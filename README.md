@@ -1,2 +1,2 @@
-# My Personal Blog
- * fongray.github.io
+# [My Personal Blog](http://fongray.github.io/)
+
