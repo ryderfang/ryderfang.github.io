@@ -1,2 +1,2 @@
 # My Personal Blog
- * ray.github.io
+ * fongray.github.io
