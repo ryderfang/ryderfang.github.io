@@ -7,8 +7,9 @@ layout: default
     <div class="aside">
       <div class="info-card">
         <h1>Fong Ray</h1>
-        <a href="http://weibo.com/fr9166/" target="_blank"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
-        <a href="https://www.zhihu.com/people/crazycoder" target="_blank"><img src="https://static.zhihu.com/static/favicon.ico" alt="" width="22"/></a>
+        <a href="http://weibo.com/fr9166" target="_blank"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
+        <a href="https://www.zhihu.com/people/crazycoder" target="_blank"><img src="images/zhihu.ico" alt="" width="25"/></a>
+        <a href="https://github.com/FongRay" target="_blank"><img src="https://assets-cdn.github.com/favicon.ico" alt="" width="25"/></a>
       </div>
       <div id="particles-js"></div>
     </div>
