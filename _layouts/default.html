@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="author" content="Fong Ray" />
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="Ray's Blog" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
-    <style>{% include style.css %}</style>
-  </head>
+
+<head>
+  <meta charset="utf-8" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="author" content="Fong Ray" />
+  <meta name="renderer" content="webkit">
+  <meta name="description" content="Fong Ray's Blog" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
+  <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <style>{% include style.css %}</style>
+</head>
+
+<body>
+  <div class="home-menu">
+    <div class="home-icon-con">
+      <a class="home-menu-icon" href="/">Fong Ray</a>
+      <a class="home-follow" href="#" title="Contact Me">+</a>
+    </div>
+    <div class="home-contact">
+      <a href="http://weibo.com/fr9166" target="_blank"><img src="http://o86qmsuit.bkt.clouddn.com/image/weibo.ico" alt="" width="25" /></a>
+      <a href="https://www.zhihu.com/people/crazycoder" target="_blank"><img src="http://o86qmsuit.bkt.clouddn.com/image/zhihu.ico" alt="" width="25" /></a>
+      <a href="https://github.com/FongRay" target="_blank"><img src="http://o86qmsuit.bkt.clouddn.com/image/github_logo.png" alt="" width="25" /></a>
+    </div>
+  </div>
 
   {{ content }}
+  <script type="text/javascript">
+    $(function() {
+      $('.home-follow').click(function(e) {
+        e.preventDefault();
+
+        if ($('.home-contact').is(':visible')) {
+          $('.home-contact').slideUp(100);
+        } else {
+          $('.home-contact').slideDown(100);
+        }
+      });
+    })
+  </script>
+</body>
+
 </html>
