@@ -1,11 +1,9 @@
 auto: true
 
 markdown: kramdown
-gems: [jekyll-paginate]
 kramdown:
     input: GFM
 rouge: true
-paginate: 8
 permalink: /:title
 
 title: 忍把浮名，换了代码几行

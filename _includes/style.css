@@ -208,6 +208,25 @@ a.external:hover {
   background-position: right -15px;
 }
 
+.entry-title,
+.entry-title a {
+  font-size:30px;
+  font-weight:bold;
+  margin-bottom:6px;
+  color:#000;
+  text-align:center;
+  word-wrap:break-word;
+}
+.entry-title a:hover {
+  text-decoration:none;
+}
+.entry-date {
+  text-align:center;
+  color:#999;
+  margin-bottom:60px;
+  font-size:14px;
+}
+
 h2 {
   font-size: 22px;
   font-weight: bold;
@@ -317,190 +336,43 @@ pre ol {
   display: block;
 }
 
-.post-wrapper {
-  width: 900px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 80px 60px;
-  float: left;
+.entry {
+  width:787px;
+  float:left; 
+  background:#fff; 
+  padding:30px; 
+  box-shadow:0 2px 6px #ccc; 
 }
 
-@media screen and (max-width: 767px) {
-  .post-wrapper {
-    width: 85%;
-    margin: 100px auto 50px;
-    padding: 0;
-  }
+.entry ul {
+  margin-bottom:25px;
+  margin-left:25px;
 }
-
-.post-wrapper .post-title,
-.post-wrapper .post-title a {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 6px;
-  color: #000;
-  text-align: center;
-  word-wrap: break-word;
+.entry p+ul {
+  margin-top:-20px;
 }
-
-@media screen and (max-width: 767px) {
-  .post-wrapper .post-title,
-  .post-wrapper .post-title a {
-    font-size: 24px;
-  }
+.entry ul li {
+  margin-bottom:5px;
+  list-style:disc;
+  line-height:1.8em;
 }
-
-.post-wrapper .post-title:hover,
-.post-wrapper .post-title a:hover {
-  text-decoration: none;
+.entry ol {
+  margin-bottom:25px;
+  margin-left:25px;
 }
-
-.post-wrapper .post-date {
-  text-align: center;
-  color: #999;
-  margin-bottom: 60px;
-  font-size: 14px;
+.entry ol li { 
+  margin-bottom:5px;
+  list-style:decimal;
+  line-height:1.1em;}
+.entry blockquote { 
+  margin-left:25px;
+  font-size:14px;
+  font-style:italic;
 }
-
-@media screen and (max-width: 767px) {
-  .post-wrapper .post-date {
-    margin-bottom: 40px;
-  }
-}
-
-.post-wrapper h2 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 25px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
-}
-
-@media $mobiel {
-  .post-wrapper h2 {
-    font-size: 20px;
-  }
-}
-
-.post-wrapper h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 25px;
-  color: #222;
-}
-
-@media screen and (max-width: 767px) {
-  .post-wrapper h3 {
-    font-size: 16px;
-  }
-}
-
-.post-wrapper h4,
-.post-wrapper h5,
-.post-wrapper h6 {
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.post-wrapper p {
-  margin-bottom: 40px;
-  line-height: 1.8em;
-}
-
-.post-wrapper code {
-  background: #eee;
-  border: 1px solid #ccc;
-  padding: 0 5px;
-  font-family: "Courier";
-  line-height: 14px;
-  font-size: 14px;
-  word-wrap: break-word;
-}
-
-.post-wrapper pre {
-  background: #f7f3f7;
-  padding: 20px 30px 15px;
-  overflow: auto;
-  margin-bottom: 40px;
-  font-size: 14px;
-  border: 1px solid #eee;
-  color: #b9bdb6;
-  margin-top: -20px;
-}
-
-.post-wrapper pre code {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  word-wrap: normal;
-}
-
-@media screen and (max-width: 767px) {
-  .post-wrapper pre code {
-    line-height: 1em;
-    font-size: 12px;
-  }
-}
-
-.post-wrapper h4+pre,
-.post-wrapper h3+pre {
-  margin-top: 20px;
-}
-
-.post-wrapper ul {
-  margin-bottom: 25px;
-  margin-left: 25px;
-}
-
-.post-wrapper ul li {
-  margin-bottom: 5px;
-  list-style: disc;
-  line-height: 1.8em;
-}
-
-.post-wrapper p + ul {
-  margin-top: -20px;
-}
-
-.post-wrapper ol {
-  margin-bottom: 25px;
-  margin-left: 25px;
-}
-
-.post-wrapper ol li {
-  margin-bottom: 5px;
-  list-style: decimal;
-  line-height: 1.1em;
-}
-
-@media screen and (max-width: 767px) {
-  .post-wrapper ol li {
-    margin-bottom: 0;
-    line-height: 1em;
-  }
-}
-
-.post-wrapper blockquote {
-  margin-left: 25px;
-  font-size: 14px;
-  font-style: italic;
-}
-
-.post-wrapper img {
-  max-width: 670px;
-  display: block;
-  margin: 10px auto;
-}
-
-@media screen and (max-width: 767px) {
-  .post-wrapper img {
-    max-width: 90%;
-  }
-}
-
-.post-wrapper table {
-  margin: 0 auto;
+.entry img {
+  max-width:670px;
+  display:block;
+  margin:10px auto;
 }
 
 .index-content .aside {
@@ -709,9 +581,10 @@ h3.about {
 
 .about-wrapper {
   background: #7e96a9;
-  width: 900px;
+  width: 727px;
   margin: 0 auto;
   padding: 30px 60px;
+  float: left;
 }
 
 @media screen and (max-width: 767px) {
@@ -834,8 +707,8 @@ h3.about {
   .entry-title a {
     font-size: 24px;
   }
-  .entry-date {
-    margin-bottom: 40px;
+ .entry-date {
+    margin-bottom:40px;
   }
   .entry img {
     max-width: 90%;
