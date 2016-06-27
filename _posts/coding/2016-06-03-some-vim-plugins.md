@@ -7,7 +7,7 @@ category: coding
 
 ## [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors#quick-start)
 
-## 1.
+### 1. 编辑同一变量
 
     def hello(poorly_named_var)
       poorly_named_var ||= "Nameless"
@@ -19,7 +19,7 @@ category: coding
 * 命令：`2Gfp<C-n><C-n><C-n>cname`
 * 解释：到第二行，fp找到p，三次<C-n>选中三个单词，c进入编辑
 
-## 2.
+### 2. 多行操作 I
 
     _ 
     Mon
@@ -39,7 +39,7 @@ category: coding
   * 移动到行尾，输入",
   * vip全选后，输入J，让所有行上移
 
-## 3.
+### 3. 多行操作 II
 
     days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
@@ -53,7 +53,7 @@ category: coding
   * 切换到v模式，选中所有的`,`，c插入，回车
   * 上移一行，删除，移动到最右，删除
 
-## 4.
+### 4. HTML加密（？）
 
 ![4](https://github.com/terryma/vim-multiple-cursors/raw/master/assets/example4.gif?raw=true)
 
