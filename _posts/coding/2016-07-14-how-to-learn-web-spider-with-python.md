@@ -1,5 +1,14 @@
-> * 转载自知乎专栏[**学习编程**](https://zhuanlan.zhihu.com/passer)
-> * 感谢作者[__路人甲__](https://www.zhihu.com/people/sgai)的整理
+---
+layout: post
+title: 如何学习Python爬虫
+description: Python、爬虫、入门篇
+category: coding
+---
+
+* 转载自知乎专栏[**学习编程**](https://zhuanlan.zhihu.com/passer)
+* 感谢作者[__路人甲__](https://www.zhihu.com/people/sgai)的整理
+
+***
 
 ## 如何学习python爬虫[入门篇]？
 
@@ -11,10 +20,9 @@
 
 ### python爬虫学习教程
 
-> * 来自博客：http://cuiqingcai.com/1052.html
-> * python 2.7
+* 来自博客：http://cuiqingcai.com/1052.html
 
-* 一、爬虫入门
+一、爬虫入门
 
  1. [python爬虫入门一之综述](http://cuiqingcai.com/927.html)
  
@@ -30,7 +38,7 @@
 
  7. [python爬虫入门七之正则表达式](http://cuiqingcai.com/977.html)
 
-* 二、爬虫实战
+二、爬虫实战
 
  1. [python爬虫实战一之爬取糗事百科段子](http://cuiqingcai.com/990.html)
 
@@ -48,7 +56,7 @@
 
  8. [python爬虫实战八之利用selenium抓取淘宝匿名旺旺](http://cuiqingcai.com/2852.html)
 
-* 三、爬虫利器
+三、爬虫利器
 
  1. [python爬虫利器一之requests库的用法](http://cuiqingcai.com/2556.html)
 
@@ -62,7 +70,7 @@
 
  6. [python爬虫利器六之pyquery的用法](http://cuiqingcai.com/2636.html)
 
-* 四、爬虫进阶
+四、爬虫进阶
 
  1. [python爬虫进阶一之爬虫框架概述](http://cuiqingcai.com/2433.html)
 
@@ -73,9 +81,10 @@
  1. [python爬虫进阶四之pyspider的用法](http://cuiqingcai.com/2652.html)
 
 - - - 
+
 ### python爬虫入门教程
 
-> 来自CSDN专栏：http://blog.csdn.net/column/details/why-bug.html
+* 来自CSDN专栏：http://blog.csdn.net/column/details/why-bug.html
 
  1. [python]网络爬虫（一）：[抓取网页的含义和url基本构成](http://blog.csdn.net/pleasecallmewhy/article/details/8922826)
 
@@ -105,7 +114,7 @@
 
 ### 实战练习
 
-> 来自CSDN博客：http://blog.csdn.net/cwyalpha/
+* 来自CSDN博客：http://blog.csdn.net/cwyalpha/
 
 Python爬虫学习记录（0）——[Python 爬虫抓站 记录（虾米，百度，豆瓣，新浪微博）](http://blog.csdn.net/cwyalpha/article/details/48111173)
 
@@ -123,7 +132,7 @@ Python爬虫学习记录（3）——[用Python获取虾米加心歌曲，并获
 
 Python爬虫学习记录（5）——[python mongodb + 爬虫 + web.py 的acfun视频排行榜](http://blog.csdn.net/cwyalpha/article/details/48111101)
 
-> 来自博客：http://aljun.me/
+* 来自博客：http://aljun.me/
 
 [爬虫教程（1）基础入门](http://aljun.me/post/17)
 
