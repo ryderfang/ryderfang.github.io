@@ -6,6 +6,7 @@
 
 - DNSPod提供域名解析
 
+- 在Bandwagon VPS上搭了个备用地址: [http://138.128.194.163:233](http://138.128.194.163:233)
 
 > License: MIT
 
