@@ -7,7 +7,7 @@ layout: home
     <ul class="artical-cate">
       <li><a href="/coding"><span>程序人生</span></a></li>
       <li class="on" style="text-align:center"><a href="/life"><span>生活随笔</span></a></li>
-      <li style="text-align:center"><a href="/jsoneditor"><span>JSONEditor</span></a></li>
+      <li style="text-align:center"><a href="/jsoneditor" target="_blank"><span>JSONEditor</span></a></li>
     </ul>
 
     <div class="cate-bar"><span id="cateBar"></span></div>
