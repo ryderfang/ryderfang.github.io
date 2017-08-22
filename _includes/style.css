@@ -398,15 +398,15 @@ pre ol {
 }
 
 .coding .aside {
-  background-image: url(http://o86qmsuit.bkt.clouddn.com/image/coding_background.jpeg);
+  background-image: url('/images/home/coding_bg.jpg');
 }
 
 .life .aside {
-  background-image: url(http://o86qmsuit.bkt.clouddn.com/image/life_background.jpg);
+  background-image: url('/images/home/life_bg.jpg');
 }
 
-.project .aside {
-  background-image: url('https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*kTUZamBulGQZg1MW.jpeg')
+.resume .aside {
+  background-image: url('/images/home/resume_bg.jpg')
 }
 
 .index-content .section {
@@ -443,6 +443,7 @@ pre ol {
   color: #999;
   font-size: 14px;
   line-height: 1.6em;
+  padding-left: 30px;
 }
 
 .index-content .artical-cate {
@@ -455,8 +456,14 @@ pre ol {
   *float: left;
   zoom: 1;
   font-size: 18px;
-  width: 32%;
+  width: 24%;
   cursor: pointer;
+  text-align:center;
+}
+.index-content .artical-cate .new {
+  background-image: url('/images/home/new.gif');
+  background-repeat: no-repeat;
+  background-position: 85% top;
 }
 
 .index-content .artical-cate li a,
@@ -805,7 +812,7 @@ h3.about {
   margin: 3px auto;
   border: 0px solid #000;
   border-left-width: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .col-title {
