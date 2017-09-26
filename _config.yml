@@ -7,7 +7,7 @@ title: Fong Ray's
 subtitle: Life is too short to coding with C++ :(
 description:
 author: Fong Ray
-language: zh-cn
+language:
 timezone:
 
 # URL
@@ -25,7 +25,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -82,4 +82,4 @@ use_font_lato: false
 deploy:
   type: git
   repo: https://github.com/FongRay/FongRay.github.io.git
-  branch: master
+  branch: hexo
