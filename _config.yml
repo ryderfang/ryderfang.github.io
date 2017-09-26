@@ -82,4 +82,4 @@ use_font_lato: false
 deploy:
   type: git
   repo: https://github.com/FongRay/FongRay.github.io.git
-  branch: hexo
+  branch: master
