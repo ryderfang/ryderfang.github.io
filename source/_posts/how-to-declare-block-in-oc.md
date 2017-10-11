@@ -9,13 +9,13 @@ categories: Coding
 
 - As a `local variable`:
 
-```objc
+``` objectivec
 returnType (^blockName)(parameterTypes) = ^returnType(parameters) {...};
 ```
 
 - As a `property`:
 
-```objc
+``` objectivec
 @property (nonatomic, copy, nullability) returnType (^blockName)(parameterTypes);
 ```
 
@@ -23,19 +23,19 @@ returnType (^blockName)(parameterTypes) = ^returnType(parameters) {...};
 
 - As a `method parameter`:
 
-```objc
+``` objectivec
 - (void)someMethodThatTakesABlock:(returnType (^nullability)(parameterTypes))blockName;
 ```
 
 - As an `argument to a method call`:
 
-```objc
+``` objectivec
 [someObject someMethodThatTakesABlock:^returnType (parameters) {...}];
 ```
 
 - As a `typedef`:
 
-```objc
+``` objectivec
 typedef returnType (^TypeName)(parameterTypes);
 TypeName blockName = ^returnType(parameters) {...};
 ```

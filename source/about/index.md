@@ -8,7 +8,7 @@ date: 2017-09-26 20:11:37
 
 > Life is too short to be proficient in C plus plus. —— [Bjarne Stroustrup](http://www.stroustrup.com)
 
-``` c++ 
+``` cpp
 #include <map>
 #include <string>
 #incldue <time.h>
@@ -41,6 +41,8 @@ private:
     ~FongRay();
 };
 ```
+
+![1](/images/me.jpg)
 
 ### *☛ Links*
 

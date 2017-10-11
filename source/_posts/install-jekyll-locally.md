@@ -11,22 +11,26 @@ categories: Configuration
   - [Ruby DevKit](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe)
 
 切换到安装目录：
-    
-    cd C:\RubyDevKit
-    ruby dk.rb init
-    ruby dk.rb install
+    ``` bash
+    $ cd C:\RubyDevKit
+    $ ruby dk.rb init
+    $ ruby dk.rb install
+    ```
 
 安装Jekyll
- 
-    gem install jekyll
-    gem install wdm
+
+    ``` bash
+    $ gem install jekyll
+    $ gem install wdm
+    ```
 
 <!-- more -->
 
 切换到博客目录运行
-    
-    jekyll build [--watch/-w]
-    jekyll serve [--watch/-w]
+    ``` bash
+    $ jekyll build [--watch/-w]
+    $ jekyll serve [--watch/-w]
+    ```
 
 用浏览器打开`http://127.0.0.1:4000`，即可看到效果，而且在修改文件的同时刷新页面即可实时更新。
 
@@ -36,7 +40,7 @@ categories: Configuration
 
 - [Running Jekyll on Windows][2]
 
--  [Jekyll Windows][3]
+- [Jekyll Windows][3]
 
 - [Setup Jekyll on Windows][4]
 
