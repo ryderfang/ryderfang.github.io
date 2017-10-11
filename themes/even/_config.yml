@@ -41,8 +41,8 @@ copyright:
 reward:
   enable: true
   qrCode:
-    wechat: /image/reward/wechat.png
-    alipay: /image/reward/alipay.png
+    wechat: /images/reward/wechat.png
+    alipay: /images/reward/alipay.png
 
 # ===========================================
 # Social links Settings

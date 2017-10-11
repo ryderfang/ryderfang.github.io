@@ -2,7 +2,7 @@
 title: 博客迁移到Hexo遇到的一些问题
 date: 2017-09-27 10:29:13
 tags: [Hexo, Github]
-categories: Troubleshot
+categories: Tutorial
 ---
 
 关于Hexo如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:
@@ -19,6 +19,8 @@ $ hexo server (hexo s)
 由于国内XXX的网络环境，总会遇到各种各样的问题，
 
 下面总结一下本博客迁移到Hexo过程中遇到的一些问题。
+
+<!-- more -->
 
 ## NPM 源
 
@@ -165,8 +167,3 @@ $ npm install hexo-generator-baidu-sitemap --save
 $ npm uninstall hexo-generator-baidu-sitemap
 ```
 或者在`package.json`中将它删除掉。
-
-
-
-
-<!-- more -->

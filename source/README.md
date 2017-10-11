@@ -2,6 +2,8 @@
 
 - 感谢 [BeiYuu](https://github.com/beiyuu) 和 [moonsea](https://github.com/moonsea)
 
+- 感谢[Even主题](https://github.com/ahonn/hexo-theme-even)
+
 - 使用Hexo和Disqus
 
 - DNSPod提供域名解析
