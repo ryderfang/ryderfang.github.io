@@ -32,6 +32,9 @@
   {% include "../_script/push.swig" %}
 {% endif %}
 
+{# Theme Configuration #}
+{% include "../_script/config.swig" %}
+
 {# LeanCloud Counter #}
 {% include "../_script/counter.swig"%}
 

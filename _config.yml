@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Fong Ray's
-subtitle: Life is too short to coding with C++ :(
+title: 无为以牧之
+subtitle: 
 description:
 author: Fong Ray
 language:
@@ -76,6 +76,13 @@ theme: even
 
 # Font
 use_font_lato: false
+
+# Search
+search:
+    path: search.xml
+    field: post
+    format: html
+    limit: 10000
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
