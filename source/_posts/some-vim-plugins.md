@@ -7,7 +7,7 @@ categories: TextEditor
 
 ## [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors#quick-start)
 
-### 1. 编辑同一变量
+### 编辑同一变量
 
     def hello(poorly_named_var)
       poorly_named_var ||= "Nameless"
@@ -21,7 +21,7 @@ categories: TextEditor
 
 <!-- more -->
 
-### 2. 多行操作 I
+### 多行操作 I
 
     _ 
     Mon
@@ -41,7 +41,7 @@ categories: TextEditor
   * 移动到行尾，输入",
   * vip全选后，输入J，让所有行上移
 
-### 3. 多行操作 II
+### 多行操作 II
 
     days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
@@ -55,7 +55,7 @@ categories: TextEditor
   * 切换到v模式，选中所有的`,`，c插入，回车
   * 上移一行，删除，移动到最右，删除
 
-### 4. HTML加密 (?)
+### HTML加密 (?)
 
 ![4](/images/myblog/vim_example4.gif)
 
