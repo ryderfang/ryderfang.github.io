@@ -1,5 +1,7 @@
 # [My Personal Blog](http://www.fangr.cc/)
 
+- **话说，Fork的时候顺便Star一下呗 🙃**
+
 - 感谢 [BeiYuu](https://github.com/beiyuu) 和 [moonsea](https://github.com/moonsea)
 
 - 感谢[Even主题](https://github.com/ahonn/hexo-theme-even)
