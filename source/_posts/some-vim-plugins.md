@@ -2,7 +2,7 @@
 title: 介绍几个常用的vim插件
 date: 2016-06-03
 tags: [Vim, 插件]
-categories: TextEditor
+categories: Coding
 ---
 
 ## [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors#quick-start)
