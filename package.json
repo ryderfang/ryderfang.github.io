@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.3.9"
+    "version": "3.4.1"
   },
   "dependencies": {
-    "hexo": "^3.3.9",
+    "hexo": "^3.4.1",
     "hexo-algolia": "^1.2.3",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.4",
@@ -17,8 +17,9 @@
     "hexo-generator-tag": "^0.2.0",
     "hexo-renderer-ejs": "^0.3.0",
     "hexo-renderer-marked": "^0.3.0",
-    "hexo-renderer-scss": "^1.0.3",
+    "hexo-renderer-scss": "^1.1.0",
     "hexo-renderer-stylus": "^0.3.1",
-    "hexo-server": "^0.2.0"
+    "hexo-server": "^0.2.2",
+    "node-sass": "^4.6.1"
   }
 }

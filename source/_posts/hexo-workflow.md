@@ -61,7 +61,7 @@ $ npm install hexo-server --save
 
 ### **node-sass**
 ``` bash
-$ npm intall node-sass --save
+$ npm install node-sass --save
 ```
 如果出现如下情况:
 ```

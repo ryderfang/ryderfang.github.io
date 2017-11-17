@@ -29,9 +29,10 @@ public
         return ltm->tm_year + 1900 - 1991;
     }
     static _Tvs languages{"C/C++", "Objective-C", "Python", "Go"};
-    static _Tmss works({{"2345.com", "2014.07~2016.04"},
-                       {"bilibili.com", "2016.04~2017.10"}
-                      });
+    static _Tmss works({{"2345.com", "2014.07...2016.04"},
+                        {"bilibili.com", "2016.04...2017.10"},
+                        {"alibaba-inc.com", "2017.10.16...HUGE_VALF}
+                       });
 
     // I'm the unique one, 'Constructors' are illegal.
     FongRay(const FongRay& fr) = delete;
