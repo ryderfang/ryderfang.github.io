@@ -1,7 +1,8 @@
 ---
-title: about
+title: About Me
 layout: page
 date: 2017-09-26 20:11:37
+comments: false
 ---
 
 ### *☛ Whoami*
