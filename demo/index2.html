@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title>
+        Maya Promotion Demo
+    </title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            display: -webkit-box;
+            height: 1000px;
+            width: 9.09%;
+            float: left;
+        }
+
+        #li0 {
+            background: rgba(255, 0, 0, 0);
+        }
+
+        #li1 {
+            background: rgba(255, 0, 0, 0.1);
+        }
+
+        #li2 {
+            background: rgba(255, 0, 0, 0.2);
+        }
+
+        #li3 {
+            background: rgba(255, 0, 0, 0.3);
+        }
+
+        #li4 {
+            background: rgba(255, 0, 0, 0.4);
+        }
+
+        #li5 {
+            background: rgba(255, 0, 0, 0.5);
+        }
+
+        #li6 {
+            background: rgba(255, 0, 0, 0.6);
+        }
+
+        #li7 {
+            background: rgba(255, 0, 0, 0.7);
+        }
+
+        #li8 {
+            background: rgba(255, 0, 0, 0.8);
+        }
+
+        #li9 {
+            background: rgba(255, 0, 0, 0.9);
+        }
+
+        #li10 {
+            background: rgba(255, 0, 0, 1);
+        }
+
+        #background {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        body {
+            align-content: center;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        a {
+            background: #fb6165;
+            text-decoration: none;
+        }
+
+        .item {
+            margin: 10px;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px;
+        }
+    </style>
+    </meta>
+    </meta>
+</head>
+<body>
+<ul id="background" >
+    <li id="li0" onclick="test(0.0)">
+        0.0
+    </li>
+    <li id="li1" onclick="test(0.1)">
+        0.1
+    </li>
+    <li id="li2" onclick="test(0.2)">
+        0.2
+    </li>
+    <li id="li3" onclick="test(0.3)">
+        0.3
+    </li>
+    <li id="li4" onclick="test(0.4)">
+        0.4
+    </li>
+    <li id="li5" onclick="test(0.5)">
+        0.5
+    </li>
+    <li id="li6" onclick="test(0.6)">
+        0.6
+    </li>
+    <li id="li7" onclick="test(0.7)">
+        0.7
+    </li>
+    <li id="li8" onclick="test(0.8)">
+        0.8
+    </li>
+    <li id="li9" onclick="test(0.9)">
+        0.9
+    </li>
+    <li id="li10" onclick="test(1.0)">
+        1.0
+    </li>
+</ul>
+<div id="container" >
+    <a class="item" href="javascript:void(0)" id="display" style="margin-top: 50px">
+        display
+    </a>
+    <a class="item" href="javascript:void(0)" id="inView">
+        show in maya ?
+    </a>
+    <div class="row">
+        <input class="modalThreshold" id="modalThreshold_value" style="margin-right: 10px ; height: 30px"
+               title="modalThreshold" type="number" value="0.8"/>
+        <a class="item" href="javascript:void(0)" id="modalThreshold" style="flex-grow: 1; margin: 0">
+            setModalThreshold
+        </a>
+    </div>
+    <a class="item" href="javascript:void(0)" id="dismiss">
+        dismiss
+    </a>
+    <a class="item" href="javascript:void(0)" id="refresh" style="background-color: #33bd61; margin-top: 200px">
+        refresh
+    </a>
+</div>
+<script src="https://as.alipayobjects.com/g/component/antbridge/1.1.1/antbridge.min.js">
+</script>
+<script src="https://a.alipayobjects.com/static/fastclick/1.0.6/fastclick.min.js">
+</script>
+<script src="https://a.alipayobjects.com/amui/zepto/1.1.3/zepto.js">
+</script>
+<script src="https://a.alipayobjects.com/g/component/tracert/1.0.1-beta1/index.js">
+</script>
+<script>
+    function ready(callback) {
+        if (window.AlipayJSBridge) {
+            callback && callback();
+        } else {
+            document.addEventListener('AlipayJSBridgeReady', callback, false);
+        }
+    }
+
+    ready(function () {
+        document.addEventListener("Maya.Displayed", function (msg) {
+            // alert("Maya.Displayed");
+            //    AlipayJSBridge.call('toast', {
+            //        content: "Maya.Displayed",
+            //        duration: 5000
+            //    });
+        });
+        document.addEventListener("Maya.Task.Track", function (msg) {
+            alert("Maya.Task.Track, \n\t" + "groupId: " + msg['groupId'] + ", selector: " + msg['selector'] + ", success: " + msg['success']);
+            // AlipayJSBridge.call('toast', {
+            //     content: "Maya.Task.Track, \n\t" + "groupId: " + msg['groupId'] + ", selector: " + msg['selector'] + ", success: " + msg['success'],
+            //     duration: 5000
+            // });
+        });
+        document.addEventListener("Maya.Task.Untrack", function (msg) {
+            alert("Maya.Task.Untrack, \n\t" + "groupId: " + msg['groupId'] + ", selector: " + msg['selector'] + ", success: " + msg['success']);
+            // AlipayJSBridge.call('toast', {
+            //     content: "Maya.Task.Untrack, \n\t" + "groupId: " + msg['groupId'] + ", selector: " + msg['selector'] + ", success: " + msg['success'],
+            //     duration: 5000
+            // });
+        });
+        document.addEventListener("Maya.Task.Info", function (msg) {
+            alert("Maya.Task.Info, \n\t" + "groupId: " + msg['groupId'] + ", selector: " + msg['selector'] + ", success: " + msg['success'] + "\n\t datas: " + JSON.stringify(msg['datas']));
+            // AlipayJSBridge.call('toast', {
+            //     content: "Maya.Task.Info, \n\t" + "groupId: " + msg['groupId'] + ", selector: " + msg['selector'] + ", success: " + msg['success'] + "\n\t datas: " + JSON.stringify(msg['datas']),
+            //     duration: 5000
+            // });
+        });
+        document.addEventListener("Maya.Task.Event", function (msg) {
+            alert("Maya.Task.Event, \n" + JSON.stringify(msg));
+            // AlipayJSBridge.call('toast', {
+            //     content: "Maya.Task.Event, \n" + JSON.stringify(msg),
+            //     duration: 5000
+            // });
+        });
+
+        function callBack(value) {
+            console.log(JSON.stringify(value));
+        }
+
+        document.getElementById('refresh').addEventListener("click", function () {
+            AlipayJSBridge.call('refresh', {}, null);
+        });
+
+        document.getElementById('display').addEventListener("click", function () {
+            AlipayJSBridge.call('maya_display', {}, callBack);
+        });
+
+        document.getElementById('inView').addEventListener("click", function () {
+            AlipayJSBridge.call('maya_embedded', {}, callBack);
+        });
+
+        document.getElementById('modalThreshold').addEventListener("click", function () {
+            var modalThreshold = document.getElementById('modalThreshold_value').value;
+            AlipayJSBridge.call('maya_setModalThreshold', {'modalThreshold': modalThreshold}, callBack);
+        });
+
+        document.getElementById('dismiss').addEventListener("click", function () {
+            AlipayJSBridge.call('maya_close', {}, callBack);
+        });
+
+        AlipayJSBridge.call('maya_display', {}, callBack);
+    });
+</script>
+</body>
+</html>
