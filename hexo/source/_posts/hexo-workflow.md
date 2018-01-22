@@ -12,6 +12,9 @@ $ npm install -g hexo
 $ hexo init
 $ hexo generate (hexo g)
 $ hexo server (hexo s)
+
+$ hexo new [name] - 新建文章
+$ hexo new page [name] - 新建页面
 ```
 
 正常情况下，这样就会启动本地的服务:[http://localhost:4000](http://localhost:4000)，但现实总是残酷的，
