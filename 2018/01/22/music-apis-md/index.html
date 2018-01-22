@@ -136,7 +136,7 @@
 
 
 
-  <title>入职阿里 | Fong Ray's Blog</title>
+  <title>各种音乐平台 API 整理 | Fong Ray's Blog</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fangr.cc/2017/10/16/join-alibaba/">
+    <link itemprop="mainEntityOfPage" href="http://fangr.cc/2018/01/22/music-apis-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yi Mu">
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">入职阿里</h1>
+          <h1 class="post-title" itemprop="name headline">各种音乐平台 API 整理</h1>
         
 
         <div class="post-meta">
@@ -357,7 +357,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-16T00:00:00+08:00">2017-10-16</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-22T15:24:20+08:00">2018-01-22</time>
             
 
             
@@ -377,7 +377,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a></span>
 
                 
                 
@@ -392,9 +392,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/10/16/join-alibaba/#comments" itemprop="discussionUrl">
+                <a href="/2018/01/22/music-apis-md/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/16/join-alibaba/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/01/22/music-apis-md/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -427,41 +427,50 @@
       
 
       
-        <h2 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h2><blockquote>
-<p>通过猎头推荐，参加了口碑上海的面试，二面结束后稀里糊涂的收到了Offer。</p>
+        <blockquote>
+<p>本文总结一些常见音乐平台 API 接口，仅用于学习使用，不保证大流量请求的可用性。</p>
 </blockquote>
-<h2 id="入职"><a href="#入职" class="headerlink" title="入职"></a>入职</h2><blockquote>
-<p>2017-10-16入职口碑，成为阿里一名基层小二，iOS搬砖攻城狮。</p>
-</blockquote>
-<h2 id="试用期"><a href="#试用期" class="headerlink" title="试用期"></a>试用期</h2><blockquote>
-<p>三个月试用期终于结束了，顺利通过并且在试用期拿到了3.75。希望继续加油！</p>
-</blockquote>
-<h2 id="内推"><a href="#内推" class="headerlink" title="内推"></a>内推</h2><blockquote>
-<p>口碑（上海 &amp; 杭州）现在疯狂招人中，急需P7+，岗位见 <a href="https://job.alibaba.com/zhaopin/positionList.htm?keyWord=JXU1M0UzJXU3ODkxJTIw&amp;_input_charset=UTF-8" target="_blank" rel="noopener">口碑招聘</a>，需要内推的请在 <a href="https://www.zhihu.com/people/crazycoder/" target="_blank" rel="noopener">知乎</a> 上私信我。</p>
-</blockquote>
-<p>贴一下 <code>iOS开发专家 (P7)</code> 的JD：</p>
-<blockquote>
 <ul>
-<li>职位描述</li>
+<li><p><a href="#豆瓣FM">豆瓣FM</a></p>
+</li>
+<li><p><a href="#网易云音乐">网易云音乐</a></p>
+</li>
+<li><p><a href="#虾米音乐">虾米音乐</a></p>
+</li>
 </ul>
-<ol>
-<li>负责口碑iOS端业务开发</li>
-<li>iOS应用框架，SDK的开发与维护</li>
-</ol>
-<ul>
-<li>职位要求</li>
-</ul>
-<ol>
-<li>三年以上iOS开发经验，熟悉iOS系统常用的framework，对UIKit，CoreAnimation，Quartz2D有优化经验的优先考虑</li>
-<li>熟悉Objective-C语言，深入理解OC的运行时特性，有C++开发经验的优先考虑</li>
-<li>熟悉iOS平台常用的开发模式，理解MVC，MVVM并在项目中有所实践</li>
-<li>熟悉iOS领域里常用的开源库，并知晓其背后的实现原理</li>
-<li>有强烈的责任心和团队精神，善于沟通合作，能独立完成设计和编码</li>
-<li>有iOS作品和开源项目者优先</li>
-</ol>
-</blockquote>
+<hr>
 <a id="more"></a>
-
+<h3 id="豆瓣FM"><a href="#豆瓣FM" class="headerlink" title="豆瓣FM"></a>豆瓣FM</h3><h4 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h4><ul>
+<li>接口: <a href="https://www.douban.com/service/auth2/token" target="_blank" rel="noopener">https://www.douban.com/service/auth2/token</a>  (POST)</li>
+<li>请求头:<br><code>{&#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39;}</code></li>
+<li><p>参数:<br>账号、密码是明文的</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">post_data = &#123;</span><br><span class="line">        'apikey': '02646d3fb69a52ff072d47bf23cef8fd',</span><br><span class="line">        'client_id': '02646d3fb69a52ff072d47bf23cef8fd',</span><br><span class="line">        'client_secret': 'cde5d61429abcd7c',</span><br><span class="line">        'udid': '07e0335d0c38a73384f709fa3102b33a94710d60',</span><br><span class="line">        'douban_udid': 'b635779c65b816b13b330b68921c0f8edc049590',</span><br><span class="line">        'device_id': '07e0335d0c38a73384f709fa3102b33a94710d60',</span><br><span class="line">        'grant_type': 'password',</span><br><span class="line">        'redirect_uri': 'http://www.douban.com/mobile/fm',</span><br><span class="line">        'username': user,</span><br><span class="line">        'password': passwd</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>返回值:<br>access_token 后续接口会用到。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"access_token"</span>: <span class="string">"****"</span>,</span><br><span class="line">  <span class="attr">"douban_user_name"</span>: <span class="string">"****"</span>,</span><br><span class="line">  <span class="attr">"douban_user_id"</span>: <span class="string">"****"</span>,</span><br><span class="line">  <span class="attr">"expires_in"</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">"refresh_token"</span>: <span class="string">"****"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="获取红心歌曲"><a href="#获取红心歌曲" class="headerlink" title="获取红心歌曲"></a>获取红心歌曲</h4><ul>
+<li>接口: <a href="https://api.douban.com/v2/fm/redheart/basic" target="_blank" rel="noopener">https://api.douban.com/v2/fm/redheart/basic</a> (GET)</li>
+<li>请求头:<br><code>{&#39;Authorization&#39;: &#39;Bearer &#39; + ACCESS_KEY}</code></li>
+<li><p>参数：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">query_data = &#123;</span><br><span class="line">        'alt': 'json',</span><br><span class="line">        'apikey': '02646d3fb69a52ff072d47bf23cef8fd',</span><br><span class="line">        'app_name': 'radio_iphone',</span><br><span class="line">        'audio_patch_version': 4,</span><br><span class="line">        'client': 's:mobile|y:iOS 11.2.2|f:122|d:07e0335d0c38a73384f709fa3102b33a94710d60|e:iPhone8,1|m:appstore',</span><br><span class="line">        'douban_udid': '677209cb05feeb5aa10fd34ed2d25765d8284f33',</span><br><span class="line">        'kbps': 128,</span><br><span class="line">        'udid': '07e0335d0c38a73384f709fa3102b33a94710d60'</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>返回值:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"description"</span>: <span class="string">""</span>,</span><br><span class="line">	<span class="attr">"collected_count"</span>: <span class="number">0</span>,</span><br><span class="line">	<span class="attr">"creator"</span>: &#123;</span><br><span class="line">		<span class="attr">"url"</span>: <span class="string">"https:\/\/www.douban.com\/people\/FongRay\/"</span>,</span><br><span class="line">		<span class="attr">"picture"</span>: <span class="string">"http://img7.doubanio.com\/icon\/u66096063-4.jpg"</span>,</span><br><span class="line">		<span class="attr">"id"</span>: <span class="string">"66096063"</span>,</span><br><span class="line">		<span class="attr">"name"</span>: <span class="string">"小咩"</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">"offshelf_alert"</span>: <span class="string">"部分红心歌曲版权洽谈中，暂时不能收听，等待它们浮出海面的同时，去收获更多新的红心吧"</span>,</span><br><span class="line">	<span class="attr">"title"</span>: <span class="string">"我的红心歌曲"</span>,</span><br><span class="line">	<span class="attr">"cover"</span>: <span class="string">""</span>,</span><br><span class="line">	<span class="attr">"updated_time"</span>: <span class="string">"2017-05-05 17:16:03"</span>,</span><br><span class="line">	<span class="attr">"is_collected"</span>: <span class="literal">true</span>,</span><br><span class="line">	<span class="attr">"rec_reason"</span>: <span class="string">""</span>,</span><br><span class="line">	<span class="attr">"created_time"</span>: <span class="string">""</span>,</span><br><span class="line">	<span class="attr">"can_play"</span>: <span class="literal">true</span>,</span><br><span class="line">	<span class="attr">"type"</span>: <span class="number">-1</span>,</span><br><span class="line">	<span class="attr">"id"</span>: <span class="number">-1</span>,</span><br><span class="line">	<span class="attr">"songs"</span>: [&#123;</span><br><span class="line">		<span class="attr">"update_time"</span>: <span class="number">1493982773</span>,</span><br><span class="line">		<span class="attr">"playable"</span>: <span class="literal">true</span>,</span><br><span class="line">		<span class="attr">"like"</span>: <span class="number">1</span>,</span><br><span class="line">		<span class="attr">"sid"</span>: <span class="string">"1888519"</span></span><br><span class="line">	&#125;, &#123;</span><br><span class="line">		<span class="attr">"update_time"</span>: <span class="number">1498647084</span>,</span><br><span class="line">		<span class="attr">"playable"</span>: <span class="literal">true</span>,</span><br><span class="line">		<span class="attr">"like"</span>: <span class="number">1</span>,</span><br><span class="line">		<span class="attr">"sid"</span>: <span class="string">"2236918"</span></span><br><span class="line">	&#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="获取歌曲详情"><a href="#获取歌曲详情" class="headerlink" title="获取歌曲详情"></a>获取歌曲详情</h4><ul>
+<li>接口: <a href="https://api.douban.com/v2/fm/songs" target="_blank" rel="noopener">https://api.douban.com/v2/fm/songs</a> (POST)</li>
+<li>请求头:<br><code>{&#39;Authorization&#39;: &#39;Bearer &#39; + ACCESS_KEY}</code></li>
+<li><p>参数:<br>其中 sids 参数是多个sid用分隔符<code>|</code>拼接而来的</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">post_data = &#123;</span><br><span class="line">    'alt': 'json',</span><br><span class="line">    'apikey': '02646d3fb69a52ff072d47bf23cef8fd',</span><br><span class="line">    'app_name': 'radio_iphone',</span><br><span class="line">    'audio_patch_version': 4,</span><br><span class="line">    'client': 's:mobile|y:iOS 11.2.2|f:122|d:07e0335d0c38a73384f709fa3102b33a94710d60|e:iPhone8,1|m:appstore',</span><br><span class="line">    'douban_udid': '677209cb05feeb5aa10fd34ed2d25765d8284f33',</span><br><span class="line">    'sids': sids,</span><br><span class="line">    'udid': '07e0335d0c38a73384f709fa3102b33a94710d60',</span><br><span class="line">    'user_accept_play_third_party': 1,</span><br><span class="line">    'version': 122</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>返回值:<br>歌曲列表，每首歌的详细信息</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"all_play_sources"</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"confidence"</span>: <span class="number">0.937778</span>,</span><br><span class="line">        <span class="attr">"source_full_name"</span>: <span class="string">"itunes"</span>,</span><br><span class="line">        <span class="attr">"file_url"</span>: <span class="literal">null</span>,</span><br><span class="line">        <span class="attr">"source"</span>: <span class="string">"it"</span>,</span><br><span class="line">        <span class="attr">"source_id"</span>: <span class="string">"514603298"</span>,</span><br><span class="line">        <span class="attr">"playable"</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">"page_url"</span>: <span class="literal">null</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"albumtitle"</span>: <span class="string">"回蔚 莫文蔚演唱會@台北小巨蛋"</span>,</span><br><span class="line">    <span class="attr">"file_ext"</span>: <span class="string">"mp4"</span>,</span><br><span class="line">    <span class="attr">"album"</span>: <span class="string">"/subject/10546781/"</span>,</span><br><span class="line">    <span class="attr">"ssid"</span>: <span class="string">"6b4b"</span>,</span><br><span class="line">    <span class="attr">"title"</span>: <span class="string">"爱情"</span>,</span><br><span class="line">    <span class="attr">"subtype"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"sid"</span>: <span class="string">"1888519"</span>,</span><br><span class="line">    <span class="attr">"sha256"</span>: <span class="string">"07d68b92880a24a25d6e3688880acbff3d52f0ed52984b28ccf8e1bee216a7f0"</span>,</span><br><span class="line">    <span class="attr">"status"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">"picture"</span>: <span class="string">"http://img7.doubanio.com/lpic/s8953971.jpg"</span>,</span><br><span class="line">    <span class="attr">"update_time"</span>: <span class="number">1493982773</span>,</span><br><span class="line">    <span class="attr">"alert_msg"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"is_douban_playable"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"public_time"</span>: <span class="string">"2012"</span>,</span><br><span class="line">    <span class="attr">"partner_sources"</span>: [],</span><br><span class="line">    <span class="attr">"singers"</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"style"</span>: [],</span><br><span class="line">        <span class="attr">"name"</span>: <span class="string">"莫文蔚"</span>,</span><br><span class="line">        <span class="attr">"region"</span>: [</span><br><span class="line">          <span class="string">"香港"</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"name_usual"</span>: <span class="string">"莫文蔚"</span>,</span><br><span class="line">        <span class="attr">"related_site_id"</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">"avatar"</span>: <span class="string">"http://img3.doubanio.com/img/fmadmin/large/31309.jpg"</span>,</span><br><span class="line">        <span class="attr">"genre"</span>: [</span><br><span class="line">          <span class="string">"Pop"</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"is_site_artist"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">"id"</span>: <span class="string">"8260"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"artist"</span>: <span class="string">"莫文蔚"</span>,</span><br><span class="line">    <span class="attr">"is_royal"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"url"</span>: <span class="string">"http://mr3.doubanio.com/e49a7486849f6067219c959dc03077e4/0/fm/song/p1888519_128k.mp4"</span>,</span><br><span class="line">    <span class="attr">"length"</span>: <span class="number">165</span>,</span><br><span class="line">    <span class="attr">"release"</span>: &#123;</span><br><span class="line">      <span class="attr">"link"</span>: <span class="string">"https://douban.fm/album/10546781g7be3"</span>,</span><br><span class="line">      <span class="attr">"id"</span>: <span class="string">"10546781"</span>,</span><br><span class="line">      <span class="attr">"ssid"</span>: <span class="string">"7be3"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"aid"</span>: <span class="string">"10546781"</span>,</span><br><span class="line">    <span class="attr">"kbps"</span>: <span class="string">"128"</span>,</span><br><span class="line">    <span class="attr">"available_formats"</span>: &#123;</span><br><span class="line">      <span class="attr">"64"</span>: <span class="number">1290</span>,</span><br><span class="line">      <span class="attr">"128"</span>: <span class="number">2523</span>,</span><br><span class="line">      <span class="attr">"192"</span>: <span class="number">3806</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h3><h3 id="虾米音乐"><a href="#虾米音乐" class="headerlink" title="虾米音乐"></a>虾米音乐</h3>
       
     </div>
     
@@ -510,7 +519,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://fangr.cc/2017/10/16/join-alibaba/" title="入职阿里">http://fangr.cc/2017/10/16/join-alibaba/</a>
+    <a href="http://fangr.cc/2018/01/22/music-apis-md/" title="各种音乐平台 API 整理">http://fangr.cc/2018/01/22/music-apis-md/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -525,7 +534,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/扯淡/" rel="tag"># 扯淡</a>
+            <a href="/tags/API/" rel="tag"># API</a>
           
         </div>
       
@@ -538,8 +547,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/13/some-free-apis/" rel="next" title="一些API接口汇总">
-                <i class="fa fa-chevron-left"></i> 一些API接口汇总
+              <a href="/2017/10/16/join-alibaba/" rel="next" title="入职阿里">
+                <i class="fa fa-chevron-left"></i> 入职阿里
               </a>
             
           </div>
@@ -548,8 +557,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/22/music-apis-md/" rel="prev" title="各种音乐平台 API 整理">
-                各种音乐平台 API 整理 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/31/2018-top/" rel="prev" title="Hello 2018">
+                Hello 2018 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -745,7 +754,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面试"><span class="nav-number">1.</span> <span class="nav-text">面试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#入职"><span class="nav-number">2.</span> <span class="nav-text">入职</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#试用期"><span class="nav-number">3.</span> <span class="nav-text">试用期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内推"><span class="nav-number">4.</span> <span class="nav-text">内推</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#豆瓣FM"><span class="nav-number">1.</span> <span class="nav-text">豆瓣FM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#登录"><span class="nav-number">1.1.</span> <span class="nav-text">登录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取红心歌曲"><span class="nav-number">1.2.</span> <span class="nav-text">获取红心歌曲</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取歌曲详情"><span class="nav-number">1.3.</span> <span class="nav-text">获取歌曲详情</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网易云音乐"><span class="nav-number">2.</span> <span class="nav-text">网易云音乐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虾米音乐"><span class="nav-number">3.</span> <span class="nav-text">虾米音乐</span></a></li></ol></div>
             
 
           </div>
@@ -925,9 +934,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://fangr.cc/2017/10/16/join-alibaba/';
-        this.page.identifier = '2017/10/16/join-alibaba/';
-        this.page.title = '入职阿里';
+        this.page.url = 'http://fangr.cc/2018/01/22/music-apis-md/';
+        this.page.identifier = '2018/01/22/music-apis-md/';
+        this.page.title = '各种音乐平台 API 整理';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');
