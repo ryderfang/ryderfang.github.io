@@ -9,23 +9,25 @@ categories: [Python]
 
 Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：
 
-![](../images/myblog/vp0.png)
+![](/images/myblog/vp0.png)
 
 本文就是要 Python 去除这个水印，输出 png 图片。
 
 > 该方法参考了网络上手动去除的方法，需要有一些操作
 
+<!— more —>
+
 ### 导出
 
 首先需要将完成的图表导出为 svg 格式的图片：
 
-![](../images/myblog/vp1.png)
+![](/images/myblog/vp1.png)
 
 选择 svg 格式保存：
 
-![](../images/myblog/vp2.png)
+![](/images/myblog/vp2.png)
 
-这样我们就得到了一个带水印的 [svg 图片](../images/myblog/vp_test.svg)
+这样我们就得到了一个带水印的 [svg 图片](/images/myblog/vp_test.svg)
 
 ### 去除水印
 
