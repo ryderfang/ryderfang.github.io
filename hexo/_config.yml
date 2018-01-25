@@ -81,6 +81,12 @@ search:
     format: html
     limit: 10000
 
+# Sitemap
+sitemap:
+    path: sitemap.xml
+baidusitemap:
+    path: baidusitemap.xml
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
