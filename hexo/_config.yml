@@ -26,6 +26,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - google22d0459a9b88fe0c.html
   - baidu_verify_zfR4QKoh6g.html
   - README.md 
   - jsoneditor/*
