@@ -1,5 +1,5 @@
 ---
-title: vue-devtools
+title: Vue Devtools 提示 『 Vue.js not detected 』 解决方法
 date: 2018-01-24 10:47:44
 tags: [Vue, 前端开发]
 categories: [Vue]
