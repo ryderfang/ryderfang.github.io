@@ -15,7 +15,7 @@ Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，�
 
 > 该方法参考了网络上手动去除的方法，需要有一些操作
 
-<!— more —>
+<!-- more -->
 
 ### 导出
 
@@ -27,7 +27,9 @@ Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，�
 
 ![](/images/myblog/vp2.png)
 
-这样我们就得到了一个带水印的 [svg 图片](/images/myblog/vp_test.svg)
+这样我们就得到了一个带水印的 [svg 图片](/images/myblog/vp_test.svg):
+
+![](/images/myblog/vp_test.svg)
 
 ### 去除水印
 
@@ -64,8 +66,71 @@ WdwvFl2vGaThOSEAAAAASUVORK5CYII=" height="16" stroke="white" preserveAspectRatio
 
 ### 使用方法
 
-```bash
-$ vp-remove-watermark 
+* 需要先安装 `cairosvg`:
 
+``` bash
+$ pip3 install cairosvg
+```
+
+可能会报错，`Pillow` 安装失败，提示：
+`The headers or library files could not be found for zlib.`
+
+可以尝试一下:
+``` bash
+$ xcode-select —-install
+$ brew install libtiff libjpeg webp little-cms2
+$ pip3 install Pillow
+```
+
+安装 `cairosvg` 成功后，使用 Python3 `import cairosvg` 发现还是报错:
+```
+>>> import cairosvg
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/__init__.py", line 29, in <module>
+    from . import surface
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/surface.py", line 24, in <module>
+    import cairocffi as cairo
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py", line 41, in <module>
+    cairo = dlopen(ffi, 'cairo', 'cairo-2')
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py", line 38, in dlopen
+    raise OSError("dlopen() failed to load a library: %s" % ' / '.join(names))
+OSError: dlopen() failed to load a library: cairo / cairo-2
+```
+
+经过搜索，发现还需要安装 `cairo` 和 `libffi`：
+``` bash
+$ brew install cairo pango gdk-pixbuf libffi
+```
+
+* 终于弄完了
+
+![](/images/myblog/emoji3.jpeg)
+
+源文件：
+[vp_remove_watermark.py](https://github.com/FongRay/PyTools/blob/master/vp_remove_watermark.py)
+
+
+* 核心代码如下：
+``` python
+import cairosvg
+
+svg_content = ''
+with open(src_name, 'r') as f:
+    svg_content = f.read()
+    end = svg_content.rfind('</g')
+    beg = svg_content.rfind('<g', 0, end)
+    svg_content = svg_content[:beg] + svg_content[end:]
+
+with open('./vp_test_out.svg', 'w') as f:
+    f.write(svg_content)
+
+cairosvg.svg2png(url='./vp_test_out.svg', write_to=dst_name)
+```
+
+* 赶紧跑起来
+
+```bash
+$ python vp_remove_watermark test.svg -o out.png
 ```
 

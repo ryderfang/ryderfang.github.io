@@ -19,6 +19,9 @@ categories: Coding
 
 ### 豆瓣FM
 
+> 写了一个脚本，将豆瓣红心歌曲导入到网易云音乐:
+> [douban2netease.py](https://github.com/FongRay/PyTools/blob/master/douban2netease.py)
+
 #### 登录
 
 * 接口: https://www.douban.com/service/auth2/token  (POST)
