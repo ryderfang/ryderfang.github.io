@@ -3,7 +3,6 @@
 
 
     
-    
   <url>
     <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
     <lastmod>2018-01-25T12:07:19.688Z</lastmod>
@@ -195,28 +194,6 @@
 
     
   <url>
-    <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
-    <lastmod>2018-01-16T11:49:57.987Z</lastmod>
-    <data>
-        <display>
-        <title>如何学习Python爬虫</title>
-        <pubTime>2016-07-13T16:00:00.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
     <lastmod>2018-01-16T11:49:57.987Z</lastmod>
     <data>
@@ -254,6 +231,28 @@
            
              
               <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
+    <lastmod>2018-01-16T11:49:57.987Z</lastmod>
+    <data>
+        <display>
+        <title>如何学习Python爬虫</title>
+        <pubTime>2016-07-13T16:00:00.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
           
         </display>
     </data>
