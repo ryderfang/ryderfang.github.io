@@ -136,7 +136,7 @@
 
 
 
-  <title>Vue Devtools 提示 『 Vue.js not detected 』 解决方法 | Fong Ray's Blog</title>
+  <title>Visual Paradigm 去除水印的方法 (Python) | Fong Ray's Blog</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fangr.cc/2018/01/24/vue-devtools/">
+    <link itemprop="mainEntityOfPage" href="http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yi Mu">
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</h1>
+          <h1 class="post-title" itemprop="name headline">Visual Paradigm 去除水印的方法 (Python)</h1>
         
 
         <div class="post-meta">
@@ -357,7 +357,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T10:47:44+08:00">2018-01-24</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T11:24:45+08:00">2018-01-25</time>
             
 
             
@@ -377,7 +377,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -392,9 +392,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/24/vue-devtools/#comments" itemprop="discussionUrl">
+                <a href="/2018/01/25/visual-paradigm-remove-watermark/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/24/vue-devtools/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/01/25/visual-paradigm-remove-watermark/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -427,35 +427,32 @@
       
       
       
-        <p>最近开始学习 <a href="https://cn.vuejs.org/" target="_blank" rel="noopener">Vue.js</a>, 一脸懵逼地进入前端世界。</p>
-<p>不使用 <code>vue-cli</code> 和 <code>webpack</code> 这些构建工具，使用单个 html 引入 Vue。</p>
-<p>html 内容是这样的:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello, Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/vue"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'app'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-bind:title</span>=<span class="string">"message"</span>&gt;</span>鼠标悬停<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        var app = new Vue(&#123;</span></span><br><span class="line"><span class="undefined">            el: '#app',</span></span><br><span class="line"><span class="undefined">            data: &#123;</span></span><br><span class="line"><span class="undefined">                message: '页面加载于 ' + new Date().toLocaleString()</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>用浏览器打开这个 html 就可以看到效果（鼠标悬停显示『页面加载于yyyy-MM-dd hh:mm:ss』）</p>
-<p>安装 <a href="https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd" target="_blank" rel="noopener">Vue-Devtools</a>，但是插件栏显示</p>
-<p><code>Vue.js not detected</code></p>
-<p><img src="/images/myblog/vue-devtools1.png" alt=""></p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：</p>
+<p><img src="../images/myblog/vp0.png" alt=""></p>
+<p>本文就是要 Python 去除这个水印，输出 png 图片。</p>
 <blockquote>
-<p>由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。</p>
+<p>该方法参考了网络上手动去除的方法，需要有一些操作</p>
 </blockquote>
-<h2 id="Vue-js-not-detected"><a href="#Vue-js-not-detected" class="headerlink" title="Vue.js not detected"></a>Vue.js not detected</h2><p>打开右上角 <code>...</code> -&gt; <code>更多工具</code> -&gt; <code>扩展程序</code>，找到 <code>Vue.js devtools</code>，选中 <code>允许访问文件网址</code>:</p>
-<p><img src="/images/myblog/vue-devtools2.png" alt=""></p>
-<p>OK，然后 devtools 仍然不可用，提示</p>
-<p><code>Vue.js is detected on this page. Devtools inspection is not available because it&#39;s in production mode or explicitly disabled by the author.</code></p>
-<blockquote>
-<p>由于我们使用的 vue.js <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue</a> 是生产版本，所以不能访问。</p>
-</blockquote>
-<h2 id="Production-mode"><a href="#Production-mode" class="headerlink" title="Production mode"></a>Production mode</h2><p>下载开发版本的vue.js，放到本地，修改src路径为本地即可。</p>
-<ul>
-<li><p>开发版本: <a href="https://vuejs.org/js/vue.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.js</a></p>
-</li>
-<li><p>生产版本: <a href="https://vuejs.org/js/vue.min.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.min.js</a> (或者 <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue</a>)</p>
-</li>
+<h3 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h3><p>首先需要将完成的图表导出为 svg 格式的图片：</p>
+<p><img src="../images/myblog/vp1.png" alt=""></p>
+<p>选择 svg 格式保存：</p>
+<p><img src="../images/myblog/vp2.png" alt=""></p>
+<p>这样我们就得到了一个带水印的 <a href="../images/myblog/vp_test.svg">svg 图片</a></p>
+<h3 id="去除水印"><a href="#去除水印" class="headerlink" title="去除水印"></a>去除水印</h3><ul>
+<li>处理 svg 图片</li>
 </ul>
-<h2 id="Vue-Devtools"><a href="#Vue-Devtools" class="headerlink" title="Vue-Devtools"></a>Vue-Devtools</h2><p>这样，打开开发者工具 (<code>option + command + i</code> || <code>F12</code>)</p>
-<p>可以看到多了一个Vue的Tab:</p>
-<p><img src="/images/myblog/vue-devtools3.png" alt=""></p>
+<blockquote>
+<p>Svg（Scalable Vector Graphics，可缩放矢量图形） 是一种矢量图片格式，可以使用文本编辑器直接打开，可以看得到在最后几行有水印的内容，所以我们可以用代码自动把他们去掉（当然也可以手动删除）。</p>
+</blockquote>
+<p>水印内容在 Svg 文件中：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">x</span>=<span class="string">"68"</span> <span class="attr">xml:space</span>=<span class="string">"preserve"</span> <span class="attr">y</span>=<span class="string">"276"</span> <span class="attr">stroke</span>=<span class="string">"none"</span></span></span><br><span class="line"><span class="tag">      &gt;</span>Powered ByVisual Paradigm Community Edition<span class="tag">&lt;/<span class="name">text</span></span></span><br><span class="line"><span class="tag">      &gt;</span><span class="tag">&lt;<span class="name">image</span> <span class="attr">font-size</span>=<span class="string">"12"</span> <span class="attr">x</span>=<span class="string">"303"</span> <span class="attr">y</span>=<span class="string">"264"</span> <span class="attr">fill</span>=<span class="string">"white"</span> <span class="attr">width</span>=<span class="string">"16"</span> <span class="attr">xlink:href</span>=<span class="string">"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABvklEQVR42o1TPUgC</span></span></span><br><span class="line"><span class="tag"><span class="string">YRi+z1PSzWrSc6ho6W/xNIhEoZoCl/a2fqaGoJKwyHIp16ZyCyIolwpq6c8lIz0h</span></span></span><br><span class="line"><span class="tag"><span class="string">h6ACa/KWOHGz4byezz7lkNM8eHjf7/ve53l/vu84rsWXEcVo2uOJtYrhW5A3YCKE</span></span></span><br><span class="line"><span class="tag"><span class="string">48YXnE7zoSzfty3AyFHdln/R4bBA5O5fgQbyiUbIK6oY5gjxG1XCtyAngFl7qXT+</span></span></span><br><span class="line"><span class="tag"><span class="string">Y7UOwR+glTSK8EZkomlJMZsNCrKs7iuKOuXzJboUJYAqemrtHEBkGwsTIy/pe0bZ</span></span></span><br><span class="line"><span class="tag"><span class="string">/Rmvd6K27svnx7Q/cu08LIliiPpmlvEGJo0DL4sRSKVyBuEZledznKpeYs+u6/YF</span></span></span><br><span class="line"><span class="tag"><span class="string">nKt6C+jpe14QPjCsQUpmQVYgaNK0R9hPYJLtZ5Eo5JGkVF0AmUZAvoBLM5WBXhZs</span></span></span><br><span class="line"><span class="tag"><span class="string">A6YB+pi+AAudD+zOnMuVjBcKheoMbOXyG0wcWKGtAPr77gauKyYTFU8g+xrsUWex</span></span></span><br><span class="line"><span class="tag"><span class="string">mKu2r79Gye3eQkAE7i4wCtQG+YTMKZwt0zOUv274DjCLJGZBoEqv9JRtyyDfgrwK</span></span></span><br><span class="line"><span class="tag"><span class="string">f09PNnyJ6OuBiYSxPAbecf9UMNZIbvovUBE8FjRINrEMNJbd1t9I28Gz7YD7DHKo</span></span></span><br><span class="line"><span class="tag"><span class="string">WdwvFl2vGaThOSEAAAAASUVORK5CYII="</span> <span class="attr">height</span>=<span class="string">"16"</span> <span class="attr">stroke</span>=<span class="string">"white"</span> <span class="attr">preserveAspectRatio</span>=<span class="string">"none"</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>用 Python 读取文件内容，去除这一段内容即可。</p>
+<ul>
+<li>转换成 png 图片</li>
+</ul>
+<p>然后将 Svg 格式转换成 png格式，这里有现成的库 <a href="http://cairosvg.org/" target="_blank" rel="noopener">cairosvg</a> 来实现。</p>
+<p>完整的代码可以在 我的 <a href="">Github</a> 上找到。</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vp-remove-watermark</span><br></pre></td></tr></table></figure>
 
         ≡ EOF ≡
       
@@ -507,7 +504,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://fangr.cc/2018/01/24/vue-devtools/" title="Vue Devtools 提示 『 Vue.js not detected 』 解决方法">http://fangr.cc/2018/01/24/vue-devtools/</a>
+    <a href="http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/" title="Visual Paradigm 去除水印的方法 (Python)">http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -522,9 +519,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"># Vue</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
-            <a href="/tags/前端开发/" rel="tag"># 前端开发</a>
+            <a href="/tags/Tools/" rel="tag"># Tools</a>
           
         </div>
       
@@ -537,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/22/music-apis-md/" rel="next" title="各种音乐平台 API 整理">
-                <i class="fa fa-chevron-left"></i> 各种音乐平台 API 整理
+              <a href="/2018/01/24/vue-devtools/" rel="next" title="Vue Devtools 提示 『 Vue.js not detected 』 解决方法">
+                <i class="fa fa-chevron-left"></i> Vue Devtools 提示 『 Vue.js not detected 』 解决方法
               </a>
             
           </div>
@@ -547,8 +544,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/25/visual-paradigm-remove-watermark/" rel="prev" title="Visual Paradigm 去除水印的方法 (Python)">
-                Visual Paradigm 去除水印的方法 (Python) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/31/2018-top/" rel="prev" title="Hello 2018">
+                Hello 2018 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -744,7 +741,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js-not-detected"><span class="nav-number">1.</span> <span class="nav-text">Vue.js not detected</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Production-mode"><span class="nav-number">2.</span> <span class="nav-text">Production mode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-Devtools"><span class="nav-number">3.</span> <span class="nav-text">Vue-Devtools</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导出"><span class="nav-number">2.</span> <span class="nav-text">导出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#去除水印"><span class="nav-number">3.</span> <span class="nav-text">去除水印</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法"><span class="nav-number">4.</span> <span class="nav-text">使用方法</span></a></li></ol></div>
             
 
           </div>
@@ -924,9 +921,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://fangr.cc/2018/01/24/vue-devtools/';
-        this.page.identifier = '2018/01/24/vue-devtools/';
-        this.page.title = 'Vue Devtools 提示 『 Vue.js not detected 』 解决方法';
+        this.page.url = 'http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/';
+        this.page.identifier = '2018/01/25/visual-paradigm-remove-watermark/';
+        this.page.title = 'Visual Paradigm 去除水印的方法 (Python)';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');

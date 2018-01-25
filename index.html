@@ -237,14 +237,14 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签<span class="badge">20</span>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签<span class="badge">21</span>
               </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">13</span>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">14</span>
               </a>
         </li>
       
@@ -406,6 +406,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yi Mu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fong Ray's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/25/visual-paradigm-remove-watermark/" itemprop="url">Visual Paradigm 去除水印的方法 (Python)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T11:24:45+08:00">2018-01-25</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/25/visual-paradigm-remove-watermark/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/01/25/visual-paradigm-remove-watermark/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+      
+      
+        
+          
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：</p>
+<p><img src="../images/myblog/vp0.png" alt=""></p>
+<p>本文就是要 Python 去除这个水印，输出 png 图片。</p>
+<blockquote>
+<p>该方法参考了网络上手动去除的方法，需要有一些操作</p>
+</blockquote>
+<h3 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h3><p>首先需要将完成的图表导出为 svg 格式的图片：</p>
+<p><img src="../images/myblog/vp1.png" alt=""></p>
+<p>选择 svg 格式保存：</p>
+<p><img src="../images/myblog/vp2.png" alt=""></p>
+<p>这样我们就得到了一个带水印的 <a href="../images/myblog/vp_test.svg">svg 图片</a></p>
+<h3 id="去除水印"><a href="#去除水印" class="headerlink" title="去除水印"></a>去除水印</h3><ul>
+<li>处理 svg 图片</li>
+</ul>
+<blockquote>
+<p>Svg（Scalable Vector Graphics，可缩放矢量图形） 是一种矢量图片格式，可以使用文本编辑器直接打开，可以看得到在最后几行有水印的内容，所以我们可以用代码自动把他们去掉（当然也可以手动删除）。</p>
+</blockquote>
+<p>水印内容在 Svg 文件中：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">x</span>=<span class="string">"68"</span> <span class="attr">xml:space</span>=<span class="string">"preserve"</span> <span class="attr">y</span>=<span class="string">"276"</span> <span class="attr">stroke</span>=<span class="string">"none"</span></span></span><br><span class="line"><span class="tag">      &gt;</span>Powered ByVisual Paradigm Community Edition<span class="tag">&lt;/<span class="name">text</span></span></span><br><span class="line"><span class="tag">      &gt;</span><span class="tag">&lt;<span class="name">image</span> <span class="attr">font-size</span>=<span class="string">"12"</span> <span class="attr">x</span>=<span class="string">"303"</span> <span class="attr">y</span>=<span class="string">"264"</span> <span class="attr">fill</span>=<span class="string">"white"</span> <span class="attr">width</span>=<span class="string">"16"</span> <span class="attr">xlink:href</span>=<span class="string">"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABvklEQVR42o1TPUgC</span></span></span><br><span class="line"><span class="tag"><span class="string">YRi+z1PSzWrSc6ho6W/xNIhEoZoCl/a2fqaGoJKwyHIp16ZyCyIolwpq6c8lIz0h</span></span></span><br><span class="line"><span class="tag"><span class="string">h6ACa/KWOHGz4byezz7lkNM8eHjf7/ve53l/vu84rsWXEcVo2uOJtYrhW5A3YCKE</span></span></span><br><span class="line"><span class="tag"><span class="string">48YXnE7zoSzfty3AyFHdln/R4bBA5O5fgQbyiUbIK6oY5gjxG1XCtyAngFl7qXT+</span></span></span><br><span class="line"><span class="tag"><span class="string">Y7UOwR+glTSK8EZkomlJMZsNCrKs7iuKOuXzJboUJYAqemrtHEBkGwsTIy/pe0bZ</span></span></span><br><span class="line"><span class="tag"><span class="string">/Rmvd6K27svnx7Q/cu08LIliiPpmlvEGJo0DL4sRSKVyBuEZledznKpeYs+u6/YF</span></span></span><br><span class="line"><span class="tag"><span class="string">nKt6C+jpe14QPjCsQUpmQVYgaNK0R9hPYJLtZ5Eo5JGkVF0AmUZAvoBLM5WBXhZs</span></span></span><br><span class="line"><span class="tag"><span class="string">A6YB+pi+AAudD+zOnMuVjBcKheoMbOXyG0wcWKGtAPr77gauKyYTFU8g+xrsUWex</span></span></span><br><span class="line"><span class="tag"><span class="string">mKu2r79Gye3eQkAE7i4wCtQG+YTMKZwt0zOUv274DjCLJGZBoEqv9JRtyyDfgrwK</span></span></span><br><span class="line"><span class="tag"><span class="string">f09PNnyJ6OuBiYSxPAbecf9UMNZIbvovUBE8FjRINrEMNJbd1t9I28Gz7YD7DHKo</span></span></span><br><span class="line"><span class="tag"><span class="string">WdwvFl2vGaThOSEAAAAASUVORK5CYII="</span> <span class="attr">height</span>=<span class="string">"16"</span> <span class="attr">stroke</span>=<span class="string">"white"</span> <span class="attr">preserveAspectRatio</span>=<span class="string">"none"</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>用 Python 读取文件内容，去除这一段内容即可。</p>
+<ul>
+<li>转换成 png 图片</li>
+</ul>
+<p>然后将 Svg 格式转换成 png格式，这里有现成的库 <a href="http://cairosvg.org/" target="_blank" rel="noopener">cairosvg</a> 来实现。</p>
+<p>完整的代码可以在 我的 <a href="">Github</a> 上找到。</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vp-remove-watermark</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://fangr.cc/2018/01/24/vue-devtools/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -425,7 +600,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/24/vue-devtools/" itemprop="url">vue-devtools</a></h1>
+                <a class="post-title-link" href="/2018/01/24/vue-devtools/" itemprop="url">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</a></h1>
         
 
         <div class="post-meta">
@@ -1711,167 +1886,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yi Mu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fong Ray's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/07/14/how-to-learn-web-spider-with-python/" itemprop="url">如何学习Python爬虫</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-14T00:00:00+08:00">2016-07-14</time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/14/how-to-learn-web-spider-with-python/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/07/14/how-to-learn-web-spider-with-python/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-      
-      
-        
-          <ul>
-<li>转载自知乎专栏<a href="https://zhuanlan.zhihu.com/passer" target="_blank" rel="noopener"><strong>学习编程</strong></a></li>
-<li>感谢作者<a href="https://www.zhihu.com/people/sgai" target="_blank" rel="noopener"><strong>路人甲</strong></a>的整理</li>
-</ul>
-<hr>
-<h2 id="如何学习python爬虫-入门篇-？"><a href="#如何学习python爬虫-入门篇-？" class="headerlink" title="如何学习python爬虫[入门篇]？"></a>如何学习python爬虫[入门篇]？</h2><p>想写这么一篇文章，但是知乎社区爬虫大神很多，光是整理他们的答案就够我这篇文章的内容了。对于我个人来说我更喜欢那种非常实用的教程，这种教程对于想直接上手爬虫做一些小东西的朋友来说是极好的。</p>
-<p>用一个精彩的回答作为开头：<a href="https://www.zhihu.com/question/20899988/answer/24923424" target="_blank" rel="noopener">如何入门 python 爬虫？ - 谢科的回答</a></p>
-<p>如果你想学习编程，但是找不到学习路径和资源，欢迎关注专栏：<a href="https://zhuanlan.zhihu.com/passer" target="_blank" rel="noopener">学习编程</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/07/14/how-to-learn-web-spider-with-python/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1923,7 +1937,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1934,7 +1948,7 @@
                 
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1945,7 +1959,7 @@
                 
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
