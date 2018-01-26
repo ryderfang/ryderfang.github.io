@@ -7,7 +7,9 @@ categories: Tutorial
 
 ### 前言
 
-Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢，当然是应用好(zhuang)用(bi)了。
+Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢 😏
+
+> 当然是因为好（zhuang）用（bi）了。
 
 废话少说，下载地址：
 https://download-chromium.appspot.com/
@@ -25,9 +27,11 @@ https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?p
 
 ### 问题
 
-打开 Chromium 会提示 `缺少 Google API 密钥，因此 Chromium 的部分功能将无法使用`，由于 Chromium 使用的 API 都需要自行申请密钥才能使用，
+打开 Chromium 会提示 `缺少 Google API 密钥，因此 Chromium 的部分功能将无法使用` 😒
 
-所以 在 https://console.cloud.google.com/ 上创建密钥，
+由于 Chromium 使用的 API 都需要自行申请密钥才能使用。
+
+所以 在 https://console.cloud.google.com/ 上创建密钥。
 
 相关文档：http://www.chromium.org/developers/how-tos/api-keys
 
@@ -39,7 +43,7 @@ https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?p
 
 ### 解决
 
-官方的解决方法是
+官方的解决方法是：
 
 将下面三行写到 ~/.bash_profile 中，然后重启浏览器即可
 
