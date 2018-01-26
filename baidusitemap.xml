@@ -3,73 +3,12 @@
 
 
     
-  <url>
-    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
-    <lastmod>2018-01-26T04:47:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>Chromium 缺少 Google API 密钥解决办法</title>
-        <pubTime>2018-01-26T03:13:16.000Z</pubTime>
-        
-        <tag>chrome</tag>
-         
-        <tag>chromium</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
-  <url>
-    <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
-    <lastmod>2018-01-25T12:07:19.688Z</lastmod>
-    <data>
-        <display>
-        <title>Visual Paradigm 去除水印的方法 (Python)</title>
-        <pubTime>2018-01-25T03:24:45.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://fangr.cc/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
-  <url>
-    <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
-    <lastmod>2018-01-25T11:59:09.406Z</lastmod>
-    <data>
-        <display>
-        <title>各种音乐平台 API 整理</title>
-        <pubTime>2018-01-22T07:24:20.000Z</pubTime>
-        
-        <tag>API</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
-    <lastmod>2018-01-25T03:30:50.104Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.679Z</lastmod>
     <data>
         <display>
         <title>Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title>
@@ -90,103 +29,21 @@
 
     
   <url>
-    <loc>http://fangr.cc/2018/12/31/2018-top/</loc>
-    <lastmod>2018-01-24T06:07:09.000Z</lastmod>
+    <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
+    <lastmod>2018-01-26T06:00:37.679Z</lastmod>
     <data>
         <display>
-        <title>Hello 2018</title>
-        <pubTime>2018-12-31T15:59:59.000Z</pubTime>
+        <title>Visual Paradigm 去除水印的方法 (Python)</title>
+        <pubTime>2018-01-25T03:24:45.000Z</pubTime>
         
-        <tag>Photo</tag>
+        <tag>Python</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2017/10/12/markdown-tutorial/</loc>
-    <lastmod>2018-01-24T03:39:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown 完全手册</title>
-        <pubTime>2017-10-12T06:10:13.000Z</pubTime>
-        
-        <tag>Markdown</tag>
+        <tag>Tools</tag>
          
          
            
              
-              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
-    <lastmod>2018-01-22T07:20:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>博客迁移到Hexo遇到的一些问题</title>
-        <pubTime>2017-09-27T02:29:13.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>Github</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2017/10/16/join-alibaba/</loc>
-    <lastmod>2018-01-19T03:02:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>入职阿里</title>
-        <pubTime>2017-10-15T16:00:00.000Z</pubTime>
-        
-        <tag>扯淡</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://fangr.cc/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-    
-  <url>
-    <loc>http://fangr.cc/2016/06/03/some-vim-plugins/</loc>
-    <lastmod>2018-01-16T11:49:57.990Z</lastmod>
-    <data>
-        <display>
-        <title>介绍几个常用的vim插件</title>
-        <pubTime>2016-06-02T16:00:00.000Z</pubTime>
-        
-        <tag>Vim</tag>
-         
-        <tag>插件</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+              <breadCrumb title="Python" url="http://fangr.cc/categories/Python/"/>
           
         </display>
     </data>
@@ -195,7 +52,7 @@
     
   <url>
     <loc>http://fangr.cc/2017/10/13/some-free-apis/</loc>
-    <lastmod>2018-01-16T11:49:57.989Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.678Z</lastmod>
     <data>
         <display>
         <title>一些API接口汇总</title>
@@ -216,8 +73,112 @@
 
     
   <url>
+    <loc>http://fangr.cc/2016/06/03/some-vim-plugins/</loc>
+    <lastmod>2018-01-26T06:00:37.678Z</lastmod>
+    <data>
+        <display>
+        <title>介绍几个常用的vim插件</title>
+        <pubTime>2016-06-02T16:00:00.000Z</pubTime>
+        
+        <tag>Vim</tag>
+         
+        <tag>插件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2017/10/12/markdown-tutorial/</loc>
+    <lastmod>2018-01-26T06:00:37.677Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown 完全手册</title>
+        <pubTime>2017-10-12T06:10:13.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
+    <lastmod>2018-01-26T06:00:37.677Z</lastmod>
+    <data>
+        <display>
+        <title>各种音乐平台 API 整理</title>
+        <pubTime>2018-01-22T07:24:20.000Z</pubTime>
+        
+        <tag>API</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2017/10/16/join-alibaba/</loc>
+    <lastmod>2018-01-26T06:00:37.676Z</lastmod>
+    <data>
+        <display>
+        <title>入职阿里</title>
+        <pubTime>2017-10-15T16:00:00.000Z</pubTime>
+        
+        <tag>扯淡</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://fangr.cc/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
+    <data>
+        <display>
+        <title>如何学习Python爬虫</title>
+        <pubTime>2016-07-13T16:00:00.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
-    <lastmod>2018-01-16T11:49:57.987Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     <data>
         <display>
         <title>本地安装Jekyll调试环境（Windows）</title>
@@ -239,7 +200,7 @@
     
   <url>
     <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
-    <lastmod>2018-01-16T11:49:57.987Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     <data>
         <display>
         <title>在Objective-C中如何定义Block</title>
@@ -260,30 +221,8 @@
 
     
   <url>
-    <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
-    <lastmod>2018-01-16T11:49:57.987Z</lastmod>
-    <data>
-        <display>
-        <title>如何学习Python爬虫</title>
-        <pubTime>2016-07-13T16:00:00.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
-    <lastmod>2018-01-16T11:49:57.986Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
     <data>
         <display>
         <title>使用VS2013分析程序CPU占用</title>
@@ -304,8 +243,30 @@
 
     
   <url>
+    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
+    <data>
+        <display>
+        <title>博客迁移到Hexo遇到的一些问题</title>
+        <pubTime>2017-09-27T02:29:13.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Github</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fangr.cc/2016/05/18/carriage-return-line-feed-new-line-end-file/</loc>
-    <lastmod>2018-01-16T11:49:57.986Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
     <data>
         <display>
         <title>回车、换行和文件末尾空行</title>
@@ -318,6 +279,45 @@
              
               <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    <data>
+        <display>
+        <title>Chromium 缺少 Google API 密钥解决办法</title>
+        <pubTime>2018-01-26T03:13:16.000Z</pubTime>
+        
+        <tag>chrome</tag>
+         
+        <tag>chromium</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2018/12/31/2018-top/</loc>
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    <data>
+        <display>
+        <title>Hello 2018</title>
+        <pubTime>2018-12-31T15:59:59.000Z</pubTime>
+        
+        <tag>Photo</tag>
+         
+         
+           
         </display>
     </data>
     </url>

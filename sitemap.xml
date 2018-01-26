@@ -2,135 +2,135 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
-    
-    <lastmod>2018-01-26T04:47:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
-    
-    <lastmod>2018-01-25T12:07:19.688Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
-    
-    <lastmod>2018-01-25T11:59:09.406Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
-    
-    <lastmod>2018-01-25T03:30:50.104Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2018/12/31/2018-top/</loc>
-    
-    <lastmod>2018-01-24T06:07:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2017/10/12/markdown-tutorial/</loc>
-    
-    <lastmod>2018-01-24T03:39:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
-    
-    <lastmod>2018-01-22T07:20:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2017/10/16/join-alibaba/</loc>
-    
-    <lastmod>2018-01-19T03:02:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://fangr.cc/tags/index.html</loc>
     
-    <lastmod>2018-01-16T11:49:58.046Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.758Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://fangr.cc/categories/index.html</loc>
     
-    <lastmod>2018-01-16T11:49:57.992Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.681Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://fangr.cc/about/index.html</loc>
     
-    <lastmod>2018-01-16T11:49:57.991Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fangr.cc/2016/06/03/some-vim-plugins/</loc>
+    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
     
-    <lastmod>2018-01-16T11:49:57.990Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.679Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.679Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://fangr.cc/2017/10/13/some-free-apis/</loc>
     
-    <lastmod>2018-01-16T11:49:57.989Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.678Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
+    <loc>http://fangr.cc/2016/06/03/some-vim-plugins/</loc>
     
-    <lastmod>2018-01-16T11:49:57.987Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.678Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
+    <loc>http://fangr.cc/2017/10/12/markdown-tutorial/</loc>
     
-    <lastmod>2018-01-16T11:49:57.987Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.677Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.677Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2017/10/16/join-alibaba/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.676Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
     
-    <lastmod>2018-01-16T11:49:57.987Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
     
-    <lastmod>2018-01-16T11:49:57.986Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://fangr.cc/2016/05/18/carriage-return-line-feed-new-line-end-file/</loc>
     
-    <lastmod>2018-01-16T11:49:57.986Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2018/12/31/2018-top/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://fangr.cc/404/index.html</loc>
     
-    <lastmod>2018-01-16T11:49:57.985Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.671Z</lastmod>
     
   </url>
   
