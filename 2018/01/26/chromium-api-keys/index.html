@@ -427,7 +427,10 @@
       
       
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢，当然是应用好(zhuang)用(bi)了。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢 😏</p>
+<blockquote>
+<p>当然是因为好（zhuang）用（bi）了。</p>
+</blockquote>
 <p>废话少说，下载地址：<br><a href="https://download-chromium.appspot.com/" target="_blank" rel="noopener">https://download-chromium.appspot.com/</a></p>
 <p>如果下载不了，可以试下：</p>
 <ul>
@@ -438,8 +441,9 @@
 </ul>
 <p>打不开之类的需要翻墙的问题自行解决吧。</p>
 <a id="more"></a>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>打开 Chromium 会提示 <code>缺少 Google API 密钥，因此 Chromium 的部分功能将无法使用</code>，由于 Chromium 使用的 API 都需要自行申请密钥才能使用，</p>
-<p>所以 在 <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">https://console.cloud.google.com/</a> 上创建密钥，</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>打开 Chromium 会提示 <code>缺少 Google API 密钥，因此 Chromium 的部分功能将无法使用</code> 😒</p>
+<p>由于 Chromium 使用的 API 都需要自行申请密钥才能使用。</p>
+<p>所以 在 <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">https://console.cloud.google.com/</a> 上创建密钥。</p>
 <p>相关文档：<a href="http://www.chromium.org/developers/how-tos/api-keys" target="_blank" rel="noopener">http://www.chromium.org/developers/how-tos/api-keys</a></p>
 <p>最后密钥有三个，位置在 <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noopener">https://console.cloud.google.com/apis/credentials</a></p>
 <ul>
@@ -447,7 +451,7 @@
 <li>GOOGLE_DEFAULT_CLIENT_ID</li>
 <li>GOOGLE_DEFAULT_CLIENT_SECRET</li>
 </ul>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>官方的解决方法是</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>官方的解决方法是：</p>
 <p>将下面三行写到 ~/.bash_profile 中，然后重启浏览器即可</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GOOGLE_API_KEY=<span class="string">"****"</span></span><br><span class="line"><span class="built_in">export</span> GOOGLE_DEFAULT_CLIENT_ID=<span class="string">"****</span></span><br><span class="line"><span class="string">export GOOGLE_DEFAULT_CLIENT_SECRET="</span>****<span class="string">"</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">$ source ~/.bash_profile</span></span><br></pre></td></tr></table></figure>
 <p>这样，有时是管用的。特别是在 Windows上，使用类似的在命令行输入：</p>
