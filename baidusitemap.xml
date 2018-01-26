@@ -95,26 +95,6 @@
 
     
   <url>
-    <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
-    <lastmod>2018-01-26T06:00:37.677Z</lastmod>
-    <data>
-        <display>
-        <title>各种音乐平台 API 整理</title>
-        <pubTime>2018-01-22T07:24:20.000Z</pubTime>
-        
-        <tag>API</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://fangr.cc/2017/10/12/markdown-tutorial/</loc>
     <lastmod>2018-01-26T06:00:37.677Z</lastmod>
     <data>
@@ -135,6 +115,26 @@
 
     
   <url>
+    <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
+    <lastmod>2018-01-26T06:00:37.677Z</lastmod>
+    <data>
+        <display>
+        <title>各种音乐平台 API 整理</title>
+        <pubTime>2018-01-22T07:24:20.000Z</pubTime>
+        
+        <tag>API</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fangr.cc/2017/10/16/join-alibaba/</loc>
     <lastmod>2018-01-26T06:00:37.676Z</lastmod>
     <data>
@@ -148,50 +148,6 @@
            
              
               <breadCrumb title="Life" url="http://fangr.cc/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
-    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
-    <data>
-        <display>
-        <title>本地安装Jekyll调试环境（Windows）</title>
-        <pubTime>2016-06-04T16:00:00.000Z</pubTime>
-        
-        <tag>Jekyll</tag>
-         
-        <tag>配置</tag>
-         
-         
-           
-             
-              <breadCrumb title="Configuration" url="http://fangr.cc/categories/Configuration/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
-    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
-    <data>
-        <display>
-        <title>在Objective-C中如何定义Block</title>
-        <pubTime>2017-05-30T16:00:00.000Z</pubTime>
-        
-        <tag>Objective-C</tag>
-         
-        <tag>Block</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
           
         </display>
     </data>
@@ -221,21 +177,43 @@
 
     
   <url>
-    <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
-    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
+    <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     <data>
         <display>
-        <title>使用VS2013分析程序CPU占用</title>
-        <pubTime>2016-08-07T16:00:00.000Z</pubTime>
+        <title>在Objective-C中如何定义Block</title>
+        <pubTime>2017-05-30T16:00:00.000Z</pubTime>
         
-        <tag>Virtual Studio</tag>
+        <tag>Objective-C</tag>
          
-        <tag>Debug</tag>
+        <tag>Block</tag>
          
          
            
              
               <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
+    <data>
+        <display>
+        <title>本地安装Jekyll调试环境（Windows）</title>
+        <pubTime>2016-06-04T16:00:00.000Z</pubTime>
+        
+        <tag>Jekyll</tag>
+         
+        <tag>配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="Configuration" url="http://fangr.cc/categories/Configuration/"/>
           
         </display>
     </data>
@@ -258,6 +236,28 @@
            
              
               <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
+    <data>
+        <display>
+        <title>使用VS2013分析程序CPU占用</title>
+        <pubTime>2016-08-07T16:00:00.000Z</pubTime>
+        
+        <tag>Virtual Studio</tag>
+         
+        <tag>Debug</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
           
         </display>
     </data>
