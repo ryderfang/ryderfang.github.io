@@ -1889,12 +1889,14 @@ pre .javascript .function {
   margin: 0;
   text-align: center;
   color: #222;
+  font-family: "Wawati SC", "Hanzipen SC";
   font-weight: 600;
 }
 .site-description {
   margin-top: 0;
   text-align: center;
   font-size: 13px;
+  font-family: "Source Code Pro";
   color: #999;
 }
 .site-state {
@@ -1965,7 +1967,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a23082;
+  background: #2affa1;
 }
 .links-of-blogroll {
   font-size: 13px;
