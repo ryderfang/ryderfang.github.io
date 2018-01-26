@@ -155,6 +155,28 @@
 
     
   <url>
+    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
+    <data>
+        <display>
+        <title>本地安装Jekyll调试环境（Windows）</title>
+        <pubTime>2016-06-04T16:00:00.000Z</pubTime>
+        
+        <tag>Jekyll</tag>
+         
+        <tag>配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="Configuration" url="http://fangr.cc/categories/Configuration/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
     <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     <data>
@@ -192,28 +214,6 @@
            
              
               <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
-    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
-    <data>
-        <display>
-        <title>本地安装Jekyll调试环境（Windows）</title>
-        <pubTime>2016-06-04T16:00:00.000Z</pubTime>
-        
-        <tag>Jekyll</tag>
-         
-        <tag>配置</tag>
-         
-         
-           
-             
-              <breadCrumb title="Configuration" url="http://fangr.cc/categories/Configuration/"/>
           
         </display>
     </data>
