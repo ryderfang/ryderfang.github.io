@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
+    
+    <lastmod>2018-01-29T08:49:02.964Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
+    
+    <lastmod>2018-01-29T08:34:31.740Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fangr.cc/2018/01/29/2018-personal-challenge/</loc>
     
     <lastmod>2018-01-29T07:55:08.000Z</lastmod>
@@ -37,20 +51,6 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
-    
-    <lastmod>2018-01-26T06:00:37.679Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2016/06/03/some-vim-plugins/</loc>
-    
-    <lastmod>2018-01-26T06:00:37.678Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://fangr.cc/2017/10/13/some-free-apis/</loc>
     
     <lastmod>2018-01-26T06:00:37.678Z</lastmod>
@@ -58,9 +58,9 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
+    <loc>http://fangr.cc/2016/06/03/some-vim-plugins/</loc>
     
-    <lastmod>2018-01-26T06:00:37.677Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.678Z</lastmod>
     
   </url>
   
@@ -100,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
-    
-    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
     
     <lastmod>2018-01-26T06:00:37.674Z</lastmod>
@@ -114,9 +107,9 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
+    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
     
-    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
     
   </url>
   
@@ -129,6 +122,13 @@
   
   <url>
     <loc>http://fangr.cc/2016/05/18/carriage-return-line-feed-new-line-end-file/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
     
     <lastmod>2018-01-26T06:00:37.673Z</lastmod>
     
