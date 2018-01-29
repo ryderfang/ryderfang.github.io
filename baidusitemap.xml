@@ -3,30 +3,30 @@
 
 
     
-    
-    
-    
   <url>
-    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
-    <lastmod>2018-01-26T06:00:37.679Z</lastmod>
+    <loc>http://fangr.cc/2018/01/29/2018-personal-challenge/</loc>
+    <lastmod>2018-01-29T07:55:08.000Z</lastmod>
     <data>
         <display>
-        <title>Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title>
-        <pubTime>2018-01-24T02:47:44.000Z</pubTime>
+        <title>2018 年度挑战</title>
+        <pubTime>2018-01-29T06:29:40.000Z</pubTime>
         
-        <tag>Vue</tag>
+        <tag>Flag</tag>
          
-        <tag>前端开发</tag>
+        <tag>Challenge</tag>
          
          
            
              
-              <breadCrumb title="Vue" url="http://fangr.cc/categories/Vue/"/>
+              <breadCrumb title="Life" url="http://fangr.cc/categories/Life/"/>
           
         </display>
     </data>
     </url>
 
+    
+    
+    
     
   <url>
     <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
@@ -44,6 +44,28 @@
            
              
               <breadCrumb title="Python" url="http://fangr.cc/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
+    <lastmod>2018-01-26T06:00:37.679Z</lastmod>
+    <data>
+        <display>
+        <title>Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title>
+        <pubTime>2018-01-24T02:47:44.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>前端开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="http://fangr.cc/categories/Vue/"/>
           
         </display>
     </data>
@@ -95,26 +117,6 @@
 
     
   <url>
-    <loc>http://fangr.cc/2017/10/12/markdown-tutorial/</loc>
-    <lastmod>2018-01-26T06:00:37.677Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown 完全手册</title>
-        <pubTime>2017-10-12T06:10:13.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
     <lastmod>2018-01-26T06:00:37.677Z</lastmod>
     <data>
@@ -128,6 +130,26 @@
            
              
               <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2017/10/12/markdown-tutorial/</loc>
+    <lastmod>2018-01-26T06:00:37.677Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown 完全手册</title>
+        <pubTime>2017-10-12T06:10:13.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
           
         </display>
     </data>
@@ -221,6 +243,28 @@
 
     
   <url>
+    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
+    <data>
+        <display>
+        <title>博客迁移到Hexo遇到的一些问题</title>
+        <pubTime>2017-09-27T02:29:13.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Github</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
     <lastmod>2018-01-26T06:00:37.674Z</lastmod>
     <data>
@@ -243,16 +287,16 @@
 
     
   <url>
-    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
-    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
+    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
     <data>
         <display>
-        <title>博客迁移到Hexo遇到的一些问题</title>
-        <pubTime>2017-09-27T02:29:13.000Z</pubTime>
+        <title>Chromium 缺少 Google API 密钥解决办法</title>
+        <pubTime>2018-01-26T03:13:16.000Z</pubTime>
         
-        <tag>Hexo</tag>
+        <tag>chrome</tag>
          
-        <tag>Github</tag>
+        <tag>chromium</tag>
          
          
            
@@ -295,28 +339,6 @@
            
              
               <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
-    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
-    <data>
-        <display>
-        <title>Chromium 缺少 Google API 密钥解决办法</title>
-        <pubTime>2018-01-26T03:13:16.000Z</pubTime>
-        
-        <tag>chrome</tag>
-         
-        <tag>chromium</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
           
         </display>
     </data>
