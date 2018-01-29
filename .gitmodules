@@ -1,0 +1,3 @@
+[submodule "hexo/themes/next"]
+	path = hexo/themes/next
+	url = https://github.com/FongRay/hexo-theme-next
