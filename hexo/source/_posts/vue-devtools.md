@@ -47,11 +47,11 @@ html 内容是这样的:
 
 ![](/images/myblog/vue-devtools1.png)
 
-> 由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。
+> 由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。
 
 ## Vue.js not detected
 
-打开右上角 `...` -> `更多工具` -> `扩展程序`，找到 `Vue.js devtools`，选中 `允许访问文件网址`:
+打开右上角 `...` -> `更多工具` -> `扩展程序`，找到 `Vue.js devtools`，选中 `允许访问文件网址`:
 
 ![](/images/myblog/vue-devtools2.png)
 

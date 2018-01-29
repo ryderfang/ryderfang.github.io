@@ -25,7 +25,7 @@ categories: Coding
 #### 登录
 
 * 接口: https://www.douban.com/service/auth2/token  (POST)
-* 请求头:
+* 请求头:
 `{'Content-Type': 'application/x-www-form-urlencoded'}`
 * 参数:
 账号、密码是明文的
@@ -43,7 +43,7 @@ post_data = {
         'password': passwd
     }
 ```
-* 返回值:
+* 返回值:
 access_token 后续接口会用到。
 ``` json
 {
@@ -110,7 +110,7 @@ query_data = {
 
 #### 获取歌曲详情
 
-* 接口: https://api.douban.com/v2/fm/songs (POST)
+* 接口: https://api.douban.com/v2/fm/songs (POST)
 * 请求头:
 `{'Authorization': 'Bearer ' + ACCESS_KEY}`
 * 参数:
@@ -129,8 +129,8 @@ query_data = {
         'version': 122
     }
 ```
-* 返回值:
-歌曲列表，每首歌的详细信息
+* 返回值:
+歌曲列表，每首歌的详细信息
 ``` json
 [
   {
