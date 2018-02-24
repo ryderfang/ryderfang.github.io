@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fangr.cc/2018/02/24/flex-demo/</loc>
+    
+    <lastmod>2018-02-24T07:42:47.196Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
     
     <lastmod>2018-01-29T08:49:02.964Z</lastmod>
@@ -79,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
-    
-    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
     
     <lastmod>2018-01-26T06:00:37.675Z</lastmod>
@@ -100,9 +100,9 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
+    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
     
-    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     
   </url>
   
@@ -114,9 +114,9 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2018/12/31/2018-top/</loc>
+    <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
     
-    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
     
   </url>
   
@@ -129,6 +129,13 @@
   
   <url>
     <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2018/12/31/2018-top/</loc>
     
     <lastmod>2018-01-26T06:00:37.673Z</lastmod>
     
