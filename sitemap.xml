@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
+    
+    <lastmod>2018-02-27T03:47:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fangr.cc/2018/02/27/front-end-roadmap/</loc>
+    
+    <lastmod>2018-02-27T03:46:20.156Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fangr.cc/2018/02/24/flex-demo/</loc>
     
     <lastmod>2018-02-26T01:33:07.328Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>http://fangr.cc/2018/01/22/music-apis-md/</loc>
     
     <lastmod>2018-01-29T08:49:02.964Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
-    
-    <lastmod>2018-01-29T08:34:31.740Z</lastmod>
     
   </url>
   
@@ -93,6 +100,13 @@
   </url>
   
   <url>
+    <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
+    
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
     
     <lastmod>2018-01-26T06:00:37.675Z</lastmod>
@@ -101,13 +115,6 @@
   
   <url>
     <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
-    
-    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
     
     <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     
@@ -128,14 +135,14 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
+    <loc>http://fangr.cc/2016/05/18/carriage-return-line-feed-new-line-end-file/</loc>
     
     <lastmod>2018-01-26T06:00:37.673Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fangr.cc/2016/05/18/carriage-return-line-feed-new-line-end-file/</loc>
+    <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
     
     <lastmod>2018-01-26T06:00:37.673Z</lastmod>
     

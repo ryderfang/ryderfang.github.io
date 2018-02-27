@@ -137,7 +137,7 @@
 
 
 
-  <title>Vue Devtools 提示 『 Vue.js not detected 』 解决方法 | Fong Ray's Blog</title>
+  <title>前端开发路线图 | Fong Ray's Blog</title>
   
 
 
@@ -336,7 +336,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fangr.cc/2018/01/24/vue-devtools/">
+    <link itemprop="mainEntityOfPage" href="http://fangr.cc/2018/02/27/front-end-roadmap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yi Mu">
@@ -353,7 +353,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</h1>
+          <h1 class="post-title" itemprop="name headline">前端开发路线图</h1>
         
 
         <div class="post-meta">
@@ -365,7 +365,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T10:47:44+08:00">2018-01-24</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-27T11:36:09+08:00">2018-02-27</time>
             
 
             
@@ -400,9 +400,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/24/vue-devtools/#comments" itemprop="discussionUrl">
+                <a href="/2018/02/27/front-end-roadmap/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/24/vue-devtools/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/02/27/front-end-roadmap/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -435,35 +435,18 @@
       
       
       
-        <p>最近开始学习 <a href="https://cn.vuejs.org/" target="_blank" rel="noopener">Vue.js</a>, 一脸懵逼地进入前端世界。</p>
-<p>不使用 <code>vue-cli</code> 和 <code>webpack</code> 这些构建工具，使用单个 html 引入 Vue。</p>
-<p>html 内容是这样的:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello, Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/vue"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'app'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-bind:title</span>=<span class="string">"message"</span>&gt;</span>鼠标悬停<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">            data: &#123;</span></span><br><span class="line"><span class="javascript">                message: <span class="string">'页面加载于 '</span> + <span class="keyword">new</span> <span class="built_in">Date</span>().toLocaleString()</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p><strong>继续学前端</strong>  🔥🔥🔥</p>
+</blockquote>
+<p><a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noopener">Web Developer Roadmap - 2018</a></p>
+<p>~&gt; 一份 Web 开发路线图，做的很漂亮 ( 已经4万多 star 了，可怕😳 )</p>
+<blockquote>
+<p>先把前端这块弄扎实 💪</p>
+</blockquote>
+<p><img src="/images/myblog/web-dev-roadmap.png" alt=""></p>
+<p><img src="/images/myblog/front-end-roadmap.png" alt=""></p>
+<p><strong>坚持！！！</strong></p>
 <a id="more"></a>
-<p>用浏览器打开这个 html 就可以看到效果（鼠标悬停显示『页面加载于yyyy-MM-dd hh:mm:ss』）</p>
-<p>安装 <a href="https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd" target="_blank" rel="noopener">Vue-Devtools</a>，但是插件栏显示</p>
-<p><code>Vue.js not detected</code></p>
-<p><img src="/images/myblog/vue-devtools1.png" alt=""></p>
-<blockquote>
-<p>由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。</p>
-</blockquote>
-<h2 id="Vue-js-not-detected"><a href="#Vue-js-not-detected" class="headerlink" title="Vue.js not detected"></a>Vue.js not detected</h2><p>打开右上角 <code>...</code> -&gt; <code>更多工具</code> -&gt; <code>扩展程序</code>，找到 <code>Vue.js devtools</code>，选中 <code>允许访问文件网址</code>:</p>
-<p><img src="/images/myblog/vue-devtools2.png" alt=""></p>
-<p>OK，然后 devtools 仍然不可用，提示</p>
-<p><code>Vue.js is detected on this page. Devtools inspection is not available because it&#39;s in production mode or explicitly disabled by the author.</code></p>
-<blockquote>
-<p>由于我们使用的 vue.js <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue</a> 是生产版本，所以不能访问。</p>
-</blockquote>
-<h2 id="Production-mode"><a href="#Production-mode" class="headerlink" title="Production mode"></a>Production mode</h2><p>下载开发版本的vue.js，放到本地，修改src路径为本地即可。</p>
-<ul>
-<li><p>开发版本: <a href="https://vuejs.org/js/vue.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.js</a></p>
-</li>
-<li><p>生产版本: <a href="https://vuejs.org/js/vue.min.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.min.js</a> (或者 <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue</a>)</p>
-</li>
-</ul>
-<h2 id="Vue-Devtools"><a href="#Vue-Devtools" class="headerlink" title="Vue-Devtools"></a>Vue-Devtools</h2><p>这样，打开开发者工具 (<code>option + command + i</code> || <code>F12</code>)</p>
-<p>可以看到多了一个Vue的Tab:</p>
-<p><img src="/images/myblog/vue-devtools3.png" alt=""></p>
 
         ≡ EOF ≡
       
@@ -515,7 +498,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://fangr.cc/2018/01/24/vue-devtools/" title="Vue Devtools 提示 『 Vue.js not detected 』 解决方法">http://fangr.cc/2018/01/24/vue-devtools/</a>
+    <a href="http://fangr.cc/2018/02/27/front-end-roadmap/" title="前端开发路线图">http://fangr.cc/2018/02/27/front-end-roadmap/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -530,9 +513,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"># Vue</a>
-          
-            <a href="/tags/前端开发/" rel="tag"># 前端开发</a>
+            <a href="/tags/前端/" rel="tag"># 前端</a>
           
         </div>
       
@@ -545,8 +526,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/22/music-apis-md/" rel="next" title="各种音乐平台 API 整理">
-                <i class="fa fa-chevron-left"></i> 各种音乐平台 API 整理
+              <a href="/2018/02/24/flex-demo/" rel="next" title="前端学习之路：Flex 布局">
+                <i class="fa fa-chevron-left"></i> 前端学习之路：Flex 布局
               </a>
             
           </div>
@@ -555,8 +536,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/25/visual-paradigm-remove-watermark/" rel="prev" title="Visual Paradigm 去除水印的方法 (Python)">
-                Visual Paradigm 去除水印的方法 (Python) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/31/2018-top/" rel="prev" title="Hello 2018">
+                Hello 2018 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -616,17 +597,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -742,22 +714,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js-not-detected"><span class="nav-number">1.</span> <span class="nav-text">Vue.js not detected</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Production-mode"><span class="nav-number">2.</span> <span class="nav-text">Production mode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-Devtools"><span class="nav-number">3.</span> <span class="nav-text">Vue-Devtools</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -932,9 +888,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://fangr.cc/2018/01/24/vue-devtools/';
-        this.page.identifier = '2018/01/24/vue-devtools/';
-        this.page.title = 'Vue Devtools 提示 『 Vue.js not detected 』 解决方法';
+        this.page.url = 'http://fangr.cc/2018/02/27/front-end-roadmap/';
+        this.page.identifier = '2018/02/27/front-end-roadmap/';
+        this.page.title = '前端开发路线图';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');
