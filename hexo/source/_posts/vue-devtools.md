@@ -2,7 +2,7 @@
 title: Vue Devtools 提示 『 Vue.js not detected 』 解决方法
 date: 2018-01-24 10:47:44
 tags: [Vue, 前端开发]
-categories: [Vue]
+categories: Front-End
 ---
 
 最近开始学习 [Vue.js](https://cn.vuejs.org/), 一脸懵逼地进入前端世界。
