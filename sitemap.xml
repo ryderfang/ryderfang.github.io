@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fangr.cc/about/index.html</loc>
+    
+    <lastmod>2018-03-26T02:52:30.175Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fangr.cc/2018/02/27/front-end-roadmap/</loc>
     
     <lastmod>2018-03-10T03:09:06.296Z</lastmod>
@@ -58,13 +65,6 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/about/index.html</loc>
-    
-    <lastmod>2018-01-26T06:00:37.680Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
     
     <lastmod>2018-01-26T06:00:37.679Z</lastmod>
@@ -100,7 +100,7 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
+    <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
     
     <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     
@@ -114,7 +114,7 @@
   </url>
   
   <url>
-    <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
+    <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
     
     <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     
