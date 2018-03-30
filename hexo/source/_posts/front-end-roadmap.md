@@ -26,6 +26,12 @@ categories: Front-End
 
 ![](/images/myblog/front-end-roadmap.png)
 
+
+---
+作者又更新了！
+
+![](/images/myblog/frontend-v2.png)
+
 __坚持！！！__
 
 <!-- more -->
