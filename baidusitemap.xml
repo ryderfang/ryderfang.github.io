@@ -5,10 +5,10 @@
     
   <url>
     <loc>http://fangr.cc/2018/05/23/my-fault-by-git/</loc>
-    <lastmod>2018-05-23T09:27:19.726Z</lastmod>
+    <lastmod>2018-05-23T09:32:42.808Z</lastmod>
     <data>
         <display>
-        <title>Git 错误使用导致的工作失败</title>
+        <title>Git 错误使用导致的工作失误</title>
         <pubTime>2018-05-23T09:02:32.000Z</pubTime>
         
         <tag>Git</tag>
@@ -298,28 +298,6 @@
 
     
   <url>
-    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
-    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
-    <data>
-        <display>
-        <title>本地安装Jekyll调试环境（Windows）</title>
-        <pubTime>2016-06-04T16:00:00.000Z</pubTime>
-        
-        <tag>Jekyll</tag>
-         
-        <tag>配置</tag>
-         
-         
-           
-             
-              <breadCrumb title="Configuration" url="http://fangr.cc/categories/Configuration/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
     <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     <data>
@@ -335,6 +313,28 @@
            
              
               <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
+    <lastmod>2018-01-26T06:00:37.675Z</lastmod>
+    <data>
+        <display>
+        <title>本地安装Jekyll调试环境（Windows）</title>
+        <pubTime>2016-06-04T16:00:00.000Z</pubTime>
+        
+        <tag>Jekyll</tag>
+         
+        <tag>配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="Configuration" url="http://fangr.cc/categories/Configuration/"/>
           
         </display>
     </data>
@@ -386,26 +386,6 @@
 
     
   <url>
-    <loc>http://fangr.cc/2016/05/18/carriage-return-line-feed-new-line-end-file/</loc>
-    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
-    <data>
-        <display>
-        <title>回车、换行和文件末尾空行</title>
-        <pubTime>2016-05-17T16:00:00.000Z</pubTime>
-        
-        <tag>原理</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://fangr.cc/2018/01/26/chromium-api-keys/</loc>
     <lastmod>2018-01-26T06:00:37.673Z</lastmod>
     <data>
@@ -421,6 +401,26 @@
            
              
               <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2016/05/18/carriage-return-line-feed-new-line-end-file/</loc>
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    <data>
+        <display>
+        <title>回车、换行和文件末尾空行</title>
+        <pubTime>2016-05-17T16:00:00.000Z</pubTime>
+        
+        <tag>原理</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
           
         </display>
     </data>
