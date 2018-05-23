@@ -1,5 +1,5 @@
 ---
-title: Git 错误使用导致的工作失败
+title: Git 错误使用导致的工作失误
 date: 2018-05-23 17:02:32
 tags: [Git, 踩坑]
 categories: Coding
