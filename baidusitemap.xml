@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://fangr.cc/2018/06/21/shadow-socks-and-bandwagon/</loc>
+    <lastmod>2018-06-21T04:44:10.128Z</lastmod>
+    <data>
+        <display>
+        <title>Shadowsocks 翻墙和搬瓦工 VPS 配置</title>
+        <pubTime>2018-06-21T03:26:11.000Z</pubTime>
+        
+        <tag>VPS</tag>
+         
+        <tag>VPN</tag>
+         
+        <tag>Shadowsocks</tag>
+         
+        <tag>Bandwagon</tag>
+         
+        <tag>搬瓦工</tag>
+         
+        <tag>翻墙</tag>
+         
+         
+           
+             
+              <breadCrumb title="Configuration" url="http://fangr.cc/categories/Configuration/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fangr.cc/2018/05/23/my-fault-by-git/</loc>
     <lastmod>2018-05-23T09:32:42.808Z</lastmod>
     <data>
@@ -342,28 +372,6 @@
 
     
   <url>
-    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
-    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
-    <data>
-        <display>
-        <title>博客迁移到Hexo遇到的一些问题</title>
-        <pubTime>2017-09-27T02:29:13.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>Github</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
     <lastmod>2018-01-26T06:00:37.674Z</lastmod>
     <data>
@@ -379,6 +387,28 @@
            
              
               <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
+    <data>
+        <display>
+        <title>博客迁移到Hexo遇到的一些问题</title>
+        <pubTime>2017-09-27T02:29:13.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Github</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
           
         </display>
     </data>
