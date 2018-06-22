@@ -58,7 +58,7 @@ https://bwh1.net/clientarea.php?action=products
       "password" : "****",
       "method" : "aes-256-cfb",
       "remarks" : "Bandwangon",
-      "server" : "*.*.*.*",
+      "server" : "**.**.**.**",
       "kcptun" : {
         "nocomp" : false,
         "key" : "****",
@@ -70,7 +70,7 @@ https://bwh1.net/clientarea.php?action=products
         "arguments" : ""
       },
       "enabled_kcptun" : true,
-      "server_port" : 8989,
+      "server_port" : 29900,
       "remarks_base64" : "QmFuZHdhbmdvbg=="
     }
   ],
@@ -112,21 +112,6 @@ $ /usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
 }
 ```
 
-> start kcp
-
-```
-{
-    "server":"0.0.0.0",
-    "server_port":8989,
-    "local_address":"127.0.0.1",
-    "local_port":1080,
-    "password":"fangr",
-    "timeout":300,
-    "method":"aes-256-cfb",
-    "fast_open":false
-}
-```
-
 > kcp config
 
 ```
@@ -152,3 +137,8 @@ $ /usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
     "keepalive": 10
 }
 ```
+
+> 数据流
+
+![](/images/myblog/Shadowsocks.png)
+
