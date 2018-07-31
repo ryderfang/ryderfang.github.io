@@ -306,21 +306,21 @@
 
     
   <url>
-    <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
+    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
     <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     <data>
         <display>
-        <title>在Objective-C中如何定义Block</title>
-        <pubTime>2017-05-30T16:00:00.000Z</pubTime>
+        <title>本地安装Jekyll调试环境（Windows）</title>
+        <pubTime>2016-06-04T16:00:00.000Z</pubTime>
         
-        <tag>Objective-C</tag>
+        <tag>Jekyll</tag>
          
-        <tag>Block</tag>
+        <tag>配置</tag>
          
          
            
              
-              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+              <breadCrumb title="Configuration" url="http://fangr.cc/categories/Configuration/"/>
           
         </display>
     </data>
@@ -350,43 +350,21 @@
 
     
   <url>
-    <loc>http://fangr.cc/2016/06/05/install-jekyll-locally/</loc>
+    <loc>http://fangr.cc/2017/05/31/how-to-declare-block-in-oc/</loc>
     <lastmod>2018-01-26T06:00:37.675Z</lastmod>
     <data>
         <display>
-        <title>本地安装Jekyll调试环境（Windows）</title>
-        <pubTime>2016-06-04T16:00:00.000Z</pubTime>
+        <title>在Objective-C中如何定义Block</title>
+        <pubTime>2017-05-30T16:00:00.000Z</pubTime>
         
-        <tag>Jekyll</tag>
+        <tag>Objective-C</tag>
          
-        <tag>配置</tag>
+        <tag>Block</tag>
          
          
            
              
-              <breadCrumb title="Configuration" url="http://fangr.cc/categories/Configuration/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
-    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
-    <data>
-        <display>
-        <title>博客迁移到Hexo遇到的一些问题</title>
-        <pubTime>2017-09-27T02:29:13.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>Github</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
           
         </display>
     </data>
@@ -416,19 +394,21 @@
 
     
   <url>
-    <loc>http://fangr.cc/2016/05/18/carriage-return-line-feed-new-line-end-file/</loc>
-    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    <loc>http://fangr.cc/2017/09/27/hexo-workflow/</loc>
+    <lastmod>2018-01-26T06:00:37.674Z</lastmod>
     <data>
         <display>
-        <title>回车、换行和文件末尾空行</title>
-        <pubTime>2016-05-17T16:00:00.000Z</pubTime>
+        <title>博客迁移到Hexo遇到的一些问题</title>
+        <pubTime>2017-09-27T02:29:13.000Z</pubTime>
         
-        <tag>原理</tag>
+        <tag>Hexo</tag>
+         
+        <tag>Github</tag>
          
          
            
              
-              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+              <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
           
         </display>
     </data>
@@ -451,6 +431,26 @@
            
              
               <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2016/05/18/carriage-return-line-feed-new-line-end-file/</loc>
+    <lastmod>2018-01-26T06:00:37.673Z</lastmod>
+    <data>
+        <display>
+        <title>回车、换行和文件末尾空行</title>
+        <pubTime>2016-05-17T16:00:00.000Z</pubTime>
+        
+        <tag>原理</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
           
         </display>
     </data>
