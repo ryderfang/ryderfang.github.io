@@ -1145,12 +1145,12 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 20px;
   font-weight: normal;
-  font-family: 'Hanzipen SC', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
   font-size: 13px;
-  font-family: "Wawati SC", "Hanzipen SC";
+  font-family: "Wawati SC";
   color: #ddd;
 }
 .use-motion .brand {
@@ -1889,7 +1889,7 @@ pre .javascript .function {
   margin: 0;
   text-align: center;
   color: #222;
-  font-family: "Wawati SC", "Hanzipen SC";
+  font-family: "Wawati SC";
   font-weight: 600;
 }
 .site-description {
@@ -1967,7 +1967,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4b49c6;
+  background: #3204ff;
 }
 .links-of-blogroll {
   font-size: 13px;
