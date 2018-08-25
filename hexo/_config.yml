@@ -96,6 +96,6 @@ baidusitemap:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@git.coding.net:FongRay/FongRay.coding.me.git
+  repo: git@github.com:FongRay/FongRay.github.io.git
   branch: master
 
