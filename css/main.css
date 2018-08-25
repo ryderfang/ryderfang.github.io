@@ -1143,14 +1143,14 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: normal;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Damion-YM';
 }
 .site-subtitle {
   margin-top: 10px;
   font-size: 13px;
-  font-family: "Wawati SC";
+  font-family: $subtitle-font-family;
   color: #ddd;
 }
 .use-motion .brand {
@@ -1889,14 +1889,14 @@ pre .javascript .function {
   margin: 0;
   text-align: center;
   color: #222;
-  font-family: "Wawati SC";
+  font-family: "Damion-YM";
   font-weight: 600;
 }
 .site-description {
   margin-top: 0;
   text-align: center;
   font-size: 13px;
-  font-family: "Source Code Pro";
+  font-family: "Damion-YM";
   color: #999;
 }
 .site-state {
@@ -1967,7 +1967,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2240e8;
+  background: #8c2290;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2087,8 +2087,19 @@ pre .javascript .function {
 .post-toc .nav .active-current > a:hover {
   color: #fc6423;
 }
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: solid 1px #999;
+  width: 300px;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
 .footer {
-  font-size: 14px;
+  font-size: 12px;
   color: #999;
 }
 .footer img {
