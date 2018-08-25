@@ -40,27 +40,6 @@
     </url>
 
     
-  <url>
-    <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
-    <lastmod>2018-08-17T01:35:09.566Z</lastmod>
-    <data>
-        <display>
-        <title>Visual Paradigm 去除水印的方法 (Python)</title>
-        <pubTime>2018-01-25T03:24:45.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://fangr.cc/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://fangr.cc/2018/06/21/shadow-socks-and-bandwagon/</loc>
@@ -93,6 +72,28 @@
 
     
   <url>
+    <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
+    <lastmod>2018-08-17T01:35:09.566Z</lastmod>
+    <data>
+        <display>
+        <title>Visual Paradigm 去除水印的方法 (Python)</title>
+        <pubTime>2018-01-25T03:24:45.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Tools</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://fangr.cc/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
     <lastmod>2018-08-17T01:35:09.566Z</lastmod>
     <data>
@@ -108,29 +109,6 @@
            
              
               <breadCrumb title="Front-End" url="http://fangr.cc/categories/Front-End/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://fangr.cc/2018/05/23/my-fault-by-git/</loc>
-    <lastmod>2018-08-17T01:35:09.565Z</lastmod>
-    <data>
-        <display>
-        <title>Git 错误使用导致的工作失误</title>
-        <pubTime>2018-05-23T09:02:32.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-        <tag>踩坑</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
           
         </display>
     </data>
@@ -168,6 +146,28 @@
         <tag>API</tag>
          
         <tag>Resouces</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2018/05/23/my-fault-by-git/</loc>
+    <lastmod>2018-08-17T01:35:09.565Z</lastmod>
+    <data>
+        <display>
+        <title>Git 错误使用导致的工作失误</title>
+        <pubTime>2018-05-23T09:02:32.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+        <tag>踩坑</tag>
          
          
            
@@ -395,26 +395,6 @@
 
     
   <url>
-    <loc>http://fangr.cc/2017/10/16/join-alibaba/</loc>
-    <lastmod>2018-08-01T02:05:34.958Z</lastmod>
-    <data>
-        <display>
-        <title>入职阿里</title>
-        <pubTime>2017-10-15T16:00:00.000Z</pubTime>
-        
-        <tag>扯淡</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://fangr.cc/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
     <lastmod>2018-08-01T02:05:34.958Z</lastmod>
     <data>
@@ -430,6 +410,26 @@
            
              
               <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fangr.cc/2017/10/16/join-alibaba/</loc>
+    <lastmod>2018-08-01T02:05:34.958Z</lastmod>
+    <data>
+        <display>
+        <title>入职阿里</title>
+        <pubTime>2017-10-15T16:00:00.000Z</pubTime>
+        
+        <tag>扯淡</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://fangr.cc/categories/Life/"/>
           
         </display>
     </data>
