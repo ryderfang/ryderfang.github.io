@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Fong Ray's Blog
-subtitle: Eternal vigilance is the price of liberty.
-description: iOS | C/C++ | TED
-author: Yi Mu
+title: Lifelong Coding
+subtitle:
+description: 夜阑卧听风吹雨，铁马冰河入梦来。
+author: Fang Rui
 language: zh-Hans
 timezone:
 
@@ -96,6 +96,6 @@ baidusitemap:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/FongRay/FongRay.github.io.git
+  repo: git@git.coding.net:FongRay/FongRay.coding.me.git
   branch: master
 

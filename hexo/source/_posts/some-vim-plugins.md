@@ -14,7 +14,7 @@ categories: Coding
       puts("Hi, " + poorly_named_var)
     end
 
-![1](/images/myblog/vim_example1.gif)
+![1](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/94527042.jpg)
 
 * 命令：`2Gfp<C-n><C-n><C-n>cname`
 * 解释：到第二行，fp找到p，三次<C-n>选中三个单词，c进入编辑
@@ -32,7 +32,7 @@ categories: Coding
     Sat
     Sun
 
-![2](/images/myblog/vim_example2.gif)
+![2](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/22609853.jpg)
 
 * 命令：`2Gvip<C-n>i"<Right><Right><Right>",<Esc>vipJ$r]Idays = [`
 * 解释：
@@ -45,7 +45,7 @@ categories: Coding
 
     days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
-![3](/images/myblog/vim_example3.gif)
+![3](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/64713103.jpg)
 
 * 命令：`2Gdf[$r,0f,v<C-n>…<C-n>c<CR><Up><Del><Right><Right><Right><Del>`
 * 解释：
@@ -57,7 +57,7 @@ categories: Coding
 
 ### HTML加密 (?)
 
-![4](/images/myblog/vim_example4.gif)
+![4](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/73933646.jpg)
 
 * 命令：
 * 解释：

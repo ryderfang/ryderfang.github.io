@@ -45,7 +45,7 @@ html 内容是这样的:
 
 `Vue.js not detected`
 
-![](/images/myblog/vue-devtools1.png)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/41087835.jpg)
 
 > 由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。
 
@@ -53,7 +53,7 @@ html 内容是这样的:
 
 打开右上角 `...` -> `更多工具` -> `扩展程序`，找到 `Vue.js devtools`，选中 `允许访问文件网址`:
 
-![](/images/myblog/vue-devtools2.png)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/14411118.jpg)
 
 OK，然后 devtools 仍然不可用，提示
 
@@ -76,4 +76,4 @@ OK，然后 devtools 仍然不可用，提示
 
 可以看到多了一个Vue的Tab:
 
-![](/images/myblog/vue-devtools3.png)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10548580.jpg)

@@ -9,7 +9,7 @@ categories: [Python]
 
 Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：
 
-![](/images/myblog/vp0.png)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/46295044.jpg)
 
 本文就是要 Python 去除这个水印，输出 png 图片。
 
@@ -21,15 +21,15 @@ Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，�
 
 首先需要将完成的图表导出为 svg 格式的图片：
 
-![](/images/myblog/vp1.png)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/20666066.jpg)
 
 选择 svg 格式保存：
 
-![](/images/myblog/vp2.png)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/26387925.jpg)
 
-这样我们就得到了一个带水印的 [svg 图片](/images/myblog/vp_test.svg):
+这样我们就得到了一个带水印的 [svg 图片](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/vp_test.svg):
 
-![](/images/myblog/vp_test.svg)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/vp_test.svg)
 
 ### 去除水印
 
@@ -105,7 +105,7 @@ $ brew install cairo pango gdk-pixbuf libffi
 
 * 终于弄完了
 
-![](/images/myblog/emoji3.jpeg)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/49384223.jpg)
 
 源文件：
 [vp_remove_watermark.py](https://github.com/FongRay/PyTools/blob/master/vp_remove_watermark.py)

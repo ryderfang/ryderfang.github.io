@@ -44,11 +44,14 @@ private:
 };
 ```
 
-![1](/images/me.jpg)
+![1](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-17/73474794.jpg)
 
 ### *☛ Links*
 
 * [Gayhub](https://github.com/FongRay)
 
----
-[*Json Editor*](../jsoneditor)
+* [Json Editor](/jsoneditor)
+
+* [HTML5 DEMO](/demo/index.html)
+
+* [Flex DEMO](/demo/flex.html)

@@ -140,5 +140,5 @@ $ /usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
 
 > 数据流
 
-![](/images/myblog/Shadowsocks.png)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/96675299.jpg)
 

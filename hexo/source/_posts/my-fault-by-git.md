@@ -7,7 +7,7 @@ categories: Coding
 
 最近因为 Git 误操作坑了一把！
 
-![](/images/myblog/git-myfault.png)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/9699135.jpg)
 
 <!-- more -->
 
