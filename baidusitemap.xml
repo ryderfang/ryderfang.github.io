@@ -40,6 +40,50 @@
     </url>
 
     
+  <url>
+    <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
+    <lastmod>2018-08-17T01:35:09.566Z</lastmod>
+    <data>
+        <display>
+        <title>Visual Paradigm 去除水印的方法 (Python)</title>
+        <pubTime>2018-01-25T03:24:45.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Tools</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://fangr.cc/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
+    <lastmod>2018-08-17T01:35:09.566Z</lastmod>
+    <data>
+        <display>
+        <title>Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title>
+        <pubTime>2018-01-24T02:47:44.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>前端开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="Front-End" url="http://fangr.cc/categories/Front-End/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://fangr.cc/2018/06/21/shadow-socks-and-bandwagon/</loc>
@@ -72,63 +116,21 @@
 
     
   <url>
-    <loc>http://fangr.cc/2018/01/25/visual-paradigm-remove-watermark/</loc>
-    <lastmod>2018-08-17T01:35:09.566Z</lastmod>
-    <data>
-        <display>
-        <title>Visual Paradigm 去除水印的方法 (Python)</title>
-        <pubTime>2018-01-25T03:24:45.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://fangr.cc/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2018/01/24/vue-devtools/</loc>
-    <lastmod>2018-08-17T01:35:09.566Z</lastmod>
-    <data>
-        <display>
-        <title>Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title>
-        <pubTime>2018-01-24T02:47:44.000Z</pubTime>
-        
-        <tag>Vue</tag>
-         
-        <tag>前端开发</tag>
-         
-         
-           
-             
-              <breadCrumb title="Front-End" url="http://fangr.cc/categories/Front-End/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2018/02/27/front-end-roadmap/</loc>
+    <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
     <lastmod>2018-08-17T01:35:09.565Z</lastmod>
     <data>
         <display>
-        <title>前端开发路线图</title>
-        <pubTime>2018-02-27T03:36:09.000Z</pubTime>
+        <title>使用VS2013分析程序CPU占用</title>
+        <pubTime>2016-08-07T16:00:00.000Z</pubTime>
         
-        <tag>前端</tag>
+        <tag>Virtual Studio</tag>
+         
+        <tag>Debug</tag>
          
          
            
              
-              <breadCrumb title="Front-End" url="http://fangr.cc/categories/Front-End/"/>
+              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
           
         </display>
     </data>
@@ -158,6 +160,26 @@
 
     
   <url>
+    <loc>http://fangr.cc/2018/02/27/front-end-roadmap/</loc>
+    <lastmod>2018-08-17T01:35:09.565Z</lastmod>
+    <data>
+        <display>
+        <title>前端开发路线图</title>
+        <pubTime>2018-02-27T03:36:09.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Front-End" url="http://fangr.cc/categories/Front-End/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fangr.cc/2018/05/23/my-fault-by-git/</loc>
     <lastmod>2018-08-17T01:35:09.565Z</lastmod>
     <data>
@@ -168,28 +190,6 @@
         <tag>Git</tag>
          
         <tag>踩坑</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coding" url="http://fangr.cc/categories/Coding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2016/08/08/detect-cpu-usage-with-vs2013/</loc>
-    <lastmod>2018-08-17T01:35:09.565Z</lastmod>
-    <data>
-        <display>
-        <title>使用VS2013分析程序CPU占用</title>
-        <pubTime>2016-08-07T16:00:00.000Z</pubTime>
-        
-        <tag>Virtual Studio</tag>
-         
-        <tag>Debug</tag>
          
          
            
@@ -395,6 +395,26 @@
 
     
   <url>
+    <loc>http://fangr.cc/2017/10/16/join-alibaba/</loc>
+    <lastmod>2018-08-01T02:05:34.958Z</lastmod>
+    <data>
+        <display>
+        <title>入职阿里</title>
+        <pubTime>2017-10-15T16:00:00.000Z</pubTime>
+        
+        <tag>扯淡</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://fangr.cc/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fangr.cc/2016/07/14/how-to-learn-web-spider-with-python/</loc>
     <lastmod>2018-08-01T02:05:34.958Z</lastmod>
     <data>
@@ -410,26 +430,6 @@
            
              
               <breadCrumb title="Tutorial" url="http://fangr.cc/categories/Tutorial/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fangr.cc/2017/10/16/join-alibaba/</loc>
-    <lastmod>2018-08-01T02:05:34.958Z</lastmod>
-    <data>
-        <display>
-        <title>入职阿里</title>
-        <pubTime>2017-10-15T16:00:00.000Z</pubTime>
-        
-        <tag>扯淡</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://fangr.cc/categories/Life/"/>
           
         </display>
     </data>
