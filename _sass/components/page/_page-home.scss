@@ -1,0 +1,31 @@
+.page-home {
+    padding: 0 40px 0 40px;
+    &__title{
+        text-align: center;
+        margin: 0px 0;
+        font-size: 36px;
+        font-weight: $font-weight-normal;
+    }
+    &__inner {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-large;
+        margin-top: 80px;
+    }
+}
+
+.page-home-p {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: $font-size-base;
+    &:last-of-type{
+        margin-bottom: 0px;
+    }
+}
+
+.page-home-hr{
+    margin-bottom: 25px;
+}

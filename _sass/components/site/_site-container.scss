@@ -1,0 +1,39 @@
+.site-container{
+    background-color: white;
+    overflow: hidden;
+    max-width: $content-desktop;
+    margin-left: auto;
+    margin-right: auto;
+    // only have 1 child
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &__content{
+        flex-grow:1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 60px 0;
+    }
+    &-index{
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

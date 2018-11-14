@@ -1,0 +1,24 @@
+.page-about{
+    padding: 0 40px 0 40px;
+    ul{
+        margin-top: 0px;
+    }
+}
+.about-h2{
+    margin-top: 20px;
+}
+.about-logo-wrapper{
+    flex-shrink: 0;
+}
+.about-logo{
+    border-radius: 8px;
+    width: 68px;
+}
+.about-contact{
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+    flex-grow: 1;
+}
+.about-content{
+    // text-align: center;
+}

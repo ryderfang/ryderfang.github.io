@@ -1,0 +1,60 @@
+<div class="page-post__header"> 
+    <h2 class="post-title">{{page.title}}</h2>
+    <div class="post-meta">
+        <span class="post-meta-time">
+            <!-- craated -->
+            <span class="page-meta__icon">
+                <i class="fas fa-calendar"></i>
+            </span>
+            <span class="post-meta__item-text">{{ __.post.posted }}</span>
+            <time title="{{ __.post.created }}" itemprop="dateCreated datePublished" datetime="{{ post.date | date_to_xmlschema }}">
+                <span>{{ page.date | date: site.date_format }} </span>
+            </time>
+            <!-- updated -->
+            {% if page.updated %}
+                <span class="post-meta__divider">|</span>
+                <span class="page-meta__icon">
+                    <i class="fas fa-calendar-check"></i>
+                </span>
+                <span class="post-meta__item-text">{{ __.post.modified }}</span>
+                <time title="{{ __.post.modified }}" itemprop="dateModified" datetime="{{ post.updated | date: site.date_format }}">
+                    {{ page.updated | date: site.date_format }}
+                </time>
+            {% endif %}
+        </span>
+        {% if page.categories.size > 0 %}
+            <span class="post-meta-category">
+                <span class="post-meta__divider">|</span>
+                <!-- category  -->
+                <span class="page-meta__icon">
+                    <i class="fas fa-folder"></i>
+                </span>
+                <span class="post-meta__item-text">{{ __.post.in }}</span>
+                {% for cat in page.categories %}
+                {% assign cat_url_encode = cat | url_encode | replace: '+', '%20' %}
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <!-- <a href="{{ '/category/#/' | relative_url | append: cat_url_encode }}" itemprop="url" rel="index"> -->
+                    <span itemprop="name">{{ cat }}</span>
+                <!-- </a> -->
+                </span>
+                {% assign cat_length = page.categories.size %}
+                {% if cat_length > 1 and forloop.index != cat_length %}
+                {{ __.symbol.comma }}
+                {% endif %}
+            {% endfor %}
+            </span>
+        {% endif %}
+    </div>
+    <hr>
+</div>
+<div class="page-post__content">
+    {{page.content}}
+</div>
+<div class="page-post__footer">
+    
+</div>
+<!--  -->
+<script src="{{site.baseurl}}/assets/js/post.js"></script>
+<!-- third party -->
+{% include _third-party/mathjax.html %}
+{% include _third-party/lightbox.html %}

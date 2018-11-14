@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+{% include _blocks/page_class.html %} 
+{% include _blocks/sidebar.html %}
+<html lang="{{ site.language }}">
+<head>
+    {% include _partials/head.html %}
+    <title>{{page.title}}</title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang | default: page.language | default: site.language }}" oncopy="return false" oncut="return false" onpaste="return false">
+    {% assign lang = site.data.languages[site.language] %}
+    <div class="site-container">
+        <div class="site-container__content">
+            <header class="site-header" itemscope itemtype="http://schema.org/WPHeader">
+                {% include _partials/header.html %}
+            </header>       
+            <article class="site-main">
+                <main class="{{page_class}}">
+                    {{content}}
+                </main>
+                <footer class="site-footer">
+                    {% include _partials/footer.html %}
+                </footer>
+            </article> 
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

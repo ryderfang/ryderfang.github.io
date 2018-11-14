@@ -1,0 +1,12 @@
+.post-title{
+    font-size: 26px;
+    text-align: center;
+    word-break: break-word;
+    font-weight: $font-weight-normal;
+    margin: 0;
+  
+    @include mobile() {
+      font-size: 22px;
+    }
+}
+
