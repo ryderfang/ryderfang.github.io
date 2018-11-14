@@ -1,3 +1,3 @@
 #! /bin/bash
 
-hexo cl && hexo g && hexo s
+jekyll serve -w --port=2333 &

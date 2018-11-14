@@ -1,0 +1,22 @@
+.post-meta{
+    color: $grey-dark;
+    font-family: $font-family-posts;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 12px;
+
+    &__icon{
+        margin-right: 3px;
+    }
+    &__item-text{
+        @include tablet() {
+            display: none;
+          }
+          @include mobile() {
+            display: none;
+          }
+    }
+    &__divider{
+        margin: 0 .5em;
+    }
+}

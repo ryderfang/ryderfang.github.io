@@ -1,0 +1,16 @@
+{% assign posts = site.posts %}
+{% assign year = 0 %}
+<section class="page-archive__main">
+    <ul>
+    {% for post in posts %}
+        {% unless post.url contains "_en" %}
+            {% assign post_year = post.date | date: "%Y" %}
+            {% if post_year != year %}
+                {% assign year = post_year %}
+                <h2 class="page-archive__main__year">{{post_year}}</h2>
+            {%endif%}
+            <li>{% include _partials/components/date.html %}<a href="{{site.baseurl}}{{post.url}}">{{post.list_title}}</a></li>
+        {% endunless %}
+    {% endfor %}
+    </ul>
+</section>

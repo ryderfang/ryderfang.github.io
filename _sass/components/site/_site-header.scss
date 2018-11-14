@@ -1,0 +1,33 @@
+.site-header{
+    flex-basis: 160px;
+    flex-shrink: 0;
+    display: flex;    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-right: 2px solid $grey-dark;
+    padding-right: 25px;
+    
+    &__logo{
+        max-width: 50%;
+        margin-top: 80px;
+        margin-bottom: 25px;
+    }
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        ul{
+            padding-left: 0px
+        }
+        li{
+            font-size: $font-family-base;
+            list-style-type: none;
+            text-decoration: none;
+        }
+    }
+    &__nav-logo{
+        margin: 0 0;
+    }
+}

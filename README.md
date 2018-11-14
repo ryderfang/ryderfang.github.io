@@ -1,16 +1,16 @@
-# [My Personal Blog](http://www.fangr.cc/)
+### [个人博客](https://www.fangr.cc/)
 
-- **话说，Fork的时候顺便Star一下呗 🙃**
+> https://www.fangr.cc/
 
-- 感谢 [BeiYuu](https://github.com/beiyuu) 和 [moonsea](https://github.com/moonsea)
+- 话说，Fock 的时候顺便 <span style="border-bottom:3px double black;">**Star** ✨</span> 一下呗 🙃🖖
 
-- 感谢[Even主题](https://github.com/ahonn/hexo-theme-even)
+- 感谢 [xtao0](https://github.com/xta0) 大神 (未曾谋面的前口碑同事 :D) [博客](https://xta0.me/) 的主题。
 
-- 使用Hexo和Disqus
+- 基于 [Jekyll](https://jekyllrb.com/docs/)。
 
-- DNSPod提供域名解析
+- 静态博客，从 Jekyll 到 Hexo，再到 Hugo (文档不友好，放弃了)，再回到 Jekyll，
 
-- 主干`master`分支已迁移至Hexo, 旧的Jekyll博客放在`jekyll`分支且不再更新
+  不想再折腾了，还是专注内容吧！
 
-> License: MIT
+> License: [Unlicense](https://en.wikipedia.org/wiki/Unlicense), which basically means you just do whatever you want.
 

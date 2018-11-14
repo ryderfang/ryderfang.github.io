@@ -1,0 +1,22 @@
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<!-- link css  -->
+<link href="{{ site.baseurl }}/assets/lib/normalize/normalize.css" rel="stylesheet"/>
+<link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet"/>
+<link href="{{ site.baseurl }}/assets/lib/fontawesome/css/all.css" rel="stylesheet"> 
+
+<!-- link javascript -->
+<script src="{{site.baseurl}}/assets/lib/jQuery/jquery.min.js"></script>
+
+<!-- third party -->
+{% include _third-party/prism.html %}
+
+{% if jekyll.environment == 'production' %}
+  {% include _third-party/google-analytics.html %}
+{% endif %}
+
+<!-- customize header -->
+{% include _custom/head.html %}

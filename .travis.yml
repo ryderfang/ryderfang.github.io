@@ -1,0 +1,8 @@
+language: ruby
+rvm: 
+  - 2.3.3
+before_install:
+  - gem install jekyll
+script:
+  - jekyll build
+
