@@ -17,7 +17,6 @@ source/stylesheets/screen.css
 vendor
 node_modules/
 Gemfile.lock
-_site/
 bower_components/
 node_modules/
 Gemfile.lock
