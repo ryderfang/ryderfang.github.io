@@ -1,0 +1,251 @@
+<!DOCTYPE html> 
+
+
+ 
+
+
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<!-- link css  -->
+<link href="/assets/lib/normalize/normalize.css" rel="stylesheet"/>
+<link href="/assets/css/main.css" rel="stylesheet"/>
+<link href="/assets/lib/fontawesome/css/all.css" rel="stylesheet"> 
+
+<!-- link javascript -->
+<script src="/assets/lib/jQuery/jquery.min.js"></script>
+
+<!-- third party -->
+<link rel="stylesheet" href="/assets/lib/prism/prism.css">
+<script type="text/javascript" src="/assets/lib/prism/prism.js"></script>
+
+
+
+
+
+<!-- customize header -->
+
+    <title>Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="en" oncopy="return false" oncut="return false" onpaste="return false">
+    
+    <div class="site-container">
+        <div class="site-container__content">
+            <header class="site-header" itemscope itemtype="http://schema.org/WPHeader">
+                
+
+
+<div class="site-header__logo">
+    <img class="logo" src="/assets/images/avatar.png">
+</div>    
+
+<div class="site-header__nav">    
+     
+     
+    
+    
+    
+    
+    <div class="menu-item">
+        <a href="/"><i class="fa fa-fw fa-home"></i>首页 | Home</a>
+    </div> 
+     
+     
+    
+    
+    
+    
+    <div class="menu-item">
+        <a href="/src/archives/"><i class="fa fa-fw fa-archive"></i>博客 | Blog</a>
+    </div> 
+     
+     
+    
+    
+    
+    
+    <div class="menu-item">
+        <a href="/src/about/"><i class="fa fa-fw fa-user"></i>关于 | About</a>
+    </div> 
+    
+</div>
+<!-- 
+<div >
+    <ul>
+        <li><a id="en" href="">English</a></li>
+        <li><a id="cn" href="">中文</a></li>
+    </ul>
+</div>
+ -->
+
+
+            </header>       
+            <article class="site-main">
+                <main class="page-post">
+                    
+<div class="page-post__header"> 
+    <h2 class="post-title">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</h2>
+    <div class="post-meta">
+        <span class="post-meta-time">
+            <!-- craated -->
+            <span class="page-meta__icon">
+                <i class="fas fa-calendar"></i>
+            </span>
+            <span class="post-meta__item-text">Posted on</span>
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="">
+                <span>2018-01-24 </span>
+            </time>
+            <!-- updated -->
+            
+        </span>
+        
+            <span class="post-meta-category">
+                <span class="post-meta__divider">|</span>
+                <!-- category  -->
+                <span class="page-meta__icon">
+                    <i class="fas fa-folder"></i>
+                </span>
+                <span class="post-meta__item-text">In</span>
+                
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <!-- <a href="/category/#/Front-End" itemprop="url" rel="index"> -->
+                    <span itemprop="name">Front-End</span>
+                <!-- </a> -->
+                </span>
+                
+                
+            
+            </span>
+        
+    </div>
+    <hr>
+</div>
+<div class="page-post__content">
+    <p>最近开始学习 <a href="https://cn.vuejs.org/">Vue.js</a>, 一脸懵逼地进入前端世界。</p>
+
+<p>不使用 <code class="highlighter-rouge">vue-cli</code> 和 <code class="highlighter-rouge">webpack</code> 这些构建工具，使用单个 html 引入 Vue。</p>
+
+<p>html 内容是这样的:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello, Vue<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'app'</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">v-bind:title=</span><span class="s">"message"</span><span class="nt">&gt;</span>鼠标悬停<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+        <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+            <span class="na">el</span><span class="p">:</span> <span class="s1">'#app'</span><span class="p">,</span>
+            <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+                <span class="na">message</span><span class="p">:</span> <span class="s1">'页面加载于 '</span> <span class="o">+</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleString</span><span class="p">()</span>
+            <span class="p">}</span>
+        <span class="p">})</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<!-- more -->
+
+<p>用浏览器打开这个 html 就可以看到效果（鼠标悬停显示『页面加载于yyyy-MM-dd hh:mm:ss』）</p>
+
+<p>安装 <a href="https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd">Vue-Devtools</a>，但是插件栏显示</p>
+
+<p><code class="highlighter-rouge">Vue.js not detected</code></p>
+
+<p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/41087835.jpg" alt="" /></p>
+
+<blockquote>
+  <p>由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。</p>
+</blockquote>
+
+<h2 id="vuejs-not-detected">Vue.js not detected</h2>
+
+<p>打开右上角 <code class="highlighter-rouge">...</code> -&gt; <code class="highlighter-rouge">更多工具</code> -&gt; <code class="highlighter-rouge">扩展程序</code>，找到 <code class="highlighter-rouge">Vue.js devtools</code>，选中 <code class="highlighter-rouge">允许访问文件网址</code>:</p>
+
+<p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/14411118.jpg" alt="" /></p>
+
+<p>OK，然后 devtools 仍然不可用，提示</p>
+
+<p><code class="highlighter-rouge">Vue.js is detected on this page. Devtools inspection is not available because it's in production mode or explicitly disabled by the author.</code></p>
+
+<blockquote>
+  <p>由于我们使用的 vue.js <a href="https://cdn.jsdelivr.net/npm/vue">https://cdn.jsdelivr.net/npm/vue</a> 是生产版本，所以不能访问。</p>
+</blockquote>
+
+<h2 id="production-mode">Production mode</h2>
+
+<p>下载开发版本的vue.js，放到本地，修改src路径为本地即可。</p>
+
+<ul>
+  <li>
+    <p>开发版本: https://vuejs.org/js/vue.js</p>
+  </li>
+  <li>
+    <p>生产版本: https://vuejs.org/js/vue.min.js (或者 https://cdn.jsdelivr.net/npm/vue)</p>
+  </li>
+</ul>
+
+<h2 id="vue-devtools">Vue-Devtools</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>这样，打开开发者工具 (<code class="highlighter-rouge">option + command + i</code></td>
+      <td> </td>
+      <td><code class="highlighter-rouge">F12</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>可以看到多了一个Vue的Tab:</p>
+
+<p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10548580.jpg" alt="" /></p>
+
+</div>
+<div class="page-post__footer">
+    
+</div>
+<!--  -->
+<script src="/assets/js/post.js"></script>
+<!-- third party -->
+
+<link rel="stylesheet" href="/assets/lib/lightbox/css/lightbox.min.css">
+<script type="text/javascript" src="/assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+
+<!-- <div id="posts" class="site-posts"> -->
+    
+<!-- </div> -->
+                </main>
+                <footer class="site-footer">
+                    <hr>
+<div class="site-footer__item">© Yimu さま® 2007 - 2018 All Rights Reserved</div>
+<div class="site-footer__item"><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/>Content on this site is licensed under a Creative Commons Attribution 4.0 International license</a></div>
+<div class="site-footer__item"><a href=https://jekyllrb.com/>Jekyll</a>  |  <a href=https://www.linode.com/>Linode</a> | <a href=https://github.com/FongRay/FongRay.github.io>Github</a></div>
+<div class="site-footer__item">Site last generated: Nov 14, 2018</div>
+
+
+                </footer>
+            </article> 
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

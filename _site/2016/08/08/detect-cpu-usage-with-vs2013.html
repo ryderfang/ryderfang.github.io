@@ -1,0 +1,187 @@
+<!DOCTYPE html> 
+
+
+ 
+
+
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<!-- link css  -->
+<link href="/assets/lib/normalize/normalize.css" rel="stylesheet"/>
+<link href="/assets/css/main.css" rel="stylesheet"/>
+<link href="/assets/lib/fontawesome/css/all.css" rel="stylesheet"> 
+
+<!-- link javascript -->
+<script src="/assets/lib/jQuery/jquery.min.js"></script>
+
+<!-- third party -->
+<link rel="stylesheet" href="/assets/lib/prism/prism.css">
+<script type="text/javascript" src="/assets/lib/prism/prism.js"></script>
+
+
+
+
+
+<!-- customize header -->
+
+    <title>使用VS2013分析程序CPU占用</title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="en" oncopy="return false" oncut="return false" onpaste="return false">
+    
+    <div class="site-container">
+        <div class="site-container__content">
+            <header class="site-header" itemscope itemtype="http://schema.org/WPHeader">
+                
+
+
+<div class="site-header__logo">
+    <img class="logo" src="/assets/images/avatar.png">
+</div>    
+
+<div class="site-header__nav">    
+     
+     
+    
+    
+    
+    
+    <div class="menu-item">
+        <a href="/"><i class="fa fa-fw fa-home"></i>首页 | Home</a>
+    </div> 
+     
+     
+    
+    
+    
+    
+    <div class="menu-item">
+        <a href="/src/archives/"><i class="fa fa-fw fa-archive"></i>博客 | Blog</a>
+    </div> 
+     
+     
+    
+    
+    
+    
+    <div class="menu-item">
+        <a href="/src/about/"><i class="fa fa-fw fa-user"></i>关于 | About</a>
+    </div> 
+    
+</div>
+<!-- 
+<div >
+    <ul>
+        <li><a id="en" href="">English</a></li>
+        <li><a id="cn" href="">中文</a></li>
+    </ul>
+</div>
+ -->
+
+
+            </header>       
+            <article class="site-main">
+                <main class="page-post">
+                    
+<div class="page-post__header"> 
+    <h2 class="post-title">使用VS2013分析程序CPU占用</h2>
+    <div class="post-meta">
+        <span class="post-meta-time">
+            <!-- craated -->
+            <span class="page-meta__icon">
+                <i class="fas fa-calendar"></i>
+            </span>
+            <span class="post-meta__item-text">Posted on</span>
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="">
+                <span>2016-08-08 </span>
+            </time>
+            <!-- updated -->
+            
+        </span>
+        
+            <span class="post-meta-category">
+                <span class="post-meta__divider">|</span>
+                <!-- category  -->
+                <span class="page-meta__icon">
+                    <i class="fas fa-folder"></i>
+                </span>
+                <span class="post-meta__item-text">In</span>
+                
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <!-- <a href="/category/#/Coding" itemprop="url" rel="index"> -->
+                    <span itemprop="name">Coding</span>
+                <!-- </a> -->
+                </span>
+                
+                
+            
+            </span>
+        
+    </div>
+    <hr>
+</div>
+<div class="page-post__content">
+    <p>最近开发的一个程序，用户反馈CPU占用非常高，基本把一个内核占用满了。</p>
+
+<p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10993914.jpg" alt="CPU占用" /></p>
+
+<p>我自己在虚拟机中试了下，确实这样！</p>
+
+<!-- more -->
+
+<p>在用户机器中获取了DUMP，只看到有几个线程一直在跑，调用堆栈中也看不到太多信息（主要是没有线程CPU占用信息），一时没有方法。</p>
+
+<p>今天突然想到VS2013，新版本增加了一些功能，貌似有性能分析相关的。</p>
+
+<p>找了一下，果然在<code class="highlighter-rouge">调试</code>菜单下发现了<code class="highlighter-rouge">性能与诊断</code>：</p>
+
+<p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/13597794.jpg" alt="调试菜单" /></p>
+
+<p>选择<code class="highlighter-rouge">CPU使用率</code>，就开始分析啦！</p>
+
+<p>很快就给出了分析结果：</p>
+
+<p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/34785051.jpg" alt="分析结果" /></p>
+
+<p>哈哈！瞬间定位CPU占用元凶，原来是一个后台线程一直在跑（空转），设计不合理。这个线程最早设计成自驱动的，找到原因就好办了，改成被驱动式就行了！</p>
+
+</div>
+<div class="page-post__footer">
+    
+</div>
+<!--  -->
+<script src="/assets/js/post.js"></script>
+<!-- third party -->
+
+<link rel="stylesheet" href="/assets/lib/lightbox/css/lightbox.min.css">
+<script type="text/javascript" src="/assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+
+<!-- <div id="posts" class="site-posts"> -->
+    
+<!-- </div> -->
+                </main>
+                <footer class="site-footer">
+                    <hr>
+<div class="site-footer__item">© Yimu さま® 2007 - 2018 All Rights Reserved</div>
+<div class="site-footer__item"><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/>Content on this site is licensed under a Creative Commons Attribution 4.0 International license</a></div>
+<div class="site-footer__item"><a href=https://jekyllrb.com/>Jekyll</a>  |  <a href=https://www.linode.com/>Linode</a> | <a href=https://github.com/FongRay/FongRay.github.io>Github</a></div>
+<div class="site-footer__item">Site last generated: Nov 14, 2018</div>
+
+
+                </footer>
+            </article> 
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

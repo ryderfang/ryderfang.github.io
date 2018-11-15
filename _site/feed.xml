@@ -1,4 +1,253 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-14T23:50:23+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Visionary Lab</title><author><name>xta0</name></author><entry><title type="html">2018 年度挑战</title><link href="http://localhost:4000/2018/01/29/personal-challenge.html" rel="alternate" type="text/html" title="2018 年度挑战" /><published>2018-01-29T00:00:00+08:00</published><updated>2018-01-29T00:00:00+08:00</updated><id>http://localhost:4000/2018/01/29/personal-challenge</id><content type="html" xml:base="http://localhost:4000/2018/01/29/personal-challenge.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:2333/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:2333/" rel="alternate" type="text/html" /><updated>2018-11-15T15:20:21+08:00</updated><id>http://localhost:2333/feed.xml</id><title type="html">Visionary Lab</title><author><name>Yimu</name></author><entry><title type="html">Shadowsocks 翻墙和搬瓦工 VPS 配置</title><link href="http://localhost:2333/2018/06/21/shadow-socks-and-bandwagon.html" rel="alternate" type="text/html" title="Shadowsocks 翻墙和搬瓦工 VPS 配置" /><published>2018-06-21T00:00:00+08:00</published><updated>2018-06-21T00:00:00+08:00</updated><id>http://localhost:2333/2018/06/21/shadow-socks-and-bandwagon</id><content type="html" xml:base="http://localhost:2333/2018/06/21/shadow-socks-and-bandwagon.html">&lt;h3 id=&quot;这是干啥的&quot;&gt;这是干啥的&lt;/h3&gt;
+
+&lt;p&gt;敏感你懂的，不多谈。🌝 🌝 🌝&lt;/p&gt;
+
+&lt;h3 id=&quot;怎么用&quot;&gt;怎么用&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;下载 &lt;code class=&quot;highlighter-rouge&quot;&gt;ShadowsocksX-NG&lt;/code&gt;，&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;https://github.com/shadowsocks/ShadowsocksX-NG/releases/&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;配置自己的 VPS，比如我自己使用的 Bandwagon VPS，或者使用其他 SS server 地址&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在 &lt;code class=&quot;highlighter-rouge&quot;&gt;ShadowsocksX-NG&lt;/code&gt; 中添加服务器，配置好可以 FQ 了。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;搬瓦工&quot;&gt;搬瓦工&lt;/h3&gt;
+
+&lt;p&gt;目前可用的主页地址是&lt;/p&gt;
+
+&lt;p&gt;https://bwh1.net/clientarea.php?action=products&lt;/p&gt;
+
+&lt;p&gt;我买的最便宜的一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;10G VZ - PROMO&lt;/code&gt;，一个月 $2.99，但年付才 $19.99 (130 软妹币) 而已。&lt;/p&gt;
+
+&lt;p&gt;每月流量 &lt;code class=&quot;highlighter-rouge&quot;&gt;550GB&lt;/code&gt; 根本用不完&lt;/p&gt;
+
+&lt;p&gt;有需要的朋友，如果不想自己配置，可以给我转 ￥10 (一个月)，我把我的 VPS 共享给你。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;配置项&quot;&gt;配置项&lt;/h3&gt;
+
+&lt;p&gt;在 &lt;code class=&quot;highlighter-rouge&quot;&gt;ShadowsocksX-NG&lt;/code&gt; 的服务器配置中，导入如下配置即可&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;random&quot; : false,
+  &quot;authPass&quot; : null,
+  &quot;useOnlinePac&quot; : false,
+  &quot;TTL&quot; : 0,
+  &quot;global&quot; : false,
+  &quot;reconnectTimes&quot; : 3,
+  &quot;index&quot; : 0,
+  &quot;proxyType&quot; : 0,
+  &quot;proxyHost&quot; : null,
+  &quot;authUser&quot; : null,
+  &quot;proxyAuthPass&quot; : null,
+  &quot;isDefault&quot; : false,
+  &quot;pacUrl&quot; : null,
+  &quot;configs&quot; : [
+    {
+      &quot;enable&quot; : true,
+      &quot;password&quot; : &quot;****&quot;,
+      &quot;method&quot; : &quot;aes-256-cfb&quot;,
+      &quot;remarks&quot; : &quot;Bandwangon&quot;,
+      &quot;server&quot; : &quot;**.**.**.**&quot;,
+      &quot;kcptun&quot; : {
+        &quot;nocomp&quot; : false,
+        &quot;key&quot; : &quot;****&quot;,
+        &quot;crypt&quot; : &quot;salsa20&quot;,
+        &quot;datashard&quot; : 70,
+        &quot;mtu&quot; : 1350,
+        &quot;mode&quot; : &quot;fast2&quot;,
+        &quot;parityshard&quot; : 30,
+        &quot;arguments&quot; : &quot;&quot;
+      },
+      &quot;enabled_kcptun&quot; : true,
+      &quot;server_port&quot; : 29900,
+      &quot;remarks_base64&quot; : &quot;QmFuZHdhbmdvbg==&quot;
+    }
+  ],
+  &quot;proxyPort&quot; : 0,
+  &quot;randomAlgorithm&quot; : 0,
+  &quot;proxyEnable&quot; : false,
+  &quot;enabled&quot; : true,
+  &quot;autoban&quot; : false,
+  &quot;proxyAuthUser&quot; : null,
+  &quot;shareOverLan&quot; : false,
+  &quot;localPort&quot; : 1080
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;请帮忙 star🌟&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://github.com/FongRay/FongRay.github.io&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;附录&quot;&gt;附录&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;一些命令&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ /usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# /etc/shadowsocks.json
+{
+    &quot;server&quot;:&quot;0.0.0.0&quot;,
+    &quot;server_port&quot;:8989,
+    &quot;local_address&quot;:&quot;127.0.0.1&quot;,
+    &quot;local_port&quot;:1080,
+    &quot;password&quot;:&quot;****&quot;,
+    &quot;timeout&quot;:300,
+    &quot;method&quot;:&quot;aes-256-cfb&quot;,
+    &quot;fast_open&quot;:false
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;kcp config&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    &quot;listen&quot;: &quot;:29900&quot;,
+    &quot;target&quot;: &quot;127.0.0.1:8989&quot;,
+    &quot;key&quot;: &quot;****&quot;,
+    &quot;crypt&quot;: &quot;salsa20&quot;,
+    &quot;mode&quot;: &quot;fast2&quot;,
+    &quot;mtu&quot;: 1350,
+    &quot;sndwnd&quot;: 1024,
+    &quot;rcvwnd&quot;: 1024,
+    &quot;datashard&quot;: 70,
+    &quot;parityshard&quot;: 30,
+    &quot;dscp&quot;: 46,
+    &quot;nocomp&quot;: false,
+    &quot;acknodelay&quot;: false,
+    &quot;nodelay&quot;: 0,
+    &quot;interval&quot;: 40,
+    &quot;resend&quot;: 0,
+    &quot;nc&quot;: 0,
+    &quot;sockbuf&quot;: 4194304,
+    &quot;keepalive&quot;: 10
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;数据流&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/96675299.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><category term="VPS" /><category term="VPN" /><category term="Shadowsocks" /><category term="Bandwagon" /><category term="搬瓦工" /><category term="翻墙" /><summary type="html">这是干啥的</summary></entry><entry><title type="html">Git 错误使用导致的工作失误</title><link href="http://localhost:2333/2018/05/23/my-fault-by-git.html" rel="alternate" type="text/html" title="Git 错误使用导致的工作失误" /><published>2018-05-23T00:00:00+08:00</published><updated>2018-05-23T00:00:00+08:00</updated><id>http://localhost:2333/2018/05/23/my-fault-by-git</id><content type="html" xml:base="http://localhost:2333/2018/05/23/my-fault-by-git.html">&lt;p&gt;最近因为 Git 误操作坑了一把！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/9699135.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;如上图所示。&lt;/p&gt;
+
+&lt;p&gt;准备发 5.7.5 的时候，提交错了分支！！&lt;/p&gt;
+
+&lt;p&gt;我感觉整个过程有多个地方可以规避这个问题：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;本地新建了一个分支，而不是直接拉远程分支
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git branch featur_5.7.5 ❌
+$ git checkout -b feature_5.7.5 origin/feature_5.7.5 ⭕️
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;本地提交的时候，遇到 git 报错，要重视，不要随便加 &lt;code class=&quot;highlighter-rouge&quot;&gt;--force&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;提交完之后，看下终端是不是提示新建了一个分支！&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;打包的时候，可以看到最新的工程包中，代码的变更！可以看到是否是自己刚提交的代码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;总结下来，&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;急中生乱！&lt;/li&gt;
+  &lt;li&gt;对代码保持敬畏之心，特别是临上线的时候，任何变动都要仔细！&lt;/li&gt;
+  &lt;li&gt;拼写错误要重视，特别是敏感操作！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这个错误操作，直接导致了线上 crash 率上升了几个点！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;😒😒😒&lt;/p&gt;</content><author><name>Yimu</name></author><category term="Git" /><category term="踩坑" /><summary type="html">最近因为 Git 误操作坑了一把！</summary></entry><entry><title type="html">怎么面试一个 iOS 开发？</title><link href="http://localhost:2333/2018/03/30/ios-interview.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发？" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>http://localhost:2333/2018/03/30/ios-interview</id><content type="html" xml:base="http://localhost:2333/2018/03/30/ios-interview.html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;这是一篇 iOS 面试问题总结，也是对自己 iOS 开发的总结。老实说作为一个半路出家的 iOS 程序员 ( 2016.12 ~ now ) ，心里还是很虚的。自己到底是什么样水平，以后的技术之路要怎么走，这些心里还没有把握，希望整理完之后，有个答案。&lt;/p&gt;
+
+&lt;!--  more --&gt;
+
+&lt;h2 id=&quot;roadmap-路线图&quot;&gt;Roadmap 路线图&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;首先，我们需要有一个大图，iOS 开发到底包含了哪些东西？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;语言基础篇&quot;&gt;语言基础篇&lt;/h3&gt;</content><author><name>Yimu</name></author><category term="iOS" /><category term="Interview" /><summary type="html">前言</summary></entry><entry><title type="html">前端开发路线图</title><link href="http://localhost:2333/2018/02/27/front-end-roadmap.html" rel="alternate" type="text/html" title="前端开发路线图" /><published>2018-02-27T00:00:00+08:00</published><updated>2018-02-27T00:00:00+08:00</updated><id>http://localhost:2333/2018/02/27/front-end-roadmap</id><content type="html" xml:base="http://localhost:2333/2018/02/27/front-end-roadmap.html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;继续学前端&lt;/strong&gt;  🔥🔥🔥&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kamranahmedse/developer-roadmap&quot;&gt;Web Developer Roadmap - 2018&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;~&amp;gt; 一份 Web 开发路线图，做的很漂亮 ( 已经4万多 star 了，可怕😳 )&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;先把前端这块弄扎实 💪&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/68178725.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/55663718.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;作者又更新了！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/49748946.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;坚持！！！&lt;/strong&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><category term="前端" /><summary type="html">继续学前端 🔥🔥🔥</summary></entry><entry><title type="html">前端学习之路：Flex 布局</title><link href="http://localhost:2333/2018/02/24/flex-demo.html" rel="alternate" type="text/html" title="前端学习之路：Flex 布局" /><published>2018-02-24T23:20:16+08:00</published><updated>2018-02-24T23:20:16+08:00</updated><id>http://localhost:2333/2018/02/24/flex-demo</id><content type="html" xml:base="http://localhost:2333/2018/02/24/flex-demo.html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;继续学前端&lt;/strong&gt;  🔥🔥🔥&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这两天看CSS相关的东西，主要学习了教程：&lt;a href=&quot;http://zh.learnlayout.com/&quot;&gt;CSS 布局&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;发现一个比较好的CSS参考网站：&lt;a href=&quot;http://css.doyoe.com/&quot;&gt;CSS 参考手册&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;目前前端布局方式已经不是几年前我印象里的各种 float postion 乱飞的情况了，&lt;/p&gt;
+
+&lt;p&gt;以 flex 为代表的现代布局方式可以很方便的实现各种复杂界面。&lt;/p&gt;
+
+&lt;p&gt;主要参考阮一峰的两个教程：&lt;/p&gt;
+
+&lt;p&gt;1、&lt;a href=&quot;http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html&quot;&gt;Flex 布局教程：语法篇&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2、 &lt;a href=&quot;http://www.ruanyifeng.com/blog/2015/07/flex-examples.html&quot;&gt;Flex 布局教程：实例篇&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;这里有该教程的 Demo：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/demo/flex.html&quot;&gt;http://fangr.cc/demo/flex.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;</content><author><name>Yimu</name></author><category term="CSS" /><summary type="html">继续学前端 🔥🔥🔥</summary></entry><entry><title type="html">2018 年度挑战</title><link href="http://localhost:2333/2018/01/29/personal-challenge.html" rel="alternate" type="text/html" title="2018 年度挑战" /><published>2018-01-29T00:00:00+08:00</published><updated>2018-01-29T00:00:00+08:00</updated><id>http://localhost:2333/2018/01/29/personal-challenge</id><content type="html" xml:base="http://localhost:2333/2018/01/29/personal-challenge.html">&lt;blockquote&gt;
   &lt;p&gt;Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)，今年 (2018)
 他的挑战是 &lt;code class=&quot;highlighter-rouge&quot;&gt;重整 Facebook&lt;/code&gt;，So，我也要给自己立个 Flag 了。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -53,4 +302,510 @@
   &lt;p&gt;在一起快一年了，喜欢她的性格，也觉得该修成正果，安定下来了。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;hr /&gt;</content><author><name>xta0</name></author><category term="Flag" /><category term="Challenge" /><summary type="html">Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)，今年 (2018) 他的挑战是 重整 Facebook，So，我也要给自己立个 Flag 了。</summary></entry></feed>
+&lt;hr /&gt;</content><author><name>Yimu</name></author><category term="Flag" /><category term="Challenge" /><summary type="html">Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)，今年 (2018) 他的挑战是 重整 Facebook，So，我也要给自己立个 Flag 了。</summary></entry><entry><title type="html">Chromium 缺少 Google API 密钥解决办法</title><link href="http://localhost:2333/2018/01/26/chromium-api-keys.html" rel="alternate" type="text/html" title="Chromium 缺少 Google API 密钥解决办法" /><published>2018-01-26T00:00:00+08:00</published><updated>2018-01-26T00:00:00+08:00</updated><id>http://localhost:2333/2018/01/26/chromium-api-keys</id><content type="html" xml:base="http://localhost:2333/2018/01/26/chromium-api-keys.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢 😏&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;当然是因为好（zhuang）用（bi）了。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;废话少说，下载地址：
+https://download-chromium.appspot.com/&lt;/p&gt;
+
+&lt;p&gt;如果下载不了，可以试下：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Windows
+https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mac
+https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;打不开之类的需要翻墙的问题自行解决吧。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
+
+&lt;p&gt;打开 Chromium 会提示 &lt;code class=&quot;highlighter-rouge&quot;&gt;缺少 Google API 密钥，因此 Chromium 的部分功能将无法使用&lt;/code&gt; 😒&lt;/p&gt;
+
+&lt;p&gt;由于 Chromium 使用的 API 都需要自行申请密钥才能使用。&lt;/p&gt;
+
+&lt;p&gt;所以 在 https://console.cloud.google.com/ 上创建密钥。&lt;/p&gt;
+
+&lt;p&gt;相关文档：http://www.chromium.org/developers/how-tos/api-keys&lt;/p&gt;
+
+&lt;p&gt;最后密钥有三个，位置在 https://console.cloud.google.com/apis/credentials&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GOOGLE_API_KEY&lt;/li&gt;
+  &lt;li&gt;GOOGLE_DEFAULT_CLIENT_ID&lt;/li&gt;
+  &lt;li&gt;GOOGLE_DEFAULT_CLIENT_SECRET&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;解决&quot;&gt;解决&lt;/h3&gt;
+
+&lt;p&gt;官方的解决方法是：&lt;/p&gt;
+
+&lt;p&gt;将下面三行写到 ~/.bash_profile 中，然后重启浏览器即可&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GOOGLE_API_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;****&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GOOGLE_DEFAULT_CLIENT_ID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;****
+export GOOGLE_DEFAULT_CLIENT_SECRET=&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;****&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
+
+
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;source ~/.bash_profile
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这样，有时是管用的。特别是在 Windows上，使用类似的在命令行输入：&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;setx GOOGLE_API_KEY your_key_goes_here
+setx GOOGLE_DEFAULT_CLIENT_ID your_client_id_goes_here
+setx GOOGLE_DEFAULT_CLIENT_SECRET your_client_secret_goes_here
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;但是 Mac 上有时不管用，参考:&lt;/p&gt;
+
+&lt;p&gt;https://gist.github.com/cvan/44a6d60457b20133191bd7b104f9dcc4&lt;/p&gt;
+
+&lt;p&gt;在文档最后，发现有个哥们写了一个 Python 脚本，试了下，很好用！&lt;/p&gt;
+
+&lt;p&gt;我 Fork 了一下，修复了一个 bug，给他提了 PR (https://github.com/ezeeyahoo/ChromiumSyncEnabler/pull/1)&lt;/p&gt;
+
+&lt;p&gt;https://github.com/FongRay/ChromiumSyncEnabler&lt;/p&gt;
+
+&lt;p&gt;跑下来重启 Chromium 就 OK 了！&lt;/p&gt;</content><author><name>Yimu</name></author><category term="chrome" /><category term="chromium" /><summary type="html">前言</summary></entry><entry><title type="html">Visual Paradigm 去除水印的方法 (Python)</title><link href="http://localhost:2333/2018/01/25/visual-paradigm-remove-watermark.html" rel="alternate" type="text/html" title="Visual Paradigm 去除水印的方法 (Python)" /><published>2018-01-25T00:00:00+08:00</published><updated>2018-01-25T00:00:00+08:00</updated><id>http://localhost:2333/2018/01/25/visual-paradigm-remove-watermark</id><content type="html" xml:base="http://localhost:2333/2018/01/25/visual-paradigm-remove-watermark.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/46295044.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;本文就是要 Python 去除这个水印，输出 png 图片。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;该方法参考了网络上手动去除的方法，需要有一些操作&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;导出&quot;&gt;导出&lt;/h3&gt;
+
+&lt;p&gt;首先需要将完成的图表导出为 svg 格式的图片：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/20666066.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;选择 svg 格式保存：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/26387925.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这样我们就得到了一个带水印的 &lt;a href=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/vp_test.svg&quot;&gt;svg 图片&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/vp_test.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;去除水印&quot;&gt;去除水印&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;处理 svg 图片&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Svg（Scalable Vector Graphics，可缩放矢量图形） 是一种矢量图片格式，可以使用文本编辑器直接打开，可以看得到在最后几行有水印的内容，所以我们可以用代码自动把他们去掉（当然也可以手动删除）。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;水印内容在 Svg 文件中：&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;68&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xml:space=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;preserve&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;276&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;none&quot;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Powered ByVisual Paradigm Community Edition&lt;span class=&quot;nt&quot;&gt;&amp;lt;/text
+      &amp;gt;&amp;lt;image&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;font-size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;12&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;303&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;264&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;white&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;16&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xlink:href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABvklEQVR42o1TPUgC
+YRi+z1PSzWrSc6ho6W/xNIhEoZoCl/a2fqaGoJKwyHIp16ZyCyIolwpq6c8lIz0h
+h6ACa/KWOHGz4byezz7lkNM8eHjf7/ve53l/vu84rsWXEcVo2uOJtYrhW5A3YCKE
+48YXnE7zoSzfty3AyFHdln/R4bBA5O5fgQbyiUbIK6oY5gjxG1XCtyAngFl7qXT+
+Y7UOwR+glTSK8EZkomlJMZsNCrKs7iuKOuXzJboUJYAqemrtHEBkGwsTIy/pe0bZ
+/Rmvd6K27svnx7Q/cu08LIliiPpmlvEGJo0DL4sRSKVyBuEZledznKpeYs+u6/YF
+nKt6C+jpe14QPjCsQUpmQVYgaNK0R9hPYJLtZ5Eo5JGkVF0AmUZAvoBLM5WBXhZs
+A6YB+pi+AAudD+zOnMuVjBcKheoMbOXyG0wcWKGtAPr77gauKyYTFU8g+xrsUWex
+mKu2r79Gye3eQkAE7i4wCtQG+YTMKZwt0zOUv274DjCLJGZBoEqv9JRtyyDfgrwK
+f09PNnyJ6OuBiYSxPAbecf9UMNZIbvovUBE8FjRINrEMNJbd1t9I28Gz7YD7DHKo
+WdwvFl2vGaThOSEAAAAASUVORK5CYII=&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;16&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;white&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;preserveAspectRatio=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;none&quot;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;用 Python 读取文件内容，去除这一段内容即可。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;转换成 png 图片&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;然后将 Svg 格式转换成 png格式，这里有现成的库 &lt;a href=&quot;http://cairosvg.org/&quot;&gt;cairosvg&lt;/a&gt; 来实现。&lt;/p&gt;
+
+&lt;p&gt;完整的代码可以在 我的 &lt;a href=&quot;&quot;&gt;Github&lt;/a&gt; 上找到。&lt;/p&gt;
+
+&lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;需要先安装 &lt;code class=&quot;highlighter-rouge&quot;&gt;cairosvg&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;cairosvg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可能会报错，&lt;code class=&quot;highlighter-rouge&quot;&gt;Pillow&lt;/code&gt; 安装失败，提示：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;The headers or library files could not be found for zlib.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;可以尝试一下:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;xcode-select —-install
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libtiff libjpeg webp little-cms2
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Pillow
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;安装 &lt;code class=&quot;highlighter-rouge&quot;&gt;cairosvg&lt;/code&gt; 成功后，使用 Python3 &lt;code class=&quot;highlighter-rouge&quot;&gt;import cairosvg&lt;/code&gt; 发现还是报错:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; import cairosvg
+Traceback (most recent call last):
+  File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/__init__.py&quot;, line 29, in &amp;lt;module&amp;gt;
+    from . import surface
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/surface.py&quot;, line 24, in &amp;lt;module&amp;gt;
+    import cairocffi as cairo
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py&quot;, line 41, in &amp;lt;module&amp;gt;
+    cairo = dlopen(ffi, 'cairo', 'cairo-2')
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py&quot;, line 38, in dlopen
+    raise OSError(&quot;dlopen() failed to load a library: %s&quot; % ' / '.join(names))
+OSError: dlopen() failed to load a library: cairo / cairo-2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;经过搜索，发现还需要安装 &lt;code class=&quot;highlighter-rouge&quot;&gt;cairo&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;libffi&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;cairo pango gdk-pixbuf libffi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;终于弄完了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/49384223.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;源文件：
+&lt;a href=&quot;https://github.com/FongRay/PyTools/blob/master/vp_remove_watermark.py&quot;&gt;vp_remove_watermark.py&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;核心代码如下：
+``` python
+import cairosvg&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;svg_content = ‘’
+with open(src_name, ‘r’) as f:
+    svg_content = f.read()
+    end = svg_content.rfind(‘&amp;lt;/g’)
+    beg = svg_content.rfind(‘&amp;lt;g’, 0, end)
+    svg_content = svg_content[:beg] + svg_content[end:]&lt;/p&gt;
+
+&lt;p&gt;with open(‘./vp_test_out.svg’, ‘w’) as f:
+    f.write(svg_content)&lt;/p&gt;
+
+&lt;p&gt;cairosvg.svg2png(url=’./vp_test_out.svg’, write_to=dst_name)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+* 赶紧跑起来
+
+```bash
+$ python vp_remove_watermark test.svg -o out.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><category term="Python" /><category term="Tools" /><summary type="html">前言</summary></entry><entry><title type="html">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title><link href="http://localhost:2333/2018/01/24/vue-devtools.html" rel="alternate" type="text/html" title="Vue Devtools 提示 『 Vue.js not detected 』 解决方法" /><published>2018-01-24T00:00:00+08:00</published><updated>2018-01-24T00:00:00+08:00</updated><id>http://localhost:2333/2018/01/24/vue-devtools</id><content type="html" xml:base="http://localhost:2333/2018/01/24/vue-devtools.html">&lt;p&gt;最近开始学习 &lt;a href=&quot;https://cn.vuejs.org/&quot;&gt;Vue.js&lt;/a&gt;, 一脸懵逼地进入前端世界。&lt;/p&gt;
+
+&lt;p&gt;不使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;vue-cli&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt; 这些构建工具，使用单个 html 引入 Vue。&lt;/p&gt;
+
+&lt;p&gt;html 内容是这样的:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Hello, Vue&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/vue&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'app'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-bind:title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;鼠标悬停&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#app'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'页面加载于 '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLocaleString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;用浏览器打开这个 html 就可以看到效果（鼠标悬停显示『页面加载于yyyy-MM-dd hh:mm:ss』）&lt;/p&gt;
+
+&lt;p&gt;安装 &lt;a href=&quot;https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd&quot;&gt;Vue-Devtools&lt;/a&gt;，但是插件栏显示&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js not detected&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/41087835.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;vuejs-not-detected&quot;&gt;Vue.js not detected&lt;/h2&gt;
+
+&lt;p&gt;打开右上角 &lt;code class=&quot;highlighter-rouge&quot;&gt;...&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;更多工具&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;扩展程序&lt;/code&gt;，找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js devtools&lt;/code&gt;，选中 &lt;code class=&quot;highlighter-rouge&quot;&gt;允许访问文件网址&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/14411118.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;OK，然后 devtools 仍然不可用，提示&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js is detected on this page. Devtools inspection is not available because it's in production mode or explicitly disabled by the author.&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;由于我们使用的 vue.js &lt;a href=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;https://cdn.jsdelivr.net/npm/vue&lt;/a&gt; 是生产版本，所以不能访问。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;production-mode&quot;&gt;Production mode&lt;/h2&gt;
+
+&lt;p&gt;下载开发版本的vue.js，放到本地，修改src路径为本地即可。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;开发版本: https://vuejs.org/js/vue.js&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;生产版本: https://vuejs.org/js/vue.min.js (或者 https://cdn.jsdelivr.net/npm/vue)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vue-devtools&quot;&gt;Vue-Devtools&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;这样，打开开发者工具 (&lt;code class=&quot;highlighter-rouge&quot;&gt;option + command + i&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;F12&lt;/code&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;可以看到多了一个Vue的Tab:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10548580.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><category term="Vue" /><category term="前端开发" /><summary type="html">最近开始学习 Vue.js, 一脸懵逼地进入前端世界。</summary></entry><entry><title type="html">各种音乐平台 API 整理</title><link href="http://localhost:2333/2018/01/22/music-apis-md.html" rel="alternate" type="text/html" title="各种音乐平台 API 整理" /><published>2018-01-22T00:00:00+08:00</published><updated>2018-01-22T00:00:00+08:00</updated><id>http://localhost:2333/2018/01/22/music-apis-md</id><content type="html" xml:base="http://localhost:2333/2018/01/22/music-apis-md.html">&lt;blockquote&gt;
+  &lt;p&gt;本文总结一些常见音乐平台 API 接口，仅用于学习使用，不保证大流量请求的可用性。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#豆瓣FM&quot;&gt;豆瓣FM&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#网易云音乐&quot;&gt;网易云音乐&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#虾米音乐&quot;&gt;虾米音乐&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;豆瓣fm&quot;&gt;豆瓣FM&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;写了一个脚本，将豆瓣红心歌曲导入到网易云音乐:
+&lt;a href=&quot;https://github.com/FongRay/PyTools/blob/master/douban2netease.py&quot;&gt;douban2netease.py&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;登录&quot;&gt;登录&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;接口: https://www.douban.com/service/auth2/token  (POST)&lt;/li&gt;
+  &lt;li&gt;请求头:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;{'Content-Type': 'application/x-www-form-urlencoded'}&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;参数:
+账号、密码是明文的
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;post_data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'apikey'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02646&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;69&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ff&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;072&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;bf&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;cef&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fd'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'client_id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02646&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;69&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ff&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;072&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;bf&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;cef&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fd'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'client_secret'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'cde&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;61429&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;abcd&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'udid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;07e0335&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;73384&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;709&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fa&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3102&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;94710&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'douban_udid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;635779&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;816&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;330&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;68921&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;edc&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;049590&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'device_id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;07e0335&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;73384&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;709&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fa&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3102&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;94710&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'grant_type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'password'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'redirect_uri'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//www.douban.com/mobile/fm'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'username'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'password'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;passwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;返回值:
+access_token 后续接口会用到。
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;access_token&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;****&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;douban_user_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;****&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;douban_user_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;****&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;expires_in&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;refresh_token&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;****&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;获取红心歌曲&quot;&gt;获取红心歌曲&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;接口: https://api.douban.com/v2/fm/redheart/basic (GET)&lt;/li&gt;
+  &lt;li&gt;请求头:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;{'Authorization': 'Bearer ' + ACCESS_KEY}&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;参数：
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;query_data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'alt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'apikey'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02646&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;69&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ff&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;072&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;bf&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;cef&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fd'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'app_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'radio_iphone'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'audio_patch_version'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'client'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;mobile|y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;iOS&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;11.2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;122&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;07e0335&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;73384&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;709&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fa&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3102&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;94710&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;iPhone&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;appstore'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'douban_udid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;677209&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;05&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;feeb&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;aa&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fd&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ed&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25765&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8284&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'kbps'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'udid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;07e0335&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;73384&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;709&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fa&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3102&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;94710&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;返回值:
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;collected_count&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;creator&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/\/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;www.douban.com&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;people&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;FongRay&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;picture&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://img7.doubanio.com&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;u66096063-4.jpg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;66096063&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;小咩&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;offshelf_alert&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;部分红心歌曲版权洽谈中，暂时不能收听，等待它们浮出海面的同时，去收获更多新的红心吧&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;我的红心歌曲&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cover&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;updated_time&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2017-05-05 17:16:03&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;is_collected&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rec_reason&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;created_time&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;can_play&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;songs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;update_time&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1493982773&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;playable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;like&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1888519&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;update_time&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1498647084&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;playable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;like&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2236918&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;获取歌曲详情&quot;&gt;获取歌曲详情&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;接口: https://api.douban.com/v2/fm/songs (POST)&lt;/li&gt;
+  &lt;li&gt;请求头:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;{'Authorization': 'Bearer ' + ACCESS_KEY}&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;参数:
+其中 sids 参数是多个sid用分隔符&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;拼接而来的
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;post_data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'alt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'apikey'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02646&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;69&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ff&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;072&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;bf&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;cef&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fd'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'app_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'radio_iphone'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'audio_patch_version'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'client'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;mobile|y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;iOS&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;11.2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;122&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;07e0335&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;73384&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;709&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fa&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3102&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;94710&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;iPhone&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;appstore'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'douban_udid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;677209&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;05&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;feeb&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;aa&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fd&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ed&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25765&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8284&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'sids'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;sids&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'udid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;07e0335&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;73384&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;709&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fa&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3102&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;94710&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'user_accept_play_third_party'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'version'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;122&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;返回值:
+歌曲列表，每首歌的详细信息
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;all_play_sources&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;confidence&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.937778&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;source_full_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;itunes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;source&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;it&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;source_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;514603298&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;playable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;page_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;albumtitle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;回蔚 莫文蔚演唱會@台北小巨蛋&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file_ext&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;album&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/subject/10546781/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ssid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;6b4b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;爱情&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;subtype&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1888519&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sha256&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;07d68b92880a24a25d6e3688880acbff3d52f0ed52984b28ccf8e1bee216a7f0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;status&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;picture&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://img7.doubanio.com/lpic/s8953971.jpg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;update_time&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1493982773&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;alert_msg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;is_douban_playable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;public_time&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2012&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;partner_sources&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;singers&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;style&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;莫文蔚&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;region&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;香港&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name_usual&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;莫文蔚&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;related_site_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;avatar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://img3.doubanio.com/img/fmadmin/large/31309.jpg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;genre&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Pop&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;is_site_artist&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;8260&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;artist&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;莫文蔚&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;is_royal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://mr3.doubanio.com/e49a7486849f6067219c959dc03077e4/0/fm/song/p1888519_128k.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;length&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;165&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;release&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;link&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://douban.fm/album/10546781g7be3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;10546781&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ssid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;7be3&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;aid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;10546781&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;kbps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;128&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;available_formats&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;64&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1290&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;128&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2523&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;192&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3806&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;网易云音乐&quot;&gt;网易云音乐&lt;/h3&gt;
+
+&lt;h3 id=&quot;虾米音乐&quot;&gt;虾米音乐&lt;/h3&gt;</content><author><name>Yimu</name></author><category term="API" /><summary type="html">本文总结一些常见音乐平台 API 接口，仅用于学习使用，不保证大流量请求的可用性。</summary></entry></feed>

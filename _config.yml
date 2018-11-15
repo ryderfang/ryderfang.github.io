@@ -7,7 +7,7 @@ title: Visionary Lab
 version: 1.0.0
 subtitle:
 description:
-author: xta0
+author: Yimu
 # support en, zh-Hans
 # language: zh-Hans
 language: en
@@ -41,6 +41,7 @@ highlight:
 menu:
   home: /
   archives: /src/archives/
+  categories: /src/categories/
   about: /src/about/
   
 menu_icons:

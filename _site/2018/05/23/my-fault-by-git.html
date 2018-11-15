@@ -1,0 +1,206 @@
+<!DOCTYPE html> 
+
+
+ 
+
+
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<!-- link css  -->
+<link href="/assets/lib/normalize/normalize.css" rel="stylesheet"/>
+<link href="/assets/css/main.css" rel="stylesheet"/>
+<link href="/assets/lib/fontawesome/css/all.css" rel="stylesheet"> 
+
+<!-- link javascript -->
+<script src="/assets/lib/jQuery/jquery.min.js"></script>
+
+<!-- third party -->
+<link rel="stylesheet" href="/assets/lib/prism/prism.css">
+<script type="text/javascript" src="/assets/lib/prism/prism.js"></script>
+
+
+
+
+
+<!-- customize header -->
+
+    <title>Git 错误使用导致的工作失误</title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="en" oncopy="return false" oncut="return false" onpaste="return false">
+    
+    <div class="site-container">
+        <div class="site-container__content">
+            <header class="site-header" itemscope itemtype="http://schema.org/WPHeader">
+                
+
+
+<div class="site-header__logo">
+    <img class="logo" src="/assets/images/avatar.png">
+</div>    
+
+<div class="site-header__nav">    
+     
+     
+    
+    
+    
+    
+    <div class="menu-item">
+        <a href="/"><i class="fa fa-fw fa-home"></i>首页 | Home</a>
+    </div> 
+     
+     
+    
+    
+    
+    
+    <div class="menu-item">
+        <a href="/src/archives/"><i class="fa fa-fw fa-archive"></i>博客 | Blog</a>
+    </div> 
+     
+     
+    
+    
+    
+    
+    <div class="menu-item">
+        <a href="/src/about/"><i class="fa fa-fw fa-user"></i>关于 | About</a>
+    </div> 
+    
+</div>
+<!-- 
+<div >
+    <ul>
+        <li><a id="en" href="">English</a></li>
+        <li><a id="cn" href="">中文</a></li>
+    </ul>
+</div>
+ -->
+
+
+            </header>       
+            <article class="site-main">
+                <main class="page-post">
+                    
+<div class="page-post__header"> 
+    <h2 class="post-title">Git 错误使用导致的工作失误</h2>
+    <div class="post-meta">
+        <span class="post-meta-time">
+            <!-- craated -->
+            <span class="page-meta__icon">
+                <i class="fas fa-calendar"></i>
+            </span>
+            <span class="post-meta__item-text">Posted on</span>
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="">
+                <span>2018-05-23 </span>
+            </time>
+            <!-- updated -->
+            
+        </span>
+        
+            <span class="post-meta-category">
+                <span class="post-meta__divider">|</span>
+                <!-- category  -->
+                <span class="page-meta__icon">
+                    <i class="fas fa-folder"></i>
+                </span>
+                <span class="post-meta__item-text">In</span>
+                
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <!-- <a href="/category/#/Coding" itemprop="url" rel="index"> -->
+                    <span itemprop="name">Coding</span>
+                <!-- </a> -->
+                </span>
+                
+                
+            
+            </span>
+        
+    </div>
+    <hr>
+</div>
+<div class="page-post__content">
+    <p>最近因为 Git 误操作坑了一把！</p>
+
+<p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/9699135.jpg" alt="" /></p>
+
+<!-- more -->
+
+<p>如上图所示。</p>
+
+<p>准备发 5.7.5 的时候，提交错了分支！！</p>
+
+<p>我感觉整个过程有多个地方可以规避这个问题：</p>
+
+<ul>
+  <li>本地新建了一个分支，而不是直接拉远程分支
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git branch featur_5.7.5 ❌
+$ git checkout -b feature_5.7.5 origin/feature_5.7.5 ⭕️
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>本地提交的时候，遇到 git 报错，要重视，不要随便加 <code class="highlighter-rouge">--force</code></p>
+  </li>
+  <li>
+    <p>提交完之后，看下终端是不是提示新建了一个分支！</p>
+  </li>
+  <li>打包的时候，可以看到最新的工程包中，代码的变更！可以看到是否是自己刚提交的代码</li>
+</ul>
+
+<hr />
+<p>总结下来，</p>
+
+<ul>
+  <li>急中生乱！</li>
+  <li>对代码保持敬畏之心，特别是临上线的时候，任何变动都要仔细！</li>
+  <li>拼写错误要重视，特别是敏感操作！</li>
+</ul>
+
+<blockquote>
+  <p>这个错误操作，直接导致了线上 crash 率上升了几个点！</p>
+</blockquote>
+
+<p>😒😒😒</p>
+
+
+</div>
+<div class="page-post__footer">
+    
+</div>
+<!--  -->
+<script src="/assets/js/post.js"></script>
+<!-- third party -->
+
+<link rel="stylesheet" href="/assets/lib/lightbox/css/lightbox.min.css">
+<script type="text/javascript" src="/assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+
+<!-- <div id="posts" class="site-posts"> -->
+    
+<!-- </div> -->
+                </main>
+                <footer class="site-footer">
+                    <hr>
+<div class="site-footer__item">© Yimu さま® 2007 - 2018 All Rights Reserved</div>
+<div class="site-footer__item"><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/>Content on this site is licensed under a Creative Commons Attribution 4.0 International license</a></div>
+<div class="site-footer__item"><a href=https://jekyllrb.com/>Jekyll</a>  |  <a href=https://www.linode.com/>Linode</a> | <a href=https://github.com/FongRay/FongRay.github.io>Github</a></div>
+<div class="site-footer__item">Site last generated: Nov 14, 2018</div>
+
+
+                </footer>
+            </article> 
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
