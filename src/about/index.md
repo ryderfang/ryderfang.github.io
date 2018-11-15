@@ -22,7 +22,7 @@ layout: about
     <hr>
     <div class="md-flex-h md-flex-no-wrap about-exp-item">
         <div  class="about-logo-wrapper">
-            <img class="about-logo" src="{{site.baseurl}}/assets/images/about/alipay-logo.png" width="68px">
+            <img class="about-logo" src="" width="68px">
         </div>
         <ul class="md-margin-left-24">
             <li><strong>高级技术专家-P8 </strong></li>
@@ -49,7 +49,7 @@ layout: about
     </div>
     <div class="md-flex-h md-flex-no-wrap about-exp-item">
         <div>
-            <img src="{{site.baseurl}}/assets/images/about/tdd-logo.png" width="68px">
+            <img src="" width="68px">
         </div>
         <ul class="md-margin-left-24">
             <li><strong>无线技术专家-P7 </strong></li>
@@ -62,7 +62,7 @@ layout: about
     </div>
     <div class="md-flex-h md-flex-no-wrap about-exp-item">
         <div class="about-logo-wrapper">
-            <img src="{{site.baseurl}}/assets/images/about/tb-logo.png" width="68px">
+            <img src="" width="68px">
         </div>
         <ul class="md-margin-left-24">
             <li><strong>高级研发工程师-P6</strong></li>
@@ -78,7 +78,7 @@ layout: about
     <hr>
     <div class="md-flex-h md-flex-no-wrap">
         <div class="about-logo-wrapper">
-            <img class="about-logo" src="{{site.baseurl}}/assets/images/about/mist-logo.png" width="68px">
+            <img class="about-logo" src="" width="68px">
         </div>
         <ul class="md-margin-left-24">
             <li><a href="https://github.com/Vizzle/MIST"><strong>MIST</strong></a> allows iOS developer to create native UI with JSON templates.</li>
@@ -96,7 +96,7 @@ layout: about
         </ul>
     </div>
     <div class="md-flex-h md-flex-no-wrap">
-        <div  class="about-logo-wrapper"><img class="about-logo" src="{{site.baseurl}}/assets/images/about/inspector-logo.png" width="68px"></div>
+        <div  class="about-logo-wrapper"><img class="about-logo" src="" width="68px"></div>
         <div class="about-showcase-p">
             <ul class="md-margin-left-24">
                 <li><a hre="https://github.com/xta0/VZInspector"><strong>VZInspector</strong></a> is an iOS in-app runtime debugger.</li>
@@ -115,7 +115,7 @@ layout: about
     </div>
     <div class="md-flex-h md-flex-no-wrap">
         <div  class="about-logo-wrapper">
-            <img class="about-logo" src="{{site.baseurl}}/assets/images/about/flex-logo.png" width="68px">
+            <img class="about-logo" src="" width="68px">
         </div>
         <ul class="md-margin-left-24">
             <li><a href="https://github.com/Vizzle/VZFlexLayout"><strong>FlexLayout</strong></a></li>  
@@ -131,7 +131,7 @@ layout: about
     </div>
     <div class="md-flex-h md-flex-no-wrap">
         <div  class="about-logo-wrapper">
-            <img class="about-logo" src="{{site.baseurl}}/assets/images/about/vz-logo.png" width="68px">
+            <img class="about-logo" src="" width="68px">
         </div>
         <ul class="md-margin-left-24">
             <li><a href="https://github.com/Vizzle/Vizzle"><strong>Vizzle</strong></a></li>  

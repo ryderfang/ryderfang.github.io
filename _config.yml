@@ -41,7 +41,6 @@ highlight:
 menu:
   home: /
   archives: /src/archives/
-  categories: /src/categories/
   about: /src/about/
   
 menu_icons:
