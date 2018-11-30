@@ -4,7 +4,7 @@
 <html lang="{{ site.language }}">
 <head>
     {% include _partials/head.html %}
-    <title>{{page.title}}</title>
+    <title>{{site.title}}</title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang | default: page.language | default: site.language }}">
     {% assign lang = site.data.languages[site.language] %}
