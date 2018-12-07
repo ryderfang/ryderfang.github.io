@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 各种音乐平台 API 整理
-list_title: 各种音乐平台 API 整理
-tags: [API]
-categories: Coding
+title: 各种音乐平台 API 整理 | Music APIs
+categories: [Resource]
 ---
 
 > 本文总结一些常见音乐平台 API 接口，仅用于学习使用，不保证大流量请求的可用性。

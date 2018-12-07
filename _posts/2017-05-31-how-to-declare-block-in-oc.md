@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 在Objective-C中如何定义Block
-list_title: 在Objective-C中如何定义Block
-tags: [Objective-C, Block]
-categories: Coding
+title: 在 Objective-C 中如何定义 Block | Block in ObjC
+categories: [ObjC, Block]
 ---
 
 ## Declaration

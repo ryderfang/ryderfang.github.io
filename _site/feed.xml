@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-11-30T18:21:55+08:00</updated><id>/feed.xml</id><title type="html">Red Coast Base | 红岸基地  | 消灭人类暴政，世界属于三体 🤟</title><author><name>Yimu</name></author><entry><title type="html">Shadowsocks 翻墙和搬瓦工 VPS 配置</title><link href="/2018/06/21/shadow-socks-and-bandwagon.html" rel="alternate" type="text/html" title="Shadowsocks 翻墙和搬瓦工 VPS 配置" /><published>2018-06-21T00:00:00+08:00</published><updated>2018-06-21T00:00:00+08:00</updated><id>/2018/06/21/shadow-socks-and-bandwagon</id><content type="html" xml:base="/2018/06/21/shadow-socks-and-bandwagon.html">&lt;h3 id=&quot;这是干啥的&quot;&gt;这是干啥的&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-12-07T16:19:45+08:00</updated><id>/feed.xml</id><title type="html">Red Coast Base | 红岸基地  | 消灭人类暴政，世界属于三体 🤟</title><author><name>Yimu</name></author><entry><title type="html">Shadowsocks 翻墙和搬瓦工 VPS 配置</title><link href="/2018/06/21/shadow-socks-and-bandwagon.html" rel="alternate" type="text/html" title="Shadowsocks 翻墙和搬瓦工 VPS 配置" /><published>2018-06-21T00:00:00+08:00</published><updated>2018-06-21T00:00:00+08:00</updated><id>/2018/06/21/shadow-socks-and-bandwagon</id><content type="html" xml:base="/2018/06/21/shadow-socks-and-bandwagon.html">&lt;h3 id=&quot;这是干啥的&quot;&gt;这是干啥的&lt;/h3&gt;
 
 &lt;p&gt;敏感你懂的，不多谈。🌝 🌝 🌝&lt;/p&gt;
 
@@ -144,7 +144,7 @@
   &lt;p&gt;数据流&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/96675299.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><category term="VPS" /><category term="VPN" /><category term="Shadowsocks" /><category term="Bandwagon" /><category term="搬瓦工" /><category term="翻墙" /><summary type="html">这是干啥的</summary></entry><entry><title type="html">Git 错误使用导致的工作失误</title><link href="/2018/05/23/my-fault-by-git.html" rel="alternate" type="text/html" title="Git 错误使用导致的工作失误" /><published>2018-05-23T00:00:00+08:00</published><updated>2018-05-23T00:00:00+08:00</updated><id>/2018/05/23/my-fault-by-git</id><content type="html" xml:base="/2018/05/23/my-fault-by-git.html">&lt;p&gt;最近因为 Git 误操作坑了一把！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/96675299.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">这是干啥的</summary></entry><entry><title type="html">Git 错误使用导致的工作失误 | Git Usage</title><link href="/2018/05/23/my-fault-by-git.html" rel="alternate" type="text/html" title="Git 错误使用导致的工作失误 | Git Usage" /><published>2018-05-23T00:00:00+08:00</published><updated>2018-05-23T00:00:00+08:00</updated><id>/2018/05/23/my-fault-by-git</id><content type="html" xml:base="/2018/05/23/my-fault-by-git.html">&lt;p&gt;最近因为 Git 误操作坑了一把！&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/9699135.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -184,7 +184,7 @@ $ git checkout -b feature_5.7.5 origin/feature_5.7.5 ⭕️
   &lt;p&gt;这个错误操作，直接导致了线上 crash 率上升了几个点！&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;😒😒😒&lt;/p&gt;</content><author><name>Yimu</name></author><category term="Git" /><category term="踩坑" /><summary type="html">最近因为 Git 误操作坑了一把！</summary></entry><entry><title type="html">怎么面试一个 iOS 开发？</title><link href="/2018/03/30/ios-interview.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发？" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>/2018/03/30/ios-interview</id><content type="html" xml:base="/2018/03/30/ios-interview.html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;😒😒😒&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">最近因为 Git 误操作坑了一把！</summary></entry><entry><title type="html">怎么面试一个 iOS 开发 | iOS Interview</title><link href="/2018/03/30/ios-interview.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发 | iOS Interview" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>/2018/03/30/ios-interview</id><content type="html" xml:base="/2018/03/30/ios-interview.html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;这是一篇 iOS 面试问题总结，也是对自己 iOS 开发的总结。老实说作为一个半路出家的 iOS 程序员 ( 2016.12 ~ now ) ，心里还是很虚的。自己到底是什么样水平，以后的技术之路要怎么走，这些心里还没有把握，希望整理完之后，有个答案。&lt;/p&gt;
 
@@ -196,7 +196,7 @@ $ git checkout -b feature_5.7.5 origin/feature_5.7.5 ⭕️
   &lt;p&gt;首先，我们需要有一个大图，iOS 开发到底包含了哪些东西？&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;语言基础篇&quot;&gt;语言基础篇&lt;/h3&gt;</content><author><name>Yimu</name></author><category term="iOS" /><category term="Interview" /><summary type="html">前言</summary></entry><entry><title type="html">前端开发路线图</title><link href="/2018/02/27/front-end-roadmap.html" rel="alternate" type="text/html" title="前端开发路线图" /><published>2018-02-27T00:00:00+08:00</published><updated>2018-02-27T00:00:00+08:00</updated><id>/2018/02/27/front-end-roadmap</id><content type="html" xml:base="/2018/02/27/front-end-roadmap.html">&lt;blockquote&gt;
+&lt;h3 id=&quot;语言基础篇&quot;&gt;语言基础篇&lt;/h3&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">前端开发路线图 | Roadmap of Front-End Develop</title><link href="/2018/02/27/front-end-roadmap.html" rel="alternate" type="text/html" title="前端开发路线图 | Roadmap of Front-End Develop" /><published>2018-02-27T00:00:00+08:00</published><updated>2018-02-27T00:00:00+08:00</updated><id>/2018/02/27/front-end-roadmap</id><content type="html" xml:base="/2018/02/27/front-end-roadmap.html">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;继续学前端&lt;/strong&gt;  🔥🔥🔥&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -225,7 +225,7 @@ $ git checkout -b feature_5.7.5 origin/feature_5.7.5 ⭕️
 
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/49748946.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;坚持！！！&lt;/strong&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><category term="前端" /><summary type="html">继续学前端 🔥🔥🔥</summary></entry><entry><title type="html">前端学习之路：Flex 布局</title><link href="/2018/02/24/flex-demo.html" rel="alternate" type="text/html" title="前端学习之路：Flex 布局" /><published>2018-02-24T23:20:16+08:00</published><updated>2018-02-24T23:20:16+08:00</updated><id>/2018/02/24/flex-demo</id><content type="html" xml:base="/2018/02/24/flex-demo.html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;坚持！！！&lt;/strong&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">继续学前端 🔥🔥🔥</summary></entry><entry><title type="html">前端学习之路：Flex 布局 | Flex</title><link href="/2018/02/24/flex-demo.html" rel="alternate" type="text/html" title="前端学习之路：Flex 布局 | Flex" /><published>2018-02-24T00:00:00+08:00</published><updated>2018-02-24T00:00:00+08:00</updated><id>/2018/02/24/flex-demo</id><content type="html" xml:base="/2018/02/24/flex-demo.html">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;继续学前端&lt;/strong&gt;  🔥🔥🔥&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -247,12 +247,12 @@ $ git checkout -b feature_5.7.5 origin/feature_5.7.5 ⭕️
 
 &lt;p&gt;&lt;a href=&quot;/demo/flex.html&quot;&gt;http://fangr.cc/demo/flex.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;!-- more --&gt;</content><author><name>Yimu</name></author><category term="CSS" /><summary type="html">继续学前端 🔥🔥🔥</summary></entry><entry><title type="html">2018 年度挑战</title><link href="/2018/01/29/personal-challenge.html" rel="alternate" type="text/html" title="2018 年度挑战" /><published>2018-01-29T00:00:00+08:00</published><updated>2018-01-29T00:00:00+08:00</updated><id>/2018/01/29/personal-challenge</id><content type="html" xml:base="/2018/01/29/personal-challenge.html">&lt;blockquote&gt;
+&lt;!-- more --&gt;</content><author><name>Yimu</name></author><summary type="html">继续学前端 🔥🔥🔥</summary></entry><entry><title type="html">【2018】年度挑战 | Challenge of 2018</title><link href="/2018/01/29/personal-challenge.html" rel="alternate" type="text/html" title="【2018】年度挑战 | Challenge of 2018" /><published>2018-01-29T00:00:00+08:00</published><updated>2018-01-29T00:00:00+08:00</updated><id>/2018/01/29/personal-challenge</id><content type="html" xml:base="/2018/01/29/personal-challenge.html">&lt;blockquote&gt;
   &lt;p&gt;Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)，今年 (2018)
 他的挑战是 &lt;code class=&quot;highlighter-rouge&quot;&gt;重整 Facebook&lt;/code&gt;，So，我也要给自己立个 Flag 了。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;技术目标&quot;&gt;技术目标&lt;/h3&gt;
+&lt;h2 id=&quot;技术目标&quot;&gt;技术目标&lt;/h2&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//&amp;lt;!-- --&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'达到中初级前端工程师水平'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -281,28 +281,35 @@ $ git checkout -b feature_5.7.5 origin/feature_5.7.5 ⭕️
 
 &lt;p&gt;成为所谓的斜杠 (Slash) 青年，不再满足于单一职业，而是多元化发展。&lt;/p&gt;
 
-&lt;h3 id=&quot;生活目标&quot;&gt;生活目标&lt;/h3&gt;
+&lt;h2 id=&quot;生活目标&quot;&gt;生活目标&lt;/h2&gt;
 
-&lt;h4 id=&quot;早点睡觉&quot;&gt;早点睡觉&lt;/h4&gt;
+&lt;h3 id=&quot;早点睡觉&quot;&gt;早点睡觉&lt;/h3&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;常年处于缺觉的状态，整个人都不好了。
-11:00 pm ~ 8:00 am&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;家里收拾好&quot;&gt;家里收拾好&lt;/h4&gt;
+&lt;p&gt;常年处于缺觉的状态，整个人都不好了&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;养了点花花草草，买了一只小龟龟，希望它明年还在。&lt;/p&gt;
+  &lt;p&gt;// TODO 最好 11:30 pm 前睡觉&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;结婚吧&quot;&gt;结婚吧&lt;/h4&gt;
+&lt;h3 id=&quot;锻炼身体&quot;&gt;锻炼身体&lt;/h3&gt;
+
+&lt;p&gt;小肚子减减减呀！&lt;/p&gt;
+
+&lt;h3 id=&quot;家里收拾好&quot;&gt;家里收拾好&lt;/h3&gt;
+
+&lt;p&gt;养了点花花草草，买了一只小龟龟，希望它明年还在&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;在一起快一年了，喜欢她的性格，也觉得该修成正果，安定下来了。&lt;/p&gt;
+  &lt;p&gt;// UPDATE 小龟龟被我养死了 😭&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;hr /&gt;</content><author><name>Yimu</name></author><category term="Flag" /><category term="Challenge" /><summary type="html">Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)，今年 (2018) 他的挑战是 重整 Facebook，So，我也要给自己立个 Flag 了。</summary></entry><entry><title type="html">Chromium 缺少 Google API 密钥解决办法</title><link href="/2018/01/26/chromium-api-keys.html" rel="alternate" type="text/html" title="Chromium 缺少 Google API 密钥解决办法" /><published>2018-01-26T00:00:00+08:00</published><updated>2018-01-26T00:00:00+08:00</updated><id>/2018/01/26/chromium-api-keys</id><content type="html" xml:base="/2018/01/26/chromium-api-keys.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+&lt;h3 id=&quot;结婚吧&quot;&gt;结婚吧&lt;/h3&gt;
+
+&lt;p&gt;在一起快一年了，喜欢她的性格，也觉得该修成正果，安定下来了。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;// UPDATE 2018.12.01 相识 &lt;strong&gt;520&lt;/strong&gt; 天，我们结婚啦！👫 💕💕&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Yimu</name></author><summary type="html">Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)，今年 (2018) 他的挑战是 重整 Facebook，So，我也要给自己立个 Flag 了。</summary></entry><entry><title type="html">Chromium 缺少 Google API 密钥解决办法 | Chromium</title><link href="/2018/01/26/chromium-api-keys.html" rel="alternate" type="text/html" title="Chromium 缺少 Google API 密钥解决办法 | Chromium" /><published>2018-01-26T00:00:00+08:00</published><updated>2018-01-26T00:00:00+08:00</updated><id>/2018/01/26/chromium-api-keys</id><content type="html" xml:base="/2018/01/26/chromium-api-keys.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
 
 &lt;p&gt;Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢 😏&lt;/p&gt;
 
@@ -378,7 +385,7 @@ setx GOOGLE_DEFAULT_CLIENT_SECRET your_client_secret_goes_here
 
 &lt;p&gt;https://github.com/FongRay/ChromiumSyncEnabler&lt;/p&gt;
 
-&lt;p&gt;跑下来重启 Chromium 就 OK 了！&lt;/p&gt;</content><author><name>Yimu</name></author><category term="chrome" /><category term="chromium" /><summary type="html">前言</summary></entry><entry><title type="html">Visual Paradigm 去除水印的方法 (Python)</title><link href="/2018/01/25/visual-paradigm-remove-watermark.html" rel="alternate" type="text/html" title="Visual Paradigm 去除水印的方法 (Python)" /><published>2018-01-25T00:00:00+08:00</published><updated>2018-01-25T00:00:00+08:00</updated><id>/2018/01/25/visual-paradigm-remove-watermark</id><content type="html" xml:base="/2018/01/25/visual-paradigm-remove-watermark.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+&lt;p&gt;跑下来重启 Chromium 就 OK 了！&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">Visual Paradigm 去除水印的方法 (Python)</title><link href="/2018/01/25/visual-paradigm-remove-watermark.html" rel="alternate" type="text/html" title="Visual Paradigm 去除水印的方法 (Python)" /><published>2018-01-25T00:00:00+08:00</published><updated>2018-01-25T00:00:00+08:00</updated><id>/2018/01/25/visual-paradigm-remove-watermark</id><content type="html" xml:base="/2018/01/25/visual-paradigm-remove-watermark.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
 
 &lt;p&gt;Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：&lt;/p&gt;
 
@@ -512,7 +519,7 @@ with open(src_name, ‘r’) as f:
 
 ```bash
 $ python vp_remove_watermark test.svg -o out.png
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><category term="Python" /><category term="Tools" /><summary type="html">前言</summary></entry><entry><title type="html">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title><link href="/2018/01/24/vue-devtools.html" rel="alternate" type="text/html" title="Vue Devtools 提示 『 Vue.js not detected 』 解决方法" /><published>2018-01-24T00:00:00+08:00</published><updated>2018-01-24T00:00:00+08:00</updated><id>/2018/01/24/vue-devtools</id><content type="html" xml:base="/2018/01/24/vue-devtools.html">&lt;p&gt;最近开始学习 &lt;a href=&quot;https://cn.vuejs.org/&quot;&gt;Vue.js&lt;/a&gt;, 一脸懵逼地进入前端世界。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title><link href="/2018/01/24/vue-devtools.html" rel="alternate" type="text/html" title="Vue Devtools 提示 『 Vue.js not detected 』 解决方法" /><published>2018-01-24T00:00:00+08:00</published><updated>2018-01-24T00:00:00+08:00</updated><id>/2018/01/24/vue-devtools</id><content type="html" xml:base="/2018/01/24/vue-devtools.html">&lt;p&gt;最近开始学习 &lt;a href=&quot;https://cn.vuejs.org/&quot;&gt;Vue.js&lt;/a&gt;, 一脸懵逼地进入前端世界。&lt;/p&gt;
 
 &lt;p&gt;不使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;vue-cli&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt; 这些构建工具，使用单个 html 引入 Vue。&lt;/p&gt;
 
@@ -598,7 +605,7 @@ $ python vp_remove_watermark test.svg -o out.png
 
 &lt;p&gt;可以看到多了一个Vue的Tab:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10548580.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><category term="Vue" /><category term="前端开发" /><summary type="html">最近开始学习 Vue.js, 一脸懵逼地进入前端世界。</summary></entry><entry><title type="html">各种音乐平台 API 整理</title><link href="/2018/01/22/music-apis-md.html" rel="alternate" type="text/html" title="各种音乐平台 API 整理" /><published>2018-01-22T00:00:00+08:00</published><updated>2018-01-22T00:00:00+08:00</updated><id>/2018/01/22/music-apis-md</id><content type="html" xml:base="/2018/01/22/music-apis-md.html">&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10548580.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">最近开始学习 Vue.js, 一脸懵逼地进入前端世界。</summary></entry><entry><title type="html">各种音乐平台 API 整理 | Music APIs</title><link href="/2018/01/22/music-apis-md.html" rel="alternate" type="text/html" title="各种音乐平台 API 整理 | Music APIs" /><published>2018-01-22T00:00:00+08:00</published><updated>2018-01-22T00:00:00+08:00</updated><id>/2018/01/22/music-apis-md</id><content type="html" xml:base="/2018/01/22/music-apis-md.html">&lt;blockquote&gt;
   &lt;p&gt;本文总结一些常见音乐平台 API 接口，仅用于学习使用，不保证大流量请求的可用性。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -808,4 +815,4 @@ access_token 后续接口会用到。
 
 &lt;h3 id=&quot;网易云音乐&quot;&gt;网易云音乐&lt;/h3&gt;
 
-&lt;h3 id=&quot;虾米音乐&quot;&gt;虾米音乐&lt;/h3&gt;</content><author><name>Yimu</name></author><category term="API" /><summary type="html">本文总结一些常见音乐平台 API 接口，仅用于学习使用，不保证大流量请求的可用性。</summary></entry></feed>
+&lt;h3 id=&quot;虾米音乐&quot;&gt;虾米音乐&lt;/h3&gt;</content><author><name>Yimu</name></author><summary type="html">本文总结一些常见音乐平台 API 接口，仅用于学习使用，不保证大流量请求的可用性。</summary></entry></feed>

@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Markdown 完全手册
-list_title: Markdown 完全手册
-tags: Markdown
-categories: Tutorial
+title: Markdown 完全手册 | Handbook of Markdown
+categories: [Markdown]
 ---
 
 # 速查手册

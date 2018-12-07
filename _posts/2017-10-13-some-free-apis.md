@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 一些API接口汇总
-list_title: 一些API接口汇总
-tags: [API, Resouces]
-categories: Coding
+title: 一些 API 接口汇总 | Some Free APIs
+categories: [Resource]
 ---
 
 汇总一些免费的API接口，可以用来做一些工具类APP。

@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 前端开发路线图
-list_title: 前端开发路线图
-tags: 前端
-categories: Front-End
+title: 前端开发路线图 | Roadmap of Front-End Develop
+categories: [FE]
 ---
 
 

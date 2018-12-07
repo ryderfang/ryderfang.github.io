@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Chromium 缺少 Google API 密钥解决办法
-list_title: Chromium 缺少 Google API 密钥解决办法
-tags: [chrome, chromium]
-categories: Tutorial
+title: Chromium 缺少 Google API 密钥解决办法 | Chromium
+categories: [Chromium]
 ---
 
 ### 前言

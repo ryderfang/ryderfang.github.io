@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Git 错误使用导致的工作失误
-list_title: Git 错误使用导致的工作失误
-tags: [Git, 踩坑]
-categories: Coding
+title: Git 错误使用导致的工作失误 | Git Usage
+categories: [Git]
 ---
 
 最近因为 Git 误操作坑了一把！

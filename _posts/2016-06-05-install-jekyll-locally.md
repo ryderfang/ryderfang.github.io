@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 本地安装Jekyll调试环境（Windows）
-list_title: 本地安装Jekyll调试环境（Windows）
-tags: [Jekyll, 配置]
-categories: Configuration
+title: 本地安装Jekyll调试环境 (Windows) | Jekyll in Windows
+categories: [Jekyll, Config]
 ---
 
 安装Ruby和Ruby DevKit

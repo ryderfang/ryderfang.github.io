@@ -9,7 +9,7 @@
                 {% assign year = post_year %}
                 <h2 class="page-archive__main__year">{{post_year}}</h2>
             {%endif%}
-            <li>{% include _partials/components/date.html %}<a href="{{site.baseurl}}{{post.url}}">{{post.list_title}}</a></li>
+            <li>{% include _partials/components/date.html %}<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
         {% endunless %}
     {% endfor %}
     </ul>

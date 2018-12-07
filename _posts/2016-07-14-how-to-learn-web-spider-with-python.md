@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 如何学习python爬虫
-list_title: 如何学习python爬虫
-tags: [Python, 爬虫]
-categories: Tutorial
+title: 如何学习 Python 爬虫 | Python Spider Tutorial
+categories: [Python, Tutorial]
 ---
 
 * 转载自知乎专栏[**学习编程**](https://zhuanlan.zhihu.com/passer)

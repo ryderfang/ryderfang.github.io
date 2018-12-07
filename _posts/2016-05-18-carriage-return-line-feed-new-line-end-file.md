@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 回车、换行和文件末尾空行
-list_title: 回车、换行和文件末尾空行
-tags: [原理]
-categories: Coding
+title: 回车、换行和文件末尾空行 | Blank Chars
+categories: [Coding]
 updated: 2018-11-15
 ---
 

@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Visual Paradigm 去除水印的方法 (Python)
-list_title: Visual Paradigm 去除水印的方法 (Python)
-tags: [Python, Tools]
-categories: [Python]
+categories: [Python, Tool]
 ---
 
 ### 前言

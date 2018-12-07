@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 介绍几个常用的vim插件
-list_title: 介绍几个常用的vim插件
-tags: [Vim, 插件]
-categories: Coding
+title: 几个常用的 Vim 插件 | Some Vim Plugins
+categories: [Vim, Plugin]
 ---
 
 ## [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors#quick-start)

@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 怎么面试一个 iOS 开发？
-list_title: 怎么面试一个 iOS 开发？
-tags: [iOS, Interview]
-categories: Coding
+title: 怎么面试一个 iOS 开发 | iOS Interview
+categories: [iOS, Interview]
 ---
 
 ## 前言 

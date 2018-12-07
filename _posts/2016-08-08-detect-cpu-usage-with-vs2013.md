@@ -1,9 +1,7 @@
 ---
 layout: post
-title: 使用VS2013分析程序CPU占用
-list_title: 使用VS2013分析程序CPU占用
-tags: [Virtual Studio, Debug]
-categories: Coding
+title: 使用 VS2013 分析程序 CPU 占用 | Debug with VS
+categories: [Virsual Studio]
 ---
 
    最近开发的一个程序，用户反馈CPU占用非常高，基本把一个内核占用满了。

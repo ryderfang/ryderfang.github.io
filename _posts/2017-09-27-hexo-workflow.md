@@ -1,10 +1,7 @@
 ---
 layout: post
-title: 博客迁移到Hexo遇到的一些问题
-list_title: 博客迁移到Hexo遇到的一些问题
-date: 2017-09-27 10:29:13
-tags: [Hexo, Github]
-categories: Tutorial
+title: 博客迁移到 Hexo 遇到的一些问题 | Hexo
+categories: [Hexo, Github Pages]
 ---
 
 关于Hexo如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:

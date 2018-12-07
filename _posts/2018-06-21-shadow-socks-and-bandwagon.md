@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Shadowsocks 翻墙和搬瓦工 VPS 配置
-list_title: Shadowsocks 翻墙和搬瓦工 VPS 配置
-tags: [VPS, VPN, Shadowsocks, Bandwagon, 搬瓦工, 翻墙]
-categories: Configuration
+categories: [VPS, Config]
 ---
 
 ### 这是干啥的

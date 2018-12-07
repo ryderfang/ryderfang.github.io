@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Vue Devtools 提示 『 Vue.js not detected 』 解决方法
-list_title: Vue Devtools 提示 『 Vue.js not detected 』 解决方法
-tags: [Vue, 前端开发]
-categories: Front-End
+categories: [FE, Vue]
 ---
 
 最近开始学习 [Vue.js](https://cn.vuejs.org/), 一脸懵逼地进入前端世界。
