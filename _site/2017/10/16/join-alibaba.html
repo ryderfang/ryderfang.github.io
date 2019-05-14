@@ -1,11 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 
  
 
-
 <html lang="en">
-<head>
+  <head>
     
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,13 +30,26 @@
 <!-- customize header -->
 
     <title>入职阿里 | Join Alibaba (Koubei)</title>
-</head>
-<body itemscope itemtype="http://schema.org/WebPage" lang="en" oncopy="return false" oncut="return false" onpaste="return false">
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  </head>
+  <body
+    itemscope
+    itemtype="http://schema.org/WebPage"
+    lang="en"
+    oncopy="return false"
+    oncut="return false"
+    onpaste="return false"
+  >
     
     <div class="site-container">
-        <div class="site-container__content">
-            <header class="site-header" itemscope itemtype="http://schema.org/WPHeader">
-                
+      <div class="site-container__content">
+        <header
+          class="site-header"
+          itemscope
+          itemtype="http://schema.org/WPHeader"
+        >
+          
 
 
 <div class="site-header__logo">
@@ -84,10 +96,10 @@
  -->
 
 
-            </header>       
-            <article class="site-main">
-                <main class="page-post">
-                    
+        </header>
+        <article class="site-main">
+          <main class="page-post">
+            
 <div class="page-post__header"> 
     <h2 class="post-title">入职阿里 | Join Alibaba (Koubei)</h2>
     <div class="post-meta">
@@ -191,22 +203,33 @@
 <!-- <div id="posts" class="site-posts"> -->
     
 <!-- </div> -->
-                </main>
-                <footer class="site-footer">
-                    <hr>
+          </main>
+          <div id="gitalk-container"></div>
+          <footer class="site-footer">
+            <hr>
 <div class="site-footer__item">© Yimu さま® 2007 - 2019 All Rights Reserved</div>
 <div class="site-footer__item"><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/>Content on this site is licensed under a Creative Commons Attribution 4.0 International license</a></div>
 <div class="site-footer__item"><a href=https://jekyllrb.com/>Jekyll</a>  |  <a href=https://www.linode.com/>Linode</a> | <a href=https://github.com/FongRay/FongRay.github.io>Github</a></div>
 <div class="site-footer__item">Site last generated: April 26, 2019</div>
 
 
-                </footer>
-            </article> 
-        </div>
+          </footer>
+        </article>
+      </div>
     </div>
 
+    <script>
+      const gitalk = new Gitalk({
+        clientID: "de7de62c869ecd16e283",
+        clientSecret: "721281b30a5d43238e446b5e8c91bb734d21f118",
+        repo: "https://github.com/FongRay/FongRay.github.io",
+        owner: "FongRay",
+        admin: ["FongRay"],
+        id: location.pathname, // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+      });
 
-</body>
-
-
+      gitalk.render("gitalk-container");
+    </script>
+  </body>
 </html>
