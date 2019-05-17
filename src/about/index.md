@@ -1,6 +1,6 @@
 ---
 layout: about
-title: 苟利国家
+title: _whoami_
 ---
 
 <section class="about-me">
@@ -18,19 +18,19 @@ title: 苟利国家
   <div class="md-flex-v about-contact">
     <div>
       <i class="fas fa-envelope"></i> |
-      <a href="mailto://fray9166@gmail.com">Gmail</a>
+      <a href="mailto://fray9166@gmail.com" title="fray9166@gmail.com">Gmail</a>
     </div>
     <div>
-      <i class="fab fa-linkedin"></i> |
-      <a href="https://www.zhihu.com/people/crazycoder">ZhiHu</a>
+      <i class="fab fa-weixin"></i> |
+      <a href="weixin://crazy_c0der" title="crazy_c0der">WeChat</a>
     </div>
     <div>
       <i class="fab fa-github"></i> |
-      <a href="https://github.com/FongRay">GitHub</a>
+      <a href="https://github.com/FongRay" title="https://github.com/FongRay">GitHub</a>
     </div>
     <div>
       <i class="fab fa-twitter"></i> |
-      <a href="https://twitter.com/FongRay">Twitter</a>
+      <a href="https://twitter.com/FongRay" title="https://twitter.com/FongRay">Twitter</a>
     </div>
   </div>
 </section>

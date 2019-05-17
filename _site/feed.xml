@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-05-14T22:35:05+08:00</updated><id>/feed.xml</id><title type="html">Red Coast Base | 红岸基地  | 消灭人类暴政，世界属于三体 🤟</title><author><name>Yimu</name></author><entry><title type="html">几个 iOS 面试问题解答 | iOS Problems</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="几个 iOS 面试问题解答 | iOS Problems" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-05-17T22:00:28+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">iOS 技术大图</title><link href="/2019/05/16/ios-basic-knowledge.html" rel="alternate" type="text/html" title="iOS 技术大图" /><published>2019-05-16T00:00:00+08:00</published><updated>2019-05-16T00:00:00+08:00</updated><id>/2019/05/16/ios-basic-knowledge</id><content type="html" xml:base="/2019/05/16/ios-basic-knowledge.html"></content><author><name>Yimu</name></author><summary type="html"></summary></entry><entry><title type="html">几个 iOS 面试问题 | iOS Problems</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="几个 iOS 面试问题 | iOS Problems" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/13483958.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-2&quot;&gt;Section 2&lt;/h2&gt;
@@ -529,90 +529,4 @@ with open(src_name, ‘r’) as f:
 
 ```bash
 $ python vp_remove_watermark test.svg -o out.png
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title><link href="/2018/01/24/vue-devtools.html" rel="alternate" type="text/html" title="Vue Devtools 提示 『 Vue.js not detected 』 解决方法" /><published>2018-01-24T00:00:00+08:00</published><updated>2018-01-24T00:00:00+08:00</updated><id>/2018/01/24/vue-devtools</id><content type="html" xml:base="/2018/01/24/vue-devtools.html">&lt;p&gt;最近开始学习 &lt;a href=&quot;https://cn.vuejs.org/&quot;&gt;Vue.js&lt;/a&gt;, 一脸懵逼地进入前端世界。&lt;/p&gt;
-
-&lt;p&gt;不使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;vue-cli&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt; 这些构建工具，使用单个 html 引入 Vue。&lt;/p&gt;
-
-&lt;p&gt;html 内容是这样的:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Hello, Vue&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/vue&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'app'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-bind:title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;鼠标悬停&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#app'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'页面加载于 '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLocaleString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;用浏览器打开这个 html 就可以看到效果（鼠标悬停显示『页面加载于yyyy-MM-dd hh:mm:ss』）&lt;/p&gt;
-
-&lt;p&gt;安装 &lt;a href=&quot;https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd&quot;&gt;Vue-Devtools&lt;/a&gt;，但是插件栏显示&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js not detected&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/41087835.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;vuejs-not-detected&quot;&gt;Vue.js not detected&lt;/h2&gt;
-
-&lt;p&gt;打开右上角 &lt;code class=&quot;highlighter-rouge&quot;&gt;...&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;更多工具&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;扩展程序&lt;/code&gt;，找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js devtools&lt;/code&gt;，选中 &lt;code class=&quot;highlighter-rouge&quot;&gt;允许访问文件网址&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/14411118.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;OK，然后 devtools 仍然不可用，提示&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js is detected on this page. Devtools inspection is not available because it's in production mode or explicitly disabled by the author.&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;由于我们使用的 vue.js &lt;a href=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;https://cdn.jsdelivr.net/npm/vue&lt;/a&gt; 是生产版本，所以不能访问。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;production-mode&quot;&gt;Production mode&lt;/h2&gt;
-
-&lt;p&gt;下载开发版本的vue.js，放到本地，修改src路径为本地即可。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;开发版本: https://vuejs.org/js/vue.js&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;生产版本: https://vuejs.org/js/vue.min.js (或者 https://cdn.jsdelivr.net/npm/vue)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;vue-devtools&quot;&gt;Vue-Devtools&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;这样，打开开发者工具 (&lt;code class=&quot;highlighter-rouge&quot;&gt;option + command + i&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;F12&lt;/code&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;可以看到多了一个Vue的Tab:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10548580.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">最近开始学习 Vue.js, 一脸懵逼地进入前端世界。</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry></feed>
