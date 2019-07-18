@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 几个 iOS 面试问题 | iOS Problems
+title: 几个 iOS 面试问题 | iOS Interview
 categories: [iOS, Interview]
 ---
 

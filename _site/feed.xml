@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-05-17T22:00:28+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">iOS 技术大图</title><link href="/2019/05/16/ios-basic-knowledge.html" rel="alternate" type="text/html" title="iOS 技术大图" /><published>2019-05-16T00:00:00+08:00</published><updated>2019-05-16T00:00:00+08:00</updated><id>/2019/05/16/ios-basic-knowledge</id><content type="html" xml:base="/2019/05/16/ios-basic-knowledge.html"></content><author><name>Yimu</name></author><summary type="html"></summary></entry><entry><title type="html">几个 iOS 面试问题 | iOS Problems</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="几个 iOS 面试问题 | iOS Problems" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-07-18T20:04:00+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">怎么面试一个 iOS 开发 | iOS Interview</title><link href="/2019/07/17/ios-interview.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发 | iOS Interview" /><published>2019-07-17T00:00:00+08:00</published><updated>2019-07-17T00:00:00+08:00</updated><id>/2019/07/17/ios-interview</id><content type="html" xml:base="/2019/07/17/ios-interview.html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;这是一篇 iOS 面试问题总结，也是对自己 iOS 开发的总结。老实说作为一个半路出家的 iOS 程序员 ( 2016.12 ~ now ) ，心里还是很虚的。自己到底是什么样水平，以后的技术之路要怎么走，这些心里还没有把握，希望整理完之后，有个答案。&lt;/p&gt;
+
+&lt;!--  more --&gt;
+
+&lt;h2 id=&quot;roadmap-路线图&quot;&gt;Roadmap 路线图&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;首先，我们需要有一个大图，iOS 开发到底包含了哪些东西？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;语言基础篇&quot;&gt;语言基础篇&lt;/h3&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">iOS 技术大图 | iOS Roadmap</title><link href="/2019/05/16/ios-basic-knowledge.html" rel="alternate" type="text/html" title="iOS 技术大图 | iOS Roadmap" /><published>2019-05-16T00:00:00+08:00</published><updated>2019-05-16T00:00:00+08:00</updated><id>/2019/05/16/ios-basic-knowledge</id><content type="html" xml:base="/2019/05/16/ios-basic-knowledge.html"></content><author><name>Yimu</name></author><summary type="html"></summary></entry><entry><title type="html">几个 iOS 面试问题 | iOS Interview</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="几个 iOS 面试问题 | iOS Interview" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/13483958.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-2&quot;&gt;Section 2&lt;/h2&gt;
@@ -194,19 +206,7 @@ $ git checkout -b feature_5.7.5 origin/feature_5.7.5 ⭕️
   &lt;p&gt;这个错误操作，直接导致了线上 crash 率上升了几个点！&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;😒😒😒&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">最近因为 Git 误操作坑了一把！</summary></entry><entry><title type="html">怎么面试一个 iOS 开发 | iOS Interview</title><link href="/2018/03/30/ios-interview.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发 | iOS Interview" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>/2018/03/30/ios-interview</id><content type="html" xml:base="/2018/03/30/ios-interview.html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
-
-&lt;p&gt;这是一篇 iOS 面试问题总结，也是对自己 iOS 开发的总结。老实说作为一个半路出家的 iOS 程序员 ( 2016.12 ~ now ) ，心里还是很虚的。自己到底是什么样水平，以后的技术之路要怎么走，这些心里还没有把握，希望整理完之后，有个答案。&lt;/p&gt;
-
-&lt;!--  more --&gt;
-
-&lt;h2 id=&quot;roadmap-路线图&quot;&gt;Roadmap 路线图&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;首先，我们需要有一个大图，iOS 开发到底包含了哪些东西？&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;语言基础篇&quot;&gt;语言基础篇&lt;/h3&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">前端开发路线图 | Roadmap of Front-End Develop</title><link href="/2018/02/27/front-end-roadmap.html" rel="alternate" type="text/html" title="前端开发路线图 | Roadmap of Front-End Develop" /><published>2018-02-27T00:00:00+08:00</published><updated>2018-02-27T00:00:00+08:00</updated><id>/2018/02/27/front-end-roadmap</id><content type="html" xml:base="/2018/02/27/front-end-roadmap.html">&lt;blockquote&gt;
+&lt;p&gt;😒😒😒&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">最近因为 Git 误操作坑了一把！</summary></entry><entry><title type="html">前端开发路线图 | Roadmap of Front-End Develop</title><link href="/2018/02/27/front-end-roadmap.html" rel="alternate" type="text/html" title="前端开发路线图 | Roadmap of Front-End Develop" /><published>2018-02-27T00:00:00+08:00</published><updated>2018-02-27T00:00:00+08:00</updated><id>/2018/02/27/front-end-roadmap</id><content type="html" xml:base="/2018/02/27/front-end-roadmap.html">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;继续学前端&lt;/strong&gt;  🔥🔥🔥&lt;/p&gt;
 &lt;/blockquote&gt;
 
