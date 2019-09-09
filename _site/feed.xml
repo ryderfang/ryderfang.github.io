@@ -1,16 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-01T23:25:50+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">怎么面试一个 iOS 开发 | iOS Interview</title><link href="/2019/07/17/ios-interview.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发 | iOS Interview" /><published>2019-07-17T00:00:00+08:00</published><updated>2019-07-17T00:00:00+08:00</updated><id>/2019/07/17/ios-interview</id><content type="html" xml:base="/2019/07/17/ios-interview.html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-09T10:41:21+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">怎么面试一个 iOS 开发 | iOS Interview</title><link href="/2019/07/17/ios-interview.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发 | iOS Interview" /><published>2019-07-17T00:00:00+08:00</published><updated>2019-07-17T00:00:00+08:00</updated><id>/2019/07/17/ios-interview</id><content type="html" xml:base="/2019/07/17/ios-interview.html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;这是一篇 iOS 面试问题总结，也是对自己 iOS 开发的总结。老实说作为一个半路出家的 iOS 程序员 ( 2016.12 ~ now ) ，心里还是很虚的。自己到底是什么样水平，以后的技术之路要怎么走，这些心里还没有把握，希望整理完之后，有个答案。&lt;/p&gt;
 
 &lt;!--  more --&gt;
 
-&lt;h2 id=&quot;roadmap-路线图&quot;&gt;Roadmap 路线图&lt;/h2&gt;
+&lt;h1 id=&quot;roadmap-路线图&quot;&gt;Roadmap 路线图&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;首先，我们需要有一个大图，iOS 开发到底包含了哪些东西？&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;语言基础篇&quot;&gt;语言基础篇&lt;/h3&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">iOS 技术大图 | iOS Roadmap</title><link href="/2019/05/16/ios-basic-knowledge.html" rel="alternate" type="text/html" title="iOS 技术大图 | iOS Roadmap" /><published>2019-05-16T00:00:00+08:00</published><updated>2019-05-16T00:00:00+08:00</updated><id>/2019/05/16/ios-basic-knowledge</id><content type="html" xml:base="/2019/05/16/ios-basic-knowledge.html"></content><author><name>Yimu</name></author><summary type="html"></summary></entry><entry><title type="html">几个 iOS 面试问题 | iOS Interview</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="几个 iOS 面试问题 | iOS Interview" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
+&lt;p&gt;// TODO&lt;/p&gt;
+
+&lt;h1 id=&quot;1-语言基础篇&quot;&gt;1. 语言基础篇&lt;/h1&gt;
+
+&lt;h2 id=&quot;11-关键词类&quot;&gt;1.1 关键词类&lt;/h2&gt;
+
+&lt;h1 id=&quot;2uikit&quot;&gt;2.UIKit&lt;/h1&gt;
+
+&lt;h1 id=&quot;3-底层原理&quot;&gt;3. 底层原理&lt;/h1&gt;
+
+&lt;h2 id=&quot;31-runloop&quot;&gt;3.1 RunLoop&lt;/h2&gt;
+
+&lt;h2 id=&quot;32-runtime&quot;&gt;3.2 Runtime&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;源码 https://github.com/RetVal/objc-runtime&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;33-autoreleasepool&quot;&gt;3.3 AutoreleasePool&lt;/h2&gt;
+
+&lt;h2 id=&quot;34-消息转发&quot;&gt;3.4 消息转发&lt;/h2&gt;
+
+&lt;h1 id=&quot;2-开发实践&quot;&gt;2. 开发实践&lt;/h1&gt;
+
+&lt;h1 id=&quot;3-其他知识&quot;&gt;3. 其他知识&lt;/h1&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">几个 iOS 面试问题 | iOS Interview</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="几个 iOS 面试问题 | iOS Interview" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/13483958.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__block_impl_t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -73,6 +97,108 @@
 
 &lt;h2 id=&quot;section-3&quot;&gt;Section 3&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/71527803.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;NSObject 与 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;NSObject&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;一个是类（基类），一个是协议（根协议）&lt;/li&gt;
+  &lt;li&gt;NSObject 也是符合 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;NSObject&amp;gt;&lt;/code&gt; 协议的&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NSObject&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#pragma clang diagnostic push
+#pragma clang diagnostic ignored &quot;-Wobjc-interface-ivars&quot;
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isa&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;OBJC_ISA_AVAILABILITY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#pragma clang diagnostic pop
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instancetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;NS_DESIGNATED_INITIALIZER&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instancetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_SWIFT_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;use object initializers instead&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instancetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;allocWithZone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_NSZone&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;zone&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_SWIFT_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;use object initializers instead&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instancetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alloc&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_SWIFT_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;use object initializers instead&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dealloc&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_SWIFT_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;use 'deinit' to define a de-initializer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finalize&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_DEPRECATED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Objective-C garbage collection is no longer supported&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutableCopy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;copyWithZone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_NSZone&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;zone&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_ARC_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mutableCopyWithZone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_NSZone&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;zone&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_ARC_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instancesRespondToSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;conformsToProtocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Protocol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;protocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IMP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;methodForSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IMP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instanceMethodForSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;doesNotRecognizeSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;forwardingTargetForSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aSelector&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_AVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;forwardInvocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInvocation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;anInvocation&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_SWIFT_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMethodSignature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;methodSignatureForSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aSelector&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_SWIFT_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMethodSignature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instanceMethodSignatureForSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aSelector&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_SWIFT_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allowsWeakReference&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UNAVAILABLE_ATTRIBUTE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retainWeakReference&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UNAVAILABLE_ATTRIBUTE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;isSubclassOfClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;resolveClassMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sel&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_AVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;resolveInstanceMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sel&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_AVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;superclass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OBJC_SWIFT_UNAVAILABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;use 'aClass.self' instead&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;debugDescription&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@protocol NSObject
+
+- (BOOL)isEqual:(id)object;
+@property (readonly) NSUInteger hash;
+
+@property (readonly) Class superclass;
+- (Class)class OBJC_SWIFT_UNAVAILABLE(&quot;use 'type(of: anObject)' instead&quot;);
+- (instancetype)self;
+
+- (id)performSelector:(SEL)aSelector;
+- (id)performSelector:(SEL)aSelector withObject:(id)object;
+- (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2;
+
+- (BOOL)isProxy;
+
+- (BOOL)isKindOfClass:(Class)aClass;
+- (BOOL)isMemberOfClass:(Class)aClass;
+- (BOOL)conformsToProtocol:(Protocol *)aProtocol;
+
+- (BOOL)respondsToSelector:(SEL)aSelector;
+
+- (instancetype)retain OBJC_ARC_UNAVAILABLE;
+- (oneway void)release OBJC_ARC_UNAVAILABLE;
+- (instancetype)autorelease OBJC_ARC_UNAVAILABLE;
+- (NSUInteger)retainCount OBJC_ARC_UNAVAILABLE;
+
+- (struct _NSZone *)zone OBJC_ARC_UNAVAILABLE;
+
+@property (readonly, copy) NSString *description;
+@optional
+@property (readonly, copy) NSString *debugDescription;
+
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;section-4&quot;&gt;Section 4&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/97038988.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">Section 1</summary></entry><entry><title type="html">Shadowsocks 翻墙和搬瓦工 VPS 配置</title><link href="/2018/06/21/shadow-socks-and-bandwagon.html" rel="alternate" type="text/html" title="Shadowsocks 翻墙和搬瓦工 VPS 配置" /><published>2018-06-21T00:00:00+08:00</published><updated>2018-06-21T00:00:00+08:00</updated><id>/2018/06/21/shadow-socks-and-bandwagon</id><content type="html" xml:base="/2018/06/21/shadow-socks-and-bandwagon.html">&lt;h3 id=&quot;这是干啥的&quot;&gt;这是干啥的&lt;/h3&gt;
@@ -584,4 +710,90 @@ with open(src_name, ‘r’) as f:
 
 ```bash
 $ python vp_remove_watermark test.svg -o out.png
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title><link href="/2018/01/24/vue-devtools.html" rel="alternate" type="text/html" title="Vue Devtools 提示 『 Vue.js not detected 』 解决方法" /><published>2018-01-24T00:00:00+08:00</published><updated>2018-01-24T00:00:00+08:00</updated><id>/2018/01/24/vue-devtools</id><content type="html" xml:base="/2018/01/24/vue-devtools.html">&lt;p&gt;最近开始学习 &lt;a href=&quot;https://cn.vuejs.org/&quot;&gt;Vue.js&lt;/a&gt;, 一脸懵逼地进入前端世界。&lt;/p&gt;
+
+&lt;p&gt;不使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;vue-cli&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt; 这些构建工具，使用单个 html 引入 Vue。&lt;/p&gt;
+
+&lt;p&gt;html 内容是这样的:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Hello, Vue&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/vue&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'app'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-bind:title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;鼠标悬停&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#app'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'页面加载于 '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLocaleString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;用浏览器打开这个 html 就可以看到效果（鼠标悬停显示『页面加载于yyyy-MM-dd hh:mm:ss』）&lt;/p&gt;
+
+&lt;p&gt;安装 &lt;a href=&quot;https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd&quot;&gt;Vue-Devtools&lt;/a&gt;，但是插件栏显示&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js not detected&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/41087835.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;vuejs-not-detected&quot;&gt;Vue.js not detected&lt;/h2&gt;
+
+&lt;p&gt;打开右上角 &lt;code class=&quot;highlighter-rouge&quot;&gt;...&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;更多工具&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;扩展程序&lt;/code&gt;，找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js devtools&lt;/code&gt;，选中 &lt;code class=&quot;highlighter-rouge&quot;&gt;允许访问文件网址&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/14411118.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;OK，然后 devtools 仍然不可用，提示&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js is detected on this page. Devtools inspection is not available because it's in production mode or explicitly disabled by the author.&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;由于我们使用的 vue.js &lt;a href=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;https://cdn.jsdelivr.net/npm/vue&lt;/a&gt; 是生产版本，所以不能访问。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;production-mode&quot;&gt;Production mode&lt;/h2&gt;
+
+&lt;p&gt;下载开发版本的vue.js，放到本地，修改src路径为本地即可。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;开发版本: https://vuejs.org/js/vue.js&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;生产版本: https://vuejs.org/js/vue.min.js (或者 https://cdn.jsdelivr.net/npm/vue)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vue-devtools&quot;&gt;Vue-Devtools&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;这样，打开开发者工具 (&lt;code class=&quot;highlighter-rouge&quot;&gt;option + command + i&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;F12&lt;/code&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;可以看到多了一个Vue的Tab:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10548580.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">最近开始学习 Vue.js, 一脸懵逼地进入前端世界。</summary></entry></feed>

@@ -214,6 +214,108 @@
 <h2 id="section-3">Section 3</h2>
 <p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/71527803.jpg" alt="" /></p>
 
+<ul>
+  <li>NSObject 与 <code class="highlighter-rouge">&lt;NSObject&gt;</code></li>
+</ul>
+
+<ol>
+  <li>一个是类（基类），一个是协议（根协议）</li>
+  <li>NSObject 也是符合 <code class="highlighter-rouge">&lt;NSObject&gt;</code> 协议的</li>
+</ol>
+
+<div class="language-objc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@interface</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span> <span class="p">{</span>
+<span class="cp">#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-interface-ivars"
+</span>    <span class="n">Class</span> <span class="n">isa</span>  <span class="n">OBJC_ISA_AVAILABILITY</span><span class="p">;</span>
+<span class="cp">#pragma clang diagnostic pop
+</span><span class="p">}</span>
+
+<span class="o">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">load</span><span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">initialize</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span>
+<span class="cp">#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+</span>    <span class="n">NS_DESIGNATED_INITIALIZER</span>
+<span class="cp">#endif
+</span>    <span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">new</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use object initializers instead"</span><span class="p">);</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">allocWithZone</span><span class="p">:(</span><span class="k">struct</span> <span class="n">_NSZone</span> <span class="o">*</span><span class="p">)</span><span class="nv">zone</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use object initializers instead"</span><span class="p">);</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">alloc</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use object initializers instead"</span><span class="p">);</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use 'deinit' to define a de-initializer"</span><span class="p">);</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">finalize</span> <span class="n">OBJC_DEPRECATED</span><span class="p">(</span><span class="s">"Objective-C garbage collection is no longer supported"</span><span class="p">);</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">copy</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">mutableCopy</span><span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">copyWithZone</span><span class="p">:(</span><span class="k">struct</span> <span class="n">_NSZone</span> <span class="o">*</span><span class="p">)</span><span class="nv">zone</span> <span class="n">OBJC_ARC_UNAVAILABLE</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">mutableCopyWithZone</span><span class="p">:(</span><span class="k">struct</span> <span class="n">_NSZone</span> <span class="o">*</span><span class="p">)</span><span class="nv">zone</span> <span class="n">OBJC_ARC_UNAVAILABLE</span><span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">instancesRespondToSelector</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">conformsToProtocol</span><span class="p">:(</span><span class="n">Protocol</span> <span class="o">*</span><span class="p">)</span><span class="nv">protocol</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">IMP</span><span class="p">)</span><span class="nf">methodForSelector</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">IMP</span><span class="p">)</span><span class="nf">instanceMethodForSelector</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">doesNotRecognizeSelector</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">forwardingTargetForSelector</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span> <span class="n">OBJC_AVAILABLE</span><span class="p">(</span><span class="mi">10</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">forwardInvocation</span><span class="p">:(</span><span class="n">NSInvocation</span> <span class="o">*</span><span class="p">)</span><span class="nv">anInvocation</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSMethodSignature</span> <span class="o">*</span><span class="p">)</span><span class="nf">methodSignatureForSelector</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">NSMethodSignature</span> <span class="o">*</span><span class="p">)</span><span class="nf">instanceMethodSignatureForSelector</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">allowsWeakReference</span> <span class="n">UNAVAILABLE_ATTRIBUTE</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">retainWeakReference</span> <span class="n">UNAVAILABLE_ATTRIBUTE</span><span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isSubclassOfClass</span><span class="p">:(</span><span class="n">Class</span><span class="p">)</span><span class="nv">aClass</span><span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">resolveClassMethod</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">sel</span> <span class="n">OBJC_AVAILABLE</span><span class="p">(</span><span class="mi">10</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">resolveInstanceMethod</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">sel</span> <span class="n">OBJC_AVAILABLE</span><span class="p">(</span><span class="mi">10</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">hash</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">Class</span><span class="p">)</span><span class="n">superclass</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">Class</span><span class="p">)</span><span class="n">class</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use 'aClass.self' instead"</span><span class="p">);</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">description</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">debugDescription</span><span class="p">;</span>
+
+<span class="k">@end</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@protocol NSObject
+
+- (BOOL)isEqual:(id)object;
+@property (readonly) NSUInteger hash;
+
+@property (readonly) Class superclass;
+- (Class)class OBJC_SWIFT_UNAVAILABLE("use 'type(of: anObject)' instead");
+- (instancetype)self;
+
+- (id)performSelector:(SEL)aSelector;
+- (id)performSelector:(SEL)aSelector withObject:(id)object;
+- (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2;
+
+- (BOOL)isProxy;
+
+- (BOOL)isKindOfClass:(Class)aClass;
+- (BOOL)isMemberOfClass:(Class)aClass;
+- (BOOL)conformsToProtocol:(Protocol *)aProtocol;
+
+- (BOOL)respondsToSelector:(SEL)aSelector;
+
+- (instancetype)retain OBJC_ARC_UNAVAILABLE;
+- (oneway void)release OBJC_ARC_UNAVAILABLE;
+- (instancetype)autorelease OBJC_ARC_UNAVAILABLE;
+- (NSUInteger)retainCount OBJC_ARC_UNAVAILABLE;
+
+- (struct _NSZone *)zone OBJC_ARC_UNAVAILABLE;
+
+@property (readonly, copy) NSString *description;
+@optional
+@property (readonly, copy) NSString *debugDescription;
+
+@end
+</code></pre></div></div>
+
 <h2 id="section-4">Section 4</h2>
 <p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/97038988.jpg" alt="" /></p>
 
