@@ -40,3 +40,6 @@ categories: [iOS, Interview]
 
 # 3. 其他知识
 
+## LRU
+
+* 经常被问到的 LRU 算法实现

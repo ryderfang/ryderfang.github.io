@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-09T10:41:21+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">怎么面试一个 iOS 开发 | iOS Interview</title><link href="/2019/07/17/ios-interview.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发 | iOS Interview" /><published>2019-07-17T00:00:00+08:00</published><updated>2019-07-17T00:00:00+08:00</updated><id>/2019/07/17/ios-interview</id><content type="html" xml:base="/2019/07/17/ios-interview.html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-10T15:58:21+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">从搬瓦工到 Vlutr，继续科学上网</title><link href="/2019/09/10/shadowsocks-with-vlutr.html" rel="alternate" type="text/html" title="从搬瓦工到 Vlutr，继续科学上网" /><published>2019-09-10T00:00:00+08:00</published><updated>2019-09-10T00:00:00+08:00</updated><id>/2019/09/10/shadowsocks-with-vlutr</id><content type="html" xml:base="/2019/09/10/shadowsocks-with-vlutr.html">&lt;p&gt;之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1tiAwfpY7gK0jSZKzXXaikpXa-1970-312.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;发了个 Ticket 问了下，倒是很快回复了。结论就是我之前买的那种 10G 的产品是 OpenVZ v6 架构，已经不再维护，下架了。
+看了下，现在最便宜的就是 20G 这款，一年 50 美金，差不多也是行情价。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1xY3zfxz1gK0jSZSgXXavwpXa-628-708.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;考虑到 bandwagon 配置并不是特别方便，经同事推荐改用 Vlutr，现在优惠还不错 (重点)：&lt;/p&gt;
+
+&lt;p&gt;1、&lt;u&gt;充 $10 送 $25&lt;/u&gt;。 &lt;a href=&quot;https://www.vultr.com/?ref=8250675&quot;&gt;点击注册&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2、&lt;u&gt;充 $25 送 $50&lt;/u&gt;。 &lt;a href=&quot;https://www.vultr.com/?ref=8250676-4F&quot;&gt;点击注册&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最关键的是，支持 &lt;strong&gt;支付宝&lt;/strong&gt; 付款！&lt;/p&gt;
+
+&lt;h1 id=&quot;注册&quot;&gt;注册&lt;/h1&gt;
+
+&lt;p&gt;注册非常简单，点击上面的链接，用邮箱注册即可。都不用激活，方便的一比。&lt;/p&gt;
+
+&lt;h1 id=&quot;充值&quot;&gt;充值&lt;/h1&gt;
+
+&lt;p&gt;登录之后，在 https://my.vultr.com/billing/ 页面，选择 Alipay (支付宝)，充 $25，搞定！&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$25 足够用 5 个月了！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1VusFfAT2gK0jSZFkXXcIQFXa-979-622.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;买机器&quot;&gt;买机器&lt;/h1&gt;
+
+&lt;p&gt;进入 https://my.vultr.com/deploy/&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;地区 选欧洲或者美国的，相对快一点。&lt;/li&gt;
+  &lt;li&gt;操作系统 选 Ubuntu, 版本 18.04 x64。(因为这是 LTS 版本，相对稳定点)&lt;/li&gt;
+  &lt;li&gt;机器类型选最便宜的 $5/月 的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;其他不用管，直接 Deploy 吧。&lt;/p&gt;
+
+&lt;h1 id=&quot;配置&quot;&gt;配置&lt;/h1&gt;
+
+&lt;p&gt;等机器准备好，在 Products 页面中找到你的机器 IP 地址、密码等信息。打开本地终端，
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh root@ip -p 22&lt;/code&gt;
+输入密码，登录远程机器。&lt;/p&gt;
+
+&lt;p&gt;通过脚本一键安装 SS 服务端即可。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
+chmod +x shadowsocks.sh
+./shadowsocks.sh 2&amp;gt;&amp;amp;1 | tee shadowsocks.log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;设置端口号、密码等，等脚本执行完。
+这里有个坑，脚本里 shadowsocks.json 里配置的服务器地址是 0.0.0.0，有 Vlutr 环境里好像不通，我之前用 bandwagon 不用改，但是 Vlutr 不行。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim /etc/shadowsocks.json
+// 把里面的 &quot;server&quot; 字段修改为服务器的 IP 址。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在本地，用 SS 服务端，设置好同样的 IP 地址、端口号和密码即可。&lt;/p&gt;
+
+&lt;p&gt;至此，就可以去浪了！🌊🌊🌊&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。</summary></entry><entry><title type="html">怎么面试一个 iOS 开发 | iOS Interview</title><link href="/2019/07/17/ios-interview.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发 | iOS Interview" /><published>2019-07-17T00:00:00+08:00</published><updated>2019-07-17T00:00:00+08:00</updated><id>/2019/07/17/ios-interview</id><content type="html" xml:base="/2019/07/17/ios-interview.html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;这是一篇 iOS 面试问题总结，也是对自己 iOS 开发的总结。老实说作为一个半路出家的 iOS 程序员 ( 2016.12 ~ now ) ，心里还是很虚的。自己到底是什么样水平，以后的技术之路要怎么走，这些心里还没有把握，希望整理完之后，有个答案。&lt;/p&gt;
 
@@ -34,7 +99,13 @@
 
 &lt;h1 id=&quot;2-开发实践&quot;&gt;2. 开发实践&lt;/h1&gt;
 
-&lt;h1 id=&quot;3-其他知识&quot;&gt;3. 其他知识&lt;/h1&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">几个 iOS 面试问题 | iOS Interview</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="几个 iOS 面试问题 | iOS Interview" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
+&lt;h1 id=&quot;3-其他知识&quot;&gt;3. 其他知识&lt;/h1&gt;
+
+&lt;h2 id=&quot;lru&quot;&gt;LRU&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;经常被问到的 LRU 算法实现&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">几个 iOS 面试问题 | iOS Interview</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="几个 iOS 面试问题 | iOS Interview" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/13483958.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__block_impl_t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -710,90 +781,4 @@ with open(src_name, ‘r’) as f:
 
 ```bash
 $ python vp_remove_watermark test.svg -o out.png
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">Vue Devtools 提示 『 Vue.js not detected 』 解决方法</title><link href="/2018/01/24/vue-devtools.html" rel="alternate" type="text/html" title="Vue Devtools 提示 『 Vue.js not detected 』 解决方法" /><published>2018-01-24T00:00:00+08:00</published><updated>2018-01-24T00:00:00+08:00</updated><id>/2018/01/24/vue-devtools</id><content type="html" xml:base="/2018/01/24/vue-devtools.html">&lt;p&gt;最近开始学习 &lt;a href=&quot;https://cn.vuejs.org/&quot;&gt;Vue.js&lt;/a&gt;, 一脸懵逼地进入前端世界。&lt;/p&gt;
-
-&lt;p&gt;不使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;vue-cli&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt; 这些构建工具，使用单个 html 引入 Vue。&lt;/p&gt;
-
-&lt;p&gt;html 内容是这样的:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Hello, Vue&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/vue&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'app'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-bind:title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;鼠标悬停&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#app'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'页面加载于 '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLocaleString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;用浏览器打开这个 html 就可以看到效果（鼠标悬停显示『页面加载于yyyy-MM-dd hh:mm:ss』）&lt;/p&gt;
-
-&lt;p&gt;安装 &lt;a href=&quot;https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd&quot;&gt;Vue-Devtools&lt;/a&gt;，但是插件栏显示&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js not detected&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/41087835.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;由于访问的路径是 file:// 文件路径，Chrome 扩展默认是不能访问的。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;vuejs-not-detected&quot;&gt;Vue.js not detected&lt;/h2&gt;
-
-&lt;p&gt;打开右上角 &lt;code class=&quot;highlighter-rouge&quot;&gt;...&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;更多工具&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;扩展程序&lt;/code&gt;，找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js devtools&lt;/code&gt;，选中 &lt;code class=&quot;highlighter-rouge&quot;&gt;允许访问文件网址&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/14411118.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;OK，然后 devtools 仍然不可用，提示&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Vue.js is detected on this page. Devtools inspection is not available because it's in production mode or explicitly disabled by the author.&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;由于我们使用的 vue.js &lt;a href=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;https://cdn.jsdelivr.net/npm/vue&lt;/a&gt; 是生产版本，所以不能访问。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;production-mode&quot;&gt;Production mode&lt;/h2&gt;
-
-&lt;p&gt;下载开发版本的vue.js，放到本地，修改src路径为本地即可。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;开发版本: https://vuejs.org/js/vue.js&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;生产版本: https://vuejs.org/js/vue.min.js (或者 https://cdn.jsdelivr.net/npm/vue)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;vue-devtools&quot;&gt;Vue-Devtools&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;这样，打开开发者工具 (&lt;code class=&quot;highlighter-rouge&quot;&gt;option + command + i&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;F12&lt;/code&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;可以看到多了一个Vue的Tab:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10548580.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">最近开始学习 Vue.js, 一脸懵逼地进入前端世界。</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry></feed>
