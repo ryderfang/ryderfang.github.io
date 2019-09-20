@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 怎么面试一个 iOS 开发 | iOS Interview
+title: 怎么去面试一个 iOS 开发 | iOS Tutorial
 categories: [iOS, Interview]
 ---
 
@@ -14,7 +14,7 @@ categories: [iOS, Interview]
 
 > 首先，我们需要有一个大图，iOS 开发到底包含了哪些东西？
 
-![](https://cdn.nlark.com/yuque/0/2019/png/370705/1568733024889-c3cf0005-322e-4ff4-9748-488d2596401d.png)
+![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/19-09-21/ios_xmind.png)
 
 # 1. 语言基础篇
 
@@ -87,9 +87,17 @@ categories: [iOS, Interview]
 
 ## 3.1 RunLoop
 
+* mode
+
+* source0 & source1
+
+* 后台线程保活
+
 ## 3.2 Runtime
 
 > 源码 https://opensource.apple.com/source/objc4/
+
+* Method Swizzling 原理
 
 ## 3.3 AutoreleasePool
 
@@ -104,6 +112,12 @@ categories: [iOS, Interview]
 # 4. 开发实践
 
 ## 4.1 多线程
+
+* GCD
+
+* NSThread
+
+* 各种锁
 
 ## 4.2 架构
 
@@ -129,3 +143,4 @@ categories: [iOS, Interview]
   * **set**: 查找 HashMap，如果存在，更新值并移动节点到链表头部；不存在，新增值放到链表头部，空间不够则淘汰尾部节点。
 ![](https://pic2.zhimg.com/80/v2-09f037608b1b2de70b52d1312ef3b307_hd.jpg)
     
+## 5.4 设计模式

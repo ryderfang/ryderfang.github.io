@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shadowsocks 翻墙和搬瓦工 VPS 配置
+title: Shadowsocks 翻墙和搬瓦工 VPS 配置 | GFW
 categories: [VPS, Config]
 ---
 

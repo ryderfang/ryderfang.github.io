@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 从搬瓦工到 Vlutr，继续科学上网
+title: 从搬瓦工到 Vlutr，继续科学上网 | GFW
 categories: [VPS, Config]
 ---
 

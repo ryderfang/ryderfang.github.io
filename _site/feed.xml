@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-18T01:13:28+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">从搬瓦工到 Vlutr，继续科学上网</title><link href="/2019/09/10/shadowsocks-with-vlutr.html" rel="alternate" type="text/html" title="从搬瓦工到 Vlutr，继续科学上网" /><published>2019-09-10T00:00:00+08:00</published><updated>2019-09-10T00:00:00+08:00</updated><id>/2019/09/10/shadowsocks-with-vlutr</id><content type="html" xml:base="/2019/09/10/shadowsocks-with-vlutr.html">&lt;p&gt;之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-21T00:14:52+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">从搬瓦工到 Vlutr，继续科学上网 | GFW</title><link href="/2019/09/10/shadowsocks-with-vlutr.html" rel="alternate" type="text/html" title="从搬瓦工到 Vlutr，继续科学上网 | GFW" /><published>2019-09-10T00:00:00+08:00</published><updated>2019-09-10T00:00:00+08:00</updated><id>/2019/09/10/shadowsocks-with-vlutr</id><content type="html" xml:base="/2019/09/10/shadowsocks-with-vlutr.html">&lt;p&gt;之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1tiAwfpY7gK0jSZKzXXaikpXa-1970-312.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -63,7 +63,7 @@ chmod +x shadowsocks.sh
 
 &lt;p&gt;在本地，用 SS 服务端，设置好同样的 IP 地址、端口号和密码即可。&lt;/p&gt;
 
-&lt;p&gt;至此，就可以去浪了！🌊🌊🌊&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。</summary></entry><entry><title type="html">怎么面试一个 iOS 开发 | iOS Interview</title><link href="/2019/07/17/ios-interview-tutorial.html" rel="alternate" type="text/html" title="怎么面试一个 iOS 开发 | iOS Interview" /><published>2019-07-17T00:00:00+08:00</published><updated>2019-07-17T00:00:00+08:00</updated><id>/2019/07/17/ios-interview-tutorial</id><content type="html" xml:base="/2019/07/17/ios-interview-tutorial.html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;至此，就可以去浪了！🌊🌊🌊&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。</summary></entry><entry><title type="html">怎么去面试一个 iOS 开发 | iOS Tutorial</title><link href="/2019/07/17/ios-interview-tutorial.html" rel="alternate" type="text/html" title="怎么去面试一个 iOS 开发 | iOS Tutorial" /><published>2019-07-17T00:00:00+08:00</published><updated>2019-07-17T00:00:00+08:00</updated><id>/2019/07/17/ios-interview-tutorial</id><content type="html" xml:base="/2019/07/17/ios-interview-tutorial.html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;这是一篇 iOS 面试问题总结，也是对自己 iOS 开发的总结。老实说作为一个半路出家的 iOS 程序员 ( 2016.12 ~ now ) ，心里还是很虚的。自己到底是什么样水平，以后的技术之路要怎么走，这些心里还没有把握，希望整理完之后，有个答案。&lt;/p&gt;
 
@@ -75,7 +75,7 @@ chmod +x shadowsocks.sh
   &lt;p&gt;首先，我们需要有一个大图，iOS 开发到底包含了哪些东西？&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2019/png/370705/1568733024889-c3cf0005-322e-4ff4-9748-488d2596401d.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/19-09-21/ios_xmind.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;1-语言基础篇&quot;&gt;1. 语言基础篇&lt;/h1&gt;
 
@@ -169,11 +169,27 @@ chmod +x shadowsocks.sh
 
 &lt;h2 id=&quot;31-runloop&quot;&gt;3.1 RunLoop&lt;/h2&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;mode&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;source0 &amp;amp; source1&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;后台线程保活&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;32-runtime&quot;&gt;3.2 Runtime&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;源码 https://opensource.apple.com/source/objc4/&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Method Swizzling 原理&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;33-autoreleasepool&quot;&gt;3.3 AutoreleasePool&lt;/h2&gt;
 
@@ -195,6 +211,18 @@ chmod +x shadowsocks.sh
 &lt;h1 id=&quot;4-开发实践&quot;&gt;4. 开发实践&lt;/h1&gt;
 
 &lt;h2 id=&quot;41-多线程&quot;&gt;4.1 多线程&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;GCD&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;NSThread&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;各种锁&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;42-架构&quot;&gt;4.2 架构&lt;/h2&gt;
 
@@ -231,7 +259,9 @@ chmod +x shadowsocks.sh
 &lt;img src=&quot;https://pic2.zhimg.com/80/v2-09f037608b1b2de70b52d1312ef3b307_hd.jpg&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">几个 iOS 面试问题 | iOS Interview</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="几个 iOS 面试问题 | iOS Interview" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;54-设计模式&quot;&gt;5.4 设计模式&lt;/h2&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">搜集一些 iOS 面试问题 | iOS Problems</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="搜集一些 iOS 面试问题 | iOS Problems" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/13483958.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__block_impl_t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -398,7 +428,7 @@ chmod +x shadowsocks.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;section-4&quot;&gt;Section 4&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/97038988.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">Section 1</summary></entry><entry><title type="html">Shadowsocks 翻墙和搬瓦工 VPS 配置</title><link href="/2018/06/21/shadow-socks-and-bandwagon.html" rel="alternate" type="text/html" title="Shadowsocks 翻墙和搬瓦工 VPS 配置" /><published>2018-06-21T00:00:00+08:00</published><updated>2018-06-21T00:00:00+08:00</updated><id>/2018/06/21/shadow-socks-and-bandwagon</id><content type="html" xml:base="/2018/06/21/shadow-socks-and-bandwagon.html">&lt;h3 id=&quot;这是干啥的&quot;&gt;这是干啥的&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/97038988.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">Section 1</summary></entry><entry><title type="html">Shadowsocks 翻墙和搬瓦工 VPS 配置 | GFW</title><link href="/2018/06/21/shadow-socks-and-bandwagon.html" rel="alternate" type="text/html" title="Shadowsocks 翻墙和搬瓦工 VPS 配置 | GFW" /><published>2018-06-21T00:00:00+08:00</published><updated>2018-06-21T00:00:00+08:00</updated><id>/2018/06/21/shadow-socks-and-bandwagon</id><content type="html" xml:base="/2018/06/21/shadow-socks-and-bandwagon.html">&lt;h3 id=&quot;这是干啥的&quot;&gt;这是干啥的&lt;/h3&gt;
 
 &lt;p&gt;敏感你懂的，不多谈。🌝 🌝 🌝&lt;/p&gt;
 
