@@ -153,6 +153,10 @@
     <h2 id="section-1">Section 1</h2>
 <p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/13483958.jpg" alt="" /></p>
 
+<blockquote>
+  <p>前两题，了解一定的 block 内存结构知识就可以解决。</p>
+</blockquote>
+
 <div class="language-objc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">__block_impl_t</span> <span class="p">{</span>
     <span class="kt">void</span> <span class="o">*</span><span class="n">isa</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">Flags</span><span class="p">;</span>
@@ -207,6 +211,13 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
+<blockquote>
+  <p>第三题需要利用 fishhook 这个库，同时如果需要针对所有类型的 block 都打印参数，还需要 NSInvocation 的辅助。</p>
+</blockquote>
+
+<p>完整的实现放在 GitHub 上:
+<a href="https://github.com/FongRay/Snippets/blob/master/Snippets-Mac/block/main-block.mm">⚔️Hook Block!</a></p>
 
 <h2 id="section-2">Section 2</h2>
 <p><img src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/64657547.jpg" alt="" /></p>

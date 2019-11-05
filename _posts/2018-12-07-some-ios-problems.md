@@ -7,6 +7,8 @@ categories: [iOS, Interview]
 ## Section 1
 ![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/13483958.jpg)
 
+> 前两题，了解一定的 block 内存结构知识就可以解决。
+
 ```objc
 struct __block_impl_t {
     void *isa;
@@ -62,6 +64,11 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 ```
+
+> 第三题需要利用 fishhook 这个库，同时如果需要针对所有类型的 block 都打印参数，还需要 NSInvocation 的辅助。
+
+完整的实现放在 GitHub 上:
+[⚔️Hook Block!](https://github.com/FongRay/Snippets/blob/master/Snippets-Mac/block/main-block.mm)
 
 ## Section 2
 ![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/64657547.jpg)

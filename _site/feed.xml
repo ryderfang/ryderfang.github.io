@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-21T00:14:52+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">从搬瓦工到 Vlutr，继续科学上网 | GFW</title><link href="/2019/09/10/shadowsocks-with-vlutr.html" rel="alternate" type="text/html" title="从搬瓦工到 Vlutr，继续科学上网 | GFW" /><published>2019-09-10T00:00:00+08:00</published><updated>2019-09-10T00:00:00+08:00</updated><id>/2019/09/10/shadowsocks-with-vlutr</id><content type="html" xml:base="/2019/09/10/shadowsocks-with-vlutr.html">&lt;p&gt;之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-11-05T19:50:43+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">从搬瓦工到 Vlutr，继续科学上网 | GFW</title><link href="/2019/09/10/shadowsocks-with-vlutr.html" rel="alternate" type="text/html" title="从搬瓦工到 Vlutr，继续科学上网 | GFW" /><published>2019-09-10T00:00:00+08:00</published><updated>2019-09-10T00:00:00+08:00</updated><id>/2019/09/10/shadowsocks-with-vlutr</id><content type="html" xml:base="/2019/09/10/shadowsocks-with-vlutr.html">&lt;p&gt;之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1tiAwfpY7gK0jSZKzXXaikpXa-1970-312.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -264,6 +264,10 @@ chmod +x shadowsocks.sh
 &lt;h2 id=&quot;54-设计模式&quot;&gt;5.4 设计模式&lt;/h2&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">搜集一些 iOS 面试问题 | iOS Problems</title><link href="/2018/12/07/some-ios-problems.html" rel="alternate" type="text/html" title="搜集一些 iOS 面试问题 | iOS Problems" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>/2018/12/07/some-ios-problems</id><content type="html" xml:base="/2018/12/07/some-ios-problems.html">&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/13483958.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;前两题，了解一定的 block 内存结构知识就可以解决。&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__block_impl_t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Flags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -318,6 +322,13 @@ chmod +x shadowsocks.sh
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;第三题需要利用 fishhook 这个库，同时如果需要针对所有类型的 block 都打印参数，还需要 NSInvocation 的辅助。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;完整的实现放在 GitHub 上:
+&lt;a href=&quot;https://github.com/FongRay/Snippets/blob/master/Snippets-Mac/block/main-block.mm&quot;&gt;⚔️Hook Block!&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-2&quot;&gt;Section 2&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-11-30/64657547.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
