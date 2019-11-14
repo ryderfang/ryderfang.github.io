@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-11-06T14:54:39+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">从搬瓦工到 Vlutr，继续科学上网 | GFW</title><link href="/2019/09/10/shadowsocks-with-vlutr.html" rel="alternate" type="text/html" title="从搬瓦工到 Vlutr，继续科学上网 | GFW" /><published>2019-09-10T00:00:00+08:00</published><updated>2019-09-10T00:00:00+08:00</updated><id>/2019/09/10/shadowsocks-with-vlutr</id><content type="html" xml:base="/2019/09/10/shadowsocks-with-vlutr.html">&lt;p&gt;之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-11-14T20:22:39+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">学习 GPUImage 2 | GPUImage 2 (Swift)</title><link href="/2019/11/08/learning-gpuimage-2.html" rel="alternate" type="text/html" title="学习 GPUImage 2 | GPUImage 2 (Swift)" /><published>2019-11-08T00:00:00+08:00</published><updated>2019-11-08T00:00:00+08:00</updated><id>/2019/11/08/learning-gpuimage-2</id><content type="html" xml:base="/2019/11/08/learning-gpuimage-2.html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
+&lt;p&gt;&lt;br /&gt;
+书接上文，Brad Larson 在 2016 年用 Swift 语言重写了 GPUImage，创造了新的 &lt;a href=&quot;https://github.com/BradLarson/GPUImage2&quot;&gt;&lt;strong&gt;GPUImage2&lt;/strong&gt;&lt;/a&gt;，同样在作者的网站上有介绍：&lt;a href=&quot;http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift&quot;&gt;http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;作为第二代框架，它的优势主要有：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Swift 比 Objective-C 更加简洁，代码量减少了 80%，作者做过统计：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;GPUImage Version&lt;/th&gt;
+      &lt;th&gt;Files&lt;/th&gt;
+      &lt;th&gt;Lines of Code&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Objective-C (without shaders)&lt;/td&gt;
+      &lt;td&gt;359&lt;/td&gt;
+      &lt;td&gt;20107&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Swift (without shaders)&lt;/td&gt;
+      &lt;td&gt;157&lt;/td&gt;
+      &lt;td&gt;4549&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Shaders&lt;/td&gt;
+      &lt;td&gt;233&lt;/td&gt;
+      &lt;td&gt;6670&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;作者举了一个自定义操作符的例子，通过自定义 &lt;code class=&quot;highlighter-rouge&quot;&gt;operator --&amp;gt;&lt;/code&gt; 表示 addTarget 简化了代码。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;不再局限于 iOS/Mac，新一代框架可以运行在 Linux 上 (支持 Swift)，甚至可以跑在树莓派上。&lt;/li&gt;
+  &lt;li&gt;新增特性：支持在图片上任意形状添加滤镜；像素级裁剪；高斯和均值滤波自动降采样和升采样。&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Yimu</name></author><summary type="html">概述 书接上文，Brad Larson 在 2016 年用 Swift 语言重写了 GPUImage，创造了新的 GPUImage2，同样在作者的网站上有介绍：http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift。</summary></entry><entry><title type="html">学习 GPUImage | GPUImage Framework</title><link href="/2019/11/07/learning-gpuimage-1.html" rel="alternate" type="text/html" title="学习 GPUImage | GPUImage Framework" /><published>2019-11-07T00:00:00+08:00</published><updated>2019-11-07T00:00:00+08:00</updated><id>/2019/11/07/learning-gpuimage-1</id><content type="html" xml:base="/2019/11/07/learning-gpuimage-1.html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://img.alicdn.com/tfs/TB1ws.EmO_1gK0jSZFqXXcpaXXa-240-240.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/BradLarson/GPUImage&quot;&gt;&lt;strong&gt;GPUImage&lt;/strong&gt;&lt;/a&gt; 是 iOS 上一个开源图像处理库，基于 OpenGL GS 2.0，作者是 Brad Larson。&lt;/p&gt;
+
+&lt;p&gt;作者于 2012 年发布了这个框架，官方网站介绍：&lt;a href=&quot;http://www.sunsetlakesoftware.com/2012/02/12/introducing-gpuimage-framework&quot;&gt;http://www.sunsetlakesoftware.com/2012/02/12/introducing-gpuimage-framework&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;相对于系统的 CoreImage (iOS 5.0)，GPUImage 可以更方便地自定义滤镜，并且在处理速度上更快。相对于 CPU 计算来说，GPU 在处理图形图像时更具优势，
+在 iPhone 4 的机器上，GPU 的图片处理性能比 CPU 强百倍以上。&lt;/p&gt;
+
+&lt;p&gt;GPUImage 是基于 BSD 协议的开源框架，我们可以直接在 &lt;a href=&quot;https://github.com/BradLarson/GPUImage&quot;&gt;GitHub&lt;/a&gt; 上获取源码。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;系统要求
+    &lt;ul&gt;
+      &lt;li&gt;iPhone 4+ (iPhone 3G/iPod 1/iPod 2 不支持)&lt;/li&gt;
+      &lt;li&gt;iOS 4.0+ (依赖 iOS 5.0 SDK)&lt;/li&gt;
+      &lt;li&gt;支持 ARC/MRC (-fobjc-arc)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;可以看出，GPUImage 是一个非常古老的库，GitHub 最新的提交也只到 2016.05，作者应该不再更新。&lt;/p&gt;
+
+&lt;p&gt;作者后续又推出了基于 Swift 和 OpenGL 的 &lt;a href=&quot;https://github.com/BradLarson/GPUImage2&quot;&gt;&lt;strong&gt;GPUImage2&lt;/strong&gt;&lt;/a&gt; 和
+基于 Metal 的 &lt;a href=&quot;https://github.com/BradLarson/GPUImage3&quot;&gt;&lt;strong&gt;GPUImage3&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;但是初代 GPUImage 仍然可以用在最新的 iOS 13.2 上，而且它是后续两个框架的基础。所以我们仍然有必要去研究和学习它。&lt;/p&gt;
+
+&lt;h1 id=&quot;整体架构&quot;&gt;整体架构&lt;/h1&gt;</content><author><name>Yimu</name></author><summary type="html">概述</summary></entry><entry><title type="html">从搬瓦工到 Vlutr，继续科学上网 | GFW</title><link href="/2019/09/10/shadowsocks-with-vlutr.html" rel="alternate" type="text/html" title="从搬瓦工到 Vlutr，继续科学上网 | GFW" /><published>2019-09-10T00:00:00+08:00</published><updated>2019-09-10T00:00:00+08:00</updated><id>/2019/09/10/shadowsocks-with-vlutr</id><content type="html" xml:base="/2019/09/10/shadowsocks-with-vlutr.html">&lt;p&gt;之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1tiAwfpY7gK0jSZKzXXaikpXa-1970-312.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -738,214 +810,4 @@ $ git checkout -b feature_5.7.5 origin/feature_5.7.5 ⭕️
 
 &lt;blockquote&gt;
   &lt;p&gt;// UPDATE 2018.12.01 相识 &lt;strong&gt;520&lt;/strong&gt; 天，我们结婚啦！👫 💕💕&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Yimu</name></author><summary type="html">Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)，今年 (2018) 他的挑战是 重整 Facebook，So，我也要给自己立个 Flag 了。</summary></entry><entry><title type="html">Chromium 缺少 Google API 密钥解决办法 | Chromium</title><link href="/2018/01/26/chromium-api-keys.html" rel="alternate" type="text/html" title="Chromium 缺少 Google API 密钥解决办法 | Chromium" /><published>2018-01-26T00:00:00+08:00</published><updated>2018-01-26T00:00:00+08:00</updated><id>/2018/01/26/chromium-api-keys</id><content type="html" xml:base="/2018/01/26/chromium-api-keys.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
-
-&lt;p&gt;Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢 😏&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;当然是因为好（zhuang）用（bi）了。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;废话少说，下载地址：
-https://download-chromium.appspot.com/&lt;/p&gt;
-
-&lt;p&gt;如果下载不了，可以试下：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Windows
-https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Mac
-https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;打不开之类的需要翻墙的问题自行解决吧。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
-
-&lt;p&gt;打开 Chromium 会提示 &lt;code class=&quot;highlighter-rouge&quot;&gt;缺少 Google API 密钥，因此 Chromium 的部分功能将无法使用&lt;/code&gt; 😒&lt;/p&gt;
-
-&lt;p&gt;由于 Chromium 使用的 API 都需要自行申请密钥才能使用。&lt;/p&gt;
-
-&lt;p&gt;所以 在 https://console.cloud.google.com/ 上创建密钥。&lt;/p&gt;
-
-&lt;p&gt;相关文档：http://www.chromium.org/developers/how-tos/api-keys&lt;/p&gt;
-
-&lt;p&gt;最后密钥有三个，位置在 https://console.cloud.google.com/apis/credentials&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;GOOGLE_API_KEY&lt;/li&gt;
-  &lt;li&gt;GOOGLE_DEFAULT_CLIENT_ID&lt;/li&gt;
-  &lt;li&gt;GOOGLE_DEFAULT_CLIENT_SECRET&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;解决&quot;&gt;解决&lt;/h3&gt;
-
-&lt;p&gt;官方的解决方法是：&lt;/p&gt;
-
-&lt;p&gt;将下面三行写到 ~/.bash_profile 中，然后重启浏览器即可&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GOOGLE_API_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;****&quot;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GOOGLE_DEFAULT_CLIENT_ID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;****
-export GOOGLE_DEFAULT_CLIENT_SECRET=&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;****&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
-
-
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;source ~/.bash_profile
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;这样，有时是管用的。特别是在 Windows上，使用类似的在命令行输入：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;setx GOOGLE_API_KEY your_key_goes_here
-setx GOOGLE_DEFAULT_CLIENT_ID your_client_id_goes_here
-setx GOOGLE_DEFAULT_CLIENT_SECRET your_client_secret_goes_here
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;但是 Mac 上有时不管用，参考:&lt;/p&gt;
-
-&lt;p&gt;https://gist.github.com/cvan/44a6d60457b20133191bd7b104f9dcc4&lt;/p&gt;
-
-&lt;p&gt;在文档最后，发现有个哥们写了一个 Python 脚本，试了下，很好用！&lt;/p&gt;
-
-&lt;p&gt;我 Fork 了一下，修复了一个 bug，给他提了 PR (https://github.com/ezeeyahoo/ChromiumSyncEnabler/pull/1)&lt;/p&gt;
-
-&lt;p&gt;https://github.com/FongRay/ChromiumSyncEnabler&lt;/p&gt;
-
-&lt;p&gt;跑下来重启 Chromium 就 OK 了！&lt;/p&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry><entry><title type="html">Visual Paradigm 去除水印的方法 (Python)</title><link href="/2018/01/25/visual-paradigm-remove-watermark.html" rel="alternate" type="text/html" title="Visual Paradigm 去除水印的方法 (Python)" /><published>2018-01-25T00:00:00+08:00</published><updated>2018-01-25T00:00:00+08:00</updated><id>/2018/01/25/visual-paradigm-remove-watermark</id><content type="html" xml:base="/2018/01/25/visual-paradigm-remove-watermark.html">&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
-
-&lt;p&gt;Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/46295044.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;本文就是要 Python 去除这个水印，输出 png 图片。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;该方法参考了网络上手动去除的方法，需要有一些操作&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h3 id=&quot;导出&quot;&gt;导出&lt;/h3&gt;
-
-&lt;p&gt;首先需要将完成的图表导出为 svg 格式的图片：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/20666066.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;选择 svg 格式保存：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/26387925.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;这样我们就得到了一个带水印的 &lt;a href=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/vp_test.svg&quot;&gt;svg 图片&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/vp_test.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;去除水印&quot;&gt;去除水印&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;处理 svg 图片&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Svg（Scalable Vector Graphics，可缩放矢量图形） 是一种矢量图片格式，可以使用文本编辑器直接打开，可以看得到在最后几行有水印的内容，所以我们可以用代码自动把他们去掉（当然也可以手动删除）。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;水印内容在 Svg 文件中：&lt;/p&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;68&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xml:space=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;preserve&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;276&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;none&quot;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Powered ByVisual Paradigm Community Edition&lt;span class=&quot;nt&quot;&gt;&amp;lt;/text
-      &amp;gt;&amp;lt;image&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;font-size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;12&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;303&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;264&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;white&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;16&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xlink:href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABvklEQVR42o1TPUgC
-YRi+z1PSzWrSc6ho6W/xNIhEoZoCl/a2fqaGoJKwyHIp16ZyCyIolwpq6c8lIz0h
-h6ACa/KWOHGz4byezz7lkNM8eHjf7/ve53l/vu84rsWXEcVo2uOJtYrhW5A3YCKE
-48YXnE7zoSzfty3AyFHdln/R4bBA5O5fgQbyiUbIK6oY5gjxG1XCtyAngFl7qXT+
-Y7UOwR+glTSK8EZkomlJMZsNCrKs7iuKOuXzJboUJYAqemrtHEBkGwsTIy/pe0bZ
-/Rmvd6K27svnx7Q/cu08LIliiPpmlvEGJo0DL4sRSKVyBuEZledznKpeYs+u6/YF
-nKt6C+jpe14QPjCsQUpmQVYgaNK0R9hPYJLtZ5Eo5JGkVF0AmUZAvoBLM5WBXhZs
-A6YB+pi+AAudD+zOnMuVjBcKheoMbOXyG0wcWKGtAPr77gauKyYTFU8g+xrsUWex
-mKu2r79Gye3eQkAE7i4wCtQG+YTMKZwt0zOUv274DjCLJGZBoEqv9JRtyyDfgrwK
-f09PNnyJ6OuBiYSxPAbecf9UMNZIbvovUBE8FjRINrEMNJbd1t9I28Gz7YD7DHKo
-WdwvFl2vGaThOSEAAAAASUVORK5CYII=&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;16&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;white&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;preserveAspectRatio=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;none&quot;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;用 Python 读取文件内容，去除这一段内容即可。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;转换成 png 图片&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;然后将 Svg 格式转换成 png格式，这里有现成的库 &lt;a href=&quot;http://cairosvg.org/&quot;&gt;cairosvg&lt;/a&gt; 来实现。&lt;/p&gt;
-
-&lt;p&gt;完整的代码可以在 我的 &lt;a href=&quot;&quot;&gt;Github&lt;/a&gt; 上找到。&lt;/p&gt;
-
-&lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;需要先安装 &lt;code class=&quot;highlighter-rouge&quot;&gt;cairosvg&lt;/code&gt;:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;cairosvg
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;可能会报错，&lt;code class=&quot;highlighter-rouge&quot;&gt;Pillow&lt;/code&gt; 安装失败，提示：
-&lt;code class=&quot;highlighter-rouge&quot;&gt;The headers or library files could not be found for zlib.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;可以尝试一下:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;xcode-select —-install
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libtiff libjpeg webp little-cms2
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Pillow
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;安装 &lt;code class=&quot;highlighter-rouge&quot;&gt;cairosvg&lt;/code&gt; 成功后，使用 Python3 &lt;code class=&quot;highlighter-rouge&quot;&gt;import cairosvg&lt;/code&gt; 发现还是报错:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; import cairosvg
-Traceback (most recent call last):
-  File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/__init__.py&quot;, line 29, in &amp;lt;module&amp;gt;
-    from . import surface
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/surface.py&quot;, line 24, in &amp;lt;module&amp;gt;
-    import cairocffi as cairo
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py&quot;, line 41, in &amp;lt;module&amp;gt;
-    cairo = dlopen(ffi, 'cairo', 'cairo-2')
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py&quot;, line 38, in dlopen
-    raise OSError(&quot;dlopen() failed to load a library: %s&quot; % ' / '.join(names))
-OSError: dlopen() failed to load a library: cairo / cairo-2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;经过搜索，发现还需要安装 &lt;code class=&quot;highlighter-rouge&quot;&gt;cairo&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;libffi&lt;/code&gt;：&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;cairo pango gdk-pixbuf libffi
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;终于弄完了&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/49384223.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;源文件：
-&lt;a href=&quot;https://github.com/FongRay/PyTools/blob/master/vp_remove_watermark.py&quot;&gt;vp_remove_watermark.py&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;核心代码如下：
-``` python
-import cairosvg&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;svg_content = ‘’
-with open(src_name, ‘r’) as f:
-    svg_content = f.read()
-    end = svg_content.rfind(‘&amp;lt;/g’)
-    beg = svg_content.rfind(‘&amp;lt;g’, 0, end)
-    svg_content = svg_content[:beg] + svg_content[end:]&lt;/p&gt;
-
-&lt;p&gt;with open(‘./vp_test_out.svg’, ‘w’) as f:
-    f.write(svg_content)&lt;/p&gt;
-
-&lt;p&gt;cairosvg.svg2png(url=’./vp_test_out.svg’, write_to=dst_name)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-* 赶紧跑起来
-
-```bash
-$ python vp_remove_watermark test.svg -o out.png
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yimu</name></author><summary type="html">前言</summary></entry></feed>
+&lt;/blockquote&gt;</content><author><name>Yimu</name></author><summary type="html">Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)，今年 (2018) 他的挑战是 重整 Facebook，So，我也要给自己立个 Flag 了。</summary></entry></feed>
