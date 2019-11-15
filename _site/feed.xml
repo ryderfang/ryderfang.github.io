@@ -1,46 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-11-14T20:22:39+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">学习 GPUImage 2 | GPUImage 2 (Swift)</title><link href="/2019/11/08/learning-gpuimage-2.html" rel="alternate" type="text/html" title="学习 GPUImage 2 | GPUImage 2 (Swift)" /><published>2019-11-08T00:00:00+08:00</published><updated>2019-11-08T00:00:00+08:00</updated><id>/2019/11/08/learning-gpuimage-2</id><content type="html" xml:base="/2019/11/08/learning-gpuimage-2.html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-11-15T18:08:36+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">学习 GPUImage 2 | GPUImage 2 (Swift)</title><link href="/2019/11/08/learning-gpuimage-2.html" rel="alternate" type="text/html" title="学习 GPUImage 2 | GPUImage 2 (Swift)" /><published>2019-11-08T00:00:00+08:00</published><updated>2019-11-08T00:00:00+08:00</updated><id>/2019/11/08/learning-gpuimage-2</id><content type="html" xml:base="/2019/11/08/learning-gpuimage-2.html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
 &lt;p&gt;&lt;br /&gt;
 书接上文，Brad Larson 在 2016 年用 Swift 语言重写了 GPUImage，创造了新的 &lt;a href=&quot;https://github.com/BradLarson/GPUImage2&quot;&gt;&lt;strong&gt;GPUImage2&lt;/strong&gt;&lt;/a&gt;，同样在作者的网站上有介绍：&lt;a href=&quot;http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift&quot;&gt;http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;作为第二代框架，它的优势主要有：&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Swift 比 Objective-C 更加简洁，代码量减少了 80%，作者做过统计：&lt;/li&gt;
-&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Swift 比 Objective-C 更加简洁，代码量减少了 80%，作者做过统计：&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;GPUImage Version&lt;/th&gt;
-      &lt;th&gt;Files&lt;/th&gt;
-      &lt;th&gt;Lines of Code&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Objective-C (without shaders)&lt;/td&gt;
-      &lt;td&gt;359&lt;/td&gt;
-      &lt;td&gt;20107&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Swift (without shaders)&lt;/td&gt;
-      &lt;td&gt;157&lt;/td&gt;
-      &lt;td&gt;4549&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Shaders&lt;/td&gt;
-      &lt;td&gt;233&lt;/td&gt;
-      &lt;td&gt;6670&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;GPUImage Version&lt;/th&gt;
+          &lt;th&gt;Files&lt;/th&gt;
+          &lt;th&gt;Lines of Code&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Objective-C (without shaders)&lt;/td&gt;
+          &lt;td&gt;359&lt;/td&gt;
+          &lt;td&gt;20107&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Swift (without shaders)&lt;/td&gt;
+          &lt;td&gt;157&lt;/td&gt;
+          &lt;td&gt;4549&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Shaders&lt;/td&gt;
+          &lt;td&gt;233&lt;/td&gt;
+          &lt;td&gt;6670&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
 
-&lt;p&gt;作者举了一个自定义操作符的例子，通过自定义 &lt;code class=&quot;highlighter-rouge&quot;&gt;operator --&amp;gt;&lt;/code&gt; 表示 addTarget 简化了代码。&lt;/p&gt;
+    &lt;p&gt;作者举了一个自定义操作符的例子，通过自定义 &lt;code class=&quot;highlighter-rouge&quot;&gt;operator --&amp;gt;&lt;/code&gt; 表示 addTarget 简化了代码。&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;不再局限于 iOS/Mac，新一代框架可以运行在 Linux 上 (支持 Swift)，甚至可以跑在树莓派上。&lt;/li&gt;
-  &lt;li&gt;新增特性：支持在图片上任意形状添加滤镜；像素级裁剪；高斯和均值滤波自动降采样和升采样。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Yimu</name></author><summary type="html">概述 书接上文，Brad Larson 在 2016 年用 Swift 语言重写了 GPUImage，创造了新的 GPUImage2，同样在作者的网站上有介绍：http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift。</summary></entry><entry><title type="html">学习 GPUImage | GPUImage Framework</title><link href="/2019/11/07/learning-gpuimage-1.html" rel="alternate" type="text/html" title="学习 GPUImage | GPUImage Framework" /><published>2019-11-07T00:00:00+08:00</published><updated>2019-11-07T00:00:00+08:00</updated><id>/2019/11/07/learning-gpuimage-1</id><content type="html" xml:base="/2019/11/07/learning-gpuimage-1.html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
+    &lt;p&gt;作者在 &lt;a href=&quot;http://www.sunsetlakesoftware.com/2014/12/02/why-were-rewriting-our-robotics-software-swift&quot;&gt;另一篇文章&lt;/a&gt; 中解释了为什么要用 Swift 重写软件，其中针对开发中遇到的一些常见错误，由 OC 语言本身设计不够严谨导致的有：&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;nil 消息转发会导致错误被隐藏，延迟被发现。这里有两个例子：
+        &lt;ul&gt;
+          &lt;li&gt;用 IB 来开发界面的时候，如果忘记连线，会导致属性为 nil，按钮点击无响应，很难排查问题；&lt;/li&gt;
+          &lt;li&gt;作者公司是做机器人的，有一个例子导致了上万美元的损失。存储机器人移动坐标的类在特定情况下变成了 nil，这样坐标系统的 Z 轴变成了 0，
+机械臂会把打印指针插入打印台里移动，导致产品损坏。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;对 NSError 和其他 OC 错误不合适的处理
+        &lt;ul&gt;
+          &lt;li&gt;作者的意思是通常 error 是通过二级指针传入传出的，如果不小心置空，容易出问题，参见 &lt;a href=&quot;https://stackoverflow.com/questions/1808929/handling-nserror-when-reading-from-file&quot;&gt;StackOverFlow&lt;/a&gt; 的例子&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Object (id) 类型错误转换&lt;/li&gt;
+      &lt;li&gt;枚举类型与整数藕合 (Swift 支持自定义类型枚举)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;不再局限于 iOS/Mac，新一代框架可以运行在 Linux 上 (支持 Swift)，甚至可以跑在树莓派上。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;新增特性：支持在图片上任意形状添加滤镜；像素级裁剪；高斯和均值滤波自动降采样和升采样。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Yimu</name></author><summary type="html">概述 书接上文，Brad Larson 在 2016 年用 Swift 语言重写了 GPUImage，创造了新的 GPUImage2，同样在作者的网站上有介绍：http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift。</summary></entry><entry><title type="html">学习 GPUImage | GPUImage Framework</title><link href="/2019/11/07/learning-gpuimage-1.html" rel="alternate" type="text/html" title="学习 GPUImage | GPUImage Framework" /><published>2019-11-07T00:00:00+08:00</published><updated>2019-11-07T00:00:00+08:00</updated><id>/2019/11/07/learning-gpuimage-1</id><content type="html" xml:base="/2019/11/07/learning-gpuimage-1.html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;img src=&quot;https://img.alicdn.com/tfs/TB1ws.EmO_1gK0jSZFqXXcpaXXa-240-240.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
