@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-11-15T18:08:36+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">学习 GPUImage 2 | GPUImage 2 (Swift)</title><link href="/2019/11/08/learning-gpuimage-2.html" rel="alternate" type="text/html" title="学习 GPUImage 2 | GPUImage 2 (Swift)" /><published>2019-11-08T00:00:00+08:00</published><updated>2019-11-08T00:00:00+08:00</updated><id>/2019/11/08/learning-gpuimage-2</id><content type="html" xml:base="/2019/11/08/learning-gpuimage-2.html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-11-18T20:16:43+08:00</updated><id>/feed.xml</id><title type="html">$HOME - 给岁月以文明</title><author><name>Yimu</name></author><entry><title type="html">学习 GPUImage 2 | GPUImage 2 (Swift)</title><link href="/2019/11/08/learning-gpuimage-2.html" rel="alternate" type="text/html" title="学习 GPUImage 2 | GPUImage 2 (Swift)" /><published>2019-11-08T00:00:00+08:00</published><updated>2019-11-08T00:00:00+08:00</updated><id>/2019/11/08/learning-gpuimage-2</id><content type="html" xml:base="/2019/11/08/learning-gpuimage-2.html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
 &lt;p&gt;&lt;br /&gt;
 书接上文，Brad Larson 在 2016 年用 Swift 语言重写了 GPUImage，创造了新的 &lt;a href=&quot;https://github.com/BradLarson/GPUImage2&quot;&gt;&lt;strong&gt;GPUImage2&lt;/strong&gt;&lt;/a&gt;，同样在作者的网站上有介绍：&lt;a href=&quot;http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift&quot;&gt;http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift&lt;/a&gt;。&lt;/p&gt;
 
@@ -54,13 +54,10 @@
       &lt;li&gt;Object (id) 类型错误转换&lt;/li&gt;
       &lt;li&gt;枚举类型与整数藕合 (Swift 支持自定义类型枚举)&lt;/li&gt;
     &lt;/ul&gt;
+    &lt;div style=&quot;margin:20px&quot; /&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;不再局限于 iOS/Mac，新一代框架可以运行在 Linux 上 (支持 Swift)，甚至可以跑在树莓派上。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;新增特性：支持在图片上任意形状添加滤镜；像素级裁剪；高斯和均值滤波自动降采样和升采样。&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;不再局限于 iOS/Mac，新一代框架可以运行在 Linux 上 (支持 Swift)，甚至可以跑在树莓派上。&lt;/li&gt;
+  &lt;li&gt;新增特性：支持在图片上任意形状添加滤镜；像素级裁剪；高斯和均值滤波自动降采样和升采样。&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Yimu</name></author><summary type="html">概述 书接上文，Brad Larson 在 2016 年用 Swift 语言重写了 GPUImage，创造了新的 GPUImage2，同样在作者的网站上有介绍：http://www.sunsetlakesoftware.com/2016/04/16/introducing-gpuimage-2-redesigned-swift。</summary></entry><entry><title type="html">学习 GPUImage | GPUImage Framework</title><link href="/2019/11/07/learning-gpuimage-1.html" rel="alternate" type="text/html" title="学习 GPUImage | GPUImage Framework" /><published>2019-11-07T00:00:00+08:00</published><updated>2019-11-07T00:00:00+08:00</updated><id>/2019/11/07/learning-gpuimage-1</id><content type="html" xml:base="/2019/11/07/learning-gpuimage-1.html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;img src=&quot;https://img.alicdn.com/tfs/TB1ws.EmO_1gK0jSZFqXXcpaXXa-240-240.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -90,6 +87,42 @@
 基于 Metal 的 &lt;a href=&quot;https://github.com/BradLarson/GPUImage3&quot;&gt;&lt;strong&gt;GPUImage3&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;但是初代 GPUImage 仍然可以用在最新的 iOS 13.2 上，而且它是后续两个框架的基础。所以我们仍然有必要去研究和学习它。&lt;/p&gt;
+
+&lt;h1 id=&quot;gpu-渲染&quot;&gt;GPU 渲染&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1iPL0nbH1gK0jSZFwXXc7aXXa-1308-387.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GPU 的高度并行结构使得在大块数据并行算法上比 CPU 更加高效，所以在 iOS 上使用 GPU 渲染图形图像会比 CPU 更快。&lt;/p&gt;
+
+&lt;p&gt;经过比较，GPUImage 在处理同一张图片的滤镜操作会比 CPU 操作快百倍以上，比系统的 Core Image 快 40 倍；作者的测试是在 iPhone 4 上进行的，我在 iPhone 6s 上重新运行了一下 Benchmark 测试发现，现在差距已经没有这么大了，一方面 CPU 在升级，另一方面 Core Image 通常也会使用 GPU 进行计算，但 GPUImage 仍然优秀！比 CPU 快 10位，视频处理比 Core Image 快一倍！&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin:20px;&quot;&gt;
+&lt;img src=&quot;https://img.alicdn.com/tfs/TB1yjvYneH2gK0jSZFEXXcqMpXa-376-669.png&quot; width=&quot;200&quot; height=&quot;356&quot; style=&quot;margin-right: 40px&quot; /&gt;
+&lt;img src=&quot;https://img.alicdn.com/tfs/TB12mzVnhz1gK0jSZSgXXavwpXa-376-669.png&quot; width=&quot;200&quot; height=&quot;356&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;了解 GPU 渲染还得从 OpenGL 说起，作为一个跨语言、跨平台的 API 规范，OpenGL 将操作 GPU 硬件的图形指定翻译成易用的 API 接口。在嵌入式平台，如 iOS/安卓 上，OpenGL 的子集叫 OpenGL ES （OpenGL for Embedded Systems ），本文说的 GPUImage 就是基于此进一步封装和优化的。&lt;/p&gt;
+
+&lt;p&gt;引用下苹果 &lt;a href=&quot;https://developer.apple.com/library/archive/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/Introduction/Introduction.html&quot;&gt;官方文档&lt;/a&gt; 的图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1bi20nhD1gK0jSZFKXXcJrVXa-1344-249.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看出，我们是通过 OpenGL ES 与硬件打交道的，那为什么平时开发过程中，很难感觉到呢？这是由于苹果通过 UIKit 和 Core Animation 将实现细节隐藏了，这也可以解释为什么 UIView/NSView 绘制实现都交给了 CALayer，其实就是通过 CoreAnimation (虽然名字叫 Animation，但动画仅是其中的一小部分) 调用 OpenGL ES/Core Graphics 来完成视图渲染的。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1XeL1nbj1gK0jSZFuXXcrHpXa-500-201.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;那 GPU 渲染包含哪些步骤呢？下面的 OpenGL 渲染流水线展示了主要的流程：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.alicdn.com/tfs/TB1D160nkT2gK0jSZPcXXcKkpXa-642-324.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;不管是顶点信息 (几何信息)，还是像素信息 (图片信息)，传入 GPU 后都被处理成 OpenGL 指令存储在 Display List 中。&lt;/li&gt;
+  &lt;li&gt;顶点信息会被存储成矩阵，经过原始处理，如各种变换、反射和坐标转换后，进行组装。&lt;/li&gt;
+  &lt;li&gt;像素信息也会经过缩放、裁剪等操作后，存储在纹理中。&lt;/li&gt;
+  &lt;li&gt;光珊化 (Rasterization) 会将以上处理后得到的原始数据变成一系列片元 (Fragment)，每一个片元代表了最终帧缓冲区中的一个像素所有的信息，包括位置、颜色等。&lt;/li&gt;
+  &lt;li&gt;片元操作，也叫片元着色 (Fragment Shader)，根据光珊化的结果逐一操作片元，获得最终渲染的像素数据。&lt;/li&gt;
+  &lt;li&gt;最后帧缓冲区会把渲染好的数据返回给设备显示。&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;整体架构&quot;&gt;整体架构&lt;/h1&gt;</content><author><name>Yimu</name></author><summary type="html">概述</summary></entry><entry><title type="html">从搬瓦工到 Vlutr，继续科学上网 | GFW</title><link href="/2019/09/10/shadowsocks-with-vlutr.html" rel="alternate" type="text/html" title="从搬瓦工到 Vlutr，继续科学上网 | GFW" /><published>2019-09-10T00:00:00+08:00</published><updated>2019-09-10T00:00:00+08:00</updated><id>/2019/09/10/shadowsocks-with-vlutr</id><content type="html" xml:base="/2019/09/10/shadowsocks-with-vlutr.html">&lt;p&gt;之前用的 bangwagon 突然连不上了，找到现在可用的官网 (https://bwh88.net/clientarea.php?action=products) 看了下，服务虽然到期了，但整个 Service 被停用了。&lt;/p&gt;
 

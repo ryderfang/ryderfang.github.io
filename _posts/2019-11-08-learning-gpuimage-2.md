@@ -29,9 +29,8 @@ categories: [GPUImage, iOS]
       * 作者的意思是通常 error 是通过二级指针传入传出的，如果不小心置空，容易出问题，参见 [StackOverFlow](https://stackoverflow.com/questions/1808929/handling-nserror-when-reading-from-file) 的例子
     - Object (id) 类型错误转换
     - 枚举类型与整数藕合 (Swift 支持自定义类型枚举)
-
+    <div style="margin:20px" />
 2. 不再局限于 iOS/Mac，新一代框架可以运行在 Linux 上 (支持 Swift)，甚至可以跑在树莓派上。
-
 3. 新增特性：支持在图片上任意形状添加滤镜；像素级裁剪；高斯和均值滤波自动降采样和升采样。
 
 
