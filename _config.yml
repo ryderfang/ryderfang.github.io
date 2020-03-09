@@ -15,9 +15,12 @@ date_format: '%Y-%m-%d'
 favicon: /assets/favicon.ico
 
 # site url
-url:
+url: "https://www.fangr.cc/"
 baseurl: 
 permalink: /:year/:month/:day/:title.html
+
+plugins:
+  - jekyll-sitemap
 
 # Pagination
 # paginate: 10
