@@ -30,8 +30,8 @@
 <!-- customize header -->
 
     <title>各种音乐平台 API 整理 | Music APIs</title>
-    <!-- <link rel="stylesheet" href="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/gitalk.css" />
-    <script src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/gitalk.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   </head>
   <body
     itemscope
@@ -175,27 +175,27 @@
   <li>参数:
 账号、密码是明文的
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">post_data</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="err">'apikey'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">02646</span><span class="err">d</span><span class="mi">3</span><span class="err">fb</span><span class="mi">69</span><span class="err">a</span><span class="mi">52</span><span class="err">ff</span><span class="mi">072</span><span class="err">d</span><span class="mi">47</span><span class="err">bf</span><span class="mi">23</span><span class="err">cef</span><span class="mi">8</span><span class="err">fd'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'client_id'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">02646</span><span class="err">d</span><span class="mi">3</span><span class="err">fb</span><span class="mi">69</span><span class="err">a</span><span class="mi">52</span><span class="err">ff</span><span class="mi">072</span><span class="err">d</span><span class="mi">47</span><span class="err">bf</span><span class="mi">23</span><span class="err">cef</span><span class="mi">8</span><span class="err">fd'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'client_secret'</span><span class="p">:</span><span class="w"> </span><span class="err">'cde</span><span class="mi">5</span><span class="err">d</span><span class="mi">61429</span><span class="err">abcd</span><span class="mi">7</span><span class="err">c'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'udid'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'douban_udid'</span><span class="p">:</span><span class="w"> </span><span class="err">'b</span><span class="mi">635779</span><span class="err">c</span><span class="mi">65</span><span class="err">b</span><span class="mi">816</span><span class="err">b</span><span class="mi">13</span><span class="err">b</span><span class="mi">330</span><span class="err">b</span><span class="mi">68921</span><span class="err">c</span><span class="mi">0</span><span class="err">f</span><span class="mi">8</span><span class="err">edc</span><span class="mi">049590</span><span class="err">'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'device_id'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'grant_type'</span><span class="p">:</span><span class="w"> </span><span class="err">'password'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'redirect_uri'</span><span class="p">:</span><span class="w"> </span><span class="err">'http</span><span class="p">:</span><span class="err">//www.douban.com/mobile/fm'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'username'</span><span class="p">:</span><span class="w"> </span><span class="err">user</span><span class="p">,</span><span class="w">
-      </span><span class="err">'password'</span><span class="p">:</span><span class="w"> </span><span class="err">passwd</span><span class="w">
+      </span><span class="err">'apikey':</span><span class="w"> </span><span class="err">'</span><span class="mi">02646</span><span class="err">d</span><span class="mi">3</span><span class="err">fb</span><span class="mi">69</span><span class="err">a</span><span class="mi">52</span><span class="err">ff</span><span class="mi">072</span><span class="err">d</span><span class="mi">47</span><span class="err">bf</span><span class="mi">23</span><span class="err">cef</span><span class="mi">8</span><span class="err">fd'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'client_id':</span><span class="w"> </span><span class="err">'</span><span class="mi">02646</span><span class="err">d</span><span class="mi">3</span><span class="err">fb</span><span class="mi">69</span><span class="err">a</span><span class="mi">52</span><span class="err">ff</span><span class="mi">072</span><span class="err">d</span><span class="mi">47</span><span class="err">bf</span><span class="mi">23</span><span class="err">cef</span><span class="mi">8</span><span class="err">fd'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'client_secret':</span><span class="w"> </span><span class="err">'cde</span><span class="mi">5</span><span class="err">d</span><span class="mi">61429</span><span class="err">abcd</span><span class="mi">7</span><span class="err">c'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'udid':</span><span class="w"> </span><span class="err">'</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'douban_udid':</span><span class="w"> </span><span class="err">'b</span><span class="mi">635779</span><span class="err">c</span><span class="mi">65</span><span class="err">b</span><span class="mi">816</span><span class="err">b</span><span class="mi">13</span><span class="err">b</span><span class="mi">330</span><span class="err">b</span><span class="mi">68921</span><span class="err">c</span><span class="mi">0</span><span class="err">f</span><span class="mi">8</span><span class="err">edc</span><span class="mi">049590</span><span class="err">'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'device_id':</span><span class="w"> </span><span class="err">'</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'grant_type':</span><span class="w"> </span><span class="err">'password'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'redirect_uri':</span><span class="w"> </span><span class="err">'http://www.douban.com/mobile/fm'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'username':</span><span class="w"> </span><span class="err">user</span><span class="p">,</span><span class="w">
+      </span><span class="err">'password':</span><span class="w"> </span><span class="err">passwd</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
   </li>
   <li>返回值:
 access_token 后续接口会用到。
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-</span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"****"</span><span class="p">,</span><span class="w">
-</span><span class="s2">"douban_user_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"****"</span><span class="p">,</span><span class="w">
-</span><span class="s2">"douban_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"****"</span><span class="p">,</span><span class="w">
-</span><span class="s2">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-</span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"****"</span><span class="w">
+</span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"****"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"douban_user_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"****"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"douban_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"****"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+</span><span class="nl">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"****"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
   </li>
@@ -209,47 +209,47 @@ access_token 后续接口会用到。
 <code class="highlighter-rouge">{'Authorization': 'Bearer ' + ACCESS_KEY}</code></li>
   <li>参数：
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">query_data</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="err">'alt'</span><span class="p">:</span><span class="w"> </span><span class="err">'json'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'apikey'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">02646</span><span class="err">d</span><span class="mi">3</span><span class="err">fb</span><span class="mi">69</span><span class="err">a</span><span class="mi">52</span><span class="err">ff</span><span class="mi">072</span><span class="err">d</span><span class="mi">47</span><span class="err">bf</span><span class="mi">23</span><span class="err">cef</span><span class="mi">8</span><span class="err">fd'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'app_name'</span><span class="p">:</span><span class="w"> </span><span class="err">'radio_iphone'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'audio_patch_version'</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-      </span><span class="err">'client'</span><span class="p">:</span><span class="w"> </span><span class="err">'s</span><span class="p">:</span><span class="err">mobile|y</span><span class="p">:</span><span class="err">iOS</span><span class="w"> </span><span class="mf">11.2</span><span class="err">.</span><span class="mi">2</span><span class="err">|f</span><span class="p">:</span><span class="mi">122</span><span class="err">|d</span><span class="p">:</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">|e</span><span class="p">:</span><span class="err">iPhone</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="err">|m</span><span class="p">:</span><span class="err">appstore'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'douban_udid'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">677209</span><span class="err">cb</span><span class="mi">05</span><span class="err">feeb</span><span class="mi">5</span><span class="err">aa</span><span class="mi">10</span><span class="err">fd</span><span class="mi">34</span><span class="err">ed</span><span class="mi">2</span><span class="err">d</span><span class="mi">25765</span><span class="err">d</span><span class="mi">8284</span><span class="err">f</span><span class="mi">33</span><span class="err">'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'kbps'</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w">
-      </span><span class="err">'udid'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">'</span><span class="w">
+      </span><span class="err">'alt':</span><span class="w"> </span><span class="err">'json'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'apikey':</span><span class="w"> </span><span class="err">'</span><span class="mi">02646</span><span class="err">d</span><span class="mi">3</span><span class="err">fb</span><span class="mi">69</span><span class="err">a</span><span class="mi">52</span><span class="err">ff</span><span class="mi">072</span><span class="err">d</span><span class="mi">47</span><span class="err">bf</span><span class="mi">23</span><span class="err">cef</span><span class="mi">8</span><span class="err">fd'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'app_name':</span><span class="w"> </span><span class="err">'radio_iphone'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'audio_patch_version':</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="err">'client':</span><span class="w"> </span><span class="err">'s:mobile|y:iOS</span><span class="w"> </span><span class="mf">11.2</span><span class="err">.</span><span class="mi">2</span><span class="err">|f:</span><span class="mi">122</span><span class="err">|d:</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">|e:iPhone</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="err">|m:appstore'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'douban_udid':</span><span class="w"> </span><span class="err">'</span><span class="mi">677209</span><span class="err">cb</span><span class="mi">05</span><span class="err">feeb</span><span class="mi">5</span><span class="err">aa</span><span class="mi">10</span><span class="err">fd</span><span class="mi">34</span><span class="err">ed</span><span class="mi">2</span><span class="err">d</span><span class="mi">25765</span><span class="err">d</span><span class="mi">8284</span><span class="err">f</span><span class="mi">33</span><span class="err">'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'kbps':</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w">
+      </span><span class="err">'udid':</span><span class="w"> </span><span class="err">'</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">'</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
   </li>
   <li>返回值:
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"collected_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">www.douban.com</span><span class="se">\/</span><span class="s2">people</span><span class="se">\/</span><span class="s2">FongRay</span><span class="se">\/</span><span class="s2">"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://img7.doubanio.com</span><span class="se">\/</span><span class="s2">icon</span><span class="se">\/</span><span class="s2">u66096063-4.jpg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"66096063"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"小咩"</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"collected_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">www.douban.com</span><span class="se">\/</span><span class="s2">people</span><span class="se">\/</span><span class="s2">FongRay</span><span class="se">\/</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://img7.doubanio.com</span><span class="se">\/</span><span class="s2">icon</span><span class="se">\/</span><span class="s2">u66096063-4.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"66096063"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"小咩"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"offshelf_alert"</span><span class="p">:</span><span class="w"> </span><span class="s2">"部分红心歌曲版权洽谈中，暂时不能收听，等待它们浮出海面的同时，去收获更多新的红心吧"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"我的红心歌曲"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-05 17:16:03"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"is_collected"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"rec_reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"can_play"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"songs"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-      </span><span class="s2">"update_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1493982773</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"playable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1888519"</span><span class="w">
+  </span><span class="nl">"offshelf_alert"</span><span class="p">:</span><span class="w"> </span><span class="s2">"部分红心歌曲版权洽谈中，暂时不能收听，等待它们浮出海面的同时，去收获更多新的红心吧"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"我的红心歌曲"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-05 17:16:03"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"is_collected"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rec_reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"can_play"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"songs"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"update_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1493982773</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"playable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"like"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1888519"</span><span class="w">
   </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"update_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1498647084</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"playable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2236918"</span><span class="w">
+      </span><span class="nl">"update_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1498647084</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"playable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"like"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2236918"</span><span class="w">
   </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
@@ -265,16 +265,16 @@ access_token 后续接口会用到。
   <li>参数:
 其中 sids 参数是多个sid用分隔符<code class="highlighter-rouge">|</code>拼接而来的
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="err">post_data</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="err">'alt'</span><span class="p">:</span><span class="w"> </span><span class="err">'json'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'apikey'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">02646</span><span class="err">d</span><span class="mi">3</span><span class="err">fb</span><span class="mi">69</span><span class="err">a</span><span class="mi">52</span><span class="err">ff</span><span class="mi">072</span><span class="err">d</span><span class="mi">47</span><span class="err">bf</span><span class="mi">23</span><span class="err">cef</span><span class="mi">8</span><span class="err">fd'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'app_name'</span><span class="p">:</span><span class="w"> </span><span class="err">'radio_iphone'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'audio_patch_version'</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-      </span><span class="err">'client'</span><span class="p">:</span><span class="w"> </span><span class="err">'s</span><span class="p">:</span><span class="err">mobile|y</span><span class="p">:</span><span class="err">iOS</span><span class="w"> </span><span class="mf">11.2</span><span class="err">.</span><span class="mi">2</span><span class="err">|f</span><span class="p">:</span><span class="mi">122</span><span class="err">|d</span><span class="p">:</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">|e</span><span class="p">:</span><span class="err">iPhone</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="err">|m</span><span class="p">:</span><span class="err">appstore'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'douban_udid'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">677209</span><span class="err">cb</span><span class="mi">05</span><span class="err">feeb</span><span class="mi">5</span><span class="err">aa</span><span class="mi">10</span><span class="err">fd</span><span class="mi">34</span><span class="err">ed</span><span class="mi">2</span><span class="err">d</span><span class="mi">25765</span><span class="err">d</span><span class="mi">8284</span><span class="err">f</span><span class="mi">33</span><span class="err">'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'sids'</span><span class="p">:</span><span class="w"> </span><span class="err">sids</span><span class="p">,</span><span class="w">
-      </span><span class="err">'udid'</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">'</span><span class="p">,</span><span class="w">
-      </span><span class="err">'user_accept_play_third_party'</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="err">'version'</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="w">
+      </span><span class="err">'alt':</span><span class="w"> </span><span class="err">'json'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'apikey':</span><span class="w"> </span><span class="err">'</span><span class="mi">02646</span><span class="err">d</span><span class="mi">3</span><span class="err">fb</span><span class="mi">69</span><span class="err">a</span><span class="mi">52</span><span class="err">ff</span><span class="mi">072</span><span class="err">d</span><span class="mi">47</span><span class="err">bf</span><span class="mi">23</span><span class="err">cef</span><span class="mi">8</span><span class="err">fd'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'app_name':</span><span class="w"> </span><span class="err">'radio_iphone'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'audio_patch_version':</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="err">'client':</span><span class="w"> </span><span class="err">'s:mobile|y:iOS</span><span class="w"> </span><span class="mf">11.2</span><span class="err">.</span><span class="mi">2</span><span class="err">|f:</span><span class="mi">122</span><span class="err">|d:</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">|e:iPhone</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="err">|m:appstore'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'douban_udid':</span><span class="w"> </span><span class="err">'</span><span class="mi">677209</span><span class="err">cb</span><span class="mi">05</span><span class="err">feeb</span><span class="mi">5</span><span class="err">aa</span><span class="mi">10</span><span class="err">fd</span><span class="mi">34</span><span class="err">ed</span><span class="mi">2</span><span class="err">d</span><span class="mi">25765</span><span class="err">d</span><span class="mi">8284</span><span class="err">f</span><span class="mi">33</span><span class="err">'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'sids':</span><span class="w"> </span><span class="err">sids</span><span class="p">,</span><span class="w">
+      </span><span class="err">'udid':</span><span class="w"> </span><span class="err">'</span><span class="mi">07e0335</span><span class="err">d</span><span class="mi">0</span><span class="err">c</span><span class="mi">38</span><span class="err">a</span><span class="mi">73384</span><span class="err">f</span><span class="mi">709</span><span class="err">fa</span><span class="mi">3102</span><span class="err">b</span><span class="mi">33</span><span class="err">a</span><span class="mi">94710</span><span class="err">d</span><span class="mi">60</span><span class="err">'</span><span class="p">,</span><span class="w">
+      </span><span class="err">'user_accept_play_third_party':</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="err">'version':</span><span class="w"> </span><span class="mi">122</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
   </li>
@@ -282,64 +282,64 @@ access_token 后续接口会用到。
 歌曲列表，每首歌的详细信息
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
 </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"all_play_sources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"all_play_sources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"confidence"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.937778</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"source_full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"itunes"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"file_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"it"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"source_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"514603298"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"playable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"page_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="nl">"confidence"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.937778</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"source_full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"itunes"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"file_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"it"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"source_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"514603298"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"playable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"page_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"albumtitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"回蔚 莫文蔚演唱會@台北小巨蛋"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"file_ext"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"album"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/subject/10546781/"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"ssid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6b4b"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"爱情"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1888519"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"07d68b92880a24a25d6e3688880acbff3d52f0ed52984b28ccf8e1bee216a7f0"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://img7.doubanio.com/lpic/s8953971.jpg"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"update_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1493982773</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"alert_msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"is_douban_playable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"public_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"partner_sources"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-  </span><span class="s2">"singers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"albumtitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"回蔚 莫文蔚演唱會@台北小巨蛋"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"file_ext"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"album"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/subject/10546781/"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ssid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6b4b"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"爱情"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1888519"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"07d68b92880a24a25d6e3688880acbff3d52f0ed52984b28ccf8e1bee216a7f0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://img7.doubanio.com/lpic/s8953971.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"update_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1493982773</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"alert_msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"is_douban_playable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"public_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"partner_sources"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"singers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"style"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"莫文蔚"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="nl">"style"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"莫文蔚"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"region"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="s2">"香港"</span><span class="w">
       </span><span class="p">],</span><span class="w">
-      </span><span class="s2">"name_usual"</span><span class="p">:</span><span class="w"> </span><span class="s2">"莫文蔚"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"related_site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://img3.doubanio.com/img/fmadmin/large/31309.jpg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"genre"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="nl">"name_usual"</span><span class="p">:</span><span class="w"> </span><span class="s2">"莫文蔚"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"related_site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://img3.doubanio.com/img/fmadmin/large/31309.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"genre"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="s2">"Pop"</span><span class="w">
       </span><span class="p">],</span><span class="w">
-      </span><span class="s2">"is_site_artist"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8260"</span><span class="w">
+      </span><span class="nl">"is_site_artist"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8260"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"莫文蔚"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"is_royal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://mr3.doubanio.com/e49a7486849f6067219c959dc03077e4/0/fm/song/p1888519_128k.mp4"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="mi">165</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://douban.fm/album/10546781g7be3"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10546781"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ssid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7be3"</span><span class="w">
+  </span><span class="nl">"artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"莫文蔚"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"is_royal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://mr3.doubanio.com/e49a7486849f6067219c959dc03077e4/0/fm/song/p1888519_128k.mp4"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mi">165</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://douban.fm/album/10546781g7be3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10546781"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ssid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7be3"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"aid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10546781"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"kbps"</span><span class="p">:</span><span class="w"> </span><span class="s2">"128"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_formats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"64"</span><span class="p">:</span><span class="w"> </span><span class="mi">1290</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"128"</span><span class="p">:</span><span class="w"> </span><span class="mi">2523</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"192"</span><span class="p">:</span><span class="w"> </span><span class="mi">3806</span><span class="w">
+  </span><span class="nl">"aid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10546781"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"kbps"</span><span class="p">:</span><span class="w"> </span><span class="s2">"128"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"available_formats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"64"</span><span class="p">:</span><span class="w"> </span><span class="mi">1290</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"128"</span><span class="p">:</span><span class="w"> </span><span class="mi">2523</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"192"</span><span class="p">:</span><span class="w"> </span><span class="mi">3806</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">

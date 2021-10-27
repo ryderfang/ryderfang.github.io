@@ -30,8 +30,8 @@
 <!-- customize header -->
 
     <title>在 Objective-C 中如何定义 Block | Block in ObjC</title>
-    <!-- <link rel="stylesheet" href="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/gitalk.css" />
-    <script src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/gitalk.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   </head>
   <body
     itemscope
@@ -186,7 +186,7 @@
   <li>As a <code class="highlighter-rouge">typedef</code>:</li>
 </ul>
 
-<div class="language-objectivec highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="n">returnType</span> <span class="p">(</span><span class="o">^</span><span class="n">TypeName</span><span class="p">)(</span><span class="n">parameterTypes</span><span class="p">);</span>
+<div class="language-objectivec highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="nf">returnType</span> <span class="p">(</span><span class="o">^</span><span class="n">TypeName</span><span class="p">)(</span><span class="n">parameterTypes</span><span class="p">);</span>
 <span class="n">TypeName</span> <span class="n">blockName</span> <span class="o">=</span> <span class="o">^</span><span class="n">returnType</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span> <span class="p">{...};</span>
 </code></pre></div></div>
 

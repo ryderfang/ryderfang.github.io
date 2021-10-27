@@ -30,8 +30,8 @@
 <!-- customize header -->
 
     <title>搜集一些 iOS 面试问题 | iOS Problems</title>
-    <!-- <link rel="stylesheet" href="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/gitalk.css" />
-    <script src="https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/gitalk.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   </head>
   <body
     itemscope
@@ -204,7 +204,7 @@
 <span class="p">}</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
-    <span class="err">@autoreleasepool</span> <span class="p">{</span>
+    <span class="k">@autoreleasepool</span> <span class="p">{</span>
         <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">blk1</span><span class="p">)(</span><span class="kt">void</span><span class="p">)</span> <span class="o">=</span> <span class="o">^</span><span class="p">{</span>
             <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Block1 invoke!"</span><span class="p">);</span>
         <span class="p">};</span>
@@ -250,7 +250,7 @@
 <span class="cp">#pragma clang diagnostic pop
 </span><span class="p">}</span>
 
-<span class="o">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">load</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">load</span><span class="p">;</span>
 
 <span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">initialize</span><span class="p">;</span>
 <span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span>
@@ -259,12 +259,12 @@
 <span class="cp">#endif
 </span>    <span class="p">;</span>
 
-<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">new</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use object initializers instead"</span><span class="p">);</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">new</span> <span class="nf">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use object initializers instead"</span><span class="p">);</span>
 <span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">allocWithZone</span><span class="p">:(</span><span class="k">struct</span> <span class="n">_NSZone</span> <span class="o">*</span><span class="p">)</span><span class="nv">zone</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use object initializers instead"</span><span class="p">);</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">alloc</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use object initializers instead"</span><span class="p">);</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use 'deinit' to define a de-initializer"</span><span class="p">);</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">alloc</span> <span class="nf">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use object initializers instead"</span><span class="p">);</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span> <span class="nf">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use 'deinit' to define a de-initializer"</span><span class="p">);</span>
 
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">finalize</span> <span class="n">OBJC_DEPRECATED</span><span class="p">(</span><span class="s">"Objective-C garbage collection is no longer supported"</span><span class="p">);</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">finalize</span> <span class="nf">OBJC_DEPRECATED</span><span class="p">(</span><span class="s">"Objective-C garbage collection is no longer supported"</span><span class="p">);</span>
 
 <span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">copy</span><span class="p">;</span>
 <span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">mutableCopy</span><span class="p">;</span>
@@ -294,7 +294,7 @@
 
 <span class="k">+</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">hash</span><span class="p">;</span>
 <span class="k">+</span> <span class="p">(</span><span class="n">Class</span><span class="p">)</span><span class="n">superclass</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">Class</span><span class="p">)</span><span class="n">class</span> <span class="n">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use 'aClass.self' instead"</span><span class="p">);</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">Class</span><span class="p">)</span><span class="n">class</span> <span class="nf">OBJC_SWIFT_UNAVAILABLE</span><span class="p">(</span><span class="s">"use 'aClass.self' instead"</span><span class="p">);</span>
 <span class="k">+</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">description</span><span class="p">;</span>
 <span class="k">+</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">debugDescription</span><span class="p">;</span>
 

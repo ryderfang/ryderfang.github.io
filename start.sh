@@ -1,3 +1,3 @@
 #! /bin/bash
 
-jekyll serve -w --port=2333
+bundle exec jekyll serve -w --port=2333
