@@ -1,1 +1,1 @@
-Sitemap: http://localhost:2333/sitemap.xml
+Sitemap: https://www.fangr.cc//sitemap.xml
