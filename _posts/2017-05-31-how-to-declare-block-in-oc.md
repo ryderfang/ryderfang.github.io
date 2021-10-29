@@ -4,6 +4,12 @@ title: 在 Objective-C 中如何定义 Block | Block in ObjC
 categories: [ObjC, Block]
 ---
 
+
+来自一个神奇的域名
+
+```bash
+http://fuckingblocksyntax.com/
+```
 ## Declaration
 
 - As a `local variable`:
@@ -40,7 +46,7 @@ TypeName blockName = ^returnType(parameters) {...};
 ```
 
 ## Hint
-- [block在ARC下是否声明为copy属性](https://stackoverflow.com/questions/23334863/should-i-still-copy-block-copy-the-blocks-under-arc)
+- [block 在 ARC 下是否声明为 copy 属性](https://stackoverflow.com/questions/23334863/should-i-still-copy-block-copy-the-blocks-under-arc)
 
 *It is still a good idea to declare block properties as having copy semantics since a block assigned to a strong property will in fact be copied.*
 
