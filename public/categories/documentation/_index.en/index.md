@@ -1,6 +1,0 @@
-# Documentation
-
----
-title: "Documentation"
----
-
