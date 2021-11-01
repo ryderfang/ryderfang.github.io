@@ -5,17 +5,16 @@
 </div>
 <br>
 
-> 给岁月以文明，而不是给文明以岁月。—— 《三体Ⅱ ∙ 黑暗森林》
+> 给岁月以文明，而不是给文明以岁月 —— 《三体Ⅱ ∙ 黑暗森林》
 
-* 感谢 [xtao0](https://github.com/xta0) 大神 [博客](https://xta0.me/) 的主题。基于 [Jekyll](https://jekyllrb.com/docs/)。
+* 基于 [Hugo](https://gohugo.io/) 和 [uBlogger](https://github.com/uPagge/uBlogger) 主题
+* 使用 [Github Actions](https://github.com/ryderfang/ryderfang.github.io/blob/main/.github/workflows/gh-deploy.yml) 自动构建并发布到 `gh-pages` 分支
 
-* 静态博客，之前用过 Hexo / Hugo，不想折腾了，还是专注内容吧！
+<div align=left>
+<img src="https://github.com/ryderfang/ryderfang.github.io/actions/workflows/gh-deploy.yml/badge.svg"  />
+</div>
 
-* 话说，Fork 的时候顺便 **Star ✨**  一下呗。🖖
-
-* 接入 [Gitalk](https://github.com/gitalk/gitalk) 评论系统！ 🆕
-
-### Content
+## Contents
 
 * 技术总结
 
