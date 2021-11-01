@@ -31,7 +31,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./public
+          publish_dir: ./
           publish_branch: gh-pages
           cname: fangr.cc
           enable_jekyll: false
