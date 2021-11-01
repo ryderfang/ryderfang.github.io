@@ -1,1052 +1,1203 @@
-# Theme Documentation - Basics
+# Theme Documentation - Extended Shortcodes
 
 
-Discover what the Hugo - **uBlog** theme is all about and the core-concepts behind it.
+**uBlogger** theme provides multiple shortcodes on top of built-in ones in Hugo.
 
 <!--more-->
 
-## 1 Requirements
+## 1 style
 
-Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
-
-Just install latest version of [:(far fa-file-archive fa-fw): Hugo (> 0.62.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
-
-{{< admonition note "Why not support earlier versions of Hugo?" >}}
-Since [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) was introduced in the [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/), this theme only supports Hugo versions above **0.62.0**.
-{{< /admonition >}}
-
-{{< admonition tip "Hugo extended version is recommended" >}}
-Since some features of this theme need to processes :(fab fa-sass fa-fw): SCSS to :(fab fa-css3 fa-fw): CSS, it is recommended to use Hugo **extended** version for better experience.
-{{< /admonition >}}
-
-## 2 Installation
-
-The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/getting-started/quick-start/).
-
-### 2.1 Create Your Project
-
-Hugo provides a `new` command to create a new website:
-
-```shell
-hugo new site my_website
-cd my_website
-```
-
-### 2.2 Install the Theme
-
-The **uBlogger** theme’s repository is: [https://github.com/upagge/uBlogger](https://github.com/upagge/uBlogger).
-
-You can download the [latest release :(far fa-file-archive fa-fw): .zip file](https://github.com/upagge/uBlogger/releases) of the theme and extract it in the `themes` directory.
-
-Alternatively, clone this repository to the `themes` directory:
-
-```shell
-git clone https://github.com/upagge/uBlogger.git themes/uBlogger
-```
-
-Or, create an empty git repository and make this repository a submodule of your site directory:
-
-```shell
-git init
-git submodule add https://github.com/upagge/uBlogger.git themes/uBlogger
-```
-
-### 2.3 Basic Configuration {#basic-configuration}
-
-The following is a basic configuration for the uBlogger theme:
-
-```toml
-baseURL = "http://example.org/"
-# [en, zh-cn, fr, ...] determines default content language
-defaultContentLanguage = "en"
-# language code
-languageCode = "en"
-title = "My New Hugo Site"
-
-# Change the default theme to be use when building the site with Hugo
-theme = "uBlogger"
-
-[params]
-  # uBlogger theme version
-  version = "1.3.X"
-
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-    name = "Posts"
-    url = "/posts/"
-    # title will be shown when you hover on this menu link
-    title = ""
-    weight = 1
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-    weight = 2
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
-    weight = 3
-
-# Markup related configuration in Hugo
-[markup]
-  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    # false is a necessary configuration
-    noClasses = false
-```
+{{< version 0.2.0 changed >}}
 
 {{< admonition >}}
-When building the website, you can set a theme by using `--theme` option. However, we suggest you modify the configuration file (**config.toml**) and set the theme as the default.
+Hugo **extended** version is necessary for `style` shortcode.
 {{< /admonition >}}
 
-### 2.4 Create Your First Post
+`style` is a shortcode to insert custom style in your post.
 
-Here is the way to create your first post:
+The `style` shortcode has two positional parameters.
 
-```shell
-hugo new posts/first_post.md
+The **first** one is the custom style content,
+which supports nesting syntax in [:(fab fa-sass fa-fw): SASS](https://sass-lang.com/documentation/style-rules/declarations#nesting)
+and `&` referring to this parent HTML element.
+
+And the **second** one is the tag name of the HTML element wrapping the content you want to change style, and whose default value is `div`.
+
+Example `style` input:
+
+```markdown
+{{</* style "text-align:right; strong{color:#00b1ff;}" */>}}
+This is a **right-aligned** paragraph.
+{{</* /style */>}}
 ```
 
-Feel free to edit the post file by adding some sample content and replacing the title value in the beginning of the file.
+The rendered output looks like this:
 
-{{< admonition >}}
-By default all posts and pages are created as a draft. If you want to render these pages, remove the property `draft: true` from the metadata, set the property `draft: false` or add `-D`/`--buildDrafts` parameter to `hugo` command.
-{{< /admonition >}}
+{{< style "text-align:right; strong{color:#00b1ff;}" >}}
+This is a **right-aligned** paragraph.
+{{< /style >}}
 
-{{< admonition type=info title="Archetypes" open=true >}}
-You can copy /uBlogger/archetypes/default.md to your archetypes folder to create a pre-configured post.
-{{< /admonition >}}
-
-### 2.5 Launching the Website Locally
-
-Launch by using the following command:
-
-```shell
-hugo serve
-```
-
-Go to `http://localhost:1313`.
-
-{{< admonition tip >}}
-When you run `hugo serve`, when the contents of the files change, the page automatically refreshes with the changes.
-{{< /admonition >}}
-
-{{< admonition >}}
-Since the theme use `.Scratch` in Hugo to implement some features,
-it is highly recommended that you add `--disableFastRender` parameter to `hugo server` command for the live preview of the page you are editing.
-
-```shell
-hugo serve --disableFastRender
-```
-{{< /admonition >}}
-
-### 2.6 Build the Website
-
-When your site is ready to deploy, run the following command:
-
-```shell
-hugo
-```
-
-A `public` folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.
-
-{{< admonition tip >}}
-The website can be automatically published and hosted with [Netlify](https://www.netlify.com/) (Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)).
-Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) and more...
-{{< /admonition >}}
-
-## 3 Configuration
-
-### 3.1 Site Configuration {#site-configuration}
-
-In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **uBlogger** lets you define the following parameters in your site configuration (here is a `config.toml`, whose values are default).
-
-Please open the code block below to view the complete sample configuration :(far fa-hand-point-down fa-fw)::
-
-```toml
-[params]
-  # {{< version 0.2.0 changed >}} uBlogger theme version
-  version = "1.3.X"
-  # site description
-  description = "This is My New Hugo Site"
-  # site keywords
-  keywords = ["Theme", "Hugo"]
-  # site default theme ("light", "dark", "auto")
-  defaultTheme = "auto"
-  # public git repo url only then enableGitInfo is true
-  gitRepo = ""
-  # {{< version 0.1.1 >}} which hash function used for SRI, when empty, no SRI is used
-  # ("sha256", "sha384", "sha512", "md5")
-  fingerprint = ""
-  # {{< version 0.2.0 >}} date format
-  dateFormat = "2006-01-02"
-  # website images for Open Graph and Twitter Cards
-  images = ["/logo.png"]
-
-  # {{< version 0.2.0 >}} App icon config
-  [params.app]
-    # optional site title override for the app when added to an iOS home screen or Android launcher
-    title = "uBlogger"
-    # whether to omit favicon resource links
-    noFavicon = false
-    # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = ""
-    # Android browser theme color
-    themeColor = "#ffffff"
-    # Safari mask icon color
-    iconColor = "#5bbad5"
-    # Windows v8-10 tile color
-    tileColor = "#da532c"
-
-  # {{< version 0.2.0 >}} Search config
-  [params.search]
-    enable = true
-    # type of search engine ("lunr", "algolia")
-    type = "lunr"
-    # max index length of the chunked content
-    contentLength = 4000
-    # placeholder of the search bar
-    placeholder = ""
-    # {{< version 0.2.1 >}} max number of results length
-    maxResultLength = 10
-    # {{< version 0.2.3 >}} snippet length of the result
-    snippetLength = 30
-    # {{< version 0.2.1 >}} HTML tag name of the highlight part in results
-    highlightTag = "em"
-    # {{< version 0.2.4 >}} whether to use the absolute URL based on the baseURL in search index
-    absoluteURL = false
-    [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
-
-  # Header config
-  [params.header]
-    # desktop header mode ("fixed", "normal", "auto")
-    desktopMode = "fixed"
-    # mobile header mode ("fixed", "normal", "auto")
-    mobileMode = "auto"
-    # {{< version 0.2.0 >}} Header title config
-    [params.header.title]
-      # URL of the LOGO
-      logo = ""
-      # title name
-      name = ""
-      # you can add extra information before the name (HTML format is supported), such as icons
-      pre = ""
-      # you can add extra information after the name (HTML format is supported), such as icons
-      post = ""
-
-  # Footer config
-  [params.footer]
-    enable = true
-    # {{< version 0.2.0 >}} Custom content (HTML format is supported)
-    custom = ''
-    # {{< version 0.2.0 >}} whether to show Hugo and theme info
-    hugo = true
-    # {{< version 0.2.0 >}} whether to show copyright info
-    copyright = true
-    # {{< version 0.2.0 >}} whether to show the author
-    author = true
-    # Site creation time
-    since = 2019
-    # ICP info only in China (HTML format is supported)
-    icp = ""
-    # license info (HTML format is supported)
-    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-
-  # {{< version 0.2.0 >}} Section (all posts) page config
-  [params.section]
-    # special amount of posts in each section page
-    paginate = 20
-    # date format (month and day)
-    dateFormat = "01-02"
-    # amount of RSS pages
-    rss = 10
-
-  # {{< version 0.2.0 >}} List (category or tag) page config
-  [params.list]
-    # special amount of posts in each list page
-    paginate = 20
-    # date format (month and day)
-    dateFormat = "01-02"
-    # amount of RSS pages
-    rss = 10
-
-  # Home page config
-  [params.home]
-    # {{< version 0.2.0 >}} amount of RSS pages
-    rss = 10
-    # Home page profile
-    [params.home.profile]
-      enable = true
-      # Gravatar Email for preferred avatar in home page
-      gravatarEmail = ""
-      # URL of avatar shown in home page
-      avatarURL = "/images/avatar.png"
-      # {{< version 0.2.7 changed >}} title shown in home page (HTML format is supported)
-      title = ""
-      # subtitle shown in home page
-      subtitle = "This is My New Hugo Site"
-      # whether to show social links
-      social = true
-      # {{< version 0.2.0 >}} disclaimer (HTML format is supported)
-      disclaimer = ""
-    # Home page posts
-    [params.home.posts]
-      enable = true
-      # special amount of posts in each home posts page
-      paginate = 6
-      # {{< version 0.2.0 deleted >}} replaced with hiddenFromHomePage in params.page
-      # default behavior when you don't set "hiddenFromHomePage" in front matter
-      defaultHiddenFromHomePage = false
-
-  # Social config about the author
-  [params.social]
-    GitHub = "xxxx"
-    Linkedin = ""
-    Twitter = "xxxx"
-    Instagram = "xxxx"
-    Facebook = "xxxx"
-    Telegram = "xxxx"
-    Medium = ""
-    Gitlab = ""
-    Youtubelegacy = ""
-    Youtubecustom = ""
-    Youtubechannel = ""
-    Tumblr = ""
-    Quora = ""
-    Keybase = ""
-    Pinterest = ""
-    Reddit = ""
-    Codepen = ""
-    FreeCodeCamp = ""
-    Bitbucket = ""
-    Stackoverflow = ""
-    Weibo = ""
-    Odnoklassniki = ""
-    VK = ""
-    Flickr = ""
-    Xing = ""
-    Snapchat = ""
-    Soundcloud = ""
-    Spotify = ""
-    Bandcamp = ""
-    Paypal = ""
-    Fivehundredpx = ""
-    Mix = ""
-    Goodreads = ""
-    Lastfm = ""
-    Foursquare = ""
-    Hackernews = ""
-    Kickstarter = ""
-    Patreon = ""
-    Steam = ""
-    Twitch = ""
-    Strava = ""
-    Skype = ""
-    Whatsapp = ""
-    Zhihu = ""
-    Douban = ""
-    Angellist = ""
-    Slidershare = ""
-    Jsfiddle = ""
-    Deviantart = ""
-    Behance = ""
-    Dribbble = ""
-    Wordpress = ""
-    Vine = ""
-    Googlescholar = ""
-    Researchgate = ""
-    Mastodon = ""
-    Thingiverse = ""
-    Devto = ""
-    Gitea = ""
-    XMPP = ""
-    Matrix = ""
-    Bilibili = ""
-    Email = "xxxx@xxxx.com"
-    RSS = true # {{< version 0.2.0 >}}
-
-  # {{< version 0.2.0 changed >}} Page config
-  [params.page]
-    # {{< version 1.0.0 new >}} main subject for articles, by default classic. {{< link "/theme-documentation-content/#theme" "more on themes" >}}}
-    theme = "classic"
-    # {{< version 0.2.0 >}} whether to hide a page from home page
-    hiddenFromHomePage = false
-    # {{< version 0.2.0 >}} whether to hide a page from search results
-    hiddenFromSearch = false
-    # {{< version 1.2.0 new >}} Allows you to hide the preview image on the article page
-    hiddenFeaturedImage = false
-    # {{< version 0.2.0 >}} whether to enable twemoji
-    twemoji = false
-    # whether to enable lightgallery
-    lightgallery = false
-    # {{< version 0.2.0 >}} whether to enable the ruby extended syntax
-    ruby = true
-    # {{< version 0.2.0 >}} whether to enable the fraction extended syntax
-    fraction = true
-    # {{< version 0.2.0 >}} whether to enable the fontawesome extended syntax
-    fontawesome = true
-    # whether to show link to Raw Markdown content of the content
-    linkToMarkdown = true
-    # {{< version 0.2.4 >}} whether to show the full text content in RSS
-    rssFullText = false
-    # {{< version 1.1.0 new >}} Post display settings on the page
-    [params.summary]
-      # {{< version 1.1.0 new >}} Display previews on the page of posts
-      hiddenImage = false
-      # {{< version 1.1.0 new >}} Allows you to hide the description
-      hiddenDescription = false
-      # {{< version 1.1.0 new >}} Allows you to hide the title
-      hiddenTitle = false
-    # {{< version 1.1.0 new >}} Tag display settings
-    [params.summary.tags]
-      # {{< version 1.1.0 new >}} One of the options for displaying tags
-      theme = "image"
-      # {{< version 1.1.0 new >}} Text color
-      color = "white"
-      # {{< version 1.1.0 new >}} Backing color
-      background = "black"
-      # {{< version 1.1.0 new >}} Tag transparency
-      transparency = 0.9
-    # {{< version 1.2.0 new >}} Fasting time display
-    [params.timeAgo]
-      enable = "false"
-      lang = "en"
-    # {{< version 0.2.0 >}} Table of the contents config
-    [params.page.toc]
-      # whether to enable the table of the contents
-      enable = true
-      # {{< version 0.2.9 >}} whether to keep the static table of the contents in front of the post
-      keepStatic = true
-      # whether to make the table of the contents in the sidebar automatically collapsed
-      auto = true
-    # {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas
-    [params.page.math]
-      enable = true
-      # default block delimiter is $$ ... $$ and \\[ ... \\]
-      blockLeftDelimiter = ""
-      blockRightDelimiter = ""
-      # default inline delimiter is $ ... $ and \\( ... \\)
-      inlineLeftDelimiter = ""
-      inlineRightDelimiter = ""
-      # KaTeX extension copy_tex
-      copyTex = true
-      # KaTeX extension mhchem
-      mhchem = true
-    # {{< version 0.2.0 >}} Code config
-    [params.page.code]
-      # whether to show the copy button of the code block
-      copy = true
-      # the maximum number of lines of displayed code by default
-      maxShownLines = 10
-    # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} config
-    [params.page.mapbox]
-      # access token of Mapbox GL JS
-      accessToken = ""
-      # style for the light theme
-      lightStyle = "mapbox://styles/mapbox/light-v9"
-      # style for the dark theme
-      darkStyle = "mapbox://styles/mapbox/dark-v9"
-      # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol" NavigationControl >}}
-      navigation = true
-      # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol" GeolocateControl >}}
-      geolocate = true
-      # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol" ScaleControl >}}
-      scale = true
-      # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
-      fullscreen = true
-    # {{< version 0.2.0 changed >}} social share links in post page
-    [params.page.share]
-      enable = true
-      Twitter = true
-      Facebook = true
-      Linkedin = false
-      Whatsapp = true
-      Pinterest = false
-      Tumblr = false
-      HackerNews = false
-      Reddit = false
-      VK = false
-      Buffer = false
-      Xing = false
-      Line = true
-      Instapaper = false
-      Pocket = false
-      Digg = false
-      Stumbleupon = false
-      Flipboard = false
-      Weibo = true
-      Renren = false
-      Myspace = true
-      Blogger = true
-      Baidu = false
-      Odnoklassniki = false
-      Evernote = true
-      Skype = false
-      Trello = false
-      Mix = false
-    # {{< version 0.2.7 >}} Third-party library config
-    [params.page.library]
-      [params.page.library.css]
-        # someCSS = "some.css"
-        # located in "assets/"
-        # Or
-        # someCSS = "https://cdn.example.com/some.css"
-      [params.page.library.js]
-        # someJavascript = "some.js"
-        # located in "assets/"
-        # Or
-        # someJavascript = "https://cdn.example.com/some.js"
-    # {{< version 0.2.10 changed >}} Page SEO config
-    [params.page.seo]
-      # image URL
-      images = []
-      # Publisher info
-      [params.page.seo.publisher]
-        name = ""
-        logoUrl = ""
-  
-    # {{< version 1.1.0 changed >}} Comment config
-    [params.comment]
-      enable = true
-      # {{< version 1.0.0 new >}}
-      # {{< link "https://github.com/umputun/remark42/" Remark42 >}} comment config
-      [params.comment.remark42]
-        enable = false
-        # the location of your server with Remark42
-        host = "https://remark.example.com"
-        # remark42 supports comments for several sites at once, this identifier indicates which site to display comments for.
-        site = "you_site_key"
-        # design theme
-        theme = "light"
-        # language
-        locale = "en"
-        # enable or disable smiley support
-        emailSubscribe = "true"
-      # {{< link "https://disqus.com/" Disqus >}} comment config
-      [params.comment.disqus]
-        # {{< version 0.1.1 >}}
-        enable = false
-        # Disqus shortname to use Disqus in posts
-        shortname = ""
-      # {{< link "https://github.com/gitalk/gitalk" Gitalk >}} comment config
-      [params.comment.gitalk]
-        # {{< version 0.1.1 >}}
-        enable = false
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-      # {{< link "https://github.com/xCss/Valine" Valine >}} comment config
-      [params.comment.valine]
-        enable = false
-        appId = ""
-        appKey = ""
-        placeholder = ""
-        avatar = "mp"
-        meta= ""
-        pageSize = 10
-        lang = ""
-        visitor = true
-        recordIP = true
-        highlight = true
-        enableQQ = false
-        serverURLs = ""
-        # {{< version 0.2.6 >}} emoji data file name, default is "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-        # located in "themes/uBlogger/assets/data/emoji/" directory
-        # you can store your own data files in the same path under your project:
-        # "assets/data/emoji/"
-        emoji = ""
-      # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook comment" >}} config
-      [params.comment.facebook]
-        enable = false
-        width = "100%"
-        numPosts = 10
-        appId = ""
-        languageCode = ""
-      # {{< version 0.2.0 >}} {{< link "https://comments.app/" "Telegram comments" >}} config
-      [params.comment.telegram]
-        enable = false
-        siteID = ""
-        limit = 5
-        height = ""
-        color = ""
-        colorful = true
-        dislikes = false
-        outlined = false
-      # {{< version 0.2.0 >}} {{< link "https://commento.io/" "Commento" >}} comment config
-      [params.comment.commento]
-        enable = false
-      # {{< version 0.2.5 >}} {{< link "https://utteranc.es/" "Utterances" >}} comment config
-      [params.comment.utterances]
-        enable = false
-        # owner/repo
-        repo = ""
-        issueTerm = "pathname"
-        label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
-
-  # Site verification code config for Google/Bing/Yandex/Pinterest/Baidu
-  [params.verification]
-    google = ""
-    bing = ""
-    yandex = ""
-    pinterest = ""
-    baidu = ""
-
-  # {{< version 0.2.10 >}} Site SEO config
-  [params.seo]
-    # image URL
-    image = ""
-    # thumbnail URL
-    thumbnailUrl = ""
-
-  # {{< version 0.2.0 >}} Analytics config
-  [params.analytics]
-    enable = false
-    # Google Analytics
-    [params.analytics.google]
-      id = ""
-      # whether to anonymize IP
-      anonymizeIP = true
-    # Fathom Analytics
-    [params.analytics.fathom]
-      id = ""
-      # server url for your tracker if you're self hosting
-      server = ""
-    # {{< version 1.0.0 new >}}
-    # Yandex.Metrika
-    [params.analytics.yandex]
-      # your meter number
-      id = ""
-
-  # {{< version 0.2.7 >}} Cookie consent config
-  [params.cookieconsent]
-    enable = true
-    # text strings used for Cookie consent banner
-    [params.cookieconsent.content]
-      message = ""
-      dismiss = ""
-      link = ""
-
-  # {{< version 0.2.7 changed >}} CDN config for third-party library files
-  [params.cdn]
-    # CDN data file name, disabled by default
-    # ("jsdelivr.yml")
-    # located in "themes/uBlogger/assets/data/cdn/" directory
-    # you can store your own data files in the same path under your project:
-    # "assets/data/cdn/"
-    data = ""
-
-  # {{< version 0.2.8 >}} Compatibility config
-  [params.compatibility]
-    # whether to use Polyfill.io to be compatible with older browsers
-    polyfill = false
-    # whether to use object-fit-images to be compatible with older browsers
-    objectFit = false
-
-# Markup related config in Hugo
-[markup]
-  # {{< link "https://gohugo.io/content-management/syntax-highlighting" "Syntax Highlighting" >}}
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    lineNos = true
-    lineNumbersInTable = true
-    # false is a necessary configuration
-    noClasses = false
-  # Goldmark is from Hugo 0.60 the default library used for Markdown
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-    [markup.goldmark.renderer]
-      # whether to use HTML tags directly in the document
-      unsafe = true
-  # Table Of Contents settings
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 6
-
-# Author config
-# {{< version 1.0.0 changed >}}
-[author]
-  name = "xxxx"
-
-# Sitemap config
-[sitemap]
-  changefreq = "weekly"
-  filename = "sitemap.xml"
-  priority = 0.5
-
-# {{< link "https://gohugo.io/content-management/urls#permalinks" "Permalinks config" >}}
-[Permalinks]
-  # posts = ":year/:month/:filename"
-  posts = ":filename"
-
-# {{< link "https://gohugo.io/about/hugo-and-gdpr/" "Privacy config" >}}
-[privacy]
-  # {{< version 0.2.0 deleted >}} privacy of the Google Analytics (replaced by params.analytics.google)
-  [privacy.googleAnalytics]
-    # ...
-  [privacy.twitter]
-    enableDNT = true
-  [privacy.youtube]
-    privacyEnhanced = true
-
-# Options to make output .md files
-[mediaTypes]
-  [mediaTypes."text/plain"]
-    suffixes = ["md"]
-
-# Options to make output .md files
-[outputFormats.MarkDown]
-  mediaType = "text/plain"
-  isPlainText = true
-  isHTML = false
-
-# Options to make hugo output files
-[outputs]
-  # {{< version 0.2.0 changed >}}
-  home = ["HTML", "RSS", "JSON"]
-  page = ["HTML", "MarkDown"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
-```
-
-{{< admonition >}}
-Note that some of these parameters are explained in details in other sections of this documentation.
-{{< /admonition >}}
-
-{{< admonition note "Hugo environments" >}}
-Default environments are `development` with `hugo serve` and `production` with `hugo`.
-
-Due to limitations in the local `development` environment,
-the **comment system**, **CDN** and **fingerprint** will not be enabled in the `development` environment.
-
-You could enable these features with `hugo serve -e production`.
-{{< /admonition >}}
-
-{{< admonition tip "Tips about CDN Configuration" >}}
-{{< version 0.2.7 changed >}}
-
-```toml
-[params.cdn]
-  # CDN data file name, disabled by default
-  # ("jsdelivr.yml")
-  data = ""
-````
-
-The default CDN data file is located in `themes/uBlogger/assets/data/cdn/` directory.
-You can store your own data file in the same path under your project: `assets/data/cdn/`.
-{{< /admonition >}}
-
-{{< admonition tip "Tips about social Configuration" >}}
-{{< version 0.2.0 >}}
-
-You can directly set your ID to get a default social link and its icon:
-
-```toml
-[params.social]
-  Mastodon = "@xxxx"
-```
-
-The social link generated is `https://mastodon.technology/@xxxx`.
-
-Or You can set more options through a dict:
-
-```toml
-[params.social]
-  [params.social.Mastodon]
-    # weight when arranging icons (the greater the weight, the later the icon is positioned)
-    weight = 0
-    # your social ID
-    id = "@xxxx"
-    # prefix of your social link
-    prefix = "https://mastodon.social/"
-    # content hovering on the icon
-    title = "Mastodon"
-```
-
-The default data of all supported social links is located in `themes/uBlogger/assets/data/social.yaml`,
-which is you can refer to.
-{{< /admonition >}}
-
-### 3.2 Favicons, Browserconfig, Manifest
-
-It is recommended to put your own favicons:
-
-* apple-touch-icon.png (180x180)
-* favicon-32x32.png (32x32)
-* favicon-16x16.png (16x16)
-* mstile-150x150.png (150x150)
-* android-chrome-192x192.png (192x192)
-* android-chrome-512x512.png (512x512)
-
-into `/static`. They’re easily created via [https://realfavicongenerator.net/](https://realfavicongenerator.net/).
-
-Customize `browserconfig.xml` and `site.webmanifest` to set theme-color and background-color.
-
-### 3.3 Style Customization
-
-{{< version 0.2.8 changed >}}
-
-{{< admonition >}}
-Hugo **extended** version is necessary for the style customization.
-{{< /admonition >}}
-
-**uBlogger** theme has been built to be as configurable as possible by defining custom `.scss` style files.
-
-The directory including the custom `.scss` style files is `assets/css` relative to **your project root directory**.
-
-In `assets/css/_override.scss`, you can override the variables in `themes/uBlogger/assets/css/_variables.scss` to customize the style.
-
-Here is a example:
-
-```scss
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext');
-$code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospace;
-```
-
-In `assets/css/_custom.scss`, you can add some css style code to customize the style.
-
-## 4 Multilingual and i18n
-
-**uBlogger** theme is fully compatible with Hugo multilingual mode, which provides in-browser language switching.
-
-![Language Switch](language-switch.gif "Language Switch")
-
-### 4.1 Compatibility {#language-compatibility}
-
-{{< version 0.2.10 changed >}}
-
-| Language             | Hugo Code | HTML `lang` Attribute | Theme Docs                    | Lunr.js Support               |
-|:-------------------- |:---------:|:---------------------:|:-----------------------------:|:-----------------------------:|
-| English              | `en`      | `en`                  | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| French               | `fr`      | `fr`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Polish               | `pl`      | `pl`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Italian              | `it`      | `it`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Spanish              | `es`      | `es`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| German               | `de`      | `de`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| German               | `de`      | `de`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Serbian              | `sr`      | `sr`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Russian              | `ru`      | `ru`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Romanian             | `ro`      | `ro`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Vietnamese           | `vi`      | `vi`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-
-### 4.2 Basic Configuration
-
-After learning [how Hugo handle multilingual websites](https://gohugo.io/content-management/multilingual), define your languages in your [site configuration](#site-configuration).
-
-For example with English, Chinese and French website:
-
-```toml
-# [en, zh-cn, fr, pl, ...] determines default content language
-defaultContentLanguage = "en"
-
-[languages]
-  [languages.en]
-    weight = 1
-    title = "My New Hugo Site"
-    languageCode = "en"
-    languageName = "English"
-    [[languages.en.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "Posts"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.en.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "Tags"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.en.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "Categories"
-      url = "/categories/"
-      title = ""
-      weight = 3
-
-  [languages.zh-cn]
-    weight = 2
-    title = "我的全新 Hugo 网站"
-    # language code, CN only here
-    languageCode = "zh-CN"
-    languageName = "简体中文"
-    # whether to include Chinese/Japanese/Korean
-    hasCJKLanguage = true
-    [[languages.zh-cn.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "文章"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.zh-cn.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "标签"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.zh-cn.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "分类"
-      url = "/categories/"
-      title = ""
-      weight = 3
-
-  [languages.fr]
-    weight = 3
-    title = "Mon nouveau site Hugo"
-    languageCode = "fr"
-    languageName = "Français"
-    [[languages.fr.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "Postes"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.fr.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "Balises"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.fr.menu.main]]
-      identifier = "categories"
-      name = "Catégories"
-      pre = ""
-      post = ""
-      url = "/categories/"
-      title = ""
-      weight = 3
-```
-
-Then, for each new page, append the language code to the file name.
-
-Single file `my-page.md` is split in three files:
-
-* in English: `my-page.en.md`
-* in Chinese: `my-page.zh-cn.md`
-* in French: `my-page.fr.md`
-
-{{< admonition >}}
-Be aware that only translated pages are displayed in menu. It’s not replaced with default language content.
-{{< /admonition >}}
-
-{{< admonition tip >}}
-Use [Front Matter parameter](https://gohugo.io/content-management/multilingual#translate-your-content) to translate urls too.
-{{< /admonition >}}
-
-### 4.3 Overwrite Translation Strings
-
-Translations strings are used for common default values used in the theme. Translations are available in [some languages](#language-compatibility), but you may use another language or want to override default values.
-
-To override these values, create a new file in your local i18n folder `i18n/<languageCode>.toml` and inspire yourself from `themes/uBlogger/i18n/en.toml`.
-
-By the way, as these translations could be used by other people, please take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/upagge/uBlogger/pulls) to the theme!
-
-## 5 Search
+## 2 link
 
 {{< version 0.2.0 >}}
 
-Based on [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/), searching is supported in **uBlogger** theme.
+`link` shortcode is an alternative to [Markdown link syntax](../basic-markdown-syntax#links). `link` shortcode can provide some other features and can be used in code blocks.
 
-### 5.1 Output Configuration
+{{< version 0.2.10 >}} The complete usage of [local resource references](../theme-documentation-content#contents-organization) is supported.
 
-In order to generate `index.json` for searching, add `JSON` output file type to the `home` of the `outputs` part in your [site configuration](#site-configuration).
+The `link` shortcode has the following named parameters:
 
-```toml
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+* **href** *[required]* (**first** positional parameter)
+
+    Destination of the link.
+
+* **content** *[optional]* (**second** positional parameter)
+
+    Content of the link, default value is the value of **href** parameter.
+
+    *Markdown or HTML format is supported.*
+
+* **title** *[optional]* (**third** positional parameter)
+
+    `title` attribute of the HTML `a` tag, which will be shown when hovering on the link.
+
+* **class** *[optional]*
+
+    `class` attribute of the HTML `a` tag.
+
+* **rel** *[optional]*
+
+    Additional `rel` attributes of the HTML `a` tag.
+
+Example `link` input:
+
+```markdown
+{{</* link "https://assemble.io" */>}}
+Or
+{{</* link href="https://assemble.io" */>}}
+
+{{</* link "mailto:contact@revolunet.com" */>}}
+Or
+{{</* link href="mailto:contact@revolunet.com" */>}}
+
+{{</* link "https://assemble.io" Assemble */>}}
+Or
+{{</* link href="https://assemble.io" content=Assemble */>}}
 ```
 
-### 5.2 Search Configuration
+The rendered output looks like this:
 
-Based on `index.json` generated by Hugo, you could activate searching.
+* {{< link "https://assemble.io" >}}
+* {{< link "mailto:contact@revolunet.com" >}}
+* {{< link "https://assemble.io" Assemble >}}
 
-Here is the search configuration in your [site configuration](#site-configuration):
+Example `link` input with a title:
 
-```toml
-[params.search]
-  enable = true
-  # type of search engine ("lunr", "algolia")
-  type = "lunr"
-  # max index length of the chunked content
-  contentLength = 4000
-  # placeholder of the search bar
-  placeholder = ""
-  # {{< version 0.2.1 >}} max number of results length
-  maxResultLength = 10
-  # {{< version 0.2.3 >}} snippet length of the result
-  snippetLength = 30
-  # {{< version 0.2.1 >}} HTML tag name of the highlight part in results
-  highlightTag = "em"
-  # {{< version 0.2.4 >}} whether to use the absolute URL based on the baseURL in search index
-  absoluteURL = false
-  [params.search.algolia]
-    index = ""
-    appID = ""
-    searchKey = ""
+```markdown
+{{</* link "https://github.com/upstage/" Upstage "Visit Upstage!" */>}}
+Or
+{{</* link href="https://github.com/upstage/" content=Upstage title="Visit Upstage!" */>}}
 ```
 
-{{< admonition note "How to choose search engine?" >}}
-The following is a comparison of two search engines:
+The rendered output looks like this (hover over the link, there should be a tooltip):
 
-* `lunr`: simple, no need to synchronize `index.json`, no limit for `contentLength`,
-  but high bandwidth and low performance (Especially for Chinese which needs a large segmentit library)
-* `algolia`: high performance and low bandwidth, but need to synchronize `index.json` and limit for `contentLength`
+{{< link "https://github.com/upstage/" Upstage "Visit Upstage!" >}}
 
-{{< version 0.2.3 >}} The content of the post is separated by `h2` and `h3` HTML tag to improve query performance and basically implement full-text search.
-`contentLength` is used to limit the max index length of the part starting with `h2` and `h3` HTML tag.
+## 3 image {#image}
+
+{{< version 0.2.0 changed >}}
+
+`image` shortcode is an alternative to [`figure` shortcode](../theme-documentation-built-in-shortcodes#figure). `image` shortcode can take full advantage of the dependent libraries of [lazysizes](https://github.com/aFarkas/lazysizes) and [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js).
+
+{{< version 0.2.10 >}} The complete usage of [local resource references](../theme-documentation-content#contents-organization) is supported.
+
+The `image` shortcode has the following named parameters:
+
+* **src** *[required]* (**first** positional parameter)
+
+    URL of the image to be displayed.
+
+* **alt** *[optional]* (**second** positional parameter)
+
+    Alternate text for the image if the image cannot be displayed, default value is the value of **src** parameter.
+
+    *Markdown or HTML format is supported.*
+
+* **caption** *[optional]* (**third** positional parameter)
+
+    Image caption.
+
+    *Markdown or HTML format is supported.*
+
+* **title** *[optional]*
+
+    Image title that will be shown when hovering on the image.
+
+* **class** *[optional]*
+
+    `class` attribute of the HTML `figure` tag.
+
+* **src_s** *[optional]*
+
+    URL of the image thumbnail, used for lightgallery, default value is the value of **src** parameter.
+
+* **src_l** *[optional]*
+
+    URL of the HD image, used for lightgallery, default value is the value of **src** parameter.
+
+* **height** *[optional]*
+
+    `height` attribute of the image.
+
+* **width** *[optional]*
+
+    `width` attribute of the image.
+
+* **linked** *[optional]*
+
+    Whether the image needs to be hyperlinked, default value is `true`.
+
+* **rel** *[optional]*
+
+    Additional `rel` attributes of the HTML `a` tag, if **linked** parameter is set to `true`.
+
+Example `image` input:
+
+```markdown
+{{</* image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" */>}}
+```
+
+The rendered output looks like this:
+
+{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
+
+## 4 admonition
+
+The `admonition` shortcode supports **12** types of banners to help you put notice in your page.
+
+*Markdown or HTML format in the content is supported.*
+
+{{< admonition >}}
+A **note** banner
 {{< /admonition >}}
 
-{{< admonition tip "Tips about algolia" >}}
-You need to upload `index.json` files to algolia to activate searching.
-You could upload the `index.json` files by browsers but a CLI tool may be better.
-[Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) is a good choice.
-To be compatible with Hugo multilingual mode,
-you need to upload different `index.json` for each language to the different index of algolia, such as `zh-cn/index.json` or `fr/index.json`...
+{{< admonition abstract >}}
+An **abstract** banner
 {{< /admonition >}}
+
+{{< admonition info >}}
+A **info** banner
+{{< /admonition >}}
+
+{{< admonition tip >}}
+A **tip** banner
+{{< /admonition >}}
+
+{{< admonition success >}}
+A **success** banner
+{{< /admonition >}}
+
+{{< admonition question >}}
+A **question** banner
+{{< /admonition >}}
+
+{{< admonition warning >}}
+A **warning** banner
+{{< /admonition >}}
+
+{{< admonition failure >}}
+A **failure** banner
+{{< /admonition >}}
+
+{{< admonition danger >}}
+A **danger** banner
+{{< /admonition >}}
+
+{{< admonition bug >}}
+A **bug** banner
+{{< /admonition >}}
+
+{{< admonition example >}}
+An **example** banner
+{{< /admonition >}}
+
+{{< admonition quote >}}
+A **quote** banner
+{{< /admonition >}}
+
+The `admonition` shortcode has the following named parameters:
+
+* **type** *[optional]* (**first** positional parameter)
+
+    Type of the `admonition` banner, default value is `note`.
+
+* **title** *[optional]* (**second** positional parameter)
+
+    Title of the `admonition` banner, default value is the value of **type** parameter.
+
+* **open** *[optional]* (**third** positional parameter) {{< version 0.2.0 changed >}}
+
+    Whether the content will be expandable by default, default value is `true`.
+
+Example `admonition` input:
+
+```markdown
+{{</* admonition type=tip title="This is a tip" open=false */>}}
+A **tip** banner
+{{</* /admonition */>}}
+Or
+{{</* admonition tip "This is a tip" false */>}}
+A **tip** banner
+{{</* /admonition */>}}
+```
+
+The rendered output looks like this:
+
+{{< admonition tip "This is a tip" false >}}
+A **tip** banner
+{{< /admonition >}}
+
+## 5 mermaid
+
+[mermaid](https://mermaidjs.github.io/) is a library helping you to generate diagram and flowcharts from text, in a similar manner as Markdown.
+
+Just insert your mermaid code in the `mermaid` shortcode and that’s it.
+
+### 5.1 Flowchart {#flowchart}
+
+Example **flowchart** `mermaid` input:
+
+```markdown
+{{</* mermaid */>}}
+graph LR;
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+{{</* /mermaid */>}}
+```
+
+The rendered output looks like this:
+
+{{< mermaid >}}
+graph LR;
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+{{< /mermaid >}}
+
+### 5.2 Sequence Diagram {#sequence-diagram}
+
+Example **sequence diagram** `mermaid` input:
+
+```markdown
+{{</* mermaid */>}}
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+{{</* /mermaid */>}}
+```
+
+The rendered output looks like this:
+
+{{< mermaid >}}
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+{{< /mermaid >}}
+
+### 5.3 GANTT {#gantt}
+
+Example **GANTT** `mermaid` input:
+
+```markdown
+{{</* mermaid */>}}
+gantt
+    dateFormat  YYYY-MM-DD
+    title Adding GANTT diagram functionality to mermaid
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2               :         des4, after des3, 5d
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :1d
+{{</* /mermaid */>}}
+```
+
+The rendered output looks like this:
+
+{{< mermaid >}}
+gantt
+    dateFormat  YYYY-MM-DD
+    title Adding GANTT diagram functionality to mermaid
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2               :         des4, after des3, 5d
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :1d
+{{< /mermaid >}}
+
+### 5.4 Class Diagram {#class-diagram}
+
+Example **class diagram** `mermaid` input:
+
+```markdown
+{{</* mermaid */>}}
+classDiagram
+    Class01 <|-- AveryLongClass : Cool
+    Class03 *-- Class04
+    Class05 o-- Class06
+    Class07 .. Class08
+    Class09 --> C2 : Where am i?
+    Class09 --* C3
+    Class09 --|> Class07
+    Class07 : equals()
+    Class07 : Object[] elementData
+    Class01 : size()
+    Class01 : int chimp
+    Class01 : int gorilla
+    Class08 <--> C2: Cool label
+{{</* /mermaid */>}}
+```
+
+The rendered output looks like this:
+
+{{< mermaid >}}
+classDiagram
+    Class01 <|-- AveryLongClass : Cool
+    Class03 *-- Class04
+    Class05 o-- Class06
+    Class07 .. Class08
+    Class09 --> C2 : Where am i?
+    Class09 --* C3
+    Class09 --|> Class07
+    Class07 : equals()
+    Class07 : Object[] elementData
+    Class01 : size()
+    Class01 : int chimp
+    Class01 : int gorilla
+    Class08 <--> C2: Cool label
+{{< /mermaid >}}
+
+### 5.5 State Diagram {#state-diagram}
+
+Example **state diagram** `mermaid` input:
+
+```markdown
+{{</* mermaid */>}}
+stateDiagram
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+{{</* /mermaid */>}}
+```
+
+The rendered output looks like this:
+
+{{< mermaid >}}
+stateDiagram
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+{{< /mermaid >}}
+
+### 5.6 Git Graph {#git-graph}
+
+Example **git graph** `mermaid` input:
+
+```markdown
+{{</* mermaid */>}}
+gitGraph:
+options
+{
+    "nodeSpacing": 100,
+    "nodeRadius": 10
+}
+end
+    commit
+    branch newbranch
+    checkout newbranch
+    commit
+    commit
+    checkout master
+    commit
+    commit
+    merge newbranch
+{{</* /mermaid */>}}
+```
+
+The rendered output looks like this:
+
+{{< mermaid >}}
+gitGraph:
+options
+{
+    "nodeSpacing": 100,
+    "nodeRadius": 10
+}
+end
+    commit
+    branch newbranch
+    checkout newbranch
+    commit
+    commit
+    checkout master
+    commit
+    commit
+    merge newbranch
+{{< /mermaid >}}
+
+### 5.7 Pie {#pie}
+
+Example **pie** `mermaid` input:
+
+```markdown
+{{</* mermaid */>}}
+pie
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+{{</* /mermaid */>}}
+```
+
+The rendered output looks like this:
+
+{{< mermaid >}}
+pie
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+{{< /mermaid >}}
+
+## 6 echarts
+
+[ECharts](https://echarts.apache.org/) is a library helping you to generate interactive data visualization. uBlogger uses echarts version 5.
+
+The basic chart types ECharts supports include [line series](https://echarts.apache.org/en/option.html#series-line), [bar series](https://echarts.apache.org/en/option.html#series-line), [scatter series](https://echarts.apache.org/en/option.html#series-scatter), [pie charts](https://echarts.apache.org/en/option.html#series-pie), [candle-stick series](https://echarts.apache.org/en/option.html#series-candlestick), [boxplot series](https://echarts.apache.org/en/option.html#series-boxplot) for statistics, [map series](https://echarts.apache.org/en/option.html#series-map), [heatmap series](https://echarts.apache.org/en/option.html#series-heatmap), [lines series](https://echarts.apache.org/en/option.html#series-lines) for directional information, [graph series](https://echarts.apache.org/en/option.html#series-graph) for relationships, [treemap series](https://echarts.apache.org/en/option.html#series-treemap), [sunburst series](https://echarts.apache.org/en/option.html#series-sunburst), [parallel series](https://echarts.apache.org/en/option.html#series-parallel) for multi-dimensional data, [funnel series](https://echarts.apache.org/en/option.html#series-funnel), [gauge series](https://echarts.apache.org/en/option.html#series-gauge). And it's extremely easy to create a combinition of them with ECharts.
+
+See the [echarts gallery](https://echarts.apache.org/examples/en/index.html) for inspiration on what you can do with echarts.
+
+Just insert your ECharts option in `JSON`/`YAML`/`TOML` format in the `echarts` shortcode and that’s it.
+
+Example `echarts` input in `JSON` format:
+
+```json
+{{</* echarts */>}}
+{
+    "title": {
+        "text": "Summary Line Chart"
+    },
+    "tooltip": {
+        "trigger": "axis"
+    },
+    "legend": {
+        "show": true,
+        "right": "5%"
+    },
+    "grid": {
+        "left": "3%",
+        "right": "4%",
+        "bottom": "3%",
+        "containLabel": true
+    },
+    "toolbox": {
+        "feature": {
+            "saveAsImage": {}
+        }
+    },
+    "xAxis": {
+        "type": "category",
+        "boundaryGap": false,
+        "data": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    },
+    "yAxis": {
+        "type": "value"
+    },
+    "series": [
+        {
+            "name": "Email",
+            "type": "line",
+            "stack": "total",
+            "data": [120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            "name": "Affiliate",
+            "type": "line",
+            "stack": "total",
+            "data": [220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+            "name": "Video",
+            "type": "line",
+            "stack": "total",
+            "data": [150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+            "name": "Direct",
+            "type": "line",
+            "stack": "total",
+            "data": [320, 332, 301, 334, 390, 330, 320]
+        },
+        {
+            "name": "Search Engine",
+            "type": "line",
+            "stack": "total",
+            "data": [820, 932, 901, 934, 1290, 1330, 1320]
+        }
+    ]
+}
+{{</* /echarts */>}}
+```
+
+The same in `YAML` format:
+
+```yaml
+{{</* echarts */>}}
+title:
+  text: Summary Line Chart
+tooltip:
+  trigger: axis
+legend:
+  show: true
+  right: 5%
+grid:
+  left: 3%
+  right: 4%
+  bottom: 3%
+  containLabel: true
+toolbox:
+  feature:
+    saveAsImage: {}
+xAxis:
+  type: category
+  boundaryGap: false
+  data:
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+  - Sunday
+yAxis:
+  type: value
+series:
+- name: Email
+  type: line
+  stack: total
+  data:
+  - 120
+  - 132
+  - 101
+  - 134
+  - 90
+  - 230
+  - 210
+- name: Affiliate
+  type: line
+  stack: total
+  data:
+  - 220
+  - 182
+  - 191
+  - 234
+  - 290
+  - 330
+  - 310
+- name: Video
+  type: line
+  stack: total
+  data:
+  - 150
+  - 232
+  - 201
+  - 154
+  - 190
+  - 330
+  - 410
+- name: Direct
+  type: line
+  stack: total
+  data:
+  - 320
+  - 332
+  - 301
+  - 334
+  - 390
+  - 330
+  - 320
+- name: Search Engine
+  type: line
+  stack: total
+  data:
+  - 820
+  - 932
+  - 901
+  - 934
+  - 1290
+  - 1330
+  - 1320
+{{</* /echarts */>}}
+```
+
+The same in `TOML` format:
+
+```toml
+{{</* echarts */>}}
+[title]
+text = 'Summary Line Chart'
+
+[tooltip]
+trigger = 'axis'
+
+[legend]
+show = true
+right = '5%'
+
+[grid]
+left = '3%'
+right = '4%'
+bottom = '3%'
+containLabel = true
+[toolbox.feature.saveAsImage]
+
+[xAxis]
+type = 'category'
+boundaryGap = false
+data = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+]
+
+[yAxis]
+type = 'value'
+
+[[series]]
+name = 'Email'
+type = 'line'
+stack = 'total'
+data = [
+    120,
+    132,
+    101,
+    134,
+    90,
+    230,
+    210,
+]
+
+[[series]]
+name = 'Affiliate'
+type = 'line'
+stack = 'total'
+data = [
+    220,
+    182,
+    191,
+    234,
+    290,
+    330,
+    310,
+]
+
+[[series]]
+name = 'Video'
+type = 'line'
+stack = 'total'
+data = [
+    150,
+    232,
+    201,
+    154,
+    190,
+    330,
+    410,
+]
+
+[[series]]
+name = 'Direct'
+type = 'line'
+stack = 'total'
+data = [
+    320,
+    332,
+    301,
+    334,
+    390,
+    330,
+    320,
+]
+
+[[series]]
+name = 'Search Engine'
+type = 'line'
+stack = 'total'
+data = [
+    820,
+    932,
+    901,
+    934,
+    1290,
+    1330,
+    1320,
+]
+{{</* /echarts */>}}
+```
+
+The rendered output looks like this:
+
+{{< echarts >}}
+{
+    "title": {
+        "text": "Summary Line Chart"
+    },
+    "tooltip": {
+        "trigger": "axis"
+    },
+    "legend": {
+        "show": true,
+        "right": "5%"
+    },
+    "grid": {
+        "left": "3%",
+        "right": "4%",
+        "bottom": "3%",
+        "containLabel": true
+    },
+    "toolbox": {
+        "feature": {
+            "saveAsImage": {}
+        }
+    },
+    "xAxis": {
+        "type": "category",
+        "boundaryGap": false,
+        "data": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    },
+    "yAxis": {
+        "type": "value"
+    },
+    "series": [
+        {
+            "name": "Email",
+            "type": "line",
+            "stack": "total",
+            "data": [120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            "name": "Affiliate",
+            "type": "line",
+            "stack": "total",
+            "data": [220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+            "name": "Video",
+            "type": "line",
+            "stack": "total",
+            "data": [150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+            "name": "Direct",
+            "type": "line",
+            "stack": "total",
+            "data": [320, 332, 301, 334, 390, 330, 320]
+        },
+        {
+            "name": "Search Engine",
+            "type": "line",
+            "stack": "total",
+            "data": [820, 932, 901, 934, 1290, 1330, 1320]
+        }
+    ]
+}
+{{< /echarts >}}
+
+Pro tip: build your graphs faster by picking an example from the [echarts gallery](https://echarts.apache.org/examples/en/index.html), and use the interactive editor to quickly adapt it to your desired graph.
+When you're done, you can copy the resulting graph specification and paste it over into the uBlogger shortcode. Just make sure you correct the JSON syntax by:
+
+1. Removing the `option =` prefix to the graph specification.
+1. Removing the `;` suffix to the graph specification.
+1. Enclosing all symbols in quotes in the graph specification (e.g. `xAxis:` &rarr; `"xAxis":`).
+
+The `echarts` shortcode has also the following named parameters:
+
+* **width** *[optional]* (**first** positional parameter)
+
+    {{< version 0.2.0 >}} Width of the data visualization, default value is `100%`.
+
+* **height** *[optional]* (**second** positional parameter)
+
+    {{< version 0.2.0 >}} Height of the data visualization, default value is `30rem`.
+
+## 7 mapbox
+
+{{< version 0.2.0 >}}
+
+[Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [Mapbox styles](https://docs.mapbox.com/mapbox-gl-js/style-spec/).
+
+The `mapbox` shortcode has the following named parameters to use Mapbox GL JS:
+
+* **lng** *[required]* (**first** positional parameter)
+
+    Longitude of the inital centerpoint of the map, measured in degrees.
+
+* **lat** *[required]* (**second** positional parameter)
+
+    Latitude of the inital centerpoint of the map, measured in degrees.
+
+* **zoom** *[optional]* (**third** positional parameter)
+
+    The initial zoom level of the map, default value is `10`.
+
+* **marked** *[optional]* (**fourth** positional parameter)
+
+    Whether to add a marker at the inital centerpoint of the map, default value is `true`.
+
+* **light-style** *[optional]* (**fifth** positional parameter)
+
+    Style for the light theme, default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+
+* **dark-style** *[optional]* (**sixth** positional parameter)
+
+    Style for the dark theme, default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+
+* **navigation** *[optional]*
+
+    Whether to add [NavigationControl](https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+
+* **geolocate** *[optional]*
+
+    Whether to add [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+
+* **scale** *[optional]*
+
+    Whether to add [ScaleControl](https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+
+* **fullscreen** *[optional]*
+
+    Whether to add [FullscreenControl](https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+
+* **width** *[optional]*
+
+    Width of the map, default value is `100%`.
+
+* **height** *[optional]*
+
+    Height of the map, default value is `20rem`.
+
+Example simple `mapbox` input:
+
+```markdown
+{{</* mapbox 121.485 31.233 12 */>}}
+Or
+{{</* mapbox lng=121.485 lat=31.233 zoom=12 */>}}
+```
+
+The rendered output looks like this:
+
+{{< mapbox 121.485 31.233 12 >}}
+
+Example `mapbox` input with the custom style:
+
+```markdown
+{{</* mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/navigation-preview-day-v4" "mapbox://styles/mapbox/navigation-preview-night-v4" */>}}
+Or
+{{</* mapbox lng=-122.252 lat=37.453 zoom=10 marked=false light-style="mapbox://styles/mapbox/navigation-preview-day-v4" dark-style="mapbox://styles/mapbox/navigation-preview-night-v4" */>}}
+```
+
+The rendered output looks like this:
+
+{{< mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/navigation-preview-day-v4?optimize=true" "mapbox://styles/mapbox/navigation-preview-night-v4?optimize=true" >}}
+
+## 8 music
+
+The `music` shortcode embeds a responsive music player based on [APlayer](https://github.com/MoePlayer/APlayer) and [MetingJS](https://github.com/metowolf/MetingJS).
+
+There are three ways to use it the `music` shortcode.
+
+### 8.1 Custom Music URL {#custom-music-url}
+
+{{< version 0.2.10 >}} The complete usage of [local resource references](../theme-documentation-content#contents-organization) is supported.
+
+The `music` shortcode has the following named parameters by custom music URL:
+
+* **server** *[required]*
+
+    URL of the custom music.
+
+* **name** *[optional]*
+
+    Name of the custom music.
+
+* **artist** *[optional]*
+
+    Artist of the custom music.
+
+* **cover** *[required]*
+
+    URL of the custom music cover.
+
+Example `music` input by custom music URL:
+
+```markdown
+{{</* music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" */>}}
+```
+
+The rendered output looks like this:
+
+{{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" >}}
+
+### 8.2 Music Platform URL Automatic Identification {#automatic-identification}
+
+The `music` shortcode has one named parameter by music platform URL automatic identification:
+
+* **auto** *[required]* (**first** positional parameter)
+
+    URL of the music platform URL for automatic identification,
+    which supports `netease`, `tencent` and `xiami` music platform.
+
+Example `music` input by music platform URL automatic identification:
+
+```markdown
+{{</* music auto="https://music.163.com/#/playlist?id=60198" */>}}
+Or
+{{</* music "https://music.163.com/#/playlist?id=60198" */>}}
+```
+
+The rendered output looks like this:
+
+{{< music auto="https://music.163.com/#/playlist?id=60198" >}}
+
+### 8.3 Custom Server, Type and ID {#custom-server}
+
+The `music` shortcode has the following named parameters by custom music platform:
+
+* **server** *[required]* (**first** positional parameter)
+
+    [`netease`, `tencent`, `kugou`, `xiami`, `baidu`]
+
+    Music platform.
+
+* **type** *[required]* (**second** positional parameter)
+
+    [`song`, `playlist`, `album`, `search`, `artist`]
+
+    Type of the music.
+
+* **id** *[required]* (**third** positional parameter)
+
+    Song ID, or playlist ID, or album ID, or search keyword, or artist ID.
+
+Example `music` input by custom music platform:
+
+```markdown
+{{</* music server="netease" type="song" id="1868553" */>}}
+Or
+{{</* music netease song 1868553 */>}}
+```
+
+The rendered output looks like this:
+
+{{< music netease song 1868553 >}}
+
+### 8.4 Other Parameters {#other-parameters}
+
+The `music` shortcode has other named parameters applying to the above three ways:
+
+* **theme** *[optional]*
+
+    {{< version 0.2.0 changed >}} Main color of the music player, default value is `#448aff`.
+
+* **fixed** *[optional]*
+
+    Whether to enable fixed mode, default value is `false`.
+
+* **mini** *[optional]*
+
+    Whether to enable mini mode, default value is `false`.
+
+* **autoplay** *[optional]*
+
+    Whether to autoplay music, default value is `false`.
+
+* **volume** *[optional]*
+
+    Default volume when the player is first opened, which will be remembered in the browser, default value is `0.7`.
+
+* **mutex** *[optional]*
+
+    Whether to pause other players when this player starts playing, default value is `true`.
+
+The `music` shortcode has the following named parameters only applying to the type of music list:
+
+* **loop** *[optional]*
+
+    [`all`, `one`, `none`]
+
+    Loop mode of the music list, default value is `none`.
+
+* **order** *[optional]*
+
+    [`list`, `random`]
+
+    Play order of the music list, default value is `list`.
+
+* **list-folded** *[optional]*
+
+    Whether the music list should be folded at first, default value is `false`.
+
+* **list-max-height** *[optional]*
+
+    Max height of the music list, default value is `340px`.
+
+## 9 bilibili
+
+{{< version 0.2.0 changed >}}
+
+The `bilibili` shortcode embeds a responsive video player for bilibili videos.
+
+When the video only has one part, only the BV `id` of the video is required, e.g.:
+
+```code
+https://www.bilibili.com/video/BV1Sx411T7QQ
+```
+
+Example `bilibili` input:
+
+```markdown
+{{</* bilibili BV1Sx411T7QQ */>}}
+Or
+{{</* bilibili id=BV1Sx411T7QQ */>}}
+```
+
+The rendered output looks like this:
+
+{{< bilibili id=BV1Sx411T7QQ >}}
+
+When the video has multiple parts, in addition to the BV `id` of the video,
+`p` is also required, whose default value is `1`, e.g.:
+
+```code
+https://www.bilibili.com/video/BV1TJ411C7An?p=3
+```
+
+Example `bilibili` input with `p`:
+
+```markdown
+{{</* bilibili BV1TJ411C7An 3 */>}}
+Or
+{{</* bilibili id=BV1TJ411C7An p=3 */>}}
+```
+
+The rendered output looks like this:
+
+{{< bilibili id=BV1TJ411C7An p=3 >}}
+
+## 10 typeit
+
+The `typeit` shortcode provides typing animation based on [TypeIt](https://typeitjs.com/).
+
+Just insert your content in the `typeit` shortcode and that’s it.
+
+### 10.1 Simple Content {#simple-content}
+
+Simple content is allowed in `Markdown` format and **without** rich block content such as images and more...
+
+Example `typeit` input:
+
+The rendered output looks like this:
+
+Alternatively, you can use custom **HTML tags**.
+
+Example `typeit` input with `h4` tag:
+
+The rendered output looks like this:
+
+### 10.2 Code Content {#code-content}
+
+Code content is allowed and will be highlighted by named parameter `code` for the type of code language.
+
+Example `typeit` input with `code`:
+
+
+The rendered output looks like this:
+
+
+### 10.3 Group Content {#group-content}
+
+All typing animations start at the same time by default.
+But sometimes you may want to start a set of `typeit` contents in order.
+
+A set of `typeit` contents with the same value of named parameter `group` will start typing animation in sequence.
+
+Example `typeit` input with `group`:
+
+
+The rendered output looks like this:
+
+
+## 11 script
+
+{{< version 0.2.8 >}}
+
+`script` is a shortcode to insert custom **:(fab fa-js fa-fw): Javascript** in your post.
+
+{{< admonition >}}
+The script content can be guaranteed to be executed in order after all third-party libraries are loaded. So you are free to use third-party libraries.
+{{< /admonition >}}
+
+Example `script` input:
+
+```markdown
+{{</* script */>}}
+console.log('Hello uBlogger!');
+{{</* /script */>}}
+```
+
+You can see the output in the console of the developer tool.
+
+{{< script >}}
+console.log('Hello uBlogger!');
+{{< /script >}}
 

@@ -1,14 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>installation - 标签 - $HOME - 给岁月以文明</title>
-        <link>https://fangr.cc/tags/installation/</link>
-        <description>installation - 标签 - $HOME - 给岁月以文明</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Mar 2020 21:29:01 &#43;0800</lastBuildDate><atom:link href="https://fangr.cc/tags/installation/" rel="self" type="application/rss+xml" /><item>
-    <title>Theme Documentation - Basics</title>
-    <link>https://fangr.cc/index.en/</link>
-    <pubDate>Fri, 06 Mar 2020 21:29:01 &#43;0800</pubDate>
-    <author>ryderfang</author>
-    <guid>https://fangr.cc/index.en/</guid>
-    <description><![CDATA[<p>Discover what the Hugo - <strong>uBlog</strong> theme is all about and the core-concepts behind it.</p>]]></description>
-</item></channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>installation - 标签 - $HOME - 给岁月以文明</title><link>https://fangr.cc/tags/installation/</link><description>installation - 标签 - $HOME - 给岁月以文明</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Mar 2020 21:29:01 +0800</lastBuildDate><atom:link href="https://fangr.cc/tags/installation/" rel="self" type="application/rss+xml"/><item><title>Theme Documentation - Basics</title><link>https://fangr.cc/index.en/</link><pubDate>Fri, 06 Mar 2020 21:29:01 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/index.en/</guid><description>&lt;p>Discover what the Hugo - &lt;strong>uBlog&lt;/strong> theme is all about and the core-concepts behind it.&lt;/p></description></item></channel></rss>
