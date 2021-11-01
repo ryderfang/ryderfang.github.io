@@ -1,8 +1,8 @@
 #! /bin/bash
 
 # waiting for build complete
-result=`bundle exec jekyll build`
+result=`hugo --buildDrafts`
 git add .
-git commit -m "Update(auto commit)"
+git commit -m "Deploy(auto commit)"
 git push origin master
 
