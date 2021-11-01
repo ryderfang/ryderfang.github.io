@@ -31,7 +31,10 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./
-          publish_branch: gh-pages
-          cname: fangr.cc
-          enable_jekyll: false
+          publish_dir: ./public
+
+      - name: Git subtree
+        run: |
+          git add public && git commit -m "deploy(auto commit): action done"
+          git subtree push --prefix public origin gh-pages
+
