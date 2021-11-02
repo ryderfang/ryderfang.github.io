@@ -107,9 +107,9 @@ enableEmoji = true
         # whether to use the absolute URL based on the baseURL in search index
         absoluteURL = false
         [languages.zh-cn.params.search.algolia]
-          index = "index.zh-cn"
-          appID = "PASDMWALPK"
-          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+          index = "ryder_blog"
+          appID = "KNWHHR2LLW"
+          searchKey = "99980e3c2014fb8c463a83c546a3f4a6"
       # Home page config
       [languages.zh-cn.params.home]
         # amount of RSS pages
