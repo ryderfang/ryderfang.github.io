@@ -15,7 +15,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://fangr.cc/theme-documentation-basics/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Theme Documentation - Basics","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/fangr.cc\/theme-documentation-basics\/"},"image":[{"@type":"ImageObject","url":"https:\/\/fangr.cc\/theme-documentation-basics\/featured-image.jpg","width":1600,"height":840}],"genre":"posts","keywords":"installation, configuration","wordCount":4169,"url":"https:\/\/fangr.cc\/theme-documentation-basics\/","datePublished":"2020-03-06T21:29:01+08:00","dateModified":"2020-12-15T11:21:43+03:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"static\/avatar.png"}]},"author":{"@type":"Person","name":""},"description":"Discover what the Hugo - uBlog theme is all about and the core-concepts behind it."}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/fangr.cc\/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://fangr.cc/categories/documentation/"},{"@type":"ListItem","position":3,"name":"Theme Documentation - Basics"}]}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://fangr.cc/theme-documentation-basics/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Theme Documentation - Basics","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/fangr.cc\/theme-documentation-basics\/"},"image":[{"@type":"ImageObject","url":"https:\/\/fangr.cc\/theme-documentation-basics\/featured-image.jpg","width":1600,"height":840}],"genre":"posts","keywords":"installation, configuration","wordCount":4217,"url":"https:\/\/fangr.cc\/theme-documentation-basics\/","datePublished":"2020-03-06T21:29:01+08:00","dateModified":"2020-12-15T11:21:43+03:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"static\/avatar.png"}]},"author":{"@type":"Person","name":""},"description":"Discover what the Hugo - uBlog theme is all about and the core-concepts behind it."}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/fangr.cc\/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://fangr.cc/categories/documentation/"},{"@type":"ListItem","position":3,"name":"Theme Documentation - Basics"}]}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -121,7 +121,7 @@
 </span><span class="post-meta-date meta-item">
 <span class="svg-icon icon-clock"></span><time class=timeago datetime=2020-03-06>2020-03-06</time>
 </span><span class="post-meta-words meta-item">
-<span class="svg-icon icon-pencil"></span>约 4169 字
+<span class="svg-icon icon-pencil"></span>约 4217 字
 </span>
 <span class="post-meta-reading meta-item">
 <span class="svg-icon icon-stopwatch"></span>预计阅读 9 分钟
@@ -899,7 +899,12 @@ the <strong>comment system</strong>, <strong>CDN</strong> and <strong>fingerprin
 <i class="icon admonition-icon icon-tip"></i>Tips about CDN Configuration<i class="details-icon admonition-icon admonition-icon-arrow-right"></i>
 </div>
 <div class=details-content>
-<div class=admonition-content><p><a href=https://github.com/upagge/uBlogger/releases/tag/v0.2.7 rel="noopener noreffer" target=_blank><img loading=lazy decoding=async class=version src=/svg/version/0.2.7-changed.min.svg alt="uBlogger 更改 | 0.2.7" title="uBlogger 更改 | 0.2.7"></a></p>
+<div class=admonition-content><p><a href=https://github.com/upagge/uBlogger/releases/tag/v0.2.7 rel="noopener noreffer" target=_blank>&lt;img loading=&ldquo;lazy&rdquo; decoding=&ldquo;async&rdquo;
+class=&ldquo;version&rdquo;
+src="/svg/version/0.2.7-changed.min.svg"
+alt=&ldquo;uBlogger 更改 | 0.2.7&rdquo;
+title=&ldquo;uBlogger 更改 | 0.2.7&rdquo;
+/></a></p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>cdn</span><span class=p>]</span>
   <span class=c># CDN data file name, disabled by default</span>
   <span class=c># (&#34;jsdelivr.yml&#34;)</span>
@@ -914,7 +919,12 @@ You can store your own data file in the same path under your project: <code>asse
 <i class="icon admonition-icon icon-tip"></i>Tips about social Configuration<i class="details-icon admonition-icon admonition-icon-arrow-right"></i>
 </div>
 <div class=details-content>
-<div class=admonition-content><p><a href=https://github.com/upagge/uBlogger/releases/tag/v0.2.0 rel="noopener noreffer" target=_blank><img loading=lazy decoding=async class=version src=/svg/version/0.2.0-new.min.svg alt="uBlogger 新增 | 0.2.0" title="uBlogger 新增 | 0.2.0"></a></p>
+<div class=admonition-content><p><a href=https://github.com/upagge/uBlogger/releases/tag/v0.2.0 rel="noopener noreffer" target=_blank>&lt;img loading=&ldquo;lazy&rdquo; decoding=&ldquo;async&rdquo;
+class=&ldquo;version&rdquo;
+src="/svg/version/0.2.0-new.min.svg"
+alt=&ldquo;uBlogger 新增 | 0.2.0&rdquo;
+title=&ldquo;uBlogger 新增 | 0.2.0&rdquo;
+/></a></p>
 <p>You can directly set your ID to get a default social link and its icon:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>social</span><span class=p>]</span>
   <span class=nx>Mastodon</span> <span class=p>=</span> <span class=s2>&#34;@xxxx&#34;</span>
@@ -1235,7 +1245,12 @@ which is you can refer to.</p>
 but high bandwidth and low performance (Especially for Chinese which needs a large segmentit library)</li>
 <li><code>algolia</code>: high performance and low bandwidth, but need to synchronize <code>index.json</code> and limit for <code>contentLength</code></li>
 </ul>
-<p><a href=https://github.com/upagge/uBlogger/releases/tag/v0.2.3 rel="noopener noreffer" target=_blank><img loading=lazy decoding=async class=version src=/svg/version/0.2.3-new.min.svg alt="uBlogger 新增 | 0.2.3" title="uBlogger 新增 | 0.2.3"></a> The content of the post is separated by <code>h2</code> and <code>h3</code> HTML tag to improve query performance and basically implement full-text search.
+<p><a href=https://github.com/upagge/uBlogger/releases/tag/v0.2.3 rel="noopener noreffer" target=_blank>&lt;img loading=&ldquo;lazy&rdquo; decoding=&ldquo;async&rdquo;
+class=&ldquo;version&rdquo;
+src="/svg/version/0.2.3-new.min.svg"
+alt=&ldquo;uBlogger 新增 | 0.2.3&rdquo;
+title=&ldquo;uBlogger 新增 | 0.2.3&rdquo;
+/></a> The content of the post is separated by <code>h2</code> and <code>h3</code> HTML tag to improve query performance and basically implement full-text search.
 <code>contentLength</code> is used to limit the max index length of the part starting with <code>h2</code> and <code>h3</code> HTML tag.</p>
 </div>
 </div>
