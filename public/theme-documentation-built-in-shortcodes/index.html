@@ -1,0 +1,267 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>Theme Documentation - Built-in Shortcodes | </title><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://fangr.cc/theme-documentation-built-in-shortcodes/featured-image.png">
+<meta name=twitter:title content="Theme Documentation - Built-in Shortcodes">
+<meta name=twitter:description content="Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean."><meta name=twitter:creator content="@ryderfang"><meta name=Description content="Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean."><meta property="og:title" content="Theme Documentation - Built-in Shortcodes">
+<meta property="og:description" content="Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fangr.cc/theme-documentation-built-in-shortcodes/"><meta property="og:image" content="https://fangr.cc/theme-documentation-built-in-shortcodes/featured-image.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2020-03-04T16:29:41+08:00">
+<meta property="article:modified_time" content="2020-03-04T16:29:41+08:00">
+<meta name=application-name content="uBlogger">
+<meta name=apple-mobile-web-app-title content="uBlogger"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://fangr.cc/theme-documentation-built-in-shortcodes/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Theme Documentation - Built-in Shortcodes","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/fangr.cc\/theme-documentation-built-in-shortcodes\/"},"image":[{"@type":"ImageObject","url":"https:\/\/fangr.cc\/theme-documentation-built-in-shortcodes\/featured-image.png","width":1e3,"height":500}],"genre":"posts","keywords":"shortcodes","wordCount":375,"url":"https:\/\/fangr.cc\/theme-documentation-built-in-shortcodes\/","datePublished":"2020-03-04T16:29:41+08:00","dateModified":"2020-03-04T16:29:41+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"static\/avatar.png"}]},"author":{"@type":"Person","name":""},"description":"Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean."}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/fangr.cc\/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://fangr.cc/categories/documentation/"},{"@type":"ListItem","position":3,"name":"Theme Documentation - Built-in Shortcodes"}]}</script></head>
+<body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
+<div id=mask></div><div class=wrapper><header>
+<div class="desktop header" id=header-desktop>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title="$HOME - 给岁月以文明" class="header-logo logo-svg"><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+</div>
+<div class=menu>
+<nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul class=menu-inner><li>
+<a class=menu-item href=/posts/> Posts </a>
+</li><li>
+<a class=menu-item href=/tags/> Tags </a>
+</li><li>
+<a class=menu-item href=/categories/> Categories </a>
+</li><li>
+<a class=menu-item href=/about/> About </a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i> </a>
+</li></ul>
+</nav><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-desktop>
+<span class="svg-icon icon-loading"></span>
+</span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a>
+</div>
+</div>
+</div><div class="mobile header" id=header-mobile>
+<div class=header-container>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title="$HOME - 给岁月以文明" class=header-logo><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+</div>
+<div class=menu-toggle id=menu-toggle-mobile>
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class=menu id=menu-mobile><div class=search-wrapper>
+<div class="search mobile" id=search-mobile>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-mobile>
+<span class="svg-icon icon-loading"></span>
+</span>
+</div>
+<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
+取消
+</a>
+</div><nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul><li>
+<a class=menu-item href=/posts/ title>Posts</a>
+</li><li>
+<a class=menu-item href=/tags/ title>Tags</a>
+</li><li>
+<a class=menu-item href=/categories/ title>Categories</a>
+</li><li>
+<a class=menu-item href=/about/ title>About</a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i></a>
+</li></ul>
+</nav>
+<a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a></div>
+</div>
+</div><div class="search-dropdown desktop">
+<div id=search-dropdown-desktop></div>
+</div>
+<div class="search-dropdown mobile">
+<div id=search-dropdown-mobile></div>
+</div></header><main class=main>
+<div class="container content-article page-toc theme-classic"><div class=toc id=toc-auto>
+<div class=toc-title>目录</div>
+<div class=toc-content id=toc-content-auto></div>
+</div>
+<article>
+<header class=header-post>
+<div class=post-title>
+<div class=post-all-meta>
+<nav class=breadcrumbs>
+<ol>
+<li><a href=/>主页 </a></li><li><a href=/categories/documentation/>Documentation </a></li><li>Theme Documentation - Built-in Shortcodes</li>
+</ol>
+</nav>
+<h1 class="single-title flipInX">Theme Documentation - Built-in Shortcodes</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+<a href=/categories/documentation/><span class="svg-icon icon-folder"></span>Documentation</a>
+</span><span class="post-meta-date meta-item">
+<span class="svg-icon icon-clock"></span><time class=timeago datetime=2020-03-04>2020-03-04</time>
+</span><span class="post-meta-words meta-item">
+<span class="svg-icon icon-pencil"></span>约 375 字
+</span>
+<span class="post-meta-reading meta-item">
+<span class="svg-icon icon-stopwatch"></span>预计阅读 2 分钟
+</span>
+</div>
+</div>
+</div>
+</header>
+<div class="article-post toc-start">
+<div class="content-block content-block-first content-block-position">
+<div class="post single"><div class=image-theme-classic>
+<img src=https://fangr.cc/theme-documentation-built-in-shortcodes/featured-image.png style=width:100%>
+</div><div class="details toc" id=toc-static data-kept>
+<div class="details-summary toc-title">
+<span>目录</span>
+</div>
+<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents>
+<ul>
+<li><a href=#figure>1 figure</a></li>
+<li><a href=#2-gist>2 gist</a></li>
+<li><a href=#3-highlight>3 highlight</a></li>
+<li><a href=#4-instagram>4 instagram</a></li>
+<li><a href=#5-param>5 param</a></li>
+<li><a href=#ref-and-relref>6 ref and relref</a></li>
+<li><a href=#7-tweet>7 tweet</a></li>
+<li><a href=#8-vimeo>8 vimeo</a></li>
+<li><a href=#9-youtube>9 youtube</a></li>
+</ul>
+</nav></div>
+</div><p><strong>Hugo</strong> provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.</p>
+<p>Hugo uses Markdown for its simple content format. However, there are a lot of things that Markdown doesn’t support well. You could use pure HTML to expand possibilities.</p>
+<p>But this happens to be a bad idea. Everyone uses Markdown because it’s pure and simple to read even non-rendered. You should avoid HTML to keep it as simple as possible.</p>
+<p>To avoid this limitations, Hugo created <a href=https://gohugo.io/extras/shortcodes/ target=_blank rel="noopener noreffer">shortcodes</a>.
+A shortcode is a simple snippet that can generate reasonable HTML code and conforms to Markdown&rsquo;s design philosophy.</p>
+<p>Hugo ships with a set of predefined shortcodes that represent very common usage. These shortcodes are provided for author convenience and to keep your markdown content clean.</p>
+<h2 id=figure class=headerLink><a href=#figure class=header-mark></a>1 figure</h2><p><a href=https://gohugo.io/content-management/shortcodes#figure target=_blank rel="noopener noreffer">Documentation of <code>figure</code></a></p>
+<p>Example <code>figure</code> input:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>{{<span class=p>&lt;</span> <span class=nt>figure</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;/images/lighthouse.jpg&#34;</span> <span class=na>title</span><span class=o>=</span><span class=s>&#34;Lighthouse (figure)&#34;</span> <span class=p>&gt;</span>}}
+</code></pre></div><p>The rendered output looks like this:</p>
+<figure><img src=/images/lighthouse.jpg><figcaption>
+<h4>Lighthouse (figure)</h4>
+</figcaption>
+</figure>
+<p>The HTML looks like this:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>figure</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>img</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;/images/lighthouse.jpg&#34;</span><span class=p>/&gt;</span>
+    <span class=p>&lt;</span><span class=nt>figcaption</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>h4</span><span class=p>&gt;</span>Lighthouse (figure)<span class=p>&lt;/</span><span class=nt>h4</span><span class=p>&gt;</span>
+    <span class=p>&lt;/</span><span class=nt>figcaption</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>figure</span><span class=p>&gt;</span>
+</code></pre></div><h2 id=2-gist class=headerLink><a href=#2-gist class=header-mark></a>2 gist</h2><p><a href=https://gohugo.io/content-management/shortcodes#gist target=_blank rel="noopener noreffer">Documentation of <code>gist</code></a></p>
+<p>Example <code>gist</code> input:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>{{<span class=p>&lt;</span> <span class=nt>gist</span> <span class=na>spf13</span> <span class=na>7896402</span> <span class=p>&gt;</span>}}
+</code></pre></div><p>The rendered output looks like this:</p>
+<script type=application/javascript src=https://gist.github.com/spf13/7896402.js></script>
+<p>The HTML looks like this:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>script</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;application/javascript&#34;</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://gist.github.com/spf13/7896402.js&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</code></pre></div><h2 id=3-highlight class=headerLink><a href=#3-highlight class=header-mark></a>3 highlight</h2><p><a href=https://gohugo.io/content-management/shortcodes#instagram target=_blank rel="noopener noreffer">Documentation of <code>highlight</code></a></p>
+<p>Example <code>highlight</code> input:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>{{<span class=p>&lt;</span> <span class=nt>highlight</span> <span class=na>html</span> <span class=p>&gt;</span>}}
+<span class=p>&lt;</span><span class=nt>section</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;main&#34;</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>h1</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;title&#34;</span><span class=p>&gt;</span>{{ .Title }}<span class=p>&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+        {{ range .Pages }}
+            {{ .Render &#34;summary&#34;}}
+        {{ end }}
+    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>section</span><span class=p>&gt;</span>
+{{<span class=p>&lt;</span> <span class=p>/</span><span class=nt>highlight</span> <span class=p>&gt;</span>}}
+</code></pre></div><p>The rendered output looks like this:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>section</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;main&#34;</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>h1</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;title&#34;</span><span class=p>&gt;</span>{{ .Title }}<span class=p>&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+        {{ range .Pages }}
+            {{ .Render &#34;summary&#34;}}
+        {{ end }}
+    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>section</span><span class=p>&gt;</span></code></pre></div>
+<h2 id=4-instagram class=headerLink><a href=#4-instagram class=header-mark></a>4 instagram</h2><p><a href=https://gohugo.io/content-management/shortcodes#instagram target=_blank rel="noopener noreffer">Documentation of <code>instagram</code></a></p>
+<p>Example <code>instagram</code> input:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>{{<span class=p>&lt;</span> <span class=nt>instagram</span> <span class=na>BWNjjyYFxVx</span> <span class=na>hidecaption</span> <span class=p>&gt;</span>}}
+</code></pre></div><p>The rendered output looks like this:</p>
+<h2 id=5-param class=headerLink><a href=#5-param class=header-mark></a>5 param</h2><p><a href=https://gohugo.io/content-management/shortcodes#param target=_blank rel="noopener noreffer">Documentation of <code>param</code></a></p>
+<p>Example <code>param</code> input:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>{{<span class=p>&lt;</span> <span class=nt>param</span> <span class=na>description</span> <span class=p>&gt;</span>}}
+</code></pre></div><p>The rendered output looks like this:</p>
+Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
+<h2 id=ref-and-relref class=headerLink><a href=#ref-and-relref class=header-mark></a>6 ref and relref</h2><p><a href=https://gohugo.io/content-management/shortcodes#ref-and-relref target=_blank rel="noopener noreffer">Documentation of <code>ref</code> and <code>relref</code></a></p>
+<h2 id=7-tweet class=headerLink><a href=#7-tweet class=header-mark></a>7 tweet</h2><p><a href=https://gohugo.io/content-management/shortcodes#tweet target=_blank rel="noopener noreffer">Documentation of <code>tweet</code></a></p>
+<p>Example <code>tweet</code> input:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>{{<span class=p>&lt;</span> <span class=nt>tweet</span> <span class=na>877500564405444608</span> <span class=p>&gt;</span>}}
+</code></pre></div><p>The rendered output looks like this:</p>
+<blockquote class=twitter-tweet data-dnt=true><p lang=en dir=ltr>Hugo 0.24 Released: Big archetype update + <a href="https://twitter.com/Netlify?ref_src=twsrc%5Etfw">@Netlify</a> _redirects etc. file support<a href=https://t.co/X94FmYDEZJ>https://t.co/X94FmYDEZJ</a> <a href="https://twitter.com/hashtag/gohugo?src=hash&ref_src=twsrc%5Etfw">#gohugo</a> <a href="https://twitter.com/hashtag/golang?src=hash&ref_src=twsrc%5Etfw">#golang</a> <a href="https://twitter.com/spf13?ref_src=twsrc%5Etfw">@spf13</a> <a href="https://twitter.com/bepsays?ref_src=twsrc%5Etfw">@bepsays</a></p>&mdash; GoHugo.io (@GoHugoIO) <a href="https://twitter.com/GoHugoIO/status/877500564405444608?ref_src=twsrc%5Etfw">June 21, 2017</a></blockquote>
+<script async src=https://platform.twitter.com/widgets.js></script>
+<h2 id=8-vimeo class=headerLink><a href=#8-vimeo class=header-mark></a>8 vimeo</h2><p><a href=https://gohugo.io/content-management/shortcodes#vimeo target=_blank rel="noopener noreffer">Documentation of <code>vimeo</code></a></p>
+<p>Example <code>vimeo</code> input:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>{{<span class=p>&lt;</span> <span class=nt>vimeo</span> <span class=na>146022717</span> <span class=p>&gt;</span>}}
+</code></pre></div><p>The rendered output looks like this:</p>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://player.vimeo.com/video/146022717 style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<h2 id=9-youtube class=headerLink><a href=#9-youtube class=header-mark></a>9 youtube</h2><p><a href=https://gohugo.io/content-management/shortcodes#youtube target=_blank rel="noopener noreffer">Documentation of <code>youtube</code></a></p>
+<p>Example <code>youtube</code> input:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>{{<span class=p>&lt;</span> <span class=nt>youtube</span> <span class=na>w7Ft2ymGmfc</span> <span class=p>&gt;</span>}}
+</code></pre></div><p>The rendered output looks like this:</p>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube-nocookie.com/embed/w7Ft2ymGmfc style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div></div><footer>
+<div class=post>
+<div class=post-share><div class=share-link>
+<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://fangr.cc/theme-documentation-built-in-shortcodes/ data-title="Theme Documentation - Built-in Shortcodes" data-via=ryderfang data-hashtags=shortcodes><span class="svg-social-icon icon-twitter"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://fangr.cc/theme-documentation-built-in-shortcodes/ data-hashtag=shortcodes><span class="svg-social-icon icon-facebook"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://fangr.cc/theme-documentation-built-in-shortcodes/ data-title="Theme Documentation - Built-in Shortcodes" data-ralateuid=fr9166><span class="svg-social-icon icon-weibo"></span></a>
+</div></div>
+<div class=block-author>
+<div class=author-avatar><a href=https://ryderfang.com target=_blank><img alt="CODER, MARRIED" src=static/avatar.png></a></div>
+<div class=author-info>
+<div class=name><a href=https://ryderfang.com target=_blank></a></div>
+<div class=number-posts>CODER, MARRIED</span></div>
+</div>
+</div>
+<div class=post-tags><a href=/tags/shortcodes/ class=tag>shortcodes</a></div></div>
+</footer></div>
+<div id=toc-final></div>
+</div>
+</article>
+<section class="page single comments content-block-position">
+<h1 class=display-hidden>Комментарии</h1><div id=comments><div id=utterances></div><noscript>
+Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.
+</noscript></div></section></div>
+</main><footer class=footer>
+<div class=footer-container><div class=footer-line>© 2021 Ryder Fang · &lt;/> Powered by <a href=https://gohugo.io/><u><strong>Hugo</strong></u></a> and <a href=https://github.com/uPagge/uBlogger><u><strong>uBlogger theme</strong></u></a></div><div class=footer-line></div>
+</div>
+</footer></div>
+<aside id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
+<i class="svg-icon icon-arrow-up"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论>
+<i class="svg-icon icon-comments-fixed"></i>
+</a>
+</aside><script src=/lib/smooth-scroll/smooth-scroll.min.js></script><script src=/lib/autocomplete/autocomplete.min.js></script><script src=/lib/algoliasearch/algoliasearch-lite.umd.min.js></script><script src=/lib/clipboard/clipboard.min.js></script><script src=/lib/sharer/sharer.min.js></script><script src=/lib/prismjs/prism.js></script><script>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"Utterances",lightTheme:"github-light",repo:"ryderfang/ryderfang.github.io"}},search:{algoliaAppID:"KNWHHR2LLW",algoliaIndex:"ryder_blog",algoliaSearchKey:"99980e3c2014fb8c463a83c546a3f4a6",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:30,type:"algolia"}}</script><script src=/js/theme.min.js></script></body>
+</html>

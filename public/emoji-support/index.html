@@ -1,0 +1,5932 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>Emoji Support | </title><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://fangr.cc/emoji-support/featured-image.jpg">
+<meta name=twitter:title content="Emoji Support">
+<meta name=twitter:description content="Guide to emoji usage in Hugo and uBlogger."><meta name=twitter:creator content="@ryderfang"><meta name=Description content="Guide to emoji usage in Hugo and uBlogger."><meta property="og:title" content="Emoji Support">
+<meta property="og:description" content="Guide to emoji usage in Hugo and uBlogger.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fangr.cc/emoji-support/"><meta property="og:image" content="https://fangr.cc/emoji-support/featured-image.jpg"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-10-01T17:55:28+08:00">
+<meta property="article:modified_time" content="2019-10-01T17:55:28+08:00">
+<meta name=application-name content="uBlogger">
+<meta name=apple-mobile-web-app-title content="uBlogger"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://fangr.cc/emoji-support/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Emoji Support","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/fangr.cc\/emoji-support\/"},"image":[{"@type":"ImageObject","url":"https:\/\/fangr.cc\/emoji-support\/featured-image.jpg","width":1420,"height":708}],"genre":"posts","keywords":"emoji","wordCount":3586,"url":"https:\/\/fangr.cc\/emoji-support\/","datePublished":"2019-10-01T17:55:28+08:00","dateModified":"2019-10-01T17:55:28+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"static\/avatar.png"}]},"author":{"@type":"Person","name":""},"description":"Guide to emoji usage in Hugo and uBlogger."}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/fangr.cc\/"},{"@type":"ListItem","position":2,"name":"Markdown","item":"https://fangr.cc/categories/markdown/"},{"@type":"ListItem","position":3,"name":"Emoji Support"}]}</script></head>
+<body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
+<div id=mask></div><div class=wrapper><header>
+<div class="desktop header" id=header-desktop>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title="$HOME - 给岁月以文明" class="header-logo logo-svg"><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+</div>
+<div class=menu>
+<nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul class=menu-inner><li>
+<a class=menu-item href=/posts/> Posts </a>
+</li><li>
+<a class=menu-item href=/tags/> Tags </a>
+</li><li>
+<a class=menu-item href=/categories/> Categories </a>
+</li><li>
+<a class=menu-item href=/about/> About </a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i> </a>
+</li></ul>
+</nav><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-desktop>
+<span class="svg-icon icon-loading"></span>
+</span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a>
+</div>
+</div>
+</div><div class="mobile header" id=header-mobile>
+<div class=header-container>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title="$HOME - 给岁月以文明" class=header-logo><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+</div>
+<div class=menu-toggle id=menu-toggle-mobile>
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class=menu id=menu-mobile><div class=search-wrapper>
+<div class="search mobile" id=search-mobile>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-mobile>
+<span class="svg-icon icon-loading"></span>
+</span>
+</div>
+<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
+取消
+</a>
+</div><nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul><li>
+<a class=menu-item href=/posts/ title>Posts</a>
+</li><li>
+<a class=menu-item href=/tags/ title>Tags</a>
+</li><li>
+<a class=menu-item href=/categories/ title>Categories</a>
+</li><li>
+<a class=menu-item href=/about/ title>About</a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i></a>
+</li></ul>
+</nav>
+<a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a></div>
+</div>
+</div><div class="search-dropdown desktop">
+<div id=search-dropdown-desktop></div>
+</div>
+<div class="search-dropdown mobile">
+<div id=search-dropdown-mobile></div>
+</div></header><main class=main>
+<div class="container content-article page-toc theme-classic"><div class=toc id=toc-auto>
+<div class=toc-title>目录</div>
+<div class=toc-content id=toc-content-auto></div>
+</div>
+<article>
+<header class=header-post>
+<div class=post-title>
+<div class=post-all-meta>
+<nav class=breadcrumbs>
+<ol>
+<li><a href=/>主页 </a></li><li><a href=/categories/markdown/>Markdown </a></li><li>Emoji Support</li>
+</ol>
+</nav>
+<h1 class="single-title flipInX">Emoji Support</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+<a href=/categories/markdown/><span class="svg-icon icon-folder"></span>Markdown</a>
+</span><span class="post-meta-date meta-item">
+<span class="svg-icon icon-clock"></span><time class=timeago datetime=2019-10-01>2019-10-01</time>
+</span><span class="post-meta-words meta-item">
+<span class="svg-icon icon-pencil"></span>约 3586 字
+</span>
+<span class="post-meta-reading meta-item">
+<span class="svg-icon icon-stopwatch"></span>预计阅读 17 分钟
+</span>
+</div>
+</div>
+</div>
+</header>
+<div class="article-post toc-start">
+<div class="content-block content-block-first content-block-position">
+<div class="post single"><div class=image-theme-classic>
+<img src=https://fangr.cc/emoji-support/featured-image.jpg style=width:100%>
+</div><div class="details toc" id=toc-static data-kept>
+<div class="details-summary toc-title">
+<span>目录</span>
+</div>
+<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents>
+<ul>
+<li><a href=#smileys--emotion>Smileys & Emotion</a>
+<ul>
+<li><a href=#face-smiling>Face Smiling</a></li>
+<li><a href=#face-affection>Face Affection</a></li>
+<li><a href=#face-tongue>Face Tongue</a></li>
+<li><a href=#face-hand>Face Hand</a></li>
+<li><a href=#face-neutral-skeptical>Face Neutral Skeptical</a></li>
+<li><a href=#face-sleepy>Face Sleepy</a></li>
+<li><a href=#face-unwell>Face Unwell</a></li>
+<li><a href=#face-hat>Face Hat</a></li>
+<li><a href=#face-glasses>Face Glasses</a></li>
+<li><a href=#face-concerned>Face Concerned</a></li>
+<li><a href=#face-negative>Face Negative</a></li>
+<li><a href=#face-costume>Face Costume</a></li>
+<li><a href=#cat-face>Cat Face</a></li>
+<li><a href=#monkey-face>Monkey Face</a></li>
+<li><a href=#emotion>Emotion</a></li>
+</ul>
+</li>
+<li><a href=#people--body>People & Body</a>
+<ul>
+<li><a href=#hand-fingers-open>Hand Fingers Open</a></li>
+<li><a href=#hand-fingers-partial>Hand Fingers Partial</a></li>
+<li><a href=#hand-single-finger>Hand Single Finger</a></li>
+<li><a href=#hand-fingers-closed>Hand Fingers Closed</a></li>
+<li><a href=#hands>Hands</a></li>
+<li><a href=#hand-prop>Hand Prop</a></li>
+<li><a href=#body-parts>Body Parts</a></li>
+<li><a href=#person>Person</a></li>
+<li><a href=#person-gesture>Person Gesture</a></li>
+<li><a href=#person-role>Person Role</a></li>
+<li><a href=#person-fantasy>Person Fantasy</a></li>
+<li><a href=#person-activity>Person Activity</a></li>
+<li><a href=#person-sport>Person Sport</a></li>
+<li><a href=#person-resting>Person Resting</a></li>
+<li><a href=#family>Family</a></li>
+<li><a href=#person-symbol>Person Symbol</a></li>
+</ul>
+</li>
+<li><a href=#animals--nature>Animals & Nature</a>
+<ul>
+<li><a href=#animal-mammal>Animal Mammal</a></li>
+<li><a href=#animal-bird>Animal Bird</a></li>
+<li><a href=#animal-amphibian>Animal Amphibian</a></li>
+<li><a href=#animal-reptile>Animal Reptile</a></li>
+<li><a href=#animal-marine>Animal Marine</a></li>
+<li><a href=#animal-bug>Animal Bug</a></li>
+<li><a href=#plant-flower>Plant Flower</a></li>
+<li><a href=#plant-other>Plant Other</a></li>
+</ul>
+</li>
+<li><a href=#food--drink>Food & Drink</a>
+<ul>
+<li><a href=#food-fruit>Food Fruit</a></li>
+<li><a href=#food-vegetable>Food Vegetable</a></li>
+<li><a href=#food-prepared>Food Prepared</a></li>
+<li><a href=#food-asian>Food Asian</a></li>
+<li><a href=#food-marine>Food Marine</a></li>
+<li><a href=#food-sweet>Food Sweet</a></li>
+<li><a href=#drink>Drink</a></li>
+<li><a href=#dishware>Dishware</a></li>
+</ul>
+</li>
+<li><a href=#travel--places>Travel & Places</a>
+<ul>
+<li><a href=#place-map>Place Map</a></li>
+<li><a href=#place-geographic>Place Geographic</a></li>
+<li><a href=#place-building>Place Building</a></li>
+<li><a href=#place-religious>Place Religious</a></li>
+<li><a href=#place-other>Place Other</a></li>
+<li><a href=#transport-ground>Transport Ground</a></li>
+<li><a href=#transport-water>Transport Water</a></li>
+<li><a href=#transport-air>Transport Air</a></li>
+<li><a href=#hotel>Hotel</a></li>
+<li><a href=#time>Time</a></li>
+<li><a href=#sky--weather>Sky & Weather</a></li>
+</ul>
+</li>
+<li><a href=#activities>Activities</a>
+<ul>
+<li><a href=#event>Event</a></li>
+<li><a href=#award-medal>Award Medal</a></li>
+<li><a href=#sport>Sport</a></li>
+<li><a href=#game>Game</a></li>
+<li><a href=#arts--crafts>Arts & Crafts</a></li>
+</ul>
+</li>
+<li><a href=#objects>Objects</a>
+<ul>
+<li><a href=#clothing>Clothing</a></li>
+<li><a href=#sound>Sound</a></li>
+<li><a href=#music>Music</a></li>
+<li><a href=#musical-instrument>Musical Instrument</a></li>
+<li><a href=#phone>Phone</a></li>
+<li><a href=#computer>Computer</a></li>
+<li><a href=#light--video>Light & Video</a></li>
+<li><a href=#book-paper>Book Paper</a></li>
+<li><a href=#money>Money</a></li>
+<li><a href=#mail>Mail</a></li>
+<li><a href=#writing>Writing</a></li>
+<li><a href=#office>Office</a></li>
+<li><a href=#lock>Lock</a></li>
+<li><a href=#tool>Tool</a></li>
+<li><a href=#science>Science</a></li>
+<li><a href=#medical>Medical</a></li>
+<li><a href=#household>Household</a></li>
+<li><a href=#other-object>Other Object</a></li>
+</ul>
+</li>
+<li><a href=#symbols>Symbols</a>
+<ul>
+<li><a href=#transport-sign>Transport Sign</a></li>
+<li><a href=#warning>Warning</a></li>
+<li><a href=#arrow>Arrow</a></li>
+<li><a href=#religion>Religion</a></li>
+<li><a href=#zodiac>Zodiac</a></li>
+<li><a href=#av-symbol>Av Symbol</a></li>
+<li><a href=#math>Math</a></li>
+<li><a href=#punctuation>Punctuation</a></li>
+<li><a href=#currency>Currency</a></li>
+<li><a href=#keycap>Keycap</a></li>
+<li><a href=#alphabet>Alphabet</a></li>
+<li><a href=#geometric>Geometric</a></li>
+<li><a href=#other-symbol>Other Symbol</a></li>
+</ul>
+</li>
+<li><a href=#flags>Flags</a>
+<ul>
+<li><a href=#common-flags>Common Flags</a></li>
+<li><a href=#country-and-region-flags>Country and Region Flags</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
+</div><p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a href=https://gohugo.io/functions/emojify/ target=_blank rel="noopener noreffer"><code>emojify</code></a> function can be called directly in templates or <a href=https://gohugo.io/templates/shortcode-templates#inline-shortcodes target=_blank rel="noopener noreffer">Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your <a href=https://gohugo.io/getting-started/configuration/ target=_blank rel="noopener noreffer">site configuration</a> and then you can type emoji shorthand codes directly in content files.</p>
+<p>These begin and end with a <strong>colon</strong> and include the <strong>code</strong> of an emoji:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>Gone camping! :tent: Be back soon.
+
+That is so funny! :joy:
+</code></pre></div><p>The rendered output looks like this:</p>
+<p>Gone camping! ⛺ Be back soon.</p>
+<p>That is so funny! 😂</p>
+<p>The following <strong>cheat sheet</strong> is a useful reference for emoji shorthand codes.</p>
+<h2 id=smileys--emotion class=headerLink><a href=#smileys--emotion class=header-mark></a>Smileys & Emotion</h2><h3 id=face-smiling class=headerLink><a href=#face-smiling class=header-mark></a>Face Smiling</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>😀</td>
+<td><code>grinning</code></td>
+<td style=text-align:center>😃</td>
+<td><code>smiley</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😄</td>
+<td><code>smile</code></td>
+<td style=text-align:center>😁</td>
+<td><code>grin</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😆</td>
+<td><code>laughing</code> <br> <code>satisfied</code></td>
+<td style=text-align:center>😅</td>
+<td><code>sweat_smile</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤣</td>
+<td><code>rofl</code></td>
+<td style=text-align:center>😂</td>
+<td><code>joy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙂</td>
+<td><code>slightly_smiling_face</code></td>
+<td style=text-align:center>🙃</td>
+<td><code>upside_down_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😉</td>
+<td><code>wink</code></td>
+<td style=text-align:center>😊</td>
+<td><code>blush</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😇</td>
+<td><code>innocent</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-affection class=headerLink><a href=#face-affection class=header-mark></a>Face Affection</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>😍</td>
+<td><code>heart_eyes</code></td>
+<td style=text-align:center>😘</td>
+<td><code>kissing_heart</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😗</td>
+<td><code>kissing</code></td>
+<td style=text-align:center>☺️</td>
+<td><code>relaxed</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😚</td>
+<td><code>kissing_closed_eyes</code></td>
+<td style=text-align:center>😙</td>
+<td><code>kissing_smiling_eyes</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-tongue class=headerLink><a href=#face-tongue class=header-mark></a>Face Tongue</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>😋</td>
+<td><code>yum</code></td>
+<td style=text-align:center>😛</td>
+<td><code>stuck_out_tongue</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😜</td>
+<td><code>stuck_out_tongue_winking_eye</code></td>
+<td style=text-align:center>😝</td>
+<td><code>stuck_out_tongue_closed_eyes</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤑</td>
+<td><code>money_mouth_face</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-hand class=headerLink><a href=#face-hand class=header-mark></a>Face Hand</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🤗</td>
+<td><code>hugs</code></td>
+<td style=text-align:center>🤔</td>
+<td><code>thinking</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-neutral-skeptical class=headerLink><a href=#face-neutral-skeptical class=header-mark></a>Face Neutral Skeptical</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🤐</td>
+<td><code>zipper_mouth_face</code></td>
+<td style=text-align:center>😐</td>
+<td><code>neutral_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😑</td>
+<td><code>expressionless</code></td>
+<td style=text-align:center>😶</td>
+<td><code>no_mouth</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😏</td>
+<td><code>smirk</code></td>
+<td style=text-align:center>😒</td>
+<td><code>unamused</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙄</td>
+<td><code>roll_eyes</code></td>
+<td style=text-align:center>😬</td>
+<td><code>grimacing</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤥</td>
+<td><code>lying_face</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-sleepy class=headerLink><a href=#face-sleepy class=header-mark></a>Face Sleepy</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>😌</td>
+<td><code>relieved</code></td>
+<td style=text-align:center>😔</td>
+<td><code>pensive</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😪</td>
+<td><code>sleepy</code></td>
+<td style=text-align:center>🤤</td>
+<td><code>drooling_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😴</td>
+<td><code>sleeping</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-unwell class=headerLink><a href=#face-unwell class=header-mark></a>Face Unwell</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>😷</td>
+<td><code>mask</code></td>
+<td style=text-align:center>🤒</td>
+<td><code>face_with_thermometer</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤕</td>
+<td><code>face_with_head_bandage</code></td>
+<td style=text-align:center>🤢</td>
+<td><code>nauseated_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤧</td>
+<td><code>sneezing_face</code></td>
+<td style=text-align:center>😵</td>
+<td><code>dizzy_face</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-hat class=headerLink><a href=#face-hat class=header-mark></a>Face Hat</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🤠</td>
+<td><code>cowboy_hat_face</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-glasses class=headerLink><a href=#face-glasses class=header-mark></a>Face Glasses</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>😎</td>
+<td><code>sunglasses</code></td>
+<td style=text-align:center>🤓</td>
+<td><code>nerd_face</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-concerned class=headerLink><a href=#face-concerned class=header-mark></a>Face Concerned</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>😕</td>
+<td><code>confused</code></td>
+<td style=text-align:center>😟</td>
+<td><code>worried</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙁</td>
+<td><code>slightly_frowning_face</code></td>
+<td style=text-align:center>☹</td>
+<td><code>frowning_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😮</td>
+<td><code>open_mouth</code></td>
+<td style=text-align:center>😯</td>
+<td><code>hushed</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😲</td>
+<td><code>astonished</code></td>
+<td style=text-align:center>😳</td>
+<td><code>flushed</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😦</td>
+<td><code>frowning</code></td>
+<td style=text-align:center>😧</td>
+<td><code>anguished</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😨</td>
+<td><code>fearful</code></td>
+<td style=text-align:center>😰</td>
+<td><code>cold_sweat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😥</td>
+<td><code>disappointed_relieved</code></td>
+<td style=text-align:center>😢</td>
+<td><code>cry</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😭</td>
+<td><code>sob</code></td>
+<td style=text-align:center>😱</td>
+<td><code>scream</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😖</td>
+<td><code>confounded</code></td>
+<td style=text-align:center>😣</td>
+<td><code>persevere</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😞</td>
+<td><code>disappointed</code></td>
+<td style=text-align:center>😓</td>
+<td><code>sweat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😩</td>
+<td><code>weary</code></td>
+<td style=text-align:center>😫</td>
+<td><code>tired_face</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-negative class=headerLink><a href=#face-negative class=header-mark></a>Face Negative</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>😤</td>
+<td><code>triumph</code></td>
+<td style=text-align:center>😡</td>
+<td><code>pout</code> <br> <code>rage</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😠</td>
+<td><code>angry</code></td>
+<td style=text-align:center>😈</td>
+<td><code>smiling_imp</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👿</td>
+<td><code>imp</code></td>
+<td style=text-align:center>💀</td>
+<td><code>skull</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☠️</td>
+<td><code>skull_and_crossbones</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=face-costume class=headerLink><a href=#face-costume class=header-mark></a>Face Costume</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>💩</td>
+<td><code>hankey</code> <br> <code>poop</code> <br> <code>shit</code></td>
+<td style=text-align:center>🤡</td>
+<td><code>clown_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👹</td>
+<td><code>japanese_ogre</code></td>
+<td style=text-align:center>👺</td>
+<td><code>japanese_goblin</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👻</td>
+<td><code>ghost</code></td>
+<td style=text-align:center>👽</td>
+<td><code>alien</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👾</td>
+<td><code>space_invader</code></td>
+<td style=text-align:center>🤖</td>
+<td><code>robot</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=cat-face class=headerLink><a href=#cat-face class=header-mark></a>Cat Face</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>😺</td>
+<td><code>smiley_cat</code></td>
+<td style=text-align:center>😸</td>
+<td><code>smile_cat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😹</td>
+<td><code>joy_cat</code></td>
+<td style=text-align:center>😻</td>
+<td><code>heart_eyes_cat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😼</td>
+<td><code>smirk_cat</code></td>
+<td style=text-align:center>😽</td>
+<td><code>kissing_cat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙀</td>
+<td><code>scream_cat</code></td>
+<td style=text-align:center>😿</td>
+<td><code>crying_cat_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>😾</td>
+<td><code>pouting_cat</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=monkey-face class=headerLink><a href=#monkey-face class=header-mark></a>Monkey Face</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🙈</td>
+<td><code>see_no_evil</code></td>
+<td style=text-align:center>🙉</td>
+<td><code>hear_no_evil</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙊</td>
+<td><code>speak_no_evil</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=emotion class=headerLink><a href=#emotion class=header-mark></a>Emotion</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>💋</td>
+<td><code>kiss</code></td>
+<td style=text-align:center>💌</td>
+<td><code>love_letter</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💘</td>
+<td><code>cupid</code></td>
+<td style=text-align:center>💝</td>
+<td><code>gift_heart</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💖</td>
+<td><code>sparkling_heart</code></td>
+<td style=text-align:center>💗</td>
+<td><code>heartpulse</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💓</td>
+<td><code>heartbeat</code></td>
+<td style=text-align:center>💞</td>
+<td><code>revolving_hearts</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💕</td>
+<td><code>two_hearts</code></td>
+<td style=text-align:center>💟</td>
+<td><code>heart_decoration</code></td>
+</tr>
+<tr>
+<td style=text-align:center>❣️</td>
+<td><code>heavy_heart_exclamation</code></td>
+<td style=text-align:center>💔</td>
+<td><code>broken_heart</code></td>
+</tr>
+<tr>
+<td style=text-align:center>❤️</td>
+<td><code>heart</code></td>
+<td style=text-align:center>💛</td>
+<td><code>yellow_heart</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💚</td>
+<td><code>green_heart</code></td>
+<td style=text-align:center>💙</td>
+<td><code>blue_heart</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💜</td>
+<td><code>purple_heart</code></td>
+<td style=text-align:center>🖤</td>
+<td><code>black_heart</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💯</td>
+<td><code>100</code></td>
+<td style=text-align:center>💢</td>
+<td><code>anger</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💥</td>
+<td><code>boom</code> <br> <code>collision</code></td>
+<td style=text-align:center>💫</td>
+<td><code>dizzy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💦</td>
+<td><code>sweat_drops</code></td>
+<td style=text-align:center>💨</td>
+<td><code>dash</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕳️</td>
+<td><code>hole</code></td>
+<td style=text-align:center>💣</td>
+<td><code>bomb</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💬</td>
+<td><code>speech_balloon</code></td>
+<td style=text-align:center>👁️‍🗨️</td>
+<td><code>eye_speech_bubble</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🗯️</td>
+<td><code>right_anger_bubble</code></td>
+<td style=text-align:center>💭</td>
+<td><code>thought_balloon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💤</td>
+<td><code>zzz</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id=people--body class=headerLink><a href=#people--body class=header-mark></a>People & Body</h2><h3 id=hand-fingers-open class=headerLink><a href=#hand-fingers-open class=header-mark></a>Hand Fingers Open</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👋</td>
+<td><code>wave</code></td>
+<td style=text-align:center>🤚</td>
+<td><code>raised_back_of_hand</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🖐️</td>
+<td><code>raised_hand_with_fingers_splayed</code></td>
+<td style=text-align:center>✋</td>
+<td><code>hand</code> <br> <code>raised_hand</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🖖</td>
+<td><code>vulcan_salute</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=hand-fingers-partial class=headerLink><a href=#hand-fingers-partial class=header-mark></a>Hand Fingers Partial</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👌</td>
+<td><code>ok_hand</code></td>
+<td style=text-align:center>✌️</td>
+<td><code>v</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤞</td>
+<td><code>crossed_fingers</code></td>
+<td style=text-align:center>🤘</td>
+<td><code>metal</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤙</td>
+<td><code>call_me_hand</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=hand-single-finger class=headerLink><a href=#hand-single-finger class=header-mark></a>Hand Single Finger</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👈</td>
+<td><code>point_left</code></td>
+<td style=text-align:center>👉</td>
+<td><code>point_right</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👆</td>
+<td><code>point_up_2</code></td>
+<td style=text-align:center>🖕</td>
+<td><code>fu</code> <br> <code>middle_finger</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👇</td>
+<td><code>point_down</code></td>
+<td style=text-align:center>☝️</td>
+<td><code>point_up</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=hand-fingers-closed class=headerLink><a href=#hand-fingers-closed class=header-mark></a>Hand Fingers Closed</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👍</td>
+<td><code>+1</code> <br> <code>thumbsup</code></td>
+<td style=text-align:center>👎</td>
+<td><code>-1</code> <br> <code>thumbsdown</code></td>
+</tr>
+<tr>
+<td style=text-align:center>✊</td>
+<td><code>fist</code> <br> <code>fist_raised</code></td>
+<td style=text-align:center>👊</td>
+<td><code>facepunch</code> <br> <code>fist_oncoming</code> <br> <code>punch</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤛</td>
+<td><code>fist_left</code></td>
+<td style=text-align:center>🤜</td>
+<td><code>fist_right</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=hands class=headerLink><a href=#hands class=header-mark></a>Hands</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👏</td>
+<td><code>clap</code></td>
+<td style=text-align:center>🙌</td>
+<td><code>raised_hands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👐</td>
+<td><code>open_hands</code></td>
+<td style=text-align:center>🤝</td>
+<td><code>handshake</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙏</td>
+<td><code>pray</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=hand-prop class=headerLink><a href=#hand-prop class=header-mark></a>Hand Prop</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>✍️</td>
+<td><code>writing_hand</code></td>
+<td style=text-align:center>💅</td>
+<td><code>nail_care</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤳</td>
+<td><code>selfie</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=body-parts class=headerLink><a href=#body-parts class=header-mark></a>Body Parts</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>💪</td>
+<td><code>muscle</code></td>
+<td style=text-align:center>👂</td>
+<td><code>ear</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👃</td>
+<td><code>nose</code></td>
+<td style=text-align:center>👀</td>
+<td><code>eyes</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👁️</td>
+<td><code>eye</code></td>
+<td style=text-align:center>👅</td>
+<td><code>tongue</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👄</td>
+<td><code>lips</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=person class=headerLink><a href=#person class=header-mark></a>Person</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👶</td>
+<td><code>baby</code></td>
+<td style=text-align:center>👦</td>
+<td><code>boy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👧</td>
+<td><code>girl</code></td>
+<td style=text-align:center>:blonde_man:</td>
+<td><code>blonde_man</code> <br> <code>person_with_blond_hair</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨</td>
+<td><code>man</code></td>
+<td style=text-align:center>👩</td>
+<td><code>woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👱‍♀️</td>
+<td><code>blonde_woman</code></td>
+<td style=text-align:center>👴</td>
+<td><code>older_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👵</td>
+<td><code>older_woman</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=person-gesture class=headerLink><a href=#person-gesture class=header-mark></a>Person Gesture</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🙍‍♀️</td>
+<td><code>frowning_woman</code> <br> <code>person_frowning</code></td>
+<td style=text-align:center>🙍‍♂️</td>
+<td><code>frowning_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙎‍♀️</td>
+<td><code>person_with_pouting_face</code> <br> <code>pouting_woman</code></td>
+<td style=text-align:center>🙎‍♂️</td>
+<td><code>pouting_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙅‍♀️</td>
+<td><code>ng_woman</code> <br> <code>no_good</code> <br> <code>no_good_woman</code></td>
+<td style=text-align:center>🙅‍♂️</td>
+<td><code>ng_man</code> <br> <code>no_good_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙆‍♀️</td>
+<td><code>ok_woman</code></td>
+<td style=text-align:center>🙆‍♂️</td>
+<td><code>ok_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💁‍♀️</td>
+<td><code>information_desk_person</code> <br> <code>sassy_woman</code> <br> <code>tipping_hand_woman</code></td>
+<td style=text-align:center>💁‍♂️</td>
+<td><code>sassy_man</code> <br> <code>tipping_hand_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙋‍♀️</td>
+<td><code>raising_hand</code> <br> <code>raising_hand_woman</code></td>
+<td style=text-align:center>🙋‍♂️</td>
+<td><code>raising_hand_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🙇‍♂️</td>
+<td><code>bow</code> <br> <code>bowing_man</code></td>
+<td style=text-align:center>🙇‍♀️</td>
+<td><code>bowing_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤦‍♂️</td>
+<td><code>man_facepalming</code></td>
+<td style=text-align:center>🤦‍♀️</td>
+<td><code>woman_facepalming</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤷‍♂️</td>
+<td><code>man_shrugging</code></td>
+<td style=text-align:center>🤷‍♀️</td>
+<td><code>woman_shrugging</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=person-role class=headerLink><a href=#person-role class=header-mark></a>Person Role</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👨‍⚕️</td>
+<td><code>man_health_worker</code></td>
+<td style=text-align:center>👩‍⚕️</td>
+<td><code>woman_health_worker</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🎓</td>
+<td><code>man_student</code></td>
+<td style=text-align:center>👩‍🎓</td>
+<td><code>woman_student</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🏫</td>
+<td><code>man_teacher</code></td>
+<td style=text-align:center>👩‍🏫</td>
+<td><code>woman_teacher</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍⚖️</td>
+<td><code>man_judge</code></td>
+<td style=text-align:center>👩‍⚖️</td>
+<td><code>woman_judge</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🌾</td>
+<td><code>man_farmer</code></td>
+<td style=text-align:center>👩‍🌾</td>
+<td><code>woman_farmer</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🍳</td>
+<td><code>man_cook</code></td>
+<td style=text-align:center>👩‍🍳</td>
+<td><code>woman_cook</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🔧</td>
+<td><code>man_mechanic</code></td>
+<td style=text-align:center>👩‍🔧</td>
+<td><code>woman_mechanic</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🏭</td>
+<td><code>man_factory_worker</code></td>
+<td style=text-align:center>👩‍🏭</td>
+<td><code>woman_factory_worker</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍💼</td>
+<td><code>man_office_worker</code></td>
+<td style=text-align:center>👩‍💼</td>
+<td><code>woman_office_worker</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🔬</td>
+<td><code>man_scientist</code></td>
+<td style=text-align:center>👩‍🔬</td>
+<td><code>woman_scientist</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍💻</td>
+<td><code>man_technologist</code></td>
+<td style=text-align:center>👩‍💻</td>
+<td><code>woman_technologist</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🎤</td>
+<td><code>man_singer</code></td>
+<td style=text-align:center>👩‍🎤</td>
+<td><code>woman_singer</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🎨</td>
+<td><code>man_artist</code></td>
+<td style=text-align:center>👩‍🎨</td>
+<td><code>woman_artist</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍✈️</td>
+<td><code>man_pilot</code></td>
+<td style=text-align:center>👩‍✈️</td>
+<td><code>woman_pilot</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🚀</td>
+<td><code>man_astronaut</code></td>
+<td style=text-align:center>👩‍🚀</td>
+<td><code>woman_astronaut</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍🚒</td>
+<td><code>man_firefighter</code></td>
+<td style=text-align:center>👩‍🚒</td>
+<td><code>woman_firefighter</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👮‍♂️</td>
+<td><code>cop</code> <br> <code>policeman</code></td>
+<td style=text-align:center>👮‍♀️</td>
+<td><code>policewoman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕵</td>
+<td><code>detective</code> <br> <code>male_detective</code></td>
+<td style=text-align:center>🕵️‍♀️</td>
+<td><code>female_detective</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💂‍♂️</td>
+<td><code>guardsman</code></td>
+<td style=text-align:center>💂‍♀️</td>
+<td><code>guardswoman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👷‍♂️</td>
+<td><code>construction_worker</code> <br> <code>construction_worker_man</code></td>
+<td style=text-align:center>👷‍♀️</td>
+<td><code>construction_worker_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤴</td>
+<td><code>prince</code></td>
+<td style=text-align:center>👸</td>
+<td><code>princess</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👳‍♂️</td>
+<td><code>man_with_turban</code></td>
+<td style=text-align:center>👳‍♀️</td>
+<td><code>woman_with_turban</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👲</td>
+<td><code>man_with_gua_pi_mao</code></td>
+<td style=text-align:center>🤵‍♂️</td>
+<td><code>man_in_tuxedo</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👰</td>
+<td><code>bride_with_veil</code></td>
+<td style=text-align:center>🤰</td>
+<td><code>pregnant_woman</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=person-fantasy class=headerLink><a href=#person-fantasy class=header-mark></a>Person Fantasy</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👼</td>
+<td><code>angel</code></td>
+<td style=text-align:center>🎅</td>
+<td><code>santa</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤶</td>
+<td><code>mrs_claus</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=person-activity class=headerLink><a href=#person-activity class=header-mark></a>Person Activity</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>💆‍♀️</td>
+<td><code>massage</code> <br> <code>massage_woman</code></td>
+<td style=text-align:center>💆‍♂️</td>
+<td><code>massage_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💇‍♀️</td>
+<td><code>haircut</code> <br> <code>haircut_woman</code></td>
+<td style=text-align:center>💇‍♂️</td>
+<td><code>haircut_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚶‍♂️</td>
+<td><code>walking</code> <br> <code>walking_man</code></td>
+<td style=text-align:center>🚶‍♀️</td>
+<td><code>walking_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏃‍♂️</td>
+<td><code>runner</code> <br> <code>running</code> <br> <code>running_man</code></td>
+<td style=text-align:center>🏃‍♀️</td>
+<td><code>running_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💃</td>
+<td><code>dancer</code></td>
+<td style=text-align:center>🕺</td>
+<td><code>man_dancing</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕴️</td>
+<td><code>business_suit_levitating</code></td>
+<td style=text-align:center>👯‍♀️</td>
+<td><code>dancers</code> <br> <code>dancing_women</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👯‍♂️</td>
+<td><code>dancing_men</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=person-sport class=headerLink><a href=#person-sport class=header-mark></a>Person Sport</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🤺</td>
+<td><code>person_fencing</code></td>
+<td style=text-align:center>🏇</td>
+<td><code>horse_racing</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⛷️</td>
+<td><code>skier</code></td>
+<td style=text-align:center>🏂</td>
+<td><code>snowboarder</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏌️‍♂️</td>
+<td><code>golfing_man</code></td>
+<td style=text-align:center>🏌️‍♀️</td>
+<td><code>golfing_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏄‍♂️</td>
+<td><code>surfer</code> <br> <code>surfing_man</code></td>
+<td style=text-align:center>🏄‍♀️</td>
+<td><code>surfing_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚣‍♂️</td>
+<td><code>rowboat</code> <br> <code>rowing_man</code></td>
+<td style=text-align:center>🚣‍♀️</td>
+<td><code>rowing_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏊‍♂️</td>
+<td><code>swimmer</code> <br> <code>swimming_man</code></td>
+<td style=text-align:center>🏊‍♀️</td>
+<td><code>swimming_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⛹️‍♂️</td>
+<td><code>basketball_man</code></td>
+<td style=text-align:center>⛹️‍♀️</td>
+<td><code>basketball_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏋️‍♂️</td>
+<td><code>weight_lifting_man</code></td>
+<td style=text-align:center>🏋️‍♀️</td>
+<td><code>weight_lifting_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚴‍♂️</td>
+<td><code>bicyclist</code> <br> <code>biking_man</code></td>
+<td style=text-align:center>🚴‍♀️</td>
+<td><code>biking_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚵‍♂️</td>
+<td><code>mountain_bicyclist</code> <br> <code>mountain_biking_man</code></td>
+<td style=text-align:center>🚵‍♀️</td>
+<td><code>mountain_biking_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤸‍♂️</td>
+<td><code>man_cartwheeling</code></td>
+<td style=text-align:center>🤸‍♀️</td>
+<td><code>woman_cartwheeling</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤼‍♂️</td>
+<td><code>men_wrestling</code></td>
+<td style=text-align:center>🤼‍♀️</td>
+<td><code>women_wrestling</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤽‍♂️</td>
+<td><code>man_playing_water_polo</code></td>
+<td style=text-align:center>🤽‍♀️</td>
+<td><code>woman_playing_water_polo</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤾‍♂️</td>
+<td><code>man_playing_handball</code></td>
+<td style=text-align:center>🤾‍♀️</td>
+<td><code>woman_playing_handball</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🤹‍♂️</td>
+<td><code>man_juggling</code></td>
+<td style=text-align:center>🤹‍♀️</td>
+<td><code>woman_juggling</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=person-resting class=headerLink><a href=#person-resting class=header-mark></a>Person Resting</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🛀</td>
+<td><code>bath</code></td>
+<td style=text-align:center>🛌</td>
+<td><code>sleeping_bed</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=family class=headerLink><a href=#family class=header-mark></a>Family</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👭</td>
+<td><code>two_women_holding_hands</code></td>
+<td style=text-align:center>👫</td>
+<td><code>couple</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👬</td>
+<td><code>two_men_holding_hands</code></td>
+<td style=text-align:center>👩‍❤️‍💋‍👨</td>
+<td><code>couplekiss_man_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍❤️‍💋‍👨</td>
+<td><code>couplekiss_man_man</code></td>
+<td style=text-align:center>👩‍❤️‍💋‍👩</td>
+<td><code>couplekiss_woman_woman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👩‍❤️‍👨</td>
+<td><code>couple_with_heart</code> <br> <code>couple_with_heart_woman_man</code></td>
+<td style=text-align:center>👨‍❤️‍👨</td>
+<td><code>couple_with_heart_man_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👩‍❤️‍👩</td>
+<td><code>couple_with_heart_woman_woman</code></td>
+<td style=text-align:center>👨‍👩‍👦</td>
+<td><code>family</code> <br> <code>family_man_woman_boy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍👩‍👧</td>
+<td><code>family_man_woman_girl</code></td>
+<td style=text-align:center>👨‍👩‍👧‍👦</td>
+<td><code>family_man_woman_girl_boy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍👩‍👦‍👦</td>
+<td><code>family_man_woman_boy_boy</code></td>
+<td style=text-align:center>👨‍👩‍👧‍👧</td>
+<td><code>family_man_woman_girl_girl</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍👨‍👦</td>
+<td><code>family_man_man_boy</code></td>
+<td style=text-align:center>👨‍👨‍👧</td>
+<td><code>family_man_man_girl</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍👨‍👧‍👦</td>
+<td><code>family_man_man_girl_boy</code></td>
+<td style=text-align:center>👨‍👨‍👦‍👦</td>
+<td><code>family_man_man_boy_boy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍👨‍👧‍👧</td>
+<td><code>family_man_man_girl_girl</code></td>
+<td style=text-align:center>👩‍👩‍👦</td>
+<td><code>family_woman_woman_boy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👩‍👩‍👧</td>
+<td><code>family_woman_woman_girl</code></td>
+<td style=text-align:center>👩‍👩‍👧‍👦</td>
+<td><code>family_woman_woman_girl_boy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👩‍👩‍👦‍👦</td>
+<td><code>family_woman_woman_boy_boy</code></td>
+<td style=text-align:center>👩‍👩‍👧‍👧</td>
+<td><code>family_woman_woman_girl_girl</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍👦</td>
+<td><code>family_man_boy</code></td>
+<td style=text-align:center>👨‍👦‍👦</td>
+<td><code>family_man_boy_boy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍👧</td>
+<td><code>family_man_girl</code></td>
+<td style=text-align:center>👨‍👧‍👦</td>
+<td><code>family_man_girl_boy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👨‍👧‍👧</td>
+<td><code>family_man_girl_girl</code></td>
+<td style=text-align:center>👩‍👦</td>
+<td><code>family_woman_boy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👩‍👦‍👦</td>
+<td><code>family_woman_boy_boy</code></td>
+<td style=text-align:center>👩‍👧</td>
+<td><code>family_woman_girl</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👩‍👧‍👦</td>
+<td><code>family_woman_girl_boy</code></td>
+<td style=text-align:center>👩‍👧‍👧</td>
+<td><code>family_woman_girl_girl</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=person-symbol class=headerLink><a href=#person-symbol class=header-mark></a>Person Symbol</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🗣</td>
+<td><code>speaking_head</code></td>
+<td style=text-align:center>👤</td>
+<td><code>bust_in_silhouette</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👥</td>
+<td><code>busts_in_silhouette</code></td>
+<td style=text-align:center>👣</td>
+<td><code>footprints</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=animals--nature class=headerLink><a href=#animals--nature class=header-mark></a>Animals & Nature</h2><h3 id=animal-mammal class=headerLink><a href=#animal-mammal class=header-mark></a>Animal Mammal</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🐵</td>
+<td><code>monkey_face</code></td>
+<td style=text-align:center>🐒</td>
+<td><code>monkey</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦍</td>
+<td><code>gorilla</code></td>
+<td style=text-align:center>🐶</td>
+<td><code>dog</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐕</td>
+<td><code>dog2</code></td>
+<td style=text-align:center>🐩</td>
+<td><code>poodle</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐺</td>
+<td><code>wolf</code></td>
+<td style=text-align:center>🦊</td>
+<td><code>fox_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐱</td>
+<td><code>cat</code></td>
+<td style=text-align:center>🐈</td>
+<td><code>cat2</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦁</td>
+<td><code>lion</code></td>
+<td style=text-align:center>🐯</td>
+<td><code>tiger</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐅</td>
+<td><code>tiger2</code></td>
+<td style=text-align:center>🐆</td>
+<td><code>leopard</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐴</td>
+<td><code>horse</code></td>
+<td style=text-align:center>🐎</td>
+<td><code>racehorse</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦄</td>
+<td><code>unicorn</code></td>
+<td style=text-align:center>🦌</td>
+<td><code>deer</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐮</td>
+<td><code>cow</code></td>
+<td style=text-align:center>🐂</td>
+<td><code>ox</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐃</td>
+<td><code>water_buffalo</code></td>
+<td style=text-align:center>🐄</td>
+<td><code>cow2</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐷</td>
+<td><code>pig</code></td>
+<td style=text-align:center>🐖</td>
+<td><code>pig2</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐗</td>
+<td><code>boar</code></td>
+<td style=text-align:center>🐽</td>
+<td><code>pig_nose</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐏</td>
+<td><code>ram</code></td>
+<td style=text-align:center>🐑</td>
+<td><code>sheep</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐐</td>
+<td><code>goat</code></td>
+<td style=text-align:center>🐪</td>
+<td><code>dromedary_camel</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐫</td>
+<td><code>camel</code></td>
+<td style=text-align:center>🐘</td>
+<td><code>elephant</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦏</td>
+<td><code>rhinoceros</code></td>
+<td style=text-align:center>🐭</td>
+<td><code>mouse</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐁</td>
+<td><code>mouse2</code></td>
+<td style=text-align:center>🐀</td>
+<td><code>rat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐹</td>
+<td><code>hamster</code></td>
+<td style=text-align:center>🐰</td>
+<td><code>rabbit</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐇</td>
+<td><code>rabbit2</code></td>
+<td style=text-align:center>🐿️</td>
+<td><code>chipmunk</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦇</td>
+<td><code>bat</code></td>
+<td style=text-align:center>🐻</td>
+<td><code>bear</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐨</td>
+<td><code>koala</code></td>
+<td style=text-align:center>🐼</td>
+<td><code>panda_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐾</td>
+<td><code>feet</code> <br> <code>paw_prints</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=animal-bird class=headerLink><a href=#animal-bird class=header-mark></a>Animal Bird</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🦃</td>
+<td><code>turkey</code></td>
+<td style=text-align:center>🐔</td>
+<td><code>chicken</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐓</td>
+<td><code>rooster</code></td>
+<td style=text-align:center>🐣</td>
+<td><code>hatching_chick</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐤</td>
+<td><code>baby_chick</code></td>
+<td style=text-align:center>🐥</td>
+<td><code>hatched_chick</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐦</td>
+<td><code>bird</code></td>
+<td style=text-align:center>🐧</td>
+<td><code>penguin</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕊</td>
+<td><code>dove</code></td>
+<td style=text-align:center>🦅</td>
+<td><code>eagle</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦆</td>
+<td><code>duck</code></td>
+<td style=text-align:center>🦉</td>
+<td><code>owl</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=animal-amphibian class=headerLink><a href=#animal-amphibian class=header-mark></a>Animal Amphibian</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🐸</td>
+<td><code>frog</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=animal-reptile class=headerLink><a href=#animal-reptile class=header-mark></a>Animal Reptile</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🐊</td>
+<td><code>crocodile</code></td>
+<td style=text-align:center>🐢</td>
+<td><code>turtle</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦎</td>
+<td><code>lizard</code></td>
+<td style=text-align:center>🐍</td>
+<td><code>snake</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐲</td>
+<td><code>dragon_face</code></td>
+<td style=text-align:center>🐉</td>
+<td><code>dragon</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=animal-marine class=headerLink><a href=#animal-marine class=header-mark></a>Animal Marine</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🐳</td>
+<td><code>whale</code></td>
+<td style=text-align:center>🐋</td>
+<td><code>whale2</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐬</td>
+<td><code>dolphin</code> <br> <code>flipper</code></td>
+<td style=text-align:center>🐟</td>
+<td><code>fish</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐠</td>
+<td><code>tropical_fish</code></td>
+<td style=text-align:center>🐡</td>
+<td><code>blowfish</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦈</td>
+<td><code>shark</code></td>
+<td style=text-align:center>🐙</td>
+<td><code>octopus</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐚</td>
+<td><code>shell</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=animal-bug class=headerLink><a href=#animal-bug class=header-mark></a>Animal Bug</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🐌</td>
+<td><code>snail</code></td>
+<td style=text-align:center>🦋</td>
+<td><code>butterfly</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐛</td>
+<td><code>bug</code></td>
+<td style=text-align:center>🐜</td>
+<td><code>ant</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🐝</td>
+<td><code>bee</code> <br> <code>honeybee</code></td>
+<td style=text-align:center>🪲</td>
+<td><code>beetle</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕷️</td>
+<td><code>spider</code></td>
+<td style=text-align:center>🕸️</td>
+<td><code>spider_web</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦂</td>
+<td><code>scorpion</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=plant-flower class=headerLink><a href=#plant-flower class=header-mark></a>Plant Flower</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>💐</td>
+<td><code>bouquet</code></td>
+<td style=text-align:center>🌸</td>
+<td><code>cherry_blossom</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💮</td>
+<td><code>white_flower</code></td>
+<td style=text-align:center>🏵️</td>
+<td><code>rosette</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌹</td>
+<td><code>rose</code></td>
+<td style=text-align:center>🥀</td>
+<td><code>wilted_flower</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌺</td>
+<td><code>hibiscus</code></td>
+<td style=text-align:center>🌻</td>
+<td><code>sunflower</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌼</td>
+<td><code>blossom</code></td>
+<td style=text-align:center>🌷</td>
+<td><code>tulip</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=plant-other class=headerLink><a href=#plant-other class=header-mark></a>Plant Other</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🌱</td>
+<td><code>seedling</code></td>
+<td style=text-align:center>🌲</td>
+<td><code>evergreen_tree</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌳</td>
+<td><code>deciduous_tree</code></td>
+<td style=text-align:center>🌴</td>
+<td><code>palm_tree</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌵</td>
+<td><code>cactus</code></td>
+<td style=text-align:center>🌾</td>
+<td><code>ear_of_rice</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌿</td>
+<td><code>herb</code></td>
+<td style=text-align:center>☘️</td>
+<td><code>shamrock</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍀</td>
+<td><code>four_leaf_clover</code></td>
+<td style=text-align:center>🍁</td>
+<td><code>maple_leaf</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍂</td>
+<td><code>fallen_leaf</code></td>
+<td style=text-align:center>🍃</td>
+<td><code>leaves</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=food--drink class=headerLink><a href=#food--drink class=header-mark></a>Food & Drink</h2><h3 id=food-fruit class=headerLink><a href=#food-fruit class=header-mark></a>Food Fruit</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🍇</td>
+<td><code>grapes</code></td>
+<td style=text-align:center>🍈</td>
+<td><code>melon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍉</td>
+<td><code>watermelon</code></td>
+<td style=text-align:center>🍊</td>
+<td><code>mandarin</code> <br> <code>orange</code> <br> <code>tangerine</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍋</td>
+<td><code>lemon</code></td>
+<td style=text-align:center>🍌</td>
+<td><code>banana</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍍</td>
+<td><code>pineapple</code></td>
+<td style=text-align:center>🍎</td>
+<td><code>apple</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍏</td>
+<td><code>green_apple</code></td>
+<td style=text-align:center>🍐</td>
+<td><code>pear</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍑</td>
+<td><code>peach</code></td>
+<td style=text-align:center>🍒</td>
+<td><code>cherries</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍓</td>
+<td><code>strawberry</code></td>
+<td style=text-align:center>🥝</td>
+<td><code>kiwi_fruit</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍅</td>
+<td><code>tomato</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=food-vegetable class=headerLink><a href=#food-vegetable class=header-mark></a>Food Vegetable</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🥑</td>
+<td><code>avocado</code></td>
+<td style=text-align:center>🍆</td>
+<td><code>eggplant</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🥔</td>
+<td><code>potato</code></td>
+<td style=text-align:center>🥕</td>
+<td><code>carrot</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌽</td>
+<td><code>corn</code></td>
+<td style=text-align:center>🌶️</td>
+<td><code>hot_pepper</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🥒</td>
+<td><code>cucumber</code></td>
+<td style=text-align:center>🍄</td>
+<td><code>mushroom</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🥜</td>
+<td><code>peanuts</code></td>
+<td style=text-align:center>🌰</td>
+<td><code>chestnut</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=food-prepared class=headerLink><a href=#food-prepared class=header-mark></a>Food Prepared</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🍞</td>
+<td><code>bread</code></td>
+<td style=text-align:center>🥐</td>
+<td><code>croissant</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🥖</td>
+<td><code>baguette_bread</code></td>
+<td style=text-align:center>🥞</td>
+<td><code>pancakes</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🧀</td>
+<td><code>cheese</code></td>
+<td style=text-align:center>🍖</td>
+<td><code>meat_on_bone</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍗</td>
+<td><code>poultry_leg</code></td>
+<td style=text-align:center>🥓</td>
+<td><code>bacon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍔</td>
+<td><code>hamburger</code></td>
+<td style=text-align:center>🍟</td>
+<td><code>fries</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍕</td>
+<td><code>pizza</code></td>
+<td style=text-align:center>🌭</td>
+<td><code>hotdog</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌮</td>
+<td><code>taco</code></td>
+<td style=text-align:center>🌯</td>
+<td><code>burrito</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🥙</td>
+<td><code>stuffed_flatbread</code></td>
+<td style=text-align:center>🥚</td>
+<td><code>egg</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍳</td>
+<td><code>fried_egg</code></td>
+<td style=text-align:center>🥘</td>
+<td><code>shallow_pan_of_food</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍲</td>
+<td><code>stew</code></td>
+<td style=text-align:center>🥗</td>
+<td><code>green_salad</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍿</td>
+<td><code>popcorn</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=food-asian class=headerLink><a href=#food-asian class=header-mark></a>Food Asian</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🍱</td>
+<td><code>bento</code></td>
+<td style=text-align:center>🍘</td>
+<td><code>rice_cracker</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍙</td>
+<td><code>rice_ball</code></td>
+<td style=text-align:center>🍚</td>
+<td><code>rice</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍛</td>
+<td><code>curry</code></td>
+<td style=text-align:center>🍜</td>
+<td><code>ramen</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍝</td>
+<td><code>spaghetti</code></td>
+<td style=text-align:center>🍠</td>
+<td><code>sweet_potato</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍢</td>
+<td><code>oden</code></td>
+<td style=text-align:center>🍣</td>
+<td><code>sushi</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍤</td>
+<td><code>fried_shrimp</code></td>
+<td style=text-align:center>🍥</td>
+<td><code>fish_cake</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍡</td>
+<td><code>dango</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=food-marine class=headerLink><a href=#food-marine class=header-mark></a>Food Marine</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🦀</td>
+<td><code>crab</code></td>
+<td style=text-align:center>🦐</td>
+<td><code>shrimp</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦑</td>
+<td><code>squid</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=food-sweet class=headerLink><a href=#food-sweet class=header-mark></a>Food Sweet</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🍦</td>
+<td><code>icecream</code></td>
+<td style=text-align:center>🍧</td>
+<td><code>shaved_ice</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍨</td>
+<td><code>ice_cream</code></td>
+<td style=text-align:center>🍩</td>
+<td><code>doughnut</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍪</td>
+<td><code>cookie</code></td>
+<td style=text-align:center>🎂</td>
+<td><code>birthday</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍰</td>
+<td><code>cake</code></td>
+<td style=text-align:center>🍫</td>
+<td><code>chocolate_bar</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍬</td>
+<td><code>candy</code></td>
+<td style=text-align:center>🍭</td>
+<td><code>lollipop</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍮</td>
+<td><code>custard</code></td>
+<td style=text-align:center>🍯</td>
+<td><code>honey_pot</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=drink class=headerLink><a href=#drink class=header-mark></a>Drink</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🍼</td>
+<td><code>baby_bottle</code></td>
+<td style=text-align:center>🥛</td>
+<td><code>milk_glass</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☕</td>
+<td><code>coffee</code></td>
+<td style=text-align:center>🍵</td>
+<td><code>tea</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍶</td>
+<td><code>sake</code></td>
+<td style=text-align:center>🍾</td>
+<td><code>champagne</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍷</td>
+<td><code>wine_glass</code></td>
+<td style=text-align:center>🍸</td>
+<td><code>cocktail</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍹</td>
+<td><code>tropical_drink</code></td>
+<td style=text-align:center>🍺</td>
+<td><code>beer</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🍻</td>
+<td><code>beers</code></td>
+<td style=text-align:center>🥂</td>
+<td><code>clinking_glasses</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🥃</td>
+<td><code>tumbler_glass</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=dishware class=headerLink><a href=#dishware class=header-mark></a>Dishware</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🍽️</td>
+<td><code>plate_with_cutlery</code></td>
+<td style=text-align:center>🍴</td>
+<td><code>fork_and_knife</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🥄</td>
+<td><code>spoon</code></td>
+<td style=text-align:center>🔪</td>
+<td><code>hocho</code> <br> <code>knife</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏺</td>
+<td><code>amphora</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id=travel--places class=headerLink><a href=#travel--places class=header-mark></a>Travel & Places</h2><h3 id=place-map class=headerLink><a href=#place-map class=header-mark></a>Place Map</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🌍</td>
+<td><code>earth_africa</code></td>
+<td style=text-align:center>🌎</td>
+<td><code>earth_americas</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌏</td>
+<td><code>earth_asia</code></td>
+<td style=text-align:center>🌐</td>
+<td><code>globe_with_meridians</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🗺️</td>
+<td><code>world_map</code></td>
+<td style=text-align:center>🗾</td>
+<td><code>japan</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=place-geographic class=headerLink><a href=#place-geographic class=header-mark></a>Place Geographic</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🏔</td>
+<td><code>mountain_snow</code></td>
+<td style=text-align:center>⛰️</td>
+<td><code>mountain</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌋</td>
+<td><code>volcano</code></td>
+<td style=text-align:center>🗻</td>
+<td><code>mount_fuji</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏕️</td>
+<td><code>camping</code></td>
+<td style=text-align:center>⛱</td>
+<td><code>beach_umbrella</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏜️</td>
+<td><code>desert</code></td>
+<td style=text-align:center>🏝️</td>
+<td><code>desert_island</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏞️</td>
+<td><code>national_park</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=place-building class=headerLink><a href=#place-building class=header-mark></a>Place Building</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🏟️</td>
+<td><code>stadium</code></td>
+<td style=text-align:center>🏛️</td>
+<td><code>classical_building</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏗️</td>
+<td><code>building_construction</code></td>
+<td style=text-align:center>🏘</td>
+<td><code>houses</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏚</td>
+<td><code>derelict_house</code></td>
+<td style=text-align:center>🏠</td>
+<td><code>house</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏡</td>
+<td><code>house_with_garden</code></td>
+<td style=text-align:center>🏢</td>
+<td><code>office</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏣</td>
+<td><code>post_office</code></td>
+<td style=text-align:center>🏤</td>
+<td><code>european_post_office</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏥</td>
+<td><code>hospital</code></td>
+<td style=text-align:center>🏦</td>
+<td><code>bank</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏨</td>
+<td><code>hotel</code></td>
+<td style=text-align:center>🏩</td>
+<td><code>love_hotel</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏪</td>
+<td><code>convenience_store</code></td>
+<td style=text-align:center>🏫</td>
+<td><code>school</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏬</td>
+<td><code>department_store</code></td>
+<td style=text-align:center>🏭</td>
+<td><code>factory</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏯</td>
+<td><code>japanese_castle</code></td>
+<td style=text-align:center>🏰</td>
+<td><code>european_castle</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💒</td>
+<td><code>wedding</code></td>
+<td style=text-align:center>🗼</td>
+<td><code>tokyo_tower</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🗽</td>
+<td><code>statue_of_liberty</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=place-religious class=headerLink><a href=#place-religious class=header-mark></a>Place Religious</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>⛪</td>
+<td><code>church</code></td>
+<td style=text-align:center>🕌</td>
+<td><code>mosque</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕍</td>
+<td><code>synagogue</code></td>
+<td style=text-align:center>⛩️</td>
+<td><code>shinto_shrine</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕋</td>
+<td><code>kaaba</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=place-other class=headerLink><a href=#place-other class=header-mark></a>Place Other</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>⛲</td>
+<td><code>fountain</code></td>
+<td style=text-align:center>⛺</td>
+<td><code>tent</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌁</td>
+<td><code>foggy</code></td>
+<td style=text-align:center>🌃</td>
+<td><code>night_with_stars</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏙️</td>
+<td><code>cityscape</code></td>
+<td style=text-align:center>🌄</td>
+<td><code>sunrise_over_mountains</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌅</td>
+<td><code>sunrise</code></td>
+<td style=text-align:center>🌆</td>
+<td><code>city_sunset</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌇</td>
+<td><code>city_sunrise</code></td>
+<td style=text-align:center>🌉</td>
+<td><code>bridge_at_night</code></td>
+</tr>
+<tr>
+<td style=text-align:center>♨️</td>
+<td><code>hotsprings</code></td>
+<td style=text-align:center>🎠</td>
+<td><code>carousel_horse</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎡</td>
+<td><code>ferris_wheel</code></td>
+<td style=text-align:center>🎢</td>
+<td><code>roller_coaster</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💈</td>
+<td><code>barber</code></td>
+<td style=text-align:center>🎪</td>
+<td><code>circus_tent</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=transport-ground class=headerLink><a href=#transport-ground class=header-mark></a>Transport Ground</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🚂</td>
+<td><code>steam_locomotive</code></td>
+<td style=text-align:center>🚃</td>
+<td><code>railway_car</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚄</td>
+<td><code>bullettrain_side</code></td>
+<td style=text-align:center>🚅</td>
+<td><code>bullettrain_front</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚆</td>
+<td><code>train2</code></td>
+<td style=text-align:center>🚇</td>
+<td><code>metro</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚈</td>
+<td><code>light_rail</code></td>
+<td style=text-align:center>🚉</td>
+<td><code>station</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚊</td>
+<td><code>tram</code></td>
+<td style=text-align:center>🚝</td>
+<td><code>monorail</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚞</td>
+<td><code>mountain_railway</code></td>
+<td style=text-align:center>🚋</td>
+<td><code>train</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚌</td>
+<td><code>bus</code></td>
+<td style=text-align:center>🚍</td>
+<td><code>oncoming_bus</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚎</td>
+<td><code>trolleybus</code></td>
+<td style=text-align:center>🚐</td>
+<td><code>minibus</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚑</td>
+<td><code>ambulance</code></td>
+<td style=text-align:center>🚒</td>
+<td><code>fire_engine</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚓</td>
+<td><code>police_car</code></td>
+<td style=text-align:center>🚔</td>
+<td><code>oncoming_police_car</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚕</td>
+<td><code>taxi</code></td>
+<td style=text-align:center>🚖</td>
+<td><code>oncoming_taxi</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚗</td>
+<td><code>car</code> <br> <code>red_car</code></td>
+<td style=text-align:center>🚘</td>
+<td><code>oncoming_automobile</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚙</td>
+<td><code>blue_car</code></td>
+<td style=text-align:center>🚚</td>
+<td><code>truck</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚛</td>
+<td><code>articulated_lorry</code></td>
+<td style=text-align:center>🚜</td>
+<td><code>tractor</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏎️</td>
+<td><code>racing_car</code></td>
+<td style=text-align:center>🏍</td>
+<td><code>motorcycle</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛵</td>
+<td><code>motor_scooter</code></td>
+<td style=text-align:center>🚲</td>
+<td><code>bike</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛴</td>
+<td><code>kick_scooter</code></td>
+<td style=text-align:center>🚏</td>
+<td><code>busstop</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛣️</td>
+<td><code>motorway</code></td>
+<td style=text-align:center>🛤️</td>
+<td><code>railway_track</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛢️</td>
+<td><code>oil_drum</code></td>
+<td style=text-align:center>⛽</td>
+<td><code>fuelpump</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚨</td>
+<td><code>rotating_light</code></td>
+<td style=text-align:center>🚥</td>
+<td><code>traffic_light</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚦</td>
+<td><code>vertical_traffic_light</code></td>
+<td style=text-align:center>🛑</td>
+<td><code>stop_sign</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚧</td>
+<td><code>construction</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=transport-water class=headerLink><a href=#transport-water class=header-mark></a>Transport Water</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>⚓</td>
+<td><code>anchor</code></td>
+<td style=text-align:center>⛵</td>
+<td><code>boat</code> <br> <code>sailboat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛶</td>
+<td><code>canoe</code></td>
+<td style=text-align:center>🚤</td>
+<td><code>speedboat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛳️</td>
+<td><code>passenger_ship</code></td>
+<td style=text-align:center>⛴️</td>
+<td><code>ferry</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛥️</td>
+<td><code>motor_boat</code></td>
+<td style=text-align:center>🚢</td>
+<td><code>ship</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=transport-air class=headerLink><a href=#transport-air class=header-mark></a>Transport Air</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>✈️</td>
+<td><code>airplane</code></td>
+<td style=text-align:center>🛩️</td>
+<td><code>small_airplane</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛫</td>
+<td><code>flight_departure</code></td>
+<td style=text-align:center>🛬</td>
+<td><code>flight_arrival</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💺</td>
+<td><code>seat</code></td>
+<td style=text-align:center>🚁</td>
+<td><code>helicopter</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚟</td>
+<td><code>suspension_railway</code></td>
+<td style=text-align:center>🚠</td>
+<td><code>mountain_cableway</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚡</td>
+<td><code>aerial_tramway</code></td>
+<td style=text-align:center>🛰️</td>
+<td><code>artificial_satellite</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚀</td>
+<td><code>rocket</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=hotel class=headerLink><a href=#hotel class=header-mark></a>Hotel</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🛎️</td>
+<td><code>bellhop_bell</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=time class=headerLink><a href=#time class=header-mark></a>Time</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>⌛</td>
+<td><code>hourglass</code></td>
+<td style=text-align:center>⏳</td>
+<td><code>hourglass_flowing_sand</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⌚</td>
+<td><code>watch</code></td>
+<td style=text-align:center>⏰</td>
+<td><code>alarm_clock</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⏱️</td>
+<td><code>stopwatch</code></td>
+<td style=text-align:center>⏲️</td>
+<td><code>timer_clock</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕰️</td>
+<td><code>mantelpiece_clock</code></td>
+<td style=text-align:center>🕛</td>
+<td><code>clock12</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕧</td>
+<td><code>clock1230</code></td>
+<td style=text-align:center>🕐</td>
+<td><code>clock1</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕜</td>
+<td><code>clock130</code></td>
+<td style=text-align:center>🕑</td>
+<td><code>clock2</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕝</td>
+<td><code>clock230</code></td>
+<td style=text-align:center>🕒</td>
+<td><code>clock3</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕞</td>
+<td><code>clock330</code></td>
+<td style=text-align:center>🕓</td>
+<td><code>clock4</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕟</td>
+<td><code>clock430</code></td>
+<td style=text-align:center>🕔</td>
+<td><code>clock5</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕠</td>
+<td><code>clock530</code></td>
+<td style=text-align:center>🕕</td>
+<td><code>clock6</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕡</td>
+<td><code>clock630</code></td>
+<td style=text-align:center>🕖</td>
+<td><code>clock7</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕢</td>
+<td><code>clock730</code></td>
+<td style=text-align:center>🕗</td>
+<td><code>clock8</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕣</td>
+<td><code>clock830</code></td>
+<td style=text-align:center>🕘</td>
+<td><code>clock9</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕤</td>
+<td><code>clock930</code></td>
+<td style=text-align:center>🕙</td>
+<td><code>clock10</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕥</td>
+<td><code>clock1030</code></td>
+<td style=text-align:center>🕚</td>
+<td><code>clock11</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕦</td>
+<td><code>clock1130</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=sky--weather class=headerLink><a href=#sky--weather class=header-mark></a>Sky & Weather</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🌑</td>
+<td><code>new_moon</code></td>
+<td style=text-align:center>🌒</td>
+<td><code>waxing_crescent_moon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌓</td>
+<td><code>first_quarter_moon</code></td>
+<td style=text-align:center>🌔</td>
+<td><code>moon</code> <br> <code>waxing_gibbous_moon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌕</td>
+<td><code>full_moon</code></td>
+<td style=text-align:center>🌖</td>
+<td><code>waning_gibbous_moon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌗</td>
+<td><code>last_quarter_moon</code></td>
+<td style=text-align:center>🌘</td>
+<td><code>waning_crescent_moon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌙</td>
+<td><code>crescent_moon</code></td>
+<td style=text-align:center>🌚</td>
+<td><code>new_moon_with_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌛</td>
+<td><code>first_quarter_moon_with_face</code></td>
+<td style=text-align:center>🌜</td>
+<td><code>last_quarter_moon_with_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌡️</td>
+<td><code>thermometer</code></td>
+<td style=text-align:center>☀️</td>
+<td><code>sunny</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌝</td>
+<td><code>full_moon_with_face</code></td>
+<td style=text-align:center>🌞</td>
+<td><code>sun_with_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⭐</td>
+<td><code>star</code></td>
+<td style=text-align:center>🌟</td>
+<td><code>star2</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌠</td>
+<td><code>stars</code></td>
+<td style=text-align:center>🌌</td>
+<td><code>milky_way</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☁️</td>
+<td><code>cloud</code></td>
+<td style=text-align:center>⛅</td>
+<td><code>partly_sunny</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⛈</td>
+<td><code>cloud_with_lightning_and_rain</code></td>
+<td style=text-align:center>🌤</td>
+<td><code>sun_behind_small_cloud</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌥</td>
+<td><code>sun_behind_large_cloud</code></td>
+<td style=text-align:center>🌦</td>
+<td><code>sun_behind_rain_cloud</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌧</td>
+<td><code>cloud_with_rain</code></td>
+<td style=text-align:center>🌨</td>
+<td><code>cloud_with_snow</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌩</td>
+<td><code>cloud_with_lightning</code></td>
+<td style=text-align:center>🌪️</td>
+<td><code>tornado</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌫️</td>
+<td><code>fog</code></td>
+<td style=text-align:center>🌬</td>
+<td><code>wind_face</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌀</td>
+<td><code>cyclone</code></td>
+<td style=text-align:center>🌈</td>
+<td><code>rainbow</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🌂</td>
+<td><code>closed_umbrella</code></td>
+<td style=text-align:center>☂️</td>
+<td><code>open_umbrella</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☂️</td>
+<td><code>umbrella</code></td>
+<td style=text-align:center>⛱️</td>
+<td><code>parasol_on_ground</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⚡</td>
+<td><code>zap</code></td>
+<td style=text-align:center>❄️</td>
+<td><code>snowflake</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☃️</td>
+<td><code>snowman_with_snow</code></td>
+<td style=text-align:center>☃️</td>
+<td><code>snowman</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☄️</td>
+<td><code>comet</code></td>
+<td style=text-align:center>🔥</td>
+<td><code>fire</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💧</td>
+<td><code>droplet</code></td>
+<td style=text-align:center>🌊</td>
+<td><code>ocean</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=activities class=headerLink><a href=#activities class=header-mark></a>Activities</h2><h3 id=event class=headerLink><a href=#event class=header-mark></a>Event</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🎃</td>
+<td><code>jack_o_lantern</code></td>
+<td style=text-align:center>🎄</td>
+<td><code>christmas_tree</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎆</td>
+<td><code>fireworks</code></td>
+<td style=text-align:center>🎇</td>
+<td><code>sparkler</code></td>
+</tr>
+<tr>
+<td style=text-align:center>✨</td>
+<td><code>sparkles</code></td>
+<td style=text-align:center>🎈</td>
+<td><code>balloon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎉</td>
+<td><code>tada</code></td>
+<td style=text-align:center>🎊</td>
+<td><code>confetti_ball</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎋</td>
+<td><code>tanabata_tree</code></td>
+<td style=text-align:center>🎍</td>
+<td><code>bamboo</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎎</td>
+<td><code>dolls</code></td>
+<td style=text-align:center>🎏</td>
+<td><code>flags</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎐</td>
+<td><code>wind_chime</code></td>
+<td style=text-align:center>🎑</td>
+<td><code>rice_scene</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎀</td>
+<td><code>ribbon</code></td>
+<td style=text-align:center>🎁</td>
+<td><code>gift</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎗️</td>
+<td><code>reminder_ribbon</code></td>
+<td style=text-align:center>🎟</td>
+<td><code>tickets</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎫</td>
+<td><code>ticket</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=award-medal class=headerLink><a href=#award-medal class=header-mark></a>Award Medal</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🎖️</td>
+<td><code>medal_military</code></td>
+<td style=text-align:center>🏆</td>
+<td><code>trophy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏅</td>
+<td><code>medal_sports</code></td>
+<td style=text-align:center>🥇</td>
+<td><code>1st_place_medal</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🥈</td>
+<td><code>2nd_place_medal</code></td>
+<td style=text-align:center>🥉</td>
+<td><code>3rd_place_medal</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=sport class=headerLink><a href=#sport class=header-mark></a>Sport</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>⚽</td>
+<td><code>soccer</code></td>
+<td style=text-align:center>⚾</td>
+<td><code>baseball</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏀</td>
+<td><code>basketball</code></td>
+<td style=text-align:center>🏐</td>
+<td><code>volleyball</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏈</td>
+<td><code>football</code></td>
+<td style=text-align:center>🏉</td>
+<td><code>rugby_football</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎾</td>
+<td><code>tennis</code></td>
+<td style=text-align:center>🎳</td>
+<td><code>bowling</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🦗</td>
+<td><code>cricket</code></td>
+<td style=text-align:center>🏑</td>
+<td><code>field_hockey</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏒</td>
+<td><code>ice_hockey</code></td>
+<td style=text-align:center>🏓</td>
+<td><code>ping_pong</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏸</td>
+<td><code>badminton</code></td>
+<td style=text-align:center>🥊</td>
+<td><code>boxing_glove</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🥋</td>
+<td><code>martial_arts_uniform</code></td>
+<td style=text-align:center>🥅</td>
+<td><code>goal_net</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⛳</td>
+<td><code>golf</code></td>
+<td style=text-align:center>⛸️</td>
+<td><code>ice_skate</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎣</td>
+<td><code>fishing_pole_and_fish</code></td>
+<td style=text-align:center>🎽</td>
+<td><code>running_shirt_with_sash</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎿</td>
+<td><code>ski</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=game class=headerLink><a href=#game class=header-mark></a>Game</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🎯</td>
+<td><code>dart</code></td>
+<td style=text-align:center>🎱</td>
+<td><code>8ball</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔮</td>
+<td><code>crystal_ball</code></td>
+<td style=text-align:center>🎮</td>
+<td><code>video_game</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕹️</td>
+<td><code>joystick</code></td>
+<td style=text-align:center>🎰</td>
+<td><code>slot_machine</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎲</td>
+<td><code>game_die</code></td>
+<td style=text-align:center>♠️</td>
+<td><code>spades</code></td>
+</tr>
+<tr>
+<td style=text-align:center>♥️</td>
+<td><code>hearts</code></td>
+<td style=text-align:center>♦️</td>
+<td><code>diamonds</code></td>
+</tr>
+<tr>
+<td style=text-align:center>♣️</td>
+<td><code>clubs</code></td>
+<td style=text-align:center>🃏</td>
+<td><code>black_joker</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🀄</td>
+<td><code>mahjong</code></td>
+<td style=text-align:center>🎴</td>
+<td><code>flower_playing_cards</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=arts--crafts class=headerLink><a href=#arts--crafts class=header-mark></a>Arts & Crafts</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🎭</td>
+<td><code>performing_arts</code></td>
+<td style=text-align:center>🖼</td>
+<td><code>framed_picture</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎨</td>
+<td><code>art</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id=objects class=headerLink><a href=#objects class=header-mark></a>Objects</h2><h3 id=clothing class=headerLink><a href=#clothing class=header-mark></a>Clothing</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>👓</td>
+<td><code>eyeglasses</code></td>
+<td style=text-align:center>🕶️</td>
+<td><code>dark_sunglasses</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👔</td>
+<td><code>necktie</code></td>
+<td style=text-align:center>👕</td>
+<td><code>shirt</code> <br> <code>tshirt</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👖</td>
+<td><code>jeans</code></td>
+<td style=text-align:center>👗</td>
+<td><code>dress</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👘</td>
+<td><code>kimono</code></td>
+<td style=text-align:center>👙</td>
+<td><code>bikini</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👚</td>
+<td><code>womans_clothes</code></td>
+<td style=text-align:center>👛</td>
+<td><code>purse</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👜</td>
+<td><code>handbag</code></td>
+<td style=text-align:center>👝</td>
+<td><code>pouch</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛍️</td>
+<td><code>shopping</code></td>
+<td style=text-align:center>🎒</td>
+<td><code>school_satchel</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👞</td>
+<td><code>mans_shoe</code> <br> <code>shoe</code></td>
+<td style=text-align:center>👟</td>
+<td><code>athletic_shoe</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👠</td>
+<td><code>high_heel</code></td>
+<td style=text-align:center>👡</td>
+<td><code>sandal</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👢</td>
+<td><code>boot</code></td>
+<td style=text-align:center>👑</td>
+<td><code>crown</code></td>
+</tr>
+<tr>
+<td style=text-align:center>👒</td>
+<td><code>womans_hat</code></td>
+<td style=text-align:center>🎩</td>
+<td><code>tophat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎓</td>
+<td><code>mortar_board</code></td>
+<td style=text-align:center>⛑️</td>
+<td><code>rescue_worker_helmet</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📿</td>
+<td><code>prayer_beads</code></td>
+<td style=text-align:center>💄</td>
+<td><code>lipstick</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💍</td>
+<td><code>ring</code></td>
+<td style=text-align:center>💎</td>
+<td><code>gem</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=sound class=headerLink><a href=#sound class=header-mark></a>Sound</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🔇</td>
+<td><code>mute</code></td>
+<td style=text-align:center>🔈</td>
+<td><code>speaker</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔉</td>
+<td><code>sound</code></td>
+<td style=text-align:center>🔊</td>
+<td><code>loud_sound</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📢</td>
+<td><code>loudspeaker</code></td>
+<td style=text-align:center>📣</td>
+<td><code>mega</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📯</td>
+<td><code>postal_horn</code></td>
+<td style=text-align:center>🔔</td>
+<td><code>bell</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔕</td>
+<td><code>no_bell</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=music class=headerLink><a href=#music class=header-mark></a>Music</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🎼</td>
+<td><code>musical_score</code></td>
+<td style=text-align:center>🎵</td>
+<td><code>musical_note</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎶</td>
+<td><code>notes</code></td>
+<td style=text-align:center>🎙️</td>
+<td><code>studio_microphone</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎚️</td>
+<td><code>level_slider</code></td>
+<td style=text-align:center>🎛️</td>
+<td><code>control_knobs</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎤</td>
+<td><code>microphone</code></td>
+<td style=text-align:center>🎧</td>
+<td><code>headphones</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📻</td>
+<td><code>radio</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=musical-instrument class=headerLink><a href=#musical-instrument class=header-mark></a>Musical Instrument</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🎷</td>
+<td><code>saxophone</code></td>
+<td style=text-align:center>🎸</td>
+<td><code>guitar</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎹</td>
+<td><code>musical_keyboard</code></td>
+<td style=text-align:center>🎺</td>
+<td><code>trumpet</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎻</td>
+<td><code>violin</code></td>
+<td style=text-align:center>🥁</td>
+<td><code>drum</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=phone class=headerLink><a href=#phone class=header-mark></a>Phone</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>📱</td>
+<td><code>iphone</code></td>
+<td style=text-align:center>📲</td>
+<td><code>calling</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☎️</td>
+<td><code>phone</code> <br> <code>telephone</code></td>
+<td style=text-align:center>📞</td>
+<td><code>telephone_receiver</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📟</td>
+<td><code>pager</code></td>
+<td style=text-align:center>📠</td>
+<td><code>fax</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=computer class=headerLink><a href=#computer class=header-mark></a>Computer</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🔋</td>
+<td><code>battery</code></td>
+<td style=text-align:center>🔌</td>
+<td><code>electric_plug</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💻</td>
+<td><code>computer</code></td>
+<td style=text-align:center>🖥️</td>
+<td><code>desktop_computer</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🖨️</td>
+<td><code>printer</code></td>
+<td style=text-align:center>⌨️</td>
+<td><code>keyboard</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🖱</td>
+<td><code>computer_mouse</code></td>
+<td style=text-align:center>🖲️</td>
+<td><code>trackball</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💽</td>
+<td><code>minidisc</code></td>
+<td style=text-align:center>💾</td>
+<td><code>floppy_disk</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💿</td>
+<td><code>cd</code></td>
+<td style=text-align:center>📀</td>
+<td><code>dvd</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=light--video class=headerLink><a href=#light--video class=header-mark></a>Light & Video</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🎥</td>
+<td><code>movie_camera</code></td>
+<td style=text-align:center>🎞️</td>
+<td><code>film_strip</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📽️</td>
+<td><code>film_projector</code></td>
+<td style=text-align:center>🎬</td>
+<td><code>clapper</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📺</td>
+<td><code>tv</code></td>
+<td style=text-align:center>📷</td>
+<td><code>camera</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📸</td>
+<td><code>camera_flash</code></td>
+<td style=text-align:center>📹</td>
+<td><code>video_camera</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📼</td>
+<td><code>vhs</code></td>
+<td style=text-align:center>🔍</td>
+<td><code>mag</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔎</td>
+<td><code>mag_right</code></td>
+<td style=text-align:center>🕯️</td>
+<td><code>candle</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💡</td>
+<td><code>bulb</code></td>
+<td style=text-align:center>🔦</td>
+<td><code>flashlight</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏮</td>
+<td><code>izakaya_lantern</code> <br> <code>lantern</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=book-paper class=headerLink><a href=#book-paper class=header-mark></a>Book Paper</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>📔</td>
+<td><code>notebook_with_decorative_cover</code></td>
+<td style=text-align:center>📕</td>
+<td><code>closed_book</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📖</td>
+<td><code>book</code> <br> <code>open_book</code></td>
+<td style=text-align:center>📗</td>
+<td><code>green_book</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📘</td>
+<td><code>blue_book</code></td>
+<td style=text-align:center>📙</td>
+<td><code>orange_book</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📚</td>
+<td><code>books</code></td>
+<td style=text-align:center>📓</td>
+<td><code>notebook</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📒</td>
+<td><code>ledger</code></td>
+<td style=text-align:center>📃</td>
+<td><code>page_with_curl</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📜</td>
+<td><code>scroll</code></td>
+<td style=text-align:center>📄</td>
+<td><code>page_facing_up</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📰</td>
+<td><code>newspaper</code></td>
+<td style=text-align:center>🗞️</td>
+<td><code>newspaper_roll</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📑</td>
+<td><code>bookmark_tabs</code></td>
+<td style=text-align:center>🔖</td>
+<td><code>bookmark</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏷️</td>
+<td><code>label</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=money class=headerLink><a href=#money class=header-mark></a>Money</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>💰</td>
+<td><code>moneybag</code></td>
+<td style=text-align:center>💴</td>
+<td><code>yen</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💵</td>
+<td><code>dollar</code></td>
+<td style=text-align:center>💶</td>
+<td><code>euro</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💷</td>
+<td><code>pound</code></td>
+<td style=text-align:center>💸</td>
+<td><code>money_with_wings</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💳</td>
+<td><code>credit_card</code></td>
+<td style=text-align:center>💹</td>
+<td><code>chart</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=mail class=headerLink><a href=#mail class=header-mark></a>Mail</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>✉️</td>
+<td><code>email</code> <br> <code>envelope</code></td>
+<td style=text-align:center>📧</td>
+<td><code>📧</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📨</td>
+<td><code>incoming_envelope</code></td>
+<td style=text-align:center>📩</td>
+<td><code>envelope_with_arrow</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📤</td>
+<td><code>outbox_tray</code></td>
+<td style=text-align:center>📥</td>
+<td><code>inbox_tray</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📦</td>
+<td><code>package</code></td>
+<td style=text-align:center>📫</td>
+<td><code>mailbox</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📪</td>
+<td><code>mailbox_closed</code></td>
+<td style=text-align:center>📬</td>
+<td><code>mailbox_with_mail</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📭</td>
+<td><code>mailbox_with_no_mail</code></td>
+<td style=text-align:center>📮</td>
+<td><code>postbox</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🗳</td>
+<td><code>ballot_box</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=writing class=headerLink><a href=#writing class=header-mark></a>Writing</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>✏️</td>
+<td><code>pencil2</code></td>
+<td style=text-align:center>✒️</td>
+<td><code>black_nib</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🖋</td>
+<td><code>fountain_pen</code></td>
+<td style=text-align:center>🖊</td>
+<td><code>pen</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🖌</td>
+<td><code>paintbrush</code></td>
+<td style=text-align:center>🖍</td>
+<td><code>crayon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📝</td>
+<td><code>memo</code> <br> <code>pencil</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=office class=headerLink><a href=#office class=header-mark></a>Office</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>💼</td>
+<td><code>briefcase</code></td>
+<td style=text-align:center>📁</td>
+<td><code>file_folder</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📂</td>
+<td><code>open_file_folder</code></td>
+<td style=text-align:center>🗂️</td>
+<td><code>card_index_dividers</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📅</td>
+<td><code>date</code></td>
+<td style=text-align:center>📆</td>
+<td><code>calendar</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🗒</td>
+<td><code>spiral_notepad</code></td>
+<td style=text-align:center>🗓</td>
+<td><code>spiral_calendar</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📇</td>
+<td><code>card_index</code></td>
+<td style=text-align:center>📈</td>
+<td><code>chart_with_upwards_trend</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📉</td>
+<td><code>chart_with_downwards_trend</code></td>
+<td style=text-align:center>📊</td>
+<td><code>bar_chart</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📋</td>
+<td><code>clipboard</code></td>
+<td style=text-align:center>📌</td>
+<td><code>pushpin</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📍</td>
+<td><code>round_pushpin</code></td>
+<td style=text-align:center>📎</td>
+<td><code>paperclip</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🖇</td>
+<td><code>paperclips</code></td>
+<td style=text-align:center>📏</td>
+<td><code>straight_ruler</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📐</td>
+<td><code>triangular_ruler</code></td>
+<td style=text-align:center>✂️</td>
+<td><code>scissors</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🗃️</td>
+<td><code>card_file_box</code></td>
+<td style=text-align:center>🗄️</td>
+<td><code>file_cabinet</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🗑️</td>
+<td><code>wastebasket</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=lock class=headerLink><a href=#lock class=header-mark></a>Lock</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🔒</td>
+<td><code>lock</code></td>
+<td style=text-align:center>🔓</td>
+<td><code>unlock</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔏</td>
+<td><code>lock_with_ink_pen</code></td>
+<td style=text-align:center>🔐</td>
+<td><code>closed_lock_with_key</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔑</td>
+<td><code>key</code></td>
+<td style=text-align:center>🗝️</td>
+<td><code>old_key</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=tool class=headerLink><a href=#tool class=header-mark></a>Tool</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🔨</td>
+<td><code>hammer</code></td>
+<td style=text-align:center>⛏️</td>
+<td><code>pick</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⚒️</td>
+<td><code>hammer_and_pick</code></td>
+<td style=text-align:center>🛠️</td>
+<td><code>hammer_and_wrench</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🗡</td>
+<td><code>dagger</code></td>
+<td style=text-align:center>⚔️</td>
+<td><code>crossed_swords</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔫</td>
+<td><code>gun</code></td>
+<td style=text-align:center>🏹</td>
+<td><code>bow_and_arrow</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛡️</td>
+<td><code>shield</code></td>
+<td style=text-align:center>🔧</td>
+<td><code>wrench</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔩</td>
+<td><code>nut_and_bolt</code></td>
+<td style=text-align:center>⚙️</td>
+<td><code>gear</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🗜</td>
+<td><code>clamp</code></td>
+<td style=text-align:center>⚖</td>
+<td><code>balance_scale</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔗</td>
+<td><code>link</code></td>
+<td style=text-align:center>⛓️</td>
+<td><code>chains</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=science class=headerLink><a href=#science class=header-mark></a>Science</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>⚗️</td>
+<td><code>alembic</code></td>
+<td style=text-align:center>🔬</td>
+<td><code>microscope</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔭</td>
+<td><code>telescope</code></td>
+<td style=text-align:center>🛰️</td>
+<td><code>satellite</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=medical class=headerLink><a href=#medical class=header-mark></a>Medical</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>💉</td>
+<td><code>syringe</code></td>
+<td style=text-align:center>💊</td>
+<td><code>pill</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=household class=headerLink><a href=#household class=header-mark></a>Household</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🚪</td>
+<td><code>door</code></td>
+<td style=text-align:center>🛏️</td>
+<td><code>bed</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛋️</td>
+<td><code>couch_and_lamp</code></td>
+<td style=text-align:center>🚽</td>
+<td><code>toilet</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚿</td>
+<td><code>shower</code></td>
+<td style=text-align:center>🛁</td>
+<td><code>bathtub</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛒</td>
+<td><code>shopping_cart</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=other-object class=headerLink><a href=#other-object class=header-mark></a>Other Object</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🚬</td>
+<td><code>smoking</code></td>
+<td style=text-align:center>⚰️</td>
+<td><code>coffin</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⚱️</td>
+<td><code>funeral_urn</code></td>
+<td style=text-align:center>🗿</td>
+<td><code>moyai</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=symbols class=headerLink><a href=#symbols class=header-mark></a>Symbols</h2><h3 id=transport-sign class=headerLink><a href=#transport-sign class=header-mark></a>Transport Sign</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🏧</td>
+<td><code>atm</code></td>
+<td style=text-align:center>🚮</td>
+<td><code>put_litter_in_its_place</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚰</td>
+<td><code>potable_water</code></td>
+<td style=text-align:center>♿</td>
+<td><code>wheelchair</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚹</td>
+<td><code>mens</code></td>
+<td style=text-align:center>🚺</td>
+<td><code>womens</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚻</td>
+<td><code>restroom</code></td>
+<td style=text-align:center>🚼</td>
+<td><code>baby_symbol</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚾</td>
+<td><code>wc</code></td>
+<td style=text-align:center>🛂</td>
+<td><code>passport_control</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛃</td>
+<td><code>customs</code></td>
+<td style=text-align:center>🛄</td>
+<td><code>baggage_claim</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🛅</td>
+<td><code>left_luggage</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=warning class=headerLink><a href=#warning class=header-mark></a>Warning</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>⚠️</td>
+<td><code>warning</code></td>
+<td style=text-align:center>🚸</td>
+<td><code>children_crossing</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⛔</td>
+<td><code>no_entry</code></td>
+<td style=text-align:center>🚫</td>
+<td><code>no_entry_sign</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚳</td>
+<td><code>no_bicycles</code></td>
+<td style=text-align:center>🚭</td>
+<td><code>no_smoking</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚯</td>
+<td><code>do_not_litter</code></td>
+<td style=text-align:center>🚱</td>
+<td><code>🚱</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🚷</td>
+<td><code>no_pedestrians</code></td>
+<td style=text-align:center>📵</td>
+<td><code>no_mobile_phones</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔞</td>
+<td><code>underage</code></td>
+<td style=text-align:center>☢</td>
+<td><code>radioactive</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☣</td>
+<td><code>biohazard</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=arrow class=headerLink><a href=#arrow class=header-mark></a>Arrow</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>⬆️</td>
+<td><code>arrow_up</code></td>
+<td style=text-align:center>↗️</td>
+<td><code>arrow_upper_right</code></td>
+</tr>
+<tr>
+<td style=text-align:center>➡️</td>
+<td><code>arrow_right</code></td>
+<td style=text-align:center>↘️</td>
+<td><code>arrow_lower_right</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⬇️</td>
+<td><code>arrow_down</code></td>
+<td style=text-align:center>↙️</td>
+<td><code>arrow_lower_left</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⬅️</td>
+<td><code>arrow_left</code></td>
+<td style=text-align:center>↖️</td>
+<td><code>arrow_upper_left</code></td>
+</tr>
+<tr>
+<td style=text-align:center>↕️</td>
+<td><code>arrow_up_down</code></td>
+<td style=text-align:center>↔️</td>
+<td><code>left_right_arrow</code></td>
+</tr>
+<tr>
+<td style=text-align:center>↩️</td>
+<td><code>leftwards_arrow_with_hook</code></td>
+<td style=text-align:center>↪️</td>
+<td><code>arrow_right_hook</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⤴️</td>
+<td><code>arrow_heading_up</code></td>
+<td style=text-align:center>⤵️</td>
+<td><code>arrow_heading_down</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔃</td>
+<td><code>arrows_clockwise</code></td>
+<td style=text-align:center>🔄</td>
+<td><code>arrows_counterclockwise</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔙</td>
+<td><code>back</code></td>
+<td style=text-align:center>🔚</td>
+<td><code>end</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔛</td>
+<td><code>on</code></td>
+<td style=text-align:center>🔜</td>
+<td><code>soon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔝</td>
+<td><code>top</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=religion class=headerLink><a href=#religion class=header-mark></a>Religion</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🛐</td>
+<td><code>place_of_worship</code></td>
+<td style=text-align:center>⚛️</td>
+<td><code>atom_symbol</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕉</td>
+<td><code>om</code></td>
+<td style=text-align:center>✡️</td>
+<td><code>star_of_david</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☸️</td>
+<td><code>wheel_of_dharma</code></td>
+<td style=text-align:center>☯️</td>
+<td><code>yin_yang</code></td>
+</tr>
+<tr>
+<td style=text-align:center>✝️</td>
+<td><code>latin_cross</code></td>
+<td style=text-align:center>☦️</td>
+<td><code>orthodox_cross</code></td>
+</tr>
+<tr>
+<td style=text-align:center>☪️</td>
+<td><code>star_and_crescent</code></td>
+<td style=text-align:center>☮️</td>
+<td><code>peace_symbol</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🕎</td>
+<td><code>menorah</code></td>
+<td style=text-align:center>🔯</td>
+<td><code>six_pointed_star</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=zodiac class=headerLink><a href=#zodiac class=header-mark></a>Zodiac</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>♈</td>
+<td><code>aries</code></td>
+<td style=text-align:center>♉</td>
+<td><code>taurus</code></td>
+</tr>
+<tr>
+<td style=text-align:center>♊</td>
+<td><code>gemini</code></td>
+<td style=text-align:center>♋</td>
+<td><code>cancer</code></td>
+</tr>
+<tr>
+<td style=text-align:center>♌</td>
+<td><code>leo</code></td>
+<td style=text-align:center>♍</td>
+<td><code>virgo</code></td>
+</tr>
+<tr>
+<td style=text-align:center>♎</td>
+<td><code>libra</code></td>
+<td style=text-align:center>♏</td>
+<td><code>scorpius</code></td>
+</tr>
+<tr>
+<td style=text-align:center>♐</td>
+<td><code>sagittarius</code></td>
+<td style=text-align:center>♑</td>
+<td><code>capricorn</code></td>
+</tr>
+<tr>
+<td style=text-align:center>♒</td>
+<td><code>aquarius</code></td>
+<td style=text-align:center>♓</td>
+<td><code>pisces</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⛎</td>
+<td><code>ophiuchus</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=av-symbol class=headerLink><a href=#av-symbol class=header-mark></a>Av Symbol</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🔀</td>
+<td><code>twisted_rightwards_arrows</code></td>
+<td style=text-align:center>🔁</td>
+<td><code>repeat</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔂</td>
+<td><code>repeat_one</code></td>
+<td style=text-align:center>▶️</td>
+<td><code>arrow_forward</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⏩</td>
+<td><code>fast_forward</code></td>
+<td style=text-align:center>⏭</td>
+<td><code>next_track_button</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⏯</td>
+<td><code>play_or_pause_button</code></td>
+<td style=text-align:center>◀️</td>
+<td><code>arrow_backward</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⏪</td>
+<td><code>rewind</code></td>
+<td style=text-align:center>⏮️</td>
+<td><code>previous_track_button</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔼</td>
+<td><code>arrow_up_small</code></td>
+<td style=text-align:center>⏫</td>
+<td><code>arrow_double_up</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔽</td>
+<td><code>arrow_down_small</code></td>
+<td style=text-align:center>⏬</td>
+<td><code>arrow_double_down</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⏸</td>
+<td><code>pause_button</code></td>
+<td style=text-align:center>⏹</td>
+<td><code>stop_button</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⏺</td>
+<td><code>record_button</code></td>
+<td style=text-align:center>🎦</td>
+<td><code>cinema</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔅</td>
+<td><code>low_brightness</code></td>
+<td style=text-align:center>🔆</td>
+<td><code>high_brightness</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📶</td>
+<td><code>signal_strength</code></td>
+<td style=text-align:center>📳</td>
+<td><code>vibration_mode</code></td>
+</tr>
+<tr>
+<td style=text-align:center>📴</td>
+<td><code>mobile_phone_off</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=math class=headerLink><a href=#math class=header-mark></a>Math</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>✖️</td>
+<td><code>heavy_multiplication_x</code></td>
+<td style=text-align:center>➕</td>
+<td><code>heavy_plus_sign</code></td>
+</tr>
+<tr>
+<td style=text-align:center>➖</td>
+<td><code>heavy_minus_sign</code></td>
+<td style=text-align:center>➗</td>
+<td><code>heavy_division_sign</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=punctuation class=headerLink><a href=#punctuation class=header-mark></a>Punctuation</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>‼️</td>
+<td><code>bangbang</code></td>
+<td style=text-align:center>⁉️</td>
+<td><code>interrobang</code></td>
+</tr>
+<tr>
+<td style=text-align:center>❓</td>
+<td><code>question</code></td>
+<td style=text-align:center>❔</td>
+<td><code>grey_question</code></td>
+</tr>
+<tr>
+<td style=text-align:center>❕</td>
+<td><code>grey_exclamation</code></td>
+<td style=text-align:center>❗</td>
+<td><code>exclamation</code> <br> <code>heavy_exclamation_mark</code></td>
+</tr>
+<tr>
+<td style=text-align:center>〰️</td>
+<td><code>wavy_dash</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=currency class=headerLink><a href=#currency class=header-mark></a>Currency</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>💱</td>
+<td><code>currency_exchange</code></td>
+<td style=text-align:center>💲</td>
+<td><code>heavy_dollar_sign</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=keycap class=headerLink><a href=#keycap class=header-mark></a>Keycap</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>#️⃣</td>
+<td><code>hash</code></td>
+<td style=text-align:center>*️⃣</td>
+<td><code>asterisk</code></td>
+</tr>
+<tr>
+<td style=text-align:center>0️⃣</td>
+<td><code>zero</code></td>
+<td style=text-align:center>1️⃣</td>
+<td><code>one</code></td>
+</tr>
+<tr>
+<td style=text-align:center>2️⃣</td>
+<td><code>two</code></td>
+<td style=text-align:center>3️⃣</td>
+<td><code>three</code></td>
+</tr>
+<tr>
+<td style=text-align:center>4️⃣</td>
+<td><code>four</code></td>
+<td style=text-align:center>5️⃣</td>
+<td><code>five</code></td>
+</tr>
+<tr>
+<td style=text-align:center>6️⃣</td>
+<td><code>six</code></td>
+<td style=text-align:center>7️⃣</td>
+<td><code>seven</code></td>
+</tr>
+<tr>
+<td style=text-align:center>8️⃣</td>
+<td><code>eight</code></td>
+<td style=text-align:center>9️⃣</td>
+<td><code>nine</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔟</td>
+<td><code>keycap_ten</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=alphabet class=headerLink><a href=#alphabet class=header-mark></a>Alphabet</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🔠</td>
+<td><code>capital_abcd</code></td>
+<td style=text-align:center>🔡</td>
+<td><code>abcd</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔢</td>
+<td><code>1234</code></td>
+<td style=text-align:center>🔣</td>
+<td><code>symbols</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔤</td>
+<td><code>abc</code></td>
+<td style=text-align:center>🅰️</td>
+<td><code>a</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🆎</td>
+<td><code>ab</code></td>
+<td style=text-align:center>🅱️</td>
+<td><code>b</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🆑</td>
+<td><code>cl</code></td>
+<td style=text-align:center>🆒</td>
+<td><code>cool</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🆓</td>
+<td><code>free</code></td>
+<td style=text-align:center>ℹ️</td>
+<td><code>information_source</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🆔</td>
+<td><code>id</code></td>
+<td style=text-align:center>ⓜ️</td>
+<td><code>m</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🆕</td>
+<td><code>new</code></td>
+<td style=text-align:center>🆖</td>
+<td><code>ng</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🅾️</td>
+<td><code>o2</code></td>
+<td style=text-align:center>🆗</td>
+<td><code>ok</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🅿️</td>
+<td><code>parking</code></td>
+<td style=text-align:center>🆘</td>
+<td><code>sos</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🆙</td>
+<td><code>up</code></td>
+<td style=text-align:center>🆚</td>
+<td><code>vs</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🈁</td>
+<td><code>koko</code></td>
+<td style=text-align:center>🈂️</td>
+<td><code>sa</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🈷️</td>
+<td><code>u6708</code></td>
+<td style=text-align:center>🈶</td>
+<td><code>u6709</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🈯</td>
+<td><code>u6307</code></td>
+<td style=text-align:center>🉐</td>
+<td><code>ideograph_advantage</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🈹</td>
+<td><code>u5272</code></td>
+<td style=text-align:center>🈚</td>
+<td><code>u7121</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🈲</td>
+<td><code>u7981</code></td>
+<td style=text-align:center>🉑</td>
+<td><code>accept</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🈸</td>
+<td><code>u7533</code></td>
+<td style=text-align:center>🈴</td>
+<td><code>u5408</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🈳</td>
+<td><code>u7a7a</code></td>
+<td style=text-align:center>㊗️</td>
+<td><code>congratulations</code></td>
+</tr>
+<tr>
+<td style=text-align:center>㊙️</td>
+<td><code>secret</code></td>
+<td style=text-align:center>🈺</td>
+<td><code>u55b6</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🈵</td>
+<td><code>u6e80</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=geometric class=headerLink><a href=#geometric class=header-mark></a>Geometric</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🔴</td>
+<td><code>red_circle</code></td>
+<td style=text-align:center>🔵</td>
+<td><code>large_blue_circle</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⚫</td>
+<td><code>black_circle</code></td>
+<td style=text-align:center>⚪</td>
+<td><code>white_circle</code></td>
+</tr>
+<tr>
+<td style=text-align:center>⬛</td>
+<td><code>black_large_square</code></td>
+<td style=text-align:center>⬜</td>
+<td><code>white_large_square</code></td>
+</tr>
+<tr>
+<td style=text-align:center>◼️</td>
+<td><code>black_medium_square</code></td>
+<td style=text-align:center>◻️</td>
+<td><code>white_medium_square</code></td>
+</tr>
+<tr>
+<td style=text-align:center>◾</td>
+<td><code>black_medium_small_square</code></td>
+<td style=text-align:center>◽</td>
+<td><code>white_medium_small_square</code></td>
+</tr>
+<tr>
+<td style=text-align:center>▪️</td>
+<td><code>black_small_square</code></td>
+<td style=text-align:center>▫️</td>
+<td><code>white_small_square</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔶</td>
+<td><code>large_orange_diamond</code></td>
+<td style=text-align:center>🔷</td>
+<td><code>large_blue_diamond</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔸</td>
+<td><code>small_orange_diamond</code></td>
+<td style=text-align:center>🔹</td>
+<td><code>small_blue_diamond</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔺</td>
+<td><code>small_red_triangle</code></td>
+<td style=text-align:center>🔻</td>
+<td><code>small_red_triangle_down</code></td>
+</tr>
+<tr>
+<td style=text-align:center>💠</td>
+<td><code>diamond_shape_with_a_dot_inside</code></td>
+<td style=text-align:center>🔘</td>
+<td><code>radio_button</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔳</td>
+<td><code>white_square_button</code></td>
+<td style=text-align:center>🔲</td>
+<td><code>black_square_button</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=other-symbol class=headerLink><a href=#other-symbol class=header-mark></a>Other Symbol</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>♻️</td>
+<td><code>recycle</code></td>
+<td style=text-align:center>⚜️</td>
+<td><code>fleur_de_lis</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔱</td>
+<td><code>trident</code></td>
+<td style=text-align:center>📛</td>
+<td><code>name_badge</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🔰</td>
+<td><code>beginner</code></td>
+<td style=text-align:center>⭕</td>
+<td><code>o</code></td>
+</tr>
+<tr>
+<td style=text-align:center>✅</td>
+<td><code>white_check_mark</code></td>
+<td style=text-align:center>☑️</td>
+<td><code>ballot_box_with_check</code></td>
+</tr>
+<tr>
+<td style=text-align:center>✔️</td>
+<td><code>heavy_check_mark</code></td>
+<td style=text-align:center>❌</td>
+<td><code>x</code></td>
+</tr>
+<tr>
+<td style=text-align:center>❎</td>
+<td><code>negative_squared_cross_mark</code></td>
+<td style=text-align:center>➰</td>
+<td><code>curly_loop</code></td>
+</tr>
+<tr>
+<td style=text-align:center>➿</td>
+<td><code>loop</code></td>
+<td style=text-align:center>〽️</td>
+<td><code>part_alternation_mark</code></td>
+</tr>
+<tr>
+<td style=text-align:center>✳️</td>
+<td><code>eight_spoked_asterisk</code></td>
+<td style=text-align:center>✴️</td>
+<td><code>eight_pointed_black_star</code></td>
+</tr>
+<tr>
+<td style=text-align:center>❇️</td>
+<td><code>sparkle</code></td>
+<td style=text-align:center>©️</td>
+<td><code>copyright</code></td>
+</tr>
+<tr>
+<td style=text-align:center>®️</td>
+<td><code>registered</code></td>
+<td style=text-align:center>™️</td>
+<td><code>tm</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=flags class=headerLink><a href=#flags class=header-mark></a>Flags</h2><h3 id=common-flags class=headerLink><a href=#common-flags class=header-mark></a>Common Flags</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🏁</td>
+<td><code>checkered_flag</code></td>
+<td style=text-align:center>🚩</td>
+<td><code>triangular_flag_on_post</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🎌</td>
+<td><code>crossed_flags</code></td>
+<td style=text-align:center>🏴</td>
+<td><code>black_flag</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🏳</td>
+<td><code>white_flag</code></td>
+<td style=text-align:center>🏳️‍🌈</td>
+<td><code>rainbow_flag</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=country-and-region-flags class=headerLink><a href=#country-and-region-flags class=header-mark></a>Country and Region Flags</h3><table>
+<thead>
+<tr>
+<th style=text-align:center>icon</th>
+<th>code</th>
+<th style=text-align:center>icon</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>🇦🇩</td>
+<td><code>andorra</code></td>
+<td style=text-align:center>🇦🇪</td>
+<td><code>united_arab_emirates</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇦🇫</td>
+<td><code>afghanistan</code></td>
+<td style=text-align:center>🇦🇬</td>
+<td><code>antigua_barbuda</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇦🇮</td>
+<td><code>anguilla</code></td>
+<td style=text-align:center>🇦🇱</td>
+<td><code>albania</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇦🇲</td>
+<td><code>armenia</code></td>
+<td style=text-align:center>🇦🇴</td>
+<td><code>angola</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇦🇶</td>
+<td><code>antarctica</code></td>
+<td style=text-align:center>🇦🇷</td>
+<td><code>argentina</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇦🇸</td>
+<td><code>american_samoa</code></td>
+<td style=text-align:center>🇦🇹</td>
+<td><code>austria</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇦🇺</td>
+<td><code>australia</code></td>
+<td style=text-align:center>🇦🇼</td>
+<td><code>aruba</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇦🇽</td>
+<td><code>aland_islands</code></td>
+<td style=text-align:center>🇦🇿</td>
+<td><code>azerbaijan</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇦</td>
+<td><code>bosnia_herzegovina</code></td>
+<td style=text-align:center>🇧🇧</td>
+<td><code>barbados</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇩</td>
+<td><code>bangladesh</code></td>
+<td style=text-align:center>🇧🇪</td>
+<td><code>belgium</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇫</td>
+<td><code>burkina_faso</code></td>
+<td style=text-align:center>🇧🇬</td>
+<td><code>bulgaria</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇭</td>
+<td><code>bahrain</code></td>
+<td style=text-align:center>🇧🇮</td>
+<td><code>burundi</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇯</td>
+<td><code>benin</code></td>
+<td style=text-align:center>🇧🇱</td>
+<td><code>st_barthelemy</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇲</td>
+<td><code>bermuda</code></td>
+<td style=text-align:center>🇧🇳</td>
+<td><code>brunei</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇴</td>
+<td><code>bolivia</code></td>
+<td style=text-align:center>🇧🇶</td>
+<td><code>caribbean_netherlands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇷</td>
+<td><code>brazil</code></td>
+<td style=text-align:center>🇧🇸</td>
+<td><code>bahamas</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇹</td>
+<td><code>bhutan</code></td>
+<td style=text-align:center>🇧🇼</td>
+<td><code>botswana</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇧🇾</td>
+<td><code>belarus</code></td>
+<td style=text-align:center>🇧🇿</td>
+<td><code>belize</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇦</td>
+<td><code>canada</code></td>
+<td style=text-align:center>🇨🇨</td>
+<td><code>cocos_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇩</td>
+<td><code>congo_kinshasa</code></td>
+<td style=text-align:center>🇨🇫</td>
+<td><code>central_african_republic</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇬</td>
+<td><code>congo_brazzaville</code></td>
+<td style=text-align:center>🇨🇭</td>
+<td><code>switzerland</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇮</td>
+<td><code>cote_divoire</code></td>
+<td style=text-align:center>🇨🇰</td>
+<td><code>cook_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇱</td>
+<td><code>chile</code></td>
+<td style=text-align:center>🇨🇲</td>
+<td><code>cameroon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇳</td>
+<td><code>cn</code></td>
+<td style=text-align:center>🇨🇴</td>
+<td><code>colombia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇷</td>
+<td><code>costa_rica</code></td>
+<td style=text-align:center>🇨🇺</td>
+<td><code>cuba</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇻</td>
+<td><code>cape_verde</code></td>
+<td style=text-align:center>🇨🇼</td>
+<td><code>curacao</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇽</td>
+<td><code>christmas_island</code></td>
+<td style=text-align:center>🇨🇾</td>
+<td><code>cyprus</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇨🇿</td>
+<td><code>czech_republic</code></td>
+<td style=text-align:center>🇩🇪</td>
+<td><code>de</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇩🇯</td>
+<td><code>djibouti</code></td>
+<td style=text-align:center>🇩🇰</td>
+<td><code>denmark</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇩🇲</td>
+<td><code>dominica</code></td>
+<td style=text-align:center>🇩🇴</td>
+<td><code>dominican_republic</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇩🇿</td>
+<td><code>algeria</code></td>
+<td style=text-align:center>🇪🇨</td>
+<td><code>ecuador</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇪🇪</td>
+<td><code>estonia</code></td>
+<td style=text-align:center>🇪🇬</td>
+<td><code>egypt</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇪🇭</td>
+<td><code>western_sahara</code></td>
+<td style=text-align:center>🇪🇷</td>
+<td><code>eritrea</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇪🇸</td>
+<td><code>es</code></td>
+<td style=text-align:center>🇪🇹</td>
+<td><code>ethiopia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇪🇺</td>
+<td><code>eu</code> <br> <code>european_union</code></td>
+<td style=text-align:center>🇫🇮</td>
+<td><code>finland</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇫🇯</td>
+<td><code>fiji</code></td>
+<td style=text-align:center>🇫🇰</td>
+<td><code>falkland_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇫🇲</td>
+<td><code>micronesia</code></td>
+<td style=text-align:center>🇫🇴</td>
+<td><code>faroe_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇫🇷</td>
+<td><code>fr</code></td>
+<td style=text-align:center>🇬🇦</td>
+<td><code>gabon</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇬🇧</td>
+<td><code>gb</code> <br> <code>uk</code></td>
+<td style=text-align:center>🇬🇩</td>
+<td><code>grenada</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇬🇪</td>
+<td><code>georgia</code></td>
+<td style=text-align:center>🇬🇫</td>
+<td><code>french_guiana</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇬🇬</td>
+<td><code>guernsey</code></td>
+<td style=text-align:center>🇬🇭</td>
+<td><code>ghana</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇬🇮</td>
+<td><code>gibraltar</code></td>
+<td style=text-align:center>🇬🇱</td>
+<td><code>greenland</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇬🇲</td>
+<td><code>gambia</code></td>
+<td style=text-align:center>🇬🇳</td>
+<td><code>guinea</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇬🇵</td>
+<td><code>guadeloupe</code></td>
+<td style=text-align:center>🇬🇶</td>
+<td><code>equatorial_guinea</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇬🇷</td>
+<td><code>greece</code></td>
+<td style=text-align:center>🇬🇸</td>
+<td><code>south_georgia_south_sandwich_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇬🇹</td>
+<td><code>guatemala</code></td>
+<td style=text-align:center>🇬🇺</td>
+<td><code>guam</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇬🇼</td>
+<td><code>guinea_bissau</code></td>
+<td style=text-align:center>🇬🇾</td>
+<td><code>guyana</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇭🇰</td>
+<td><code>hong_kong</code></td>
+<td style=text-align:center>🇭🇳</td>
+<td><code>honduras</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇭🇷</td>
+<td><code>croatia</code></td>
+<td style=text-align:center>🇭🇹</td>
+<td><code>haiti</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇭🇺</td>
+<td><code>hungary</code></td>
+<td style=text-align:center>🇮🇨</td>
+<td><code>canary_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇮🇩</td>
+<td><code>indonesia</code></td>
+<td style=text-align:center>🇮🇪</td>
+<td><code>ireland</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇮🇱</td>
+<td><code>israel</code></td>
+<td style=text-align:center>🇮🇲</td>
+<td><code>isle_of_man</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇮🇳</td>
+<td><code>india</code></td>
+<td style=text-align:center>🇮🇴</td>
+<td><code>british_indian_ocean_territory</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇮🇶</td>
+<td><code>iraq</code></td>
+<td style=text-align:center>🇮🇷</td>
+<td><code>iran</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇮🇸</td>
+<td><code>iceland</code></td>
+<td style=text-align:center>🇮🇹</td>
+<td><code>it</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇯🇪</td>
+<td><code>jersey</code></td>
+<td style=text-align:center>🇯🇲</td>
+<td><code>jamaica</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇯🇴</td>
+<td><code>jordan</code></td>
+<td style=text-align:center>🇯🇵</td>
+<td><code>jp</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇰🇪</td>
+<td><code>kenya</code></td>
+<td style=text-align:center>🇰🇬</td>
+<td><code>kyrgyzstan</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇰🇭</td>
+<td><code>cambodia</code></td>
+<td style=text-align:center>🇰🇮</td>
+<td><code>kiribati</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇰🇲</td>
+<td><code>comoros</code></td>
+<td style=text-align:center>🇰🇳</td>
+<td><code>st_kitts_nevis</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇰🇵</td>
+<td><code>north_korea</code></td>
+<td style=text-align:center>🇰🇷</td>
+<td><code>kr</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇰🇼</td>
+<td><code>kuwait</code></td>
+<td style=text-align:center>🇰🇾</td>
+<td><code>cayman_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇰🇿</td>
+<td><code>kazakhstan</code></td>
+<td style=text-align:center>🇱🇦</td>
+<td><code>laos</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇱🇧</td>
+<td><code>lebanon</code></td>
+<td style=text-align:center>🇱🇨</td>
+<td><code>st_lucia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇱🇮</td>
+<td><code>liechtenstein</code></td>
+<td style=text-align:center>🇱🇰</td>
+<td><code>sri_lanka</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇱🇷</td>
+<td><code>liberia</code></td>
+<td style=text-align:center>🇱🇸</td>
+<td><code>lesotho</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇱🇹</td>
+<td><code>lithuania</code></td>
+<td style=text-align:center>🇱🇺</td>
+<td><code>luxembourg</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇱🇻</td>
+<td><code>latvia</code></td>
+<td style=text-align:center>🇱🇾</td>
+<td><code>libya</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇦</td>
+<td><code>morocco</code></td>
+<td style=text-align:center>🇲🇨</td>
+<td><code>monaco</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇩</td>
+<td><code>moldova</code></td>
+<td style=text-align:center>🇲🇪</td>
+<td><code>montenegro</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇬</td>
+<td><code>madagascar</code></td>
+<td style=text-align:center>🇲🇭</td>
+<td><code>marshall_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇰</td>
+<td><code>macedonia</code></td>
+<td style=text-align:center>🇲🇱</td>
+<td><code>mali</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇲</td>
+<td><code>myanmar</code></td>
+<td style=text-align:center>🇲🇳</td>
+<td><code>mongolia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇴</td>
+<td><code>macau</code></td>
+<td style=text-align:center>🇲🇵</td>
+<td><code>northern_mariana_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇶</td>
+<td><code>martinique</code></td>
+<td style=text-align:center>🇲🇷</td>
+<td><code>mauritania</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇸</td>
+<td><code>montserrat</code></td>
+<td style=text-align:center>🇲🇹</td>
+<td><code>malta</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇺</td>
+<td><code>mauritius</code></td>
+<td style=text-align:center>🇲🇻</td>
+<td><code>maldives</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇼</td>
+<td><code>malawi</code></td>
+<td style=text-align:center>🇲🇽</td>
+<td><code>mexico</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇲🇾</td>
+<td><code>malaysia</code></td>
+<td style=text-align:center>🇲🇿</td>
+<td><code>mozambique</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇳🇦</td>
+<td><code>namibia</code></td>
+<td style=text-align:center>🇳🇨</td>
+<td><code>new_caledonia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇳🇪</td>
+<td><code>niger</code></td>
+<td style=text-align:center>🇳🇫</td>
+<td><code>norfolk_island</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇳🇬</td>
+<td><code>nigeria</code></td>
+<td style=text-align:center>🇳🇮</td>
+<td><code>nicaragua</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇳🇱</td>
+<td><code>netherlands</code></td>
+<td style=text-align:center>🇳🇴</td>
+<td><code>norway</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇳🇵</td>
+<td><code>nepal</code></td>
+<td style=text-align:center>🇳🇷</td>
+<td><code>nauru</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇳🇺</td>
+<td><code>niue</code></td>
+<td style=text-align:center>🇳🇿</td>
+<td><code>new_zealand</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇴🇲</td>
+<td><code>oman</code></td>
+<td style=text-align:center>🇵🇦</td>
+<td><code>panama</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇵🇪</td>
+<td><code>peru</code></td>
+<td style=text-align:center>🇵🇫</td>
+<td><code>french_polynesia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇵🇬</td>
+<td><code>papua_new_guinea</code></td>
+<td style=text-align:center>🇵🇭</td>
+<td><code>philippines</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇵🇰</td>
+<td><code>pakistan</code></td>
+<td style=text-align:center>🇵🇱</td>
+<td><code>poland</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇵🇲</td>
+<td><code>st_pierre_miquelon</code></td>
+<td style=text-align:center>🇵🇳</td>
+<td><code>pitcairn_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇵🇷</td>
+<td><code>puerto_rico</code></td>
+<td style=text-align:center>🇵🇸</td>
+<td><code>palestinian_territories</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇵🇹</td>
+<td><code>portugal</code></td>
+<td style=text-align:center>🇵🇼</td>
+<td><code>palau</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇵🇾</td>
+<td><code>paraguay</code></td>
+<td style=text-align:center>🇶🇦</td>
+<td><code>qatar</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇷🇪</td>
+<td><code>reunion</code></td>
+<td style=text-align:center>🇷🇴</td>
+<td><code>romania</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇷🇸</td>
+<td><code>serbia</code></td>
+<td style=text-align:center>🇷🇺</td>
+<td><code>ru</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇷🇼</td>
+<td><code>rwanda</code></td>
+<td style=text-align:center>🇸🇦</td>
+<td><code>saudi_arabia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇧</td>
+<td><code>solomon_islands</code></td>
+<td style=text-align:center>🇸🇨</td>
+<td><code>seychelles</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇩</td>
+<td><code>sudan</code></td>
+<td style=text-align:center>🇸🇪</td>
+<td><code>sweden</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇬</td>
+<td><code>singapore</code></td>
+<td style=text-align:center>🇸🇭</td>
+<td><code>st_helena</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇮</td>
+<td><code>slovenia</code></td>
+<td style=text-align:center>🇸🇰</td>
+<td><code>slovakia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇱</td>
+<td><code>sierra_leone</code></td>
+<td style=text-align:center>🇸🇲</td>
+<td><code>san_marino</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇳</td>
+<td><code>senegal</code></td>
+<td style=text-align:center>🇸🇴</td>
+<td><code>somalia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇷</td>
+<td><code>suriname</code></td>
+<td style=text-align:center>🇸🇸</td>
+<td><code>south_sudan</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇹</td>
+<td><code>sao_tome_principe</code></td>
+<td style=text-align:center>🇸🇻</td>
+<td><code>el_salvador</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇽</td>
+<td><code>sint_maarten</code></td>
+<td style=text-align:center>🇸🇾</td>
+<td><code>syria</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇸🇿</td>
+<td><code>swaziland</code></td>
+<td style=text-align:center>🇹🇨</td>
+<td><code>turks_caicos_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇹🇩</td>
+<td><code>chad</code></td>
+<td style=text-align:center>🇹🇫</td>
+<td><code>french_southern_territories</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇹🇬</td>
+<td><code>togo</code></td>
+<td style=text-align:center>🇹🇭</td>
+<td><code>thailand</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇹🇯</td>
+<td><code>tajikistan</code></td>
+<td style=text-align:center>🇹🇰</td>
+<td><code>tokelau</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇹🇱</td>
+<td><code>timor_leste</code></td>
+<td style=text-align:center>🇹🇲</td>
+<td><code>turkmenistan</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇹🇳</td>
+<td><code>tunisia</code></td>
+<td style=text-align:center>🇹🇴</td>
+<td><code>tonga</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇹🇷</td>
+<td><code>tr</code></td>
+<td style=text-align:center>🇹🇹</td>
+<td><code>trinidad_tobago</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇹🇻</td>
+<td><code>tuvalu</code></td>
+<td style=text-align:center>🇹🇼</td>
+<td><code>taiwan</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇹🇿</td>
+<td><code>tanzania</code></td>
+<td style=text-align:center>🇺🇦</td>
+<td><code>ukraine</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇺🇬</td>
+<td><code>uganda</code></td>
+<td style=text-align:center>🇺🇸</td>
+<td><code>us</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇺🇾</td>
+<td><code>uruguay</code></td>
+<td style=text-align:center>🇺🇿</td>
+<td><code>uzbekistan</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇻🇦</td>
+<td><code>vatican_city</code></td>
+<td style=text-align:center>🇻🇨</td>
+<td><code>st_vincent_grenadines</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇻🇪</td>
+<td><code>venezuela</code></td>
+<td style=text-align:center>🇻🇬</td>
+<td><code>british_virgin_islands</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇻🇮</td>
+<td><code>us_virgin_islands</code></td>
+<td style=text-align:center>🇻🇳</td>
+<td><code>vietnam</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇻🇺</td>
+<td><code>vanuatu</code></td>
+<td style=text-align:center>🇼🇫</td>
+<td><code>wallis_futuna</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇼🇸</td>
+<td><code>samoa</code></td>
+<td style=text-align:center>🇽🇰</td>
+<td><code>kosovo</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇾🇪</td>
+<td><code>yemen</code></td>
+<td style=text-align:center>🇾🇹</td>
+<td><code>mayotte</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇿🇦</td>
+<td><code>south_africa</code></td>
+<td style=text-align:center>🇿🇲</td>
+<td><code>zambia</code></td>
+</tr>
+<tr>
+<td style=text-align:center>🇿🇼</td>
+<td><code>zimbabwe</code></td>
+<td style=text-align:center></td>
+<td></td>
+</tr>
+</tbody>
+</table></div><footer>
+<div class=post>
+<div class=post-share><div class=share-link>
+<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://fangr.cc/emoji-support/ data-title="Emoji Support" data-via=ryderfang data-hashtags=emoji><span class="svg-social-icon icon-twitter"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://fangr.cc/emoji-support/ data-hashtag=emoji><span class="svg-social-icon icon-facebook"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://fangr.cc/emoji-support/ data-title="Emoji Support" data-ralateuid=fr9166><span class="svg-social-icon icon-weibo"></span></a>
+</div></div>
+<div class=block-author>
+<div class=author-avatar><a href=https://ryderfang.com target=_blank><img alt="CODER, MARRIED" src=static/avatar.png></a></div>
+<div class=author-info>
+<div class=name><a href=https://ryderfang.com target=_blank></a></div>
+<div class=number-posts>CODER, MARRIED</span></div>
+</div>
+</div>
+<div class=post-tags><a href=/tags/emoji/ class=tag>emoji</a></div></div>
+</footer></div>
+<div id=toc-final></div>
+</div>
+</article>
+<section class="page single comments content-block-position">
+<h1 class=display-hidden>Комментарии</h1><div id=comments><div id=utterances></div><noscript>
+Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.
+</noscript></div></section></div>
+</main><footer class=footer>
+<div class=footer-container><div class=footer-line>© 2021 Ryder Fang · &lt;/> Powered by <a href=https://gohugo.io/><u><strong>Hugo</strong></u></a> and <a href=https://github.com/uPagge/uBlogger><u><strong>uBlogger theme</strong></u></a></div><div class=footer-line></div>
+</div>
+</footer></div>
+<aside id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
+<i class="svg-icon icon-arrow-up"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论>
+<i class="svg-icon icon-comments-fixed"></i>
+</a>
+</aside><script src=/lib/smooth-scroll/smooth-scroll.min.js></script><script src=/lib/autocomplete/autocomplete.min.js></script><script src=/lib/algoliasearch/algoliasearch-lite.umd.min.js></script><script src=/lib/clipboard/clipboard.min.js></script><script src=/lib/sharer/sharer.min.js></script><script src=/lib/prismjs/prism.js></script><script>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"Utterances",lightTheme:"github-light",repo:"ryderfang/ryderfang.github.io"}},search:{algoliaAppID:"KNWHHR2LLW",algoliaIndex:"ryder_blog",algoliaSearchKey:"99980e3c2014fb8c463a83c546a3f4a6",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:30,type:"algolia"}}</script><script src=/js/theme.min.js></script></body>
+</html>
