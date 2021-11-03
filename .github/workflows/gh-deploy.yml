@@ -34,7 +34,7 @@ jobs:
           publish_dir: ./public
           cname: fangr.cc
           allow_empty_commit: true
-          keep_files: true
+          keep_files: false
           commit_message: ${{ github.event.head_commit.message }}
 
 
