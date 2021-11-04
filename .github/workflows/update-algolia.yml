@@ -23,5 +23,5 @@ jobs:
           ALGOLIA_APP_ID: KNWHHR2LLW
           ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
           ALGOLIA_INDEX_NAME: ryder_blog
-          ALGOLIA_INDEX_FILE: public/index.json
+          ALGOLIA_INDEX_FILE: index.json
         run: npm install atomic-algolia && npm run algolia
