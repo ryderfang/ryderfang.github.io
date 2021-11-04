@@ -1,0 +1,27 @@
+name: Update Search
+
+  on:
+    workflow_dispatch: # run the action manually
+
+  jobs:
+    deploy:
+      runs-on: ubuntu-20.04
+      steps:
+         - uses: actions/checkout@v2
+          with:
+            ref: 'gh-pages' # branch
+            submodules: false
+            fetch-depth: 0
+        
+        - name: Setup Node
+          uses: actions/setup-node@v2.1.0
+          with:
+            node-version: '12.x'
+        
+        - name: Algolia
+          env:
+            ALGOLIA_APP_ID: KNWHHR2LLW
+            ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
+            ALGOLIA_INDEX_NAME: ryder_blog
+            ALGOLIA_INDEX_FILE: public/index.json
+          run: npm install atomic-algolia && npm run algolia
