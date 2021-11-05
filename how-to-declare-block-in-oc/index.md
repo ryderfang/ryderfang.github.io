@@ -3,9 +3,11 @@
 
 来自一个神奇的域名
 
-```bash
-http://fuckingblocksyntax.com/
-```
+{{< admonition note >}}
+
+[http://fuckingblocksyntax.com/](http://fuckingblocksyntax.com/)
+
+{{< /admonition >}}
 ## Declaration
 
 ### local variable
