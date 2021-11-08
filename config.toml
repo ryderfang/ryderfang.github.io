@@ -184,9 +184,9 @@ enableEmoji = true
         # 网站创立年份
         since = 2016
         # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
-        icp = "沪备"
+        icp = '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">沪ICP备2021031507号-1</a>'
         # 许可协议信息 (支持 HTML 格式)
-        license= '<a href="https://en.wikipedia.org/wiki/Unlicense" target="_blank"><u>Unlicense</u></a>'
+        license= '<a href="https://opensource.org/licenses/MIT/" target="_blank">MIT</a>'
     
     # Section (所有文章) 页面配置
     [params.section]
