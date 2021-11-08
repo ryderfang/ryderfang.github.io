@@ -120,7 +120,7 @@ enableEmoji = true
           # Gravatar Email for preferred avatar in home page
           gravatarEmail = ""
           # URL of avatar shown in home page
-          avatarURL = "avatar.png"
+          avatarURL = "/avatar.png"
           # title shown in home page (HTML format is supported)
           title = "Ryder's Cube"
           # subtitle shown in home page (HTML format is supported)
@@ -138,7 +138,6 @@ enableEmoji = true
       [languages.zh-cn.params.social]
         GitHub = "ryderfang"
         Twitter = "ryderfang"
-        Weibo = "fr9166"
         Email = "fray9166@gmail.com"
         RSS = true
 
@@ -163,7 +162,7 @@ enableEmoji = true
         # 页面头部导航栏标题配置
         [params.header.title]
             # LOGO 的 URL
-            logo = ""
+            logo = "/logo.jpg"
             # 标题名称
             name = "光锥之内皆是命运"
             # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
@@ -175,7 +174,7 @@ enableEmoji = true
     [params.footer]
         enable = true
         # 自定义内容 (支持 HTML 格式)
-        custom = '© 2021 Ryder Fang · &lt;/&gt; Powered by <a href="https://gohugo.io/"><u><strong>Hugo</strong></u></a> and <a href="https://github.com/uPagge/uBlogger"><u><strong>uBlogger theme</strong></u></a>'
+        custom = '© 2021 Ryder Fang · &lt;/&gt; Powered by <a href="https://gohugo.io/" target="_blank"><u><strong>Hugo</strong></u></a> and <a href="https://github.com/uPagge/uBlogger" target="_blank"><u><strong>uBlogger</strong></u></a>'
         # 是否显示 Hugo 和主题信息
         hugo = false
         # 是否显示版权信息
@@ -185,9 +184,9 @@ enableEmoji = true
         # 网站创立年份
         since = 2016
         # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
-        icp = ""
+        icp = "沪备"
         # 许可协议信息 (支持 HTML 格式)
-        license= ''
+        license= '<a href="https://en.wikipedia.org/wiki/Unlicense" target="_blank"><u>Unlicense</u></a>'
     
     # Section (所有文章) 页面配置
     [params.section]

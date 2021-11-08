@@ -12,6 +12,8 @@ date: 2017-05-31
 [http://fuckingblocksyntax.com/](http://fuckingblocksyntax.com/)
 
 {{< /admonition >}}
+
+<!--more-->
 ## Declaration
 
 ### local variable
@@ -25,8 +27,6 @@ returnType (^blockName)(parameterTypes) = ^returnType(parameters) {...};
 ``` objectivec
 @property (nonatomic, copy, nullability) returnType (^blockName)(parameterTypes);
 ```
-
-<!-- more -->
 
 ### method parameter
 
