@@ -5,7 +5,15 @@
 <meta name=twitter:image content>
 <meta name=twitter:title content="在 ObjC 中如何定义 Block">
 <meta name=twitter:description content><meta name=twitter:creator content="@ryderfang"><meta name=Description content="About uBlogger Theme"><meta property="og:title" content="在 ObjC 中如何定义 Block">
-<meta property="og:description" content="来自一个神奇的域名 注意 http://fuckingblocksyntax.com/ Declarationlocal variablereturnType (^blockName)(parameterTypes) = ^returnType(parameters) {...}; property@property (nonatomic, copy, nullability) returnType (^blockName)(parameterTypes); method parameter- (void)someMethodThatTakesABlock:(returnType (^nullability)(parameterTypes))blockName; argument to a method call[someObject someMethodThatTakesABlock:^returnType (parameters) {...}]; typedeftypedef returnType (^TypeName)(parameterTypes); TypeName blockName = ^returnType(parameters) {...}; Hint block 在 ARC 下是否声明为 copy 属性 It is still a good idea to declare block properties as having copy">
+<meta property="og:description" content="来自一个神奇的域名
+
+        
+            注意
+        
+        
+            http://fuckingblocksyntax.com/
+        
+    ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://fangr.cc/how-to-declare-block-in-oc/"><meta property="og:image" content="https://fangr.cc/logo.png"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2017-05-31T00:00:00+00:00">
@@ -21,7 +29,7 @@
 <div class="desktop header" id=header-desktop>
 <div class=header-wrapper>
 <div class=header-title>
-<a href=/ title="$HOME - 给岁月以文明" class="header-logo logo-svg"><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+<a href=/ title="$HOME - 给岁月以文明" class="header-logo logo-svg"><img loading=lazy decoding=async class=logo src=/logo.jpg alt=/logo.jpg title=/logo.jpg><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
 </div>
 <div class=menu>
 <nav>
@@ -57,7 +65,7 @@
 <div class=header-container>
 <div class=header-wrapper>
 <div class=header-title>
-<a href=/ title="$HOME - 给岁月以文明" class=header-logo><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+<a href=/ title="$HOME - 给岁月以文明" class=header-logo><img loading=lazy decoding=async class=logo src=/logo.jpg alt=/logo.jpg title=/logo.jpg><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
 </div>
 <div class=menu-toggle id=menu-toggle-mobile>
 <span></span><span></span><span></span>
@@ -161,8 +169,7 @@
 </div>
 <h2 id=declaration class=headerLink><a href=#declaration class=header-mark></a>Declaration</h2><h3 id=local-variable class=headerLink><a href=#local-variable class=header-mark></a>local variable</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objectivec data-lang=objectivec><span class=n>returnType</span> <span class=p>(</span><span class=o>^</span><span class=n>blockName</span><span class=p>)(</span><span class=n>parameterTypes</span><span class=p>)</span> <span class=o>=</span> <span class=o>^</span><span class=n>returnType</span><span class=p>(</span><span class=n>parameters</span><span class=p>)</span> <span class=p>{...};</span>
 </code></pre></div><h3 id=property class=headerLink><a href=#property class=header-mark></a>property</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objectivec data-lang=objectivec><span class=k>@property</span> <span class=p>(</span><span class=k>nonatomic</span><span class=p>,</span> <span class=k>copy</span><span class=p>,</span> <span class=n>nullability</span><span class=p>)</span> <span class=n>returnType</span> <span class=p>(</span><span class=o>^</span><span class=n>blockName</span><span class=p>)(</span><span class=n>parameterTypes</span><span class=p>);</span>
-</code></pre></div>
-<h3 id=method-parameter class=headerLink><a href=#method-parameter class=header-mark></a>method parameter</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objectivec data-lang=objectivec><span class=p>-</span> <span class=p>(</span><span class=kt>void</span><span class=p>)</span><span class=nf>someMethodThatTakesABlock:</span><span class=p>(</span><span class=n>returnType</span> <span class=p>(</span><span class=o>^</span><span class=n>nullability</span><span class=p>)(</span><span class=n>parameterTypes</span><span class=p>))</span><span class=nv>blockName</span><span class=p>;</span>
+</code></pre></div><h3 id=method-parameter class=headerLink><a href=#method-parameter class=header-mark></a>method parameter</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objectivec data-lang=objectivec><span class=p>-</span> <span class=p>(</span><span class=kt>void</span><span class=p>)</span><span class=nf>someMethodThatTakesABlock:</span><span class=p>(</span><span class=n>returnType</span> <span class=p>(</span><span class=o>^</span><span class=n>nullability</span><span class=p>)(</span><span class=n>parameterTypes</span><span class=p>))</span><span class=nv>blockName</span><span class=p>;</span>
 </code></pre></div><h3 id=argument-to-a-method-call class=headerLink><a href=#argument-to-a-method-call class=header-mark></a>argument to a method call</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objectivec data-lang=objectivec><span class=p>[</span><span class=n>someObject</span> <span class=nl>someMethodThatTakesABlock</span><span class=p>:</span><span class=o>^</span><span class=n>returnType</span> <span class=p>(</span><span class=n>parameters</span><span class=p>)</span> <span class=p>{...}];</span>
 </code></pre></div><h3 id=typedef class=headerLink><a href=#typedef class=header-mark></a>typedef</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objectivec data-lang=objectivec><span class=k>typedef</span> <span class=nf>returnType</span> <span class=p>(</span><span class=o>^</span><span class=n>TypeName</span><span class=p>)(</span><span class=n>parameterTypes</span><span class=p>);</span>
 <span class=n>TypeName</span> <span class=n>blockName</span> <span class=o>=</span> <span class=o>^</span><span class=n>returnType</span><span class=p>(</span><span class=n>parameters</span><span class=p>)</span> <span class=p>{...};</span>
@@ -173,21 +180,20 @@
 <p>Apple recommends this as well:</p>
 <blockquote>
 <p>You should specify copy as the property attribute, because a block needs to be copied to keep track of its captured state outside of the original scope. This isn’t something you need to worry about when using Automatic Reference Counting, as it will happen automatically, but it’s best practice for the property attribute to show the resultant behavior.</p>
-</blockquote>
-</div><footer>
+</blockquote></div><footer>
 <div class=post>
 <div class=post-share><div class=share-link>
 <a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://fangr.cc/how-to-declare-block-in-oc/ data-title="在 ObjC 中如何定义 Block" data-via=ryderfang data-hashtags=Block><span class="svg-social-icon icon-twitter"></span></a>
 </div><div class=share-link>
 <a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://fangr.cc/how-to-declare-block-in-oc/ data-hashtag=Block><span class="svg-social-icon icon-facebook"></span></a>
 </div><div class=share-link>
-<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://fangr.cc/how-to-declare-block-in-oc/ data-title="在 ObjC 中如何定义 Block" data-ralateuid=fr9166><span class="svg-social-icon icon-weibo"></span></a>
+<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://fangr.cc/how-to-declare-block-in-oc/ data-title="在 ObjC 中如何定义 Block"><span class="svg-social-icon icon-weibo"></span></a>
 </div></div>
 <div class=block-author>
-<div class=author-avatar><a href=https://ryderfang.com target=_blank><img alt=人生如逆旅，我亦是行人。 src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-05-avatar2.jpg></a></div>
+<div class=author-avatar><a href=https://github.com/ryderfang/ target=_blank><img alt=人生如逆旅，我亦是行人 src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-05-avatar2.jpg></a></div>
 <div class=author-info>
-<div class=name><a href=https://ryderfang.com target=_blank></a></div>
-<div class=number-posts>人生如逆旅，我亦是行人。</span></div>
+<div class=name><a href=https://github.com/ryderfang/ target=_blank></a></div>
+<div class=number-posts>人生如逆旅，我亦是行人</span></div>
 </div>
 </div>
 <div class=post-tags><a href=/tags/block/ class=tag>Block</a></div></div>
@@ -200,7 +206,8 @@
 Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.
 </noscript></div></section></div>
 </main><footer class=footer>
-<div class=footer-container><div class=footer-line>© 2021 Ryder Fang · &lt;/> Powered by <a href=https://gohugo.io/><u><strong>Hugo</strong></u></a> and <a href=https://github.com/uPagge/uBlogger><u><strong>uBlogger theme</strong></u></a></div><div class=footer-line></div>
+<div class=footer-container><div class=footer-line>© 2021 Ryder Fang · &lt;/> Powered by <a href=https://gohugo.io/ target=_blank><u><strong>Hugo</strong></u></a> and <a href=https://github.com/uPagge/uBlogger target=_blank><u><strong>uBlogger</strong></u></a></div><div class=footer-line><span class=license><a href=https://en.wikipedia.org/wiki/Unlicense target=_blank><u>Unlicense</u></a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br>
+<span class=icp>沪备</span></div>
 </div>
 </footer></div>
 <aside id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
