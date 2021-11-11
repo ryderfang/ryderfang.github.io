@@ -6,7 +6,7 @@ defaultContentLanguage = "zh-cn"
 # 主题
 theme = "uBlogger"
 themeDir = "themes/uBlogger"
-title = '$HOME - 给岁月以文明'
+title = '给岁月以文明'
 
 # 是否使用 robots.txt
 enableRobotsTXT = true
