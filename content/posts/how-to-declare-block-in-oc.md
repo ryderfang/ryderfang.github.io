@@ -1,11 +1,13 @@
 ---
 title: 在 ObjC 中如何定义 Block
+date: 2017-05-31T19:34:55+08:00
 categories: [ObjC]
 tags: [Block]
-date: 2017-05-31
 ---
 
 来自一个神奇的域名
+
+<!--more-->
 
 {{< admonition note >}}
 
@@ -13,7 +15,6 @@ date: 2017-05-31
 
 {{< /admonition >}}
 
-<!--more-->
 ## Declaration
 
 ### local variable
