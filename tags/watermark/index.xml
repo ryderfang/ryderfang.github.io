@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>WaterMark - 标签 - 给岁月以文明</title><link>https://fangr.cc/tags/watermark/</link><description>WaterMark - 标签 - 给岁月以文明</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 25 Jan 2018 20:10:52 +0800</lastBuildDate><atom:link href="https://fangr.cc/tags/watermark/" rel="self" type="application/rss+xml"/><item><title>移除 Visual Paradigm 流程图的水印</title><link>https://fangr.cc/visual-paradigm-remove-watermark/</link><pubDate>Thu, 25 Jan 2018 20:10:52 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/visual-paradigm-remove-watermark/</guid><description><![CDATA[<h2 id="前言" class="headerLink"><a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：</p>
+<p>
+
+
+
+    
+</p>
+<p>本文就是要 Python 去除这个水印，输出 png 图片。</p>]]></description></item></channel></rss>

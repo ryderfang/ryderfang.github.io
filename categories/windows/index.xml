@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Windows - 分类 - 给岁月以文明</title><link>https://fangr.cc/categories/windows/</link><description>Windows - 分类 - 给岁月以文明</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 08 Aug 2016 19:59:09 +0800</lastBuildDate><atom:link href="https://fangr.cc/categories/windows/" rel="self" type="application/rss+xml"/><item><title>VS2013 检测 CPU 占用率</title><link>https://fangr.cc/detect-cpu-usage-with-vs2013/</link><pubDate>Mon, 08 Aug 2016 19:59:09 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/detect-cpu-usage-with-vs2013/</guid><description><![CDATA[<p>最近开发的一个程序，用户反馈 CPU 占用非常高，基本把一个内核占用满了。</p>
+<p>
+
+
+
+    
+</p>
+<p>我自己在虚拟机中试了下，确实这样！</p>]]></description></item></channel></rss>

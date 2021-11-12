@@ -5,25 +5,17 @@
 <meta name=twitter:image content>
 <meta name=twitter:title content="在 ObjC 中如何定义 Block">
 <meta name=twitter:description content><meta name=twitter:creator content="@ryderfang"><meta name=Description content="About uBlogger Theme"><meta property="og:title" content="在 ObjC 中如何定义 Block">
-<meta property="og:description" content="来自一个神奇的域名
-
-        
-            注意
-        
-        
-            http://fuckingblocksyntax.com/
-        
-    ">
+<meta property="og:description" content="来自一个神奇的域名">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://fangr.cc/how-to-declare-block-in-oc/"><meta property="og:image" content="https://fangr.cc/logo.png"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2017-05-31T00:00:00+00:00">
-<meta property="article:modified_time" content="2017-05-31T00:00:00+00:00">
+<meta property="article:published_time" content="2017-05-31T19:34:55+08:00">
+<meta property="article:modified_time" content="2017-05-31T19:34:55+08:00">
 <meta name=application-name content="uBlogger">
 <meta name=apple-mobile-web-app-title content="uBlogger"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://fangr.cc/how-to-declare-block-in-oc/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"在 ObjC 中如何定义 Block","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/fangr.cc\/how-to-declare-block-in-oc\/"},"genre":"posts","keywords":"Block","wordCount":154,"url":"https:\/\/fangr.cc\/how-to-declare-block-in-oc\/","datePublished":"2017-05-31T00:00:00+00:00","dateModified":"2017-05-31T00:00:00+00:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/fangr.cc\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://fangr.cc/categories/objc/"},{"@type":"ListItem","position":3,"name":"在 ObjC 中如何定义 Block"}]}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://fangr.cc/how-to-declare-block-in-oc/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"在 ObjC 中如何定义 Block","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/fangr.cc\/how-to-declare-block-in-oc\/"},"genre":"posts","keywords":"Block","wordCount":154,"url":"https:\/\/fangr.cc\/how-to-declare-block-in-oc\/","datePublished":"2017-05-31T19:34:55+08:00","dateModified":"2017-05-31T19:34:55+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/fangr.cc\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://fangr.cc/categories/objc/"},{"@type":"ListItem","position":3,"name":"在 ObjC 中如何定义 Block"}]}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>

@@ -1,0 +1,5 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Jekyll - 标签 - 给岁月以文明</title><link>https://fangr.cc/tags/jekyll/</link><description>Jekyll - 标签 - 给岁月以文明</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Jun 2016 19:34:55 +0800</lastBuildDate><atom:link href="https://fangr.cc/tags/jekyll/" rel="self" type="application/rss+xml"/><item><title>Jekyll 本地安装</title><link>https://fangr.cc/install-jekyll-locally/</link><pubDate>Sun, 05 Jun 2016 19:34:55 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/install-jekyll-locally/</guid><description><![CDATA[<p>安装 Ruby 和 Ruby DevKit</p>
+<ul>
+<li><a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe" target="_blank" rel="noopener noreffer">Ruby 2.2.4</a></li>
+<li><a href="http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe" target="_blank" rel="noopener noreffer">Ruby DevKit</a></li>
+</ul>]]></description></item></channel></rss>

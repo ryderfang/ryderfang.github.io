@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Challenge - 分类 - 给岁月以文明</title><link>https://fangr.cc/categories/challenge/</link><description>Challenge - 分类 - 给岁月以文明</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 29 Jan 2018 20:24:41 +0800</lastBuildDate><atom:link href="https://fangr.cc/categories/challenge/" rel="self" type="application/rss+xml"/><item><title>2018 个人 Flag</title><link>https://fangr.cc/2018-personal-challenge/</link><pubDate>Mon, 29 Jan 2018 20:24:41 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/2018-personal-challenge/</guid><description><![CDATA[<div class="details admonition success open">
+        <div class="details-summary admonition-title" style="display: none">
+            <i class="icon admonition-icon icon-success"></i>成功<i class="details-icon admonition-icon admonition-icon-arrow-right"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)</p>
+<p>今年(2018)，他的挑战是 <strong><u>重整 Facebook</u></strong>，So，我也要给自己立个 Flag 了。</p>
+</div>
+        </div>
+    </div>
+<h2 id="技术目标" class="headerLink"><a href="#%e6%8a%80%e6%9c%af%e7%9b%ae%e6%a0%87" class="header-mark"></a>技术目标</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//&lt;!-- --&gt;
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;达到中初级前端工程师水平&#39;</span><span class="p">)</span>
+<span class="c1">//&lt;!-- --&gt;
+</span></code></pre></div>]]></description></item></channel></rss>

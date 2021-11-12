@@ -1,0 +1,312 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>使用 Hexo 遇到的一些问题 | </title><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content>
+<meta name=twitter:title content="使用 Hexo 遇到的一些问题">
+<meta name=twitter:description content><meta name=twitter:creator content="@ryderfang"><meta name=Description content="About uBlogger Theme"><meta property="og:title" content="使用 Hexo 遇到的一些问题">
+<meta property="og:description" content="关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:
+$ npm install -g hexo
+$ hexo init
+$ hexo generate (hexo g)
+$ hexo server (hexo s)
+
+$ hexo new [name] - 新建文章
+$ hexo new page [name] - 新建页面
+">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fangr.cc/hexo-workflow/"><meta property="og:image" content="https://fangr.cc/logo.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2017-09-27T20:04:57+08:00">
+<meta property="article:modified_time" content="2017-09-27T20:04:57+08:00">
+<meta name=application-name content="uBlogger">
+<meta name=apple-mobile-web-app-title content="uBlogger"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://fangr.cc/hexo-workflow/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用 Hexo 遇到的一些问题","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/fangr.cc\/hexo-workflow\/"},"genre":"posts","keywords":"Hexo, Blog","wordCount":1e3,"url":"https:\/\/fangr.cc\/hexo-workflow\/","datePublished":"2017-09-27T20:04:57+08:00","dateModified":"2017-09-27T20:04:57+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/fangr.cc\/"},{"@type":"ListItem","position":2,"name":"RTFM","item":"https://fangr.cc/categories/rtfm/"},{"@type":"ListItem","position":3,"name":"使用 Hexo 遇到的一些问题"}]}</script></head>
+<body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
+<div id=mask></div><div class=wrapper><header>
+<div class="desktop header" id=header-desktop>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title=给岁月以文明 class="header-logo logo-svg"><img loading=lazy decoding=async class=logo src=/logo.jpg alt=/logo.jpg title=/logo.jpg><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+</div>
+<div class=menu>
+<nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul class=menu-inner><li>
+<a class=menu-item href=/posts/> Posts </a>
+</li><li>
+<a class=menu-item href=/tags/> Tags </a>
+</li><li>
+<a class=menu-item href=/categories/> Categories </a>
+</li><li>
+<a class=menu-item href=/about/> About </a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i> </a>
+</li></ul>
+</nav><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-desktop>
+<span class="svg-icon icon-loading"></span>
+</span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a>
+</div>
+</div>
+</div><div class="mobile header" id=header-mobile>
+<div class=header-container>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title=给岁月以文明 class=header-logo><img loading=lazy decoding=async class=logo src=/logo.jpg alt=/logo.jpg title=/logo.jpg><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+</div>
+<div class=menu-toggle id=menu-toggle-mobile>
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class=menu id=menu-mobile><div class=search-wrapper>
+<div class="search mobile" id=search-mobile>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-mobile>
+<span class="svg-icon icon-loading"></span>
+</span>
+</div>
+<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
+取消
+</a>
+</div><nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul><li>
+<a class=menu-item href=/posts/ title>Posts</a>
+</li><li>
+<a class=menu-item href=/tags/ title>Tags</a>
+</li><li>
+<a class=menu-item href=/categories/ title>Categories</a>
+</li><li>
+<a class=menu-item href=/about/ title>About</a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i></a>
+</li></ul>
+</nav>
+<a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a></div>
+</div>
+</div><div class="search-dropdown desktop">
+<div id=search-dropdown-desktop></div>
+</div>
+<div class="search-dropdown mobile">
+<div id=search-dropdown-mobile></div>
+</div></header><main class=main>
+<div class="container content-article page-toc theme-classic"><div class=toc id=toc-auto>
+<div class=toc-title>目录</div>
+<div class=toc-content id=toc-content-auto></div>
+</div>
+<article>
+<header class=header-post>
+<div class=post-title>
+<div class=post-all-meta>
+<nav class=breadcrumbs>
+<ol>
+<li><a href=/>主页 </a></li><li><a href=/categories/rtfm/>RTFM </a></li><li>使用 Hexo 遇到的一些问题</li>
+</ol>
+</nav>
+<h1 class="single-title flipInX">使用 Hexo 遇到的一些问题</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+<a href=/categories/rtfm/><span class="svg-icon icon-folder"></span>RTFM</a>
+</span><span class="post-meta-date meta-item">
+<span class="svg-icon icon-clock"></span><time class=timeago datetime=2017-09-27>2017-09-27</time>
+</span><span class="post-meta-words meta-item">
+<span class="svg-icon icon-pencil"></span>约 1000 字
+</span>
+<span class="post-meta-reading meta-item">
+<span class="svg-icon icon-stopwatch"></span>预计阅读 2 分钟
+</span>
+</div>
+</div>
+</div>
+</header>
+<div class="article-post toc-start">
+<div class="content-block content-block-first content-block-position">
+<div class="post single"><div class="details toc" id=toc-static data-kept>
+<div class="details-summary toc-title">
+<span>目录</span>
+</div>
+<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents>
+<ul>
+<li><a href=#npm-源>NPM 源</a></li>
+<li><a href=#hexo-安装>Hexo 安装</a>
+<ul>
+<li><a href=#hexo-server><strong>hexo-server</strong></a></li>
+<li><a href=#node-sass><strong>node-sass</strong></a></li>
+<li><a href=#hexo-renderer-scss><strong>hexo-renderer-scss</strong></a></li>
+<li><a href=#页面空白><strong>页面空白</strong></a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
+</div><p>关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm install -g hexo
+$ hexo init
+$ hexo generate <span class=o>(</span>hexo g<span class=o>)</span>
+$ hexo server <span class=o>(</span>hexo s<span class=o>)</span>
+
+$ hexo new <span class=o>[</span>name<span class=o>]</span> - 新建文章
+$ hexo new page <span class=o>[</span>name<span class=o>]</span> - 新建页面
+</code></pre></div><p>正常情况下，这样就会启动本地的服务:<a href=http://localhost:4000 target=_blank rel="noopener noreffer">http://localhost:4000</a>，但现实总是残酷的，</p>
+<p>由于国内XXX的网络环境，总会遇到各种各样的问题，</p>
+<p>下面总结一下本博客迁移到Hexo过程中遇到的一些问题。</p>
+<h2 id=npm-源 class=headerLink><a href=#npm-%e6%ba%90 class=header-mark></a>NPM 源</h2><p>node的包管理工具npm，默认使用国外的源，访问比较慢，建议换成国内源，一般是<a href=https://npm.taobao.org target=_blank rel="noopener noreffer">淘宝npm</a>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm install -g cnpm --registry<span class=o>=</span>https://registry.npm.taobao.org
+</code></pre></div><p>这样就可以使用cnpm代替npm进行模块安装了:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ cnpm install <span class=o>[</span>name<span class=o>]</span>
+</code></pre></div><p>或者，使用nrm (npm的源管理工具):</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm install nrm
+$ nrm ls
+* npm ---- https://registry.npmjs.org/
+  cnpm --- http://r.cnpmjs.org/
+  taobao - https://registry.npm.taobao.org/
+  nj ----- https://registry.nodejitsu.com/
+  rednpm - http://registry.mirror.cqupt.edu.cn/
+  npmMirror  https://skimdb.npmjs.com/registry/
+  edunpm - http://registry.enpmjs.org/
+$ nrm use taobao
+$ nrm <span class=nb>test</span> taobao
+</code></pre></div><h2 id=hexo-安装 class=headerLink><a href=#hexo-%e5%ae%89%e8%a3%85 class=header-mark></a>Hexo 安装</h2><h3 id=hexo-server class=headerLink><a href=#hexo-server class=header-mark></a><strong>hexo-server</strong></h3><p>hexo server执行失败:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>ERROR Plugin load filed: hexo-server
+</code></pre></div><p>需要单独安装hexo-server:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm install hexo-server --save
+</code></pre></div><h3 id=node-sass class=headerLink><a href=#node-sass class=header-mark></a><strong>node-sass</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm install node-sass --save
+</code></pre></div><p>如果出现如下情况:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ node scripts/install.js
+
+Cannot download &#34;https://github.com/sass/node-sass/releases/download/v4.5.3/darwin-x64-51_binding.node&#34;: 
+
+read ECONNRESET
+
+Hint: If github.com is not accessible in your location
+      try setting a proxy via HTTP_PROXY, e.g. 
+
+      export HTTP_PROXY=http://example.com:1234
+
+or configure npm proxy via
+
+      npm config set proxy http://example.com:8080
+
+$ node-sass@4.5.3 postinstall /private/tmp/node_modules/node-sass
+$ node scripts/build.js
+</code></pre></div><p>说明github访问比较慢，两种方法：</p>
+<ul>
+<li>修改host:</li>
+</ul>
+<blockquote>
+<p><a href="http://tool.chinaz.com/dns?type=1&host=github.com&ip=" target=_blank rel="noopener noreffer">http://tool.chinaz.com/dns?type=1&host=github.com&ip=</a>
+找一个TTL比较小的host，如:</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>192.30.255.112 github.com
+</code></pre></div><ul>
+<li>直接去github下载</li>
+</ul>
+<blockquote>
+<p><a href=https://github.com/sass/node-sass/releases/download/v4.5.3/darwin-x64-51_binding.node target=_blank rel="noopener noreffer">https://github.com/sass/node-sass/releases/download/v4.5.3/darwin-x64-51_binding.node</a>
+然后将该文件放到目录:<code>~/.npm/node-sass/4.5.3/darwin-x64-51_binding.node</code>
+再执行安装命令</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm intall node-sass --save
+</code></pre></div><h3 id=hexo-renderer-scss class=headerLink><a href=#hexo-renderer-scss class=header-mark></a><strong>hexo-renderer-scss</strong></h3><p>有些主题需要安装hexo-renderer-scss:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm install hexo-renderer-scss --save
+</code></pre></div><p>会出现错误:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>ERROR Plugin load failed: hexo-renderer-scss
+Error: ENOENT: no such file or directory, scandir &#39;xxx/node_modules/node-sass/vendor&#39;
+   at Object.fs.readdirSync (fs.js:914:18)
+   ...
+</code></pre></div><p>提示这个目录找不到，那我们手动创建好了:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ mkdir xxx/node_modules/node-sass/vendor
+$ mkdir xxx/node_modules/hexo-renderer-scss/node_modules/node-sass/vendor
+</code></pre></div><p>接下来还是报错:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>ERROR Plugin load failed: hexo-renderer-scss
+Error: Missing binding xxx/node_modules/hexo-renderer-scss/node_modules/node-sass/vendor/darwin-x64-51/binding.node
+Node Sass could not find a binding for your current environment: OS X 64-bit with Node.js 7.x
+
+Found bindings for the following environments:
+</code></pre></div><p>到这个目录下，把刚刚下载的darwin-x64-51_binding.node重命名复制进去好了:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ mkdir xxx/node_modules/hexo-renderer-scss/node_modules/node-sass/vendor/darwin-x64-51/
+$ cp darwin-x64-51_binding.node xxx/node_modules/hexo-renderer-scss/node_modules/node-sass/vendor/darwin-x64-51/binding.node
+</code></pre></div><h3 id=页面空白 class=headerLink><a href=#%e9%a1%b5%e9%9d%a2%e7%a9%ba%e7%99%bd class=header-mark></a><strong>页面空白</strong></h3><p>有时执行hexo s后显示服务启动，但页面打开空白，显示<code>Cannot GET /</code>，这种情况有很多原因，</p>
+<p>可以尝试:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ npm install
+$ hexo cl
+$ hexo g
+$ hexo s
+</code></pre></div><p>如果还有问题，查看一下npm插件是否安装正常:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ npm ls --depth 0
+hexo-site@0.0.0 xxx
+├── hexo@3.3.9
+├── hexo-deployer-git@0.3.1
+├── hexo-generator-archive@0.1.4
+├── hexo-generator-baidu-sitemap@0.1.2
+├── hexo-generator-category@0.1.3
+├── hexo-generator-feed@1.2.2
+├── hexo-generator-index@0.2.1
+├── hexo-generator-sitemap@1.2.0
+├── hexo-generator-tag@0.2.0
+├── hexo-renderer-ejs@0.3.1
+├── hexo-renderer-marked@0.3.0
+├── hexo-renderer-scss@1.0.3
+├── hexo-renderer-stylus@0.3.3
+├── hexo-server@0.2.2
+└── node-sass@4.5.3
+
+npm ERR! invalid: hexo-generator-baidu-sitemap@0.0.8 xxx/node_modules/hexo-generator-baidu-sitemap/node_modules/hexo-generator-baidu-sitemap
+</code></pre></div><p>可以看到hexo-generator-baidu-sitemap这个插件安装失败了，尝试重新安装或者删除它:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ npm install hexo-generator-baidu-sitemap --save
+$ npm uninstall hexo-generator-baidu-sitemap
+</code></pre></div><p>或者在<code>package.json</code>中将它删除掉。</p></div><footer>
+<div class=post>
+<div class=post-share><div class=share-link>
+<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://fangr.cc/hexo-workflow/ data-title="使用 Hexo 遇到的一些问题" data-via=ryderfang data-hashtags=Hexo,Blog><span class="svg-social-icon icon-twitter"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://fangr.cc/hexo-workflow/ data-hashtag=Hexo><span class="svg-social-icon icon-facebook"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://fangr.cc/hexo-workflow/ data-title="使用 Hexo 遇到的一些问题"><span class="svg-social-icon icon-weibo"></span></a>
+</div></div>
+<div class=block-author>
+<div class=author-avatar><a href=https://github.com/ryderfang/ target=_blank><img alt=人生如逆旅，我亦是行人 src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-05-avatar2.jpg></a></div>
+<div class=author-info>
+<div class=name><a href=https://github.com/ryderfang/ target=_blank></a></div>
+<div class=number-posts>人生如逆旅，我亦是行人</span></div>
+</div>
+</div>
+<div class=post-tags><a href=/tags/hexo/ class=tag>Hexo</a><a href=/tags/blog/ class=tag>Blog</a></div></div>
+</footer></div>
+<div id=toc-final></div>
+</div>
+</article>
+<section class="page single comments content-block-position">
+<h1 class=display-hidden>Комментарии</h1><div id=comments><div id=utterances></div><noscript>
+Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.
+</noscript></div></section></div>
+</main><footer class=footer>
+<div class=footer-container><div class=footer-line>© 2021 Ryder Fang · &lt;/> Powered by <a href=https://gohugo.io/ target=_blank><u><strong>Hugo</strong></u></a> and <a href=https://github.com/uPagge/uBlogger target=_blank><u><strong>uBlogger</strong></u></a></div><div class=footer-line><span class=license><a href=https://opensource.org/licenses/MIT/ target=_blank>MIT</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br>
+<span class=icp><a href=https://beian.miit.gov.cn/ target=_blank rel=noopener>沪ICP备2021031507号-1</a></span></div>
+</div>
+</footer></div>
+<aside id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
+<i class="svg-icon icon-arrow-up"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论>
+<i class="svg-icon icon-comments-fixed"></i>
+</a>
+</aside><script src=/lib/smooth-scroll/smooth-scroll.min.js></script><script src=/lib/autocomplete/autocomplete.min.js></script><script src=/lib/algoliasearch/algoliasearch-lite.umd.min.js></script><script src=/lib/clipboard/clipboard.min.js></script><script src=/lib/sharer/sharer.min.js></script><script src=/lib/prismjs/prism.js></script><script>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"Utterances",lightTheme:"github-light",repo:"ryderfang/ryderfang.github.io"}},search:{algoliaAppID:"KNWHHR2LLW",algoliaIndex:"ryder_blog",algoliaSearchKey:"99980e3c2014fb8c463a83c546a3f4a6",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:30,type:"algolia"}}</script><script src=/js/theme.min.js></script></body>
+</html>

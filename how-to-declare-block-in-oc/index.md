@@ -3,13 +3,14 @@
 
 来自一个神奇的域名
 
+<!--more-->
+
 {{< admonition note >}}
 
 [http://fuckingblocksyntax.com/](http://fuckingblocksyntax.com/)
 
 {{< /admonition >}}
 
-<!--more-->
 ## Declaration
 
 ### local variable

@@ -1,0 +1,196 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>VS2013 检测 CPU 占用率 | </title><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content>
+<meta name=twitter:title content="VS2013 检测 CPU 占用率">
+<meta name=twitter:description content><meta name=twitter:creator content="@ryderfang"><meta name=Description content="About uBlogger Theme"><meta property="og:title" content="VS2013 检测 CPU 占用率">
+<meta property="og:description" content="最近开发的一个程序，用户反馈 CPU 占用非常高，基本把一个内核占用满了。
+
+
+
+
+    
+
+我自己在虚拟机中试了下，确实这样！">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fangr.cc/detect-cpu-usage-with-vs2013/"><meta property="og:image" content="https://fangr.cc/logo.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2016-08-08T19:59:09+08:00">
+<meta property="article:modified_time" content="2016-08-08T19:59:09+08:00">
+<meta name=application-name content="uBlogger">
+<meta name=apple-mobile-web-app-title content="uBlogger"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://fangr.cc/detect-cpu-usage-with-vs2013/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"VS2013 检测 CPU 占用率","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/fangr.cc\/detect-cpu-usage-with-vs2013\/"},"genre":"posts","keywords":"CPU","wordCount":266,"url":"https:\/\/fangr.cc\/detect-cpu-usage-with-vs2013\/","datePublished":"2016-08-08T19:59:09+08:00","dateModified":"2016-08-08T19:59:09+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/fangr.cc\/"},{"@type":"ListItem","position":2,"name":"Windows","item":"https://fangr.cc/categories/windows/"},{"@type":"ListItem","position":3,"name":"VS2013 检测 CPU 占用率"}]}</script></head>
+<body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
+<div id=mask></div><div class=wrapper><header>
+<div class="desktop header" id=header-desktop>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title=给岁月以文明 class="header-logo logo-svg"><img loading=lazy decoding=async class=logo src=/logo.jpg alt=/logo.jpg title=/logo.jpg><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+</div>
+<div class=menu>
+<nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul class=menu-inner><li>
+<a class=menu-item href=/posts/> Posts </a>
+</li><li>
+<a class=menu-item href=/tags/> Tags </a>
+</li><li>
+<a class=menu-item href=/categories/> Categories </a>
+</li><li>
+<a class=menu-item href=/about/> About </a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i> </a>
+</li></ul>
+</nav><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-desktop>
+<span class="svg-icon icon-loading"></span>
+</span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a>
+</div>
+</div>
+</div><div class="mobile header" id=header-mobile>
+<div class=header-container>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title=给岁月以文明 class=header-logo><img loading=lazy decoding=async class=logo src=/logo.jpg alt=/logo.jpg title=/logo.jpg><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内皆是命运</a>
+</div>
+<div class=menu-toggle id=menu-toggle-mobile>
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class=menu id=menu-mobile><div class=search-wrapper>
+<div class="search mobile" id=search-mobile>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-mobile>
+<span class="svg-icon icon-loading"></span>
+</span>
+</div>
+<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
+取消
+</a>
+</div><nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul><li>
+<a class=menu-item href=/posts/ title>Posts</a>
+</li><li>
+<a class=menu-item href=/tags/ title>Tags</a>
+</li><li>
+<a class=menu-item href=/categories/ title>Categories</a>
+</li><li>
+<a class=menu-item href=/about/ title>About</a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i></a>
+</li></ul>
+</nav>
+<a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a></div>
+</div>
+</div><div class="search-dropdown desktop">
+<div id=search-dropdown-desktop></div>
+</div>
+<div class="search-dropdown mobile">
+<div id=search-dropdown-mobile></div>
+</div></header><main class=main>
+<div class="container content-article page-toc theme-classic"><div class=toc id=toc-auto>
+<div class=toc-title>目录</div>
+<div class=toc-content id=toc-content-auto></div>
+</div>
+<article>
+<header class=header-post>
+<div class=post-title>
+<div class=post-all-meta>
+<nav class=breadcrumbs>
+<ol>
+<li><a href=/>主页 </a></li><li><a href=/categories/windows/>Windows </a></li><li>VS2013 检测 CPU 占用率</li>
+</ol>
+</nav>
+<h1 class="single-title flipInX">VS2013 检测 CPU 占用率</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+<a href=/categories/windows/><span class="svg-icon icon-folder"></span>Windows</a>
+</span><span class="post-meta-date meta-item">
+<span class="svg-icon icon-clock"></span><time class=timeago datetime=2016-08-08>2016-08-08</time>
+</span><span class="post-meta-words meta-item">
+<span class="svg-icon icon-pencil"></span>约 266 字
+</span>
+<span class="post-meta-reading meta-item">
+<span class="svg-icon icon-stopwatch"></span>预计阅读 1 分钟
+</span>
+</div>
+</div>
+</div>
+</header>
+<div class="article-post toc-start">
+<div class="content-block content-block-first content-block-position">
+<div class="post single"><div class="details toc" id=toc-static data-kept>
+<div class="details-summary toc-title">
+<span>目录</span>
+</div>
+<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents></nav></div>
+</div><p>最近开发的一个程序，用户反馈 CPU 占用非常高，基本把一个内核占用满了。</p>
+<p>
+<img loading=lazy decoding=async class=render-image src=https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/10993914.jpg alt="CPU 占用" title=10993914.jpg></p>
+<p>我自己在虚拟机中试了下，确实这样！</p>
+<p>在用户机器中获取了 DUMP，只看到有几个线程一直在跑，调用堆栈中也看不到太多信息（主要是没有线程 CPU 占用信息），一时没有方法。</p>
+<p>今天突然想到 VS2013，新版本增加了一些功能，貌似有性能分析相关的。</p>
+<p>找了一下，果然在<code>调试</code>菜单下发现了<code>性能与诊断</code>：</p>
+<p>
+<img loading=lazy decoding=async class=render-image src=https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/13597794.jpg alt=调试菜单 title=13597794.jpg></p>
+<p>选择 <code>CPU使用率</code>，就开始分析啦！</p>
+<p>很快就给出了分析结果：</p>
+<p>
+<img loading=lazy decoding=async class=render-image src=https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/34785051.jpg alt=分析结果 title=34785051.jpg></p>
+<p>哈哈！瞬间定位 CPU 占用元凶，原来是一个后台线程一直在跑（空转），设计不合理。这个线程最早设计成自驱动的，找到原因就好办了，改成被驱动式就行了！</p></div><footer>
+<div class=post>
+<div class=post-share><div class=share-link>
+<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://fangr.cc/detect-cpu-usage-with-vs2013/ data-title="VS2013 检测 CPU 占用率" data-via=ryderfang data-hashtags=CPU><span class="svg-social-icon icon-twitter"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://fangr.cc/detect-cpu-usage-with-vs2013/ data-hashtag=CPU><span class="svg-social-icon icon-facebook"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://fangr.cc/detect-cpu-usage-with-vs2013/ data-title="VS2013 检测 CPU 占用率"><span class="svg-social-icon icon-weibo"></span></a>
+</div></div>
+<div class=block-author>
+<div class=author-avatar><a href=https://github.com/ryderfang/ target=_blank><img alt=人生如逆旅，我亦是行人 src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-05-avatar2.jpg></a></div>
+<div class=author-info>
+<div class=name><a href=https://github.com/ryderfang/ target=_blank></a></div>
+<div class=number-posts>人生如逆旅，我亦是行人</span></div>
+</div>
+</div>
+<div class=post-tags><a href=/tags/cpu/ class=tag>CPU</a></div></div>
+</footer></div>
+<div id=toc-final></div>
+</div>
+</article>
+<section class="page single comments content-block-position">
+<h1 class=display-hidden>Комментарии</h1><div id=comments><div id=utterances></div><noscript>
+Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.
+</noscript></div></section></div>
+</main><footer class=footer>
+<div class=footer-container><div class=footer-line>© 2021 Ryder Fang · &lt;/> Powered by <a href=https://gohugo.io/ target=_blank><u><strong>Hugo</strong></u></a> and <a href=https://github.com/uPagge/uBlogger target=_blank><u><strong>uBlogger</strong></u></a></div><div class=footer-line><span class=license><a href=https://opensource.org/licenses/MIT/ target=_blank>MIT</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br>
+<span class=icp><a href=https://beian.miit.gov.cn/ target=_blank rel=noopener>沪ICP备2021031507号-1</a></span></div>
+</div>
+</footer></div>
+<aside id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
+<i class="svg-icon icon-arrow-up"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论>
+<i class="svg-icon icon-comments-fixed"></i>
+</a>
+</aside><script src=/lib/smooth-scroll/smooth-scroll.min.js></script><script src=/lib/autocomplete/autocomplete.min.js></script><script src=/lib/algoliasearch/algoliasearch-lite.umd.min.js></script><script src=/lib/clipboard/clipboard.min.js></script><script src=/lib/sharer/sharer.min.js></script><script src=/lib/prismjs/prism.js></script><script>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"Utterances",lightTheme:"github-light",repo:"ryderfang/ryderfang.github.io"}},search:{algoliaAppID:"KNWHHR2LLW",algoliaIndex:"ryder_blog",algoliaSearchKey:"99980e3c2014fb8c463a83c546a3f4a6",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:30,type:"algolia"}}</script><script src=/js/theme.min.js></script></body>
+</html>
