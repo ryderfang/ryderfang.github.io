@@ -1,10 +1,14 @@
 ---
 title: "2018 个人 Flag"
 date: 2018-01-29T20:24:41+08:00
-categories: [Challenge]
-tags: [Flag]
 lastmod: 2019-01-01T11:26:13+08:00
 upd: "目标完成度更新"
+resources:
+- name: "featured-image"
+  src: "featured-image.jpg"
+
+categories: [Challenge]
+tags: [Flag]
 ---
 
 {{< admonition success >}}

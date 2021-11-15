@@ -16,6 +16,8 @@ Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug �
 废话少说，下载地址：
 https://download-chromium.appspot.com/
 
+<!--more-->
+
 如果下载不了，可以试下：
 * Windows
 https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/
@@ -24,8 +26,6 @@ https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?p
 https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/
 
 打不开之类的需要翻墙的问题自行解决吧。
-
-<!--more-->
 
 ## 问题
 

@@ -1,5 +1,5 @@
 ---
-title: "Vue 调试工具 Devtools 'Vue.js not detected'"
+title: "Vue 调试工具 Devtools"
 date: 2018-01-24T20:09:09+08:00
 categories: [RTFM]
 tags: [Vue, Front-End]
@@ -10,6 +10,8 @@ upd: "前端真难"
 最近开始学习 [Vue.js](https://cn.vuejs.org/), 一脸懵逼地进入前端世界。
 
 不使用 `vue-cli` 和 `webpack` 这些构建工具，使用单个 html 引入 Vue。
+
+<!--more-->
 
 html 内容是这样的:
 
@@ -39,7 +41,6 @@ html 内容是这样的:
 </html>
 ```
 
-<!--more-->
 
 用浏览器打开这个 html 就可以看到效果（鼠标悬停显示『页面加载于yyyy-MM-dd hh:mm:ss』）
 

@@ -20,7 +20,7 @@ Now I'm living with my wife and little son in Shanghai, China.
 ## 经历
 
 🐧 腾讯上海
-<img align='right' src='https://img.icons8.com/color/50/000000/qq.png' width='64px'>
+<img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-qq.jpg' width='64px'>
 
 * 客户端开发
 * 2020.11.22 - INF
@@ -30,7 +30,7 @@ Now I'm living with my wife and little son in Shanghai, China.
   * AI 端智能
 
 🚼 阿里巴巴 | 口碑
-<img align='right' src='https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/logos/merchant-logo.png' width='64px'>
+<img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-merchant-logo.png' width='64px'>
 
 * 高级无线开发工程师
 * 2017.10.16 - 2020.11.20
@@ -43,7 +43,7 @@ Now I'm living with my wife and little son in Shanghai, China.
   * H5 容器相关
 
 🏝 哔哩哔哩 | 幻电信息科技
-<img align='right' src='https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/logos/bilibili-logo-2.png' width='64px'>
+<img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-bilibili-logo.png' width='64px'>
 
 * iOS 开发工程师
 * 2016.04 - 2017.10
@@ -57,7 +57,7 @@ Now I'm living with my wife and little son in Shanghai, China.
   * 稿件管理功能等
 
 📟 二三四五网络科技
-<img align='right' src='https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/logos/2345-logo.JPG' width='64px'>
+<img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-2345.jpg' width='64px'>
 
 * 2013.12 - 2016.04
 * 2345 单核/双核 浏览器
