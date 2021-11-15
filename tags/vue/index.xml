@@ -1,27 +1,2 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Vue - 标签 - 给岁月以文明</title><link>https://fangr.cc/tags/vue/</link><description>Vue - 标签 - 给岁月以文明</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 24 Jan 2018 20:09:09 +0800</lastBuildDate><atom:link href="https://fangr.cc/tags/vue/" rel="self" type="application/rss+xml"/><item><title>Vue 调试工具 Devtools 'Vue.js not detected'</title><link>https://fangr.cc/vue-devtools/</link><pubDate>Wed, 24 Jan 2018 20:09:09 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/vue-devtools/</guid><description><![CDATA[<p>最近开始学习 <a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreffer">Vue.js</a>, 一脸懵逼地进入前端世界。</p>
-<p>不使用 <code>vue-cli</code> 和 <code>webpack</code> 这些构建工具，使用单个 html 引入 Vue。</p>
-<p>html 内容是这样的:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello, Vue<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/vue&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;app&#39;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">v-bind:title</span><span class="o">=</span><span class="s">&#34;message&#34;</span><span class="p">&gt;</span>鼠标悬停<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
-            <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
-            <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-                <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;页面加载于 &#39;</span> <span class="o">+</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleString</span><span class="p">()</span>
-            <span class="p">}</span>
-        <span class="p">})</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>]]></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Vue - 标签 - 给岁月以文明</title><link>https://fangr.cc/tags/vue/</link><description>Vue - 标签 - 给岁月以文明</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 24 Jan 2018 20:09:09 +0800</lastBuildDate><atom:link href="https://fangr.cc/tags/vue/" rel="self" type="application/rss+xml"/><item><title>Vue 调试工具 Devtools</title><link>https://fangr.cc/vue-devtools/</link><pubDate>Wed, 24 Jan 2018 20:09:09 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/vue-devtools/</guid><description><![CDATA[<p>最近开始学习 <a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreffer">Vue.js</a>, 一脸懵逼地进入前端世界。</p>
+<p>不使用 <code>vue-cli</code> 和 <code>webpack</code> 这些构建工具，使用单个 html 引入 Vue。</p>]]></description></item></channel></rss>

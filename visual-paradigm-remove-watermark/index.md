@@ -3,13 +3,15 @@
 
 ## 前言
 
-Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：
+Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有 30 天试用版和社区版，
+
+其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印。
+
+<!--more-->
 
 ![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/46295044.jpg)
 
 本文就是要 Python 去除这个水印，输出 png 图片。
-
-<!--more-->
 
 {{< admonition note >}}
 该方法参考了网络上手动去除的方法，需要有一些操作

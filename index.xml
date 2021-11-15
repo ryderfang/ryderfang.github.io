@@ -21,52 +21,9 @@
         </div>
     </div>
 <p>废话少说，下载地址：
-<a href="https://download-chromium.appspot.com/" target="_blank" rel="noopener noreffer">https://download-chromium.appspot.com/</a></p>
-<p>如果下载不了，可以试下：</p>
-<ul>
-<li>
-<p>Windows
-<a href="https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/" target="_blank" rel="noopener noreffer">https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/</a></p>
-</li>
-<li>
-<p>Mac
-<a href="https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/" target="_blank" rel="noopener noreffer">https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/</a></p>
-</li>
-</ul>
-<p>打不开之类的需要翻墙的问题自行解决吧。</p>]]></description></item><item><title>移除 Visual Paradigm 流程图的水印</title><link>https://fangr.cc/visual-paradigm-remove-watermark/</link><pubDate>Thu, 25 Jan 2018 20:10:52 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/visual-paradigm-remove-watermark/</guid><description><![CDATA[<h2 id="前言" class="headerLink"><a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：</p>
-<p>
-
-
-
-    
-</p>
-<p>本文就是要 Python 去除这个水印，输出 png 图片。</p>]]></description></item><item><title>Vue 调试工具 Devtools 'Vue.js not detected'</title><link>https://fangr.cc/vue-devtools/</link><pubDate>Wed, 24 Jan 2018 20:09:09 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/vue-devtools/</guid><description><![CDATA[<p>最近开始学习 <a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreffer">Vue.js</a>, 一脸懵逼地进入前端世界。</p>
-<p>不使用 <code>vue-cli</code> 和 <code>webpack</code> 这些构建工具，使用单个 html 引入 Vue。</p>
-<p>html 内容是这样的:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello, Vue<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/vue&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;app&#39;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">v-bind:title</span><span class="o">=</span><span class="s">&#34;message&#34;</span><span class="p">&gt;</span>鼠标悬停<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
-            <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
-            <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-                <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;页面加载于 &#39;</span> <span class="o">+</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleString</span><span class="p">()</span>
-            <span class="p">}</span>
-        <span class="p">})</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>]]></description></item><item><title>使用 Hexo 遇到的一些问题</title><link>https://fangr.cc/hexo-workflow/</link><pubDate>Wed, 27 Sep 2017 20:04:57 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/hexo-workflow/</guid><description><![CDATA[<p>关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:</p>
+<a href="https://download-chromium.appspot.com/" target="_blank" rel="noopener noreffer">https://download-chromium.appspot.com/</a></p>]]></description></item><item><title>移除 Visual Paradigm 流程图的水印</title><link>https://fangr.cc/visual-paradigm-remove-watermark/</link><pubDate>Thu, 25 Jan 2018 20:10:52 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/visual-paradigm-remove-watermark/</guid><description><![CDATA[<h2 id="前言" class="headerLink"><a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有 30 天试用版和社区版，</p>
+<p>其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印。</p>]]></description></item><item><title>Vue 调试工具 Devtools</title><link>https://fangr.cc/vue-devtools/</link><pubDate>Wed, 24 Jan 2018 20:09:09 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/vue-devtools/</guid><description><![CDATA[<p>最近开始学习 <a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreffer">Vue.js</a>, 一脸懵逼地进入前端世界。</p>
+<p>不使用 <code>vue-cli</code> 和 <code>webpack</code> 这些构建工具，使用单个 html 引入 Vue。</p>]]></description></item><item><title>使用 Hexo 遇到的一些问题</title><link>https://fangr.cc/hexo-workflow/</link><pubDate>Wed, 27 Sep 2017 20:04:57 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/hexo-workflow/</guid><description><![CDATA[<p>关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm install -g hexo
 $ hexo init
 $ hexo generate <span class="o">(</span>hexo g<span class="o">)</span>
@@ -74,14 +31,7 @@ $ hexo server <span class="o">(</span>hexo s<span class="o">)</span>
 
 $ hexo new <span class="o">[</span>name<span class="o">]</span> - 新建文章
 $ hexo new page <span class="o">[</span>name<span class="o">]</span> - 新建页面
-</code></pre></div>]]></description></item><item><title>在 ObjC 中如何定义 Block</title><link>https://fangr.cc/how-to-declare-block-in-oc/</link><pubDate>Wed, 31 May 2017 19:34:55 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/how-to-declare-block-in-oc/</guid><description>&lt;p>来自一个神奇的域名&lt;/p></description></item><item><title>VS2013 检测 CPU 占用率</title><link>https://fangr.cc/detect-cpu-usage-with-vs2013/</link><pubDate>Mon, 08 Aug 2016 19:59:09 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/detect-cpu-usage-with-vs2013/</guid><description><![CDATA[<p>最近开发的一个程序，用户反馈 CPU 占用非常高，基本把一个内核占用满了。</p>
-<p>
-
-
-
-    
-</p>
-<p>我自己在虚拟机中试了下，确实这样！</p>]]></description></item><item><title>Jekyll 本地安装</title><link>https://fangr.cc/install-jekyll-locally/</link><pubDate>Sun, 05 Jun 2016 19:34:55 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/install-jekyll-locally/</guid><description><![CDATA[<p>安装 Ruby 和 Ruby DevKit</p>
+</code></pre></div>]]></description></item><item><title>在 ObjC 中如何定义 Block</title><link>https://fangr.cc/how-to-declare-block-in-oc/</link><pubDate>Wed, 31 May 2017 19:34:55 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/how-to-declare-block-in-oc/</guid><description>&lt;p>来自一个神奇的域名&lt;/p></description></item><item><title>VS2013 检测 CPU 占用率</title><link>https://fangr.cc/detect-cpu-usage-with-vs2013/</link><pubDate>Mon, 08 Aug 2016 19:59:09 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/detect-cpu-usage-with-vs2013/</guid><description>&lt;p>最近开发的一个程序，用户反馈 CPU 占用非常高，基本把一个内核占用满了。&lt;/p></description></item><item><title>Jekyll 本地安装</title><link>https://fangr.cc/install-jekyll-locally/</link><pubDate>Sun, 05 Jun 2016 19:34:55 +0800</pubDate><author>ryderfang</author><guid>https://fangr.cc/install-jekyll-locally/</guid><description><![CDATA[<p>安装 Ruby 和 Ruby DevKit</p>
 <ul>
 <li><a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe" target="_blank" rel="noopener noreffer">Ruby 2.2.4</a></li>
 <li><a href="http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe" target="_blank" rel="noopener noreffer">Ruby DevKit</a></li>

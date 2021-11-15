@@ -152,19 +152,7 @@
 </div>
 </div>
 <p>废话少说，下载地址：
-<a href=https://download-chromium.appspot.com/ target=_blank rel="noopener noreffer">https://download-chromium.appspot.com/</a></p>
-<p>如果下载不了，可以试下：</p>
-<ul>
-<li>
-<p>Windows
-<a href="https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/" target=_blank rel="noopener noreffer">https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/</a></p>
-</li>
-<li>
-<p>Mac
-<a href="https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/" target=_blank rel="noopener noreffer">https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/</a></p>
-</li>
-</ul>
-<p>打不开之类的需要翻墙的问题自行解决吧。</p></div></div>
+<a href=https://download-chromium.appspot.com/ target=_blank rel="noopener noreffer">https://download-chromium.appspot.com/</a></p></div></div>
 </div>
 <div class=post-tags-summary-under-footer><footer>
 <div class=post-tags-summary-under-footer-display><a class=post-tag-summary href=/tags/chrome/>Chrome</a></div>
@@ -178,10 +166,8 @@
 <a href=/categories/rtfm/><span class="svg-icon icon-folder"></span>RTFM</a>
 </span><span class="meta-item post-author"><a href=https://github.com/ryderfang/ title=Author target=_blank rel="noopener noreffer author" class=author><span class="svg-icon icon-pencil"></span>admin</a></span><span class="meta-item post-publish"><span class="svg-icon icon-clock"></span><time class=timeago datetime=2018-01-25>2018-01-25</time></span></div></div>
 </header>
-<div class=article-text><div class="content summary-content"><h2 id=前言 class=headerLink><a href=#%e5%89%8d%e8%a8%80 class=header-mark></a>前言</h2><p>Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有30天试用版和社区版，其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印：</p>
-<p>
-<img loading=lazy decoding=async class=render-image src=https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/46295044.jpg alt=https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/46295044.jpg title=46295044.jpg></p>
-<p>本文就是要 Python 去除这个水印，输出 png 图片。</p></div></div>
+<div class=article-text><div class="content summary-content"><h2 id=前言 class=headerLink><a href=#%e5%89%8d%e8%a8%80 class=header-mark></a>前言</h2><p>Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有 30 天试用版和社区版，</p>
+<p>其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印。</p></div></div>
 </div>
 <div class=post-tags-summary-under-footer><footer>
 <div class=post-tags-summary-under-footer-display><a class=post-tag-summary href=/tags/watermark/>WaterMark</a></div>
@@ -190,38 +176,13 @@
 <article itemscope itemtype=http://schema.org/Article>
 <div class="summary summary-animation" style=margin-bottom:0>
 <header><div style=padding-top:20px;padding-left:20px;padding-right:20px><h2 class=summary-title itemprop="name headline">
-<a href=/vue-devtools/ target=_self>Vue 调试工具 Devtools 'Vue.js not detected'</a>
+<a href=/vue-devtools/ target=_self>Vue 调试工具 Devtools</a>
 </h2><div class="post-meta summary-post-meta"><span class="meta-item post-category">
 <a href=/categories/rtfm/><span class="svg-icon icon-folder"></span>RTFM</a>
 </span><span class="meta-item post-author"><a href=https://github.com/ryderfang/ title=Author target=_blank rel="noopener noreffer author" class=author><span class="svg-icon icon-pencil"></span>admin</a></span><span class="meta-item post-publish"><span class="svg-icon icon-clock"></span><time class=timeago datetime=2018-01-24>2018-01-24</time></span></div></div>
 </header>
 <div class=article-text><div class="content summary-content"><p>最近开始学习 <a href=https://cn.vuejs.org/ target=_blank rel="noopener noreffer">Vue.js</a>, 一脸懵逼地进入前端世界。</p>
-<p>不使用 <code>vue-cli</code> 和 <code>webpack</code> 这些构建工具，使用单个 html 引入 Vue。</p>
-<p>html 内容是这样的:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>html</span><span class=p>&gt;</span>
-
-<span class=p>&lt;</span><span class=nt>head</span><span class=p>&gt;</span>
-    <span class=p>&lt;</span><span class=nt>meta</span> <span class=na>charset</span><span class=o>=</span><span class=s>&#34;UTF-8&#34;</span><span class=p>&gt;</span>
-    <span class=p>&lt;</span><span class=nt>title</span><span class=p>&gt;</span>Hello, Vue<span class=p>&lt;/</span><span class=nt>title</span><span class=p>&gt;</span>
-    <span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://cdn.jsdelivr.net/npm/vue&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
-<span class=p>&lt;/</span><span class=nt>head</span><span class=p>&gt;</span>
-
-<span class=p>&lt;</span><span class=nt>body</span><span class=p>&gt;</span>
-    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#39;app&#39;</span><span class=p>&gt;</span>
-        <span class=p>&lt;</span><span class=nt>span</span> <span class=na>v-bind:title</span><span class=o>=</span><span class=s>&#34;message&#34;</span><span class=p>&gt;</span>鼠标悬停<span class=p>&lt;/</span><span class=nt>span</span><span class=p>&gt;</span>
-    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-    <span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
-        <span class=kd>var</span> <span class=nx>app</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Vue</span><span class=p>({</span>
-            <span class=nx>el</span><span class=o>:</span> <span class=s1>&#39;#app&#39;</span><span class=p>,</span>
-            <span class=nx>data</span><span class=o>:</span> <span class=p>{</span>
-                <span class=nx>message</span><span class=o>:</span> <span class=s1>&#39;页面加载于 &#39;</span> <span class=o>+</span> <span class=k>new</span> <span class=nb>Date</span><span class=p>().</span><span class=nx>toLocaleString</span><span class=p>()</span>
-            <span class=p>}</span>
-        <span class=p>})</span>
-    <span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
-<span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
-
-<span class=p>&lt;/</span><span class=nt>html</span><span class=p>&gt;</span>
-</code></pre></div></div></div>
+<p>不使用 <code>vue-cli</code> 和 <code>webpack</code> 这些构建工具，使用单个 html 引入 Vue。</p></div></div>
 </div>
 <div class=post-tags-summary-under-footer><footer>
 <div class=post-tags-summary-under-footer-display><a class=post-tag-summary href=/tags/vue/>Vue</a><a class=post-tag-summary href=/tags/front-end/>Front-End</a></div>
