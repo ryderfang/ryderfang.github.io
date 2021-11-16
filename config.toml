@@ -122,9 +122,9 @@ enableEmoji = true
           # URL of avatar shown in home page
           avatarURL = "/avatar.png"
           # title shown in home page (HTML format is supported)
-          title = "Ryder's Cube"
+          title = "<u>Ryder's Humble Room</u>"
           # subtitle shown in home page (HTML format is supported)
-          subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+          subtitle = "公元 2276 年 (威慑纪元 61 年)，三体文明统治地球。人类流亡澳大利亚..."
           # whether to show social links
           social = true
           # disclaimer (HTML format is supported)
@@ -151,7 +151,7 @@ enableEmoji = true
     # 日期格式
     dateFormat = "2006-01-02"
     # 网站图片, 用于 Open Graph 和 Twitter Cards
-    images = ["/logo.png"]
+    images = ["/sword.png"]
 
     # 页面头部导航栏配置
     [params.header]
@@ -162,9 +162,9 @@ enableEmoji = true
         # 页面头部导航栏标题配置
         [params.header.title]
             # LOGO 的 URL
-            logo = "/logo.jpg"
+            logo = "/geoclerk.png"
             # 标题名称
-            name = "光锥之内皆是命运"
+            name = "光锥之内，皆是命运 💫"
             # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
             pre = "<i class='fas fa-pencil-alt fa-fw'></i>"
             # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标

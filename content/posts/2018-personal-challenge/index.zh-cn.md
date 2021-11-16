@@ -1,5 +1,5 @@
 ---
-title: "2018 个人 Flag"
+title: "2018 个人目标 Flag"
 date: 2018-01-29T20:24:41+08:00
 lastmod: 2019-01-01T11:26:13+08:00
 upd: "目标完成度更新"
@@ -14,7 +14,7 @@ tags: [Flag]
 {{< admonition success >}}
 Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)
 
-今年(2018)，他的挑战是 **<u>重整 Facebook</u>**，So，我也要给自己立个 Flag 了。
+今年(2018)，他的挑战是：重整 Facebook。So，我也要给自己立个 Flag 了。
 {{< /admonition >}}
 
 <!--more-->
