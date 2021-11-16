@@ -3,9 +3,11 @@
 
 ## 我是谁
 
+<img align='right' src='/sword.png' width='64px'>
+
 互联网游荡者，历经 'BAT' 三家公司，现任鹅厂废柴搬砖工。
 
-I worked from B (Bilibili) A (Alibaba) T (Tencent), still too `vegetable` as a primary coder.
+I worked from B (Bilibili) A (Alibaba) T (Tencent), still too <u>vegetable</u> as a primary coder.
 
 Now I'm living with my wife and little son in Shanghai, China.
 
