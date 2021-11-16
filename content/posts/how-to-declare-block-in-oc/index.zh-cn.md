@@ -12,11 +12,7 @@ resources:
 
 <!--more-->
 
-{{< admonition note >}}
-
 [http://fuckingblocksyntax.com/](http://fuckingblocksyntax.com/)
-
-{{< /admonition >}}
 
 ## Declaration
 

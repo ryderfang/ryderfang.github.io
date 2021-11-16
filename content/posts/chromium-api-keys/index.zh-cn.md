@@ -8,15 +8,11 @@ resources:
   src: "chromium-image.jpeg"
 ---
 
-## 前言
-
 Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢 😏
 
 <!--more-->
 
-{{< admonition info >}}
-当然是因为好(Zhuang)用(B) 了
-{{< /admonition >}}
+> 当然是因为好用(zhuāng bī) 了 😅
 
 废话少说，下载地址：
 https://download-chromium.appspot.com/
@@ -78,6 +74,6 @@ https://gist.github.com/cvan/44a6d60457b20133191bd7b104f9dcc4
 
 我 Fork 了一下，修复了一个 bug，给他提了 PR (https://github.com/ezeeyahoo/ChromiumSyncEnabler/pull/1)
 
-https://github.com/FongRay/ChromiumSyncEnabler
+https://github.com/ryderfang/ChromiumSyncEnabler
 
 跑下来重启 Chromium 就 OK 了！

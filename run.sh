@@ -1,3 +1,3 @@
 #! /bin/bash
 
-hugo server --port=2333 --buildDrafts
+hugo server --port=2233 --buildDrafts
