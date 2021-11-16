@@ -174,7 +174,7 @@ enableEmoji = true
     [params.footer]
         enable = true
         # 自定义内容 (支持 HTML 格式)
-        custom = '© 2021 Ryder Fang · &lt;/&gt; Powered by <a href="https://gohugo.io/" target="_blank"><u><strong>Hugo</strong></u></a> and <a href="https://github.com/uPagge/uBlogger" target="_blank"><u><strong>uBlogger</strong></u></a>'
+        custom = '© 2021 Ryder Fang · &lt;/&gt; Powered by <a href="https://gohugo.io/" target="_blank"><strong>Hugo</strong></a> and <a href="https://github.com/uPagge/uBlogger" target="_blank"><strong>uBlogger</strong></a>'
         # 是否显示 Hugo 和主题信息
         hugo = false
         # 是否显示版权信息
@@ -184,7 +184,7 @@ enableEmoji = true
         # 网站创立年份
         since = 2016
         # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
-        icp = '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">沪ICP备2021031507号-1</a>'
+        icp = '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener"><u>沪ICP备2021031507号-1</u></a>'
         # 许可协议信息 (支持 HTML 格式)
         license= '<a href="https://opensource.org/licenses/MIT/" target="_blank">MIT</a>'
     
