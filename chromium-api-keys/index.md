@@ -5,14 +5,15 @@
 
 Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢 😏
 
+<!--more-->
+
 {{< admonition info >}}
-当然是因为好(Zhuang) 用(Bi) 了
+当然是因为好(Zhuang)用(B) 了
 {{< /admonition >}}
 
 废话少说，下载地址：
 https://download-chromium.appspot.com/
 
-<!--more-->
 
 如果下载不了，可以试下：
 * Windows
