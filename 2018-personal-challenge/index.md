@@ -7,6 +7,8 @@ Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)
 今年(2018)，他的挑战是 **<u>重整 Facebook</u>**，So，我也要给自己立个 Flag 了。
 {{< /admonition >}}
 
+<!--more-->
+
 ## 技术目标
 
 ```javascript
@@ -15,7 +17,9 @@ console.log('达到中初级前端工程师水平')
 //<!-- -->
 ```
 
-<!--more-->
+{{< admonition failure >}}
+// UPDATE: 并没有达到 :(
+{{< /admonition >}}
 
 这将是技术广度拓宽的一年。
 
@@ -42,7 +46,7 @@ console.log('达到中初级前端工程师水平')
 
 常年处于缺觉的状态，整个人都不好了
 
-{{< admonition success >}}
+{{< admonition tip >}}
 // TODO 最好 11:30 pm 前睡觉
 {{< /admonition >}}
 
