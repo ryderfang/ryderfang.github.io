@@ -114,4 +114,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://fangr.cc/sitemap.xml
+Sitemap: https://ryderfang.com/sitemap.xml

@@ -1,21 +1,20 @@
 # 移除 Visual Paradigm 流程图的水印
 
 
-## 前言
+Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有 30 天试用版和社区版。
 
-Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有 30 天试用版和社区版，
-
-其中社区版 Community Version 是永久免费的，唯一不足的是在导出图表为图片时，右下角会有一个水印。
+其中 [社区版 Community Version](https://www.visual-paradigm.com/cn/download/community.jsp) 是永久免费的。
 
 <!--more-->
 
+唯一不足的是在导出图表为图片时，右下角会有一个水印。
+
+
 ![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/46295044.jpg)
 
-本文就是要 Python 去除这个水印，输出 png 图片。
+本文就是要使用 Python 去除这个水印，输出 png 图片。
 
-{{< admonition note >}}
-该方法参考了网络上手动去除的方法，需要有一些操作
-{{< /admonition >}}
+> 该方法参考了网络上手动去除的方法，需要有一些操作
 
 ## 导出
 
@@ -35,9 +34,7 @@ Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，�
 
 * 处理 svg 图片
 
-{{< admonition tip >}}
-Svg（Scalable Vector Graphics，可缩放矢量图形） 是一种矢量图片格式，可以使用文本编辑器直接打开，可以看得到在最后几行有水印的内容，所以我们可以用代码自动把他们去掉（当然也可以手动删除）。
-{{< /admonition >}}
+> Svg（Scalable Vector Graphics，可缩放矢量图形） 是一种矢量图片格式，可以使用文本编辑器直接打开，可以看得到在最后几行有水印的内容，所以我们可以用代码自动把他们去掉（当然也可以手动删除）。
 
 水印内容在 Svg 文件中：
 
@@ -64,7 +61,7 @@ WdwvFl2vGaThOSEAAAAASUVORK5CYII=" height="16" stroke="white" preserveAspectRatio
 
 然后将 Svg 格式转换成 png格式，这里有现成的库 [cairosvg](http://cairosvg.org/) 来实现。
 
-完整的代码可以在 我的 [Github]() 上找到。
+完整的代码可以在 我的 [Github](https://github.com/ryderfang/PyTools/blob/master/vp_remove_watermark.py) 上找到。
 
 ### 使用方法
 
@@ -110,8 +107,7 @@ $ brew install cairo pango gdk-pixbuf libffi
 ![](https://fangr-cc-image.oss-cn-beijing.aliyuncs.com/18-8-16/49384223.jpg)
 
 源文件：
-[vp_remove_watermark.py](https://github.com/FongRay/PyTools/blob/master/vp_remove_watermark.py)
-
+[vp_remove_watermark.py](https://github.com/ryderfang/PyTools/blob/master/vp_remove_watermark.py)
 
 * 核心代码如下：
 ``` python

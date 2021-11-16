@@ -1,10 +1,10 @@
-# 2018 个人目标 Flag
+# 2018 个人目标 🎯
 
 
-{{< admonition success >}}
-Mark Zuckerberg 每年都会发布自己的年度挑战 (Personal Challenge)
+{{< admonition info >}}
+Mark Zuckerberg 每年都会发布自己的年度挑战 [Personal Challenge](https://www.facebook.com/zuck/posts/10104380170714571)
 
-今年(2018)，他的挑战是：重整 Facebook。So，我也要给自己立个 Flag 了。
+So，我也要给自己立一些 Flag...
 {{< /admonition >}}
 
 <!--more-->
@@ -17,9 +17,7 @@ console.log('达到中初级前端工程师水平')
 //<!-- -->
 ```
 
-{{< admonition failure >}}
-// UPDATE: 并没有达到 :(
-{{< /admonition >}}
+> UPDATE: 并没有达到 😢
 
 这将是技术广度拓宽的一年。
 
@@ -46,9 +44,7 @@ console.log('达到中初级前端工程师水平')
 
 常年处于缺觉的状态，整个人都不好了
 
-{{< admonition tip >}}
-// TODO 最好 11:30 pm 前睡觉
-{{< /admonition >}}
+> TODO: 最好 11:30 pm 前睡觉
 
 ### 锻炼身体
 
@@ -58,15 +54,13 @@ console.log('达到中初级前端工程师水平')
 
 养了点花花草草，买了一只小龟龟，希望它明年还在
 
-{{< admonition question >}}
-// UPDATE: 小龟龟被我养死了 😭
-{{< /admonition >}}
+> UPDATE: 小龟龟被我养死了 😭
 
 ### 结婚吧
 
 在一起快一年了，喜欢她的性格，也觉得该修成正果，安定下来了。
 
-{{< admonition success >}}
-// UPDATE: 2018.12.01 相识 **520** 天，我们结婚啦！👫 💕💕
+{{< admonition success>}}
+UPDATE: 2018.12.01 相识 **520** 天，我们结婚啦！👫 💕💕
 {{< /admonition >}}
 

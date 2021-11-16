@@ -2,12 +2,12 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>在 ObjC 中如何定义 Block | </title><meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://fangr.cc/how-to-declare-block-in-oc/block.jpeg">
+<meta name=twitter:image content="https://ryderfang.com/how-to-declare-block-in-oc/block.jpeg">
 <meta name=twitter:title content="在 ObjC 中如何定义 Block">
 <meta name=twitter:description content><meta name=twitter:creator content="@ryderfang"><meta name=Description content="About uBlogger Theme"><meta property="og:title" content="在 ObjC 中如何定义 Block">
 <meta property="og:description" content="来自一个神奇的域名">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://fangr.cc/how-to-declare-block-in-oc/"><meta property="og:image" content="https://fangr.cc/how-to-declare-block-in-oc/block.jpeg"><meta property="article:section" content="posts">
+<meta property="og:url" content="https://ryderfang.com/how-to-declare-block-in-oc/"><meta property="og:image" content="https://ryderfang.com/how-to-declare-block-in-oc/block.jpeg"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2017-05-31T19:34:55+08:00">
 <meta property="article:modified_time" content="2017-05-31T19:34:55+08:00">
 <meta name=application-name content="uBlogger">
@@ -15,7 +15,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://fangr.cc/how-to-declare-block-in-oc/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"在 ObjC 中如何定义 Block","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/fangr.cc\/how-to-declare-block-in-oc\/"},"image":[{"@type":"ImageObject","url":"https:\/\/fangr.cc\/how-to-declare-block-in-oc\/block.jpeg","width":1500,"height":1059}],"genre":"posts","keywords":"Block","wordCount":154,"url":"https:\/\/fangr.cc\/how-to-declare-block-in-oc\/","datePublished":"2017-05-31T19:34:55+08:00","dateModified":"2017-05-31T19:34:55+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/fangr.cc\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://fangr.cc/categories/objc/"},{"@type":"ListItem","position":3,"name":"在 ObjC 中如何定义 Block"}]}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/how-to-declare-block-in-oc/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"在 ObjC 中如何定义 Block","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/how-to-declare-block-in-oc\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/how-to-declare-block-in-oc\/block.jpeg","width":1500,"height":1059}],"genre":"posts","keywords":"Block","wordCount":152,"url":"https:\/\/ryderfang.com\/how-to-declare-block-in-oc\/","datePublished":"2017-05-31T19:34:55+08:00","dateModified":"2017-05-31T19:34:55+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"在 ObjC 中如何定义 Block"}]}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -121,7 +121,7 @@
 </span><span class="post-meta-date meta-item">
 <span class="svg-icon icon-clock"></span><time class=timeago datetime=2017-05-31>2017-05-31</time>
 </span><span class="post-meta-words meta-item">
-<span class="svg-icon icon-pencil"></span>约 154 字
+<span class="svg-icon icon-pencil"></span>约 152 字
 </span>
 <span class="post-meta-reading meta-item">
 <span class="svg-icon icon-stopwatch"></span>预计阅读 1 分钟
@@ -133,7 +133,7 @@
 <div class="article-post toc-start">
 <div class="content-block content-block-first content-block-position">
 <div class="post single"><div class=image-theme-classic>
-<img src=https://fangr.cc/how-to-declare-block-in-oc/block.jpeg style=width:100%>
+<img src=https://ryderfang.com/how-to-declare-block-in-oc/block.jpeg style=width:100%>
 </div><div class="details toc" id=toc-static data-kept>
 <div class="details-summary toc-title">
 <span>目录</span>
@@ -153,14 +153,7 @@
 </ul>
 </nav></div>
 </div><p>来自一个神奇的域名</p>
-<div class="details admonition note open">
-<div class="details-summary admonition-title" style=display:none>
-<i class="icon admonition-icon icon-note"></i>注意<i class="details-icon admonition-icon admonition-icon-arrow-right"></i>
-</div>
-<div class=details-content>
-<div class=admonition-content><a href=http://fuckingblocksyntax.com/ target=_blank rel="noopener noreffer">http://fuckingblocksyntax.com/</a></div>
-</div>
-</div>
+<p><a href=http://fuckingblocksyntax.com/ target=_blank rel="noopener noreffer">http://fuckingblocksyntax.com/</a></p>
 <h2 id=declaration class=headerLink><a href=#declaration class=header-mark></a>Declaration</h2><h3 id=local-variable class=headerLink><a href=#local-variable class=header-mark></a>local variable</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objectivec data-lang=objectivec><span class=n>returnType</span> <span class=p>(</span><span class=o>^</span><span class=n>blockName</span><span class=p>)(</span><span class=n>parameterTypes</span><span class=p>)</span> <span class=o>=</span> <span class=o>^</span><span class=n>returnType</span><span class=p>(</span><span class=n>parameters</span><span class=p>)</span> <span class=p>{...};</span>
 </code></pre></div><h3 id=property class=headerLink><a href=#property class=header-mark></a>property</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objectivec data-lang=objectivec><span class=k>@property</span> <span class=p>(</span><span class=k>nonatomic</span><span class=p>,</span> <span class=k>copy</span><span class=p>,</span> <span class=n>nullability</span><span class=p>)</span> <span class=n>returnType</span> <span class=p>(</span><span class=o>^</span><span class=n>blockName</span><span class=p>)(</span><span class=n>parameterTypes</span><span class=p>);</span>
 </code></pre></div><h3 id=method-parameter class=headerLink><a href=#method-parameter class=header-mark></a>method parameter</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objectivec data-lang=objectivec><span class=p>-</span> <span class=p>(</span><span class=kt>void</span><span class=p>)</span><span class=nf>someMethodThatTakesABlock:</span><span class=p>(</span><span class=n>returnType</span> <span class=p>(</span><span class=o>^</span><span class=n>nullability</span><span class=p>)(</span><span class=n>parameterTypes</span><span class=p>))</span><span class=nv>blockName</span><span class=p>;</span>
@@ -177,11 +170,11 @@
 </blockquote></div><footer>
 <div class=post>
 <div class=post-share><div class=share-link>
-<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://fangr.cc/how-to-declare-block-in-oc/ data-title="在 ObjC 中如何定义 Block" data-via=ryderfang data-hashtags=Block><span class="svg-social-icon icon-twitter"></span></a>
+<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://ryderfang.com/how-to-declare-block-in-oc/ data-title="在 ObjC 中如何定义 Block" data-via=ryderfang data-hashtags=Block><span class="svg-social-icon icon-twitter"></span></a>
 </div><div class=share-link>
-<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://fangr.cc/how-to-declare-block-in-oc/ data-hashtag=Block><span class="svg-social-icon icon-facebook"></span></a>
+<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://ryderfang.com/how-to-declare-block-in-oc/ data-hashtag=Block><span class="svg-social-icon icon-facebook"></span></a>
 </div><div class=share-link>
-<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://fangr.cc/how-to-declare-block-in-oc/ data-title="在 ObjC 中如何定义 Block"><span class="svg-social-icon icon-weibo"></span></a>
+<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://ryderfang.com/how-to-declare-block-in-oc/ data-title="在 ObjC 中如何定义 Block"><span class="svg-social-icon icon-weibo"></span></a>
 </div></div>
 <div class=block-author>
 <div class=author-avatar><a href=https://github.com/ryderfang/ target=_blank><img alt=人生如逆旅，我亦是行人 src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-05-avatar2.jpg></a></div>
