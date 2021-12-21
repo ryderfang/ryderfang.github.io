@@ -1,4 +1,4 @@
-name: Update Search
+name: Sync To TCloud
 
 on:
   workflow_dispatch: # run the action manually
@@ -16,4 +16,5 @@ jobs:
           port: 22
           script: |
             whoami
-            ls -al
+            cd blog && git pull
+            echo 'Done!'
