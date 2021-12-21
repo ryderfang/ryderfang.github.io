@@ -1,0 +1,19 @@
+name: Update Search
+
+on:
+  workflow_dispatch: # run the action manually
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: remote ssh command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.TENCENT_CLOUD_HOST }}
+          username: ubuntu
+          key: ${{ secrets.TENCENT_CLOUD_KEY }}
+          port: 22
+          script: |
+            whoami
+            ls -al
