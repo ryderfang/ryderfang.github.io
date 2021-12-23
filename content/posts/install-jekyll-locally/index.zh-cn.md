@@ -10,7 +10,7 @@ toc:
   enable: false
 resources:
 - name: "featured-image"
-  src: "jekyll-illustration.jpeg"
+  src: "featured-image.jpg"
 ---
 
 安装 Ruby 和 Ruby DevKit

@@ -5,7 +5,7 @@ categories: [ObjC]
 tags: [Block]
 resources:
 - name: "featured-image"
-  src: "block.jpeg"
+  src: "featured-image.jpg"
 ---
 
 来自一个神奇的域名

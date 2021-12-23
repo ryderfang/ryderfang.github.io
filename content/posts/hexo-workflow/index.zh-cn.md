@@ -6,7 +6,7 @@ categories: [RTFM]
 tags: [Hexo, Blog]
 resources:
 - name: "featured-image"
-  src: "hexo-github.png"
+  src: "featured-image.jpg"
 ---
 
 关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:

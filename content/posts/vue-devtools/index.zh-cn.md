@@ -7,7 +7,7 @@ lastmod: 2021-11-12T11:26:13+08:00
 upd: "前端真难"
 resources:
 - name: "featured-image"
-  src: "vue-devtools.png"
+  src: "featured-image.jpg"
 ---
 
 最近开始学习 [Vue.js](https://cn.vuejs.org/), 一脸懵逼地进入前端世界。

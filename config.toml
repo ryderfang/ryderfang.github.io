@@ -71,6 +71,7 @@ enableEmoji = true
         title = "GitHub"
         weight = 5
     [languages.zh-cn.params]
+      title = "热爱可抵岁月漫长"
       # site description
       description = "About uBlogger Theme"
       # site keywords

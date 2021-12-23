@@ -5,7 +5,7 @@ categories: [RTFM]
 tags: [WaterMark]
 resources:
 - name: "featured-image"
-  src: "Visual-Paradigm.jpeg"
+  src: "featured-image.jpg"
 ---
 
 Visual Paradigm 是一个不错的画流程图、时序图和类图的工具，有 30 天试用版和社区版。

@@ -25,6 +25,25 @@ tags: [Flag]
 
 同样在腾讯云买了一个轻应用服务器，托管一下这个静态博客，不打算再折腾自动化了，需要同步的时候 ssh 登录一下，手动拉一下 repo 就好。
 
+{{< admonition tip >}}
+哈哈，总是在打脸，还是把自动同步服务器做成了一个 Action
+{{< /admonition >}}
+
+```shell
+- name: remote ssh command
+  uses: appleboy/ssh-action@master
+  with:
+    host: ${{ secrets.TENCENT_CLOUD_HOST }}
+    username: ubuntu
+    key: ${{ secrets.TENCENT_CLOUD_KEY }}
+    port: 22
+    script: |
+      whoami
+      cd blog && git pull
+      echo 'Done!'
+```
+
+
 再把之前的博客内容整理到新的博客上，发现并没多少值得保留的，真是有点惭愧。
 
 ## 技术目标

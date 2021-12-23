@@ -5,7 +5,7 @@ categories: [RTFM]
 tags: [Chrome]
 resources:
 - name: "featured-image"
-  src: "chromium-image.jpeg"
+  src: "featured-image.jpg"
 ---
 
 Chromium 是 Chrome 的开发版本，也就是开发过程中存在一堆 Bug 的版本，那么为什么要用这个呢 😏

@@ -5,7 +5,7 @@ categories: [Windows]
 tags: [CPU]
 resources:
 - name: "featured-image"
-  src: "microsoft_visual_studio.jpeg"
+  src: "featured-image.jpg"
 ---
 
 最近开发的一个程序，用户反馈 CPU 占用非常高，基本把一个内核占用满了。

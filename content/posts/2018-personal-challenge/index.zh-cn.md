@@ -5,7 +5,7 @@ lastmod: 2019-01-01T11:26:13+08:00
 upd: "目标完成度更新"
 resources:
 - name: "featured-image"
-  src: "MarkZuckerberg2018.png"
+  src: "featured-image.jpg"
 
 categories: [Challenge]
 tags: [Flag]
