@@ -16,7 +16,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/objc-roadmap/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Objc 路线图","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/objc-roadmap\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/objc-roadmap\/featured-image.jpg","width":1365,"height":800}],"genre":"posts","keywords":"Roadmap, ObjC","wordCount":569,"url":"https:\/\/ryderfang.com\/objc-roadmap\/","datePublished":"2021-12-23T17:32:58+08:00","dateModified":"2021-12-23T17:32:58+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"Objc 路线图"}]}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/objc-roadmap/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Objc 路线图","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/objc-roadmap\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/objc-roadmap\/featured-image.jpg","width":1365,"height":800}],"genre":"posts","keywords":"Roadmap, ObjC","wordCount":608,"url":"https:\/\/ryderfang.com\/objc-roadmap\/","datePublished":"2021-12-23T17:32:58+08:00","dateModified":"2021-12-23T17:32:58+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"Objc 路线图"}]}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -122,7 +122,7 @@
 </span><span class="post-meta-date meta-item">
 <span class="svg-icon icon-clock"></span><time class=timeago datetime=2021-12-23>2021-12-23</time>
 </span><span class="post-meta-words meta-item">
-<span class="svg-icon icon-pencil"></span>约 569 字
+<span class="svg-icon icon-pencil"></span>约 608 字
 </span>
 <span class="post-meta-reading meta-item">
 <span class="svg-icon icon-stopwatch"></span>预计阅读 2 分钟
@@ -158,7 +158,15 @@
 <li><a href=#xiii-runtime-5>XIII. Runtime 5️⃣</a></li>
 </ul>
 </li>
-<li><a href=#uikit>UIKit</a></li>
+<li><a href=#uikit>UIKit</a>
+<ul>
+<li><a href=#uiview-与-calayer>UIView 与 CALayer</a></li>
+<li><a href=#常用-ui-组件>常用 UI 组件</a></li>
+<li><a href=#autolayout>AutoLayout</a></li>
+<li><a href=#uiresponder>UIResponder</a></li>
+<li><a href=#离屏渲染>离屏渲染</a></li>
+</ul>
+</li>
 <li><a href=#core-系列>Core 系列</a>
 <ul>
 <li><a href=#core-graphics>Core Graphics</a></li>
@@ -285,7 +293,43 @@ ARC 一般不需要写 dealloc，也不需要调用 [super dealloc]。移除 NSN
 <h3 id=xiii-runtime-5 class=headerLink><a href=#xiii-runtime-5 class=header-mark></a>XIII. Runtime 5️⃣</h3><p>一图胜千言，引用 Runtime 工程师 <a href=http://www.sealiesoftware.com/blog/archive/2009/04/14/objc_explain_Classes_and_metaclasses.html target=_blank rel="noopener noreffer">Greg Parker</a> 在其博客中给出的经典图</p>
 <p>
 <img loading=lazy decoding=async class=render-image src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-23-class-diagram.png alt=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-23-class-diagram.png title=2021-12-23-class-diagram.png></p>
-<h2 id=uikit class=headerLink><a href=#uikit class=header-mark></a>UIKit</h2><h2 id=core-系列 class=headerLink><a href=#core-%e7%b3%bb%e5%88%97 class=header-mark></a>Core 系列</h2><h3 id=core-graphics class=headerLink><a href=#core-graphics class=header-mark></a>Core Graphics</h3><h3 id=core-data class=headerLink><a href=#core-data class=header-mark></a>Core Data</h3><h3 id=avfoundation class=headerLink><a href=#avfoundation class=header-mark></a>AVFoundation</h3></div><footer>
+<h2 id=uikit class=headerLink><a href=#uikit class=header-mark></a>UIKit</h2><h3 id=uiview-与-calayer class=headerLink><a href=#uiview-%e4%b8%8e-calayer class=header-mark></a>UIView 与 CALayer</h3><ul>
+<li>
+<p>bounds 与 frame</p>
+</li>
+<li>
+<p>setNeedsDisplay 与 layoutIfNeeded</p>
+</li>
+</ul>
+<h3 id=常用-ui-组件 class=headerLink><a href=#%e5%b8%b8%e7%94%a8-ui-%e7%bb%84%e4%bb%b6 class=header-mark></a>常用 UI 组件</h3><ul>
+<li>
+<p>UIScrollView</p>
+</li>
+<li>
+<p>UITableView</p>
+</li>
+<li>
+<p>UICollectionView</p>
+</li>
+</ul>
+<h3 id=autolayout class=headerLink><a href=#autolayout class=header-mark></a>AutoLayout</h3><ul>
+<li>Masonary 原理</li>
+</ul>
+<h3 id=uiresponder class=headerLink><a href=#uiresponder class=header-mark></a>UIResponder</h3><ul>
+<li>
+<p>touch events</p>
+</li>
+<li>
+<p>hitTest</p>
+</li>
+</ul>
+<h3 id=离屏渲染 class=headerLink><a href=#%e7%a6%bb%e5%b1%8f%e6%b8%b2%e6%9f%93 class=header-mark></a>离屏渲染</h3><ul>
+<li>layoutSubview 与 drawRect</li>
+</ul>
+<h2 id=core-系列 class=headerLink><a href=#core-%e7%b3%bb%e5%88%97 class=header-mark></a>Core 系列</h2><h3 id=core-graphics class=headerLink><a href=#core-graphics class=header-mark></a>Core Graphics</h3><ul>
+<li>高效绘制圆角</li>
+</ul>
+<h3 id=core-data class=headerLink><a href=#core-data class=header-mark></a>Core Data</h3><h3 id=avfoundation class=headerLink><a href=#avfoundation class=header-mark></a>AVFoundation</h3></div><footer>
 <div class=post>
 <div class=post-share><div class=share-link>
 <a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://ryderfang.com/objc-roadmap/ data-title="Objc 路线图" data-via=ryderfang data-hashtags=Roadmap,ObjC><span class="svg-social-icon icon-twitter"></span></a>

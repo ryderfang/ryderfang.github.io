@@ -115,9 +115,40 @@ iOS 的体系结构如下图：
 ![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-23-class-diagram.png)
 ## UIKit
 
+### UIView 与 CALayer
+
+* bounds 与 frame
+
+* setNeedsDisplay 与 layoutIfNeeded
+
+
+### 常用 UI 组件
+
+* UIScrollView
+
+* UITableView
+
+* UICollectionView
+
+### AutoLayout
+
+* Masonary 原理
+
+### UIResponder
+
+* touch events
+
+* hitTest
+
+### 离屏渲染
+
+* layoutSubview 与 drawRect
+
 ## Core 系列
 
 ### Core Graphics
+
+* 高效绘制圆角
 
 ### Core Data
 
