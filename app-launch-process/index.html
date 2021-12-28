@@ -1,0 +1,197 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>发生在用户点击 icon 之后 | 热爱可抵岁月漫长</title><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://ryderfang.com/app-launch-process/featured-image.jpg">
+<meta name=twitter:title content="发生在用户点击 icon 之后">
+<meta name=twitter:description content><meta name=twitter:creator content="@ryderfang"><meta name=Description content="About uBlogger Theme"><meta property="og:title" content="发生在用户点击 icon 之后">
+<meta property="og:description" content="本文讨论一下 iOS 的 App 从用户点击图标开始到 App 完全可用的过程。苹果开发者文档有这样一篇文章： Responding to the Launch of Your App 有个主要的流程图： 另外，还有一篇介绍如何">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ryderfang.com/app-launch-process/"><meta property="og:image" content="https://ryderfang.com/app-launch-process/featured-image.jpg"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-12-28T16:18:03+08:00">
+<meta property="article:modified_time" content="2021-12-28T16:18:03+08:00"><meta property="og:site_name" content="热爱可抵岁月漫长">
+<meta name=application-name content="uBlogger">
+<meta name=apple-mobile-web-app-title content="uBlogger"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/app-launch-process/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"发生在用户点击 icon 之后","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/app-launch-process\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/app-launch-process\/featured-image.jpg","width":1600,"height":1067}],"genre":"posts","keywords":"Launch, App","wordCount":186,"url":"https:\/\/ryderfang.com\/app-launch-process\/","datePublished":"2021-12-28T16:18:03+08:00","dateModified":"2021-12-28T16:18:03+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"Optimize","item":"https://ryderfang.com/categories/optimize/"},{"@type":"ListItem","position":3,"name":"发生在用户点击 icon 之后"}]}</script></head>
+<body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
+<div id=mask></div><div class=wrapper><header>
+<div class="desktop header" id=header-desktop>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title=给岁月以文明 class="header-logo logo-svg"><img loading=lazy decoding=async class=logo src=/geoclerk.png alt=/geoclerk.png title=/geoclerk.png><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内，皆是命运 💫</a>
+</div>
+<div class=menu>
+<nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul class=menu-inner><li>
+<a class=menu-item href=/posts/> Posts </a>
+</li><li>
+<a class=menu-item href=/tags/> Tags </a>
+</li><li>
+<a class=menu-item href=/categories/> Categories </a>
+</li><li>
+<a class=menu-item href=/about/> About </a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i> </a>
+</li></ul>
+</nav><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-desktop>
+<span class="svg-icon icon-loading"></span>
+</span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a>
+</div>
+</div>
+</div><div class="mobile header" id=header-mobile>
+<div class=header-container>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title=给岁月以文明 class=header-logo><img loading=lazy decoding=async class=logo src=/geoclerk.png alt=/geoclerk.png title=/geoclerk.png><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内，皆是命运 💫</a>
+</div>
+<div class=menu-toggle id=menu-toggle-mobile>
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class=menu id=menu-mobile><div class=search-wrapper>
+<div class="search mobile" id=search-mobile>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-mobile>
+<span class="svg-icon icon-loading"></span>
+</span>
+</div>
+<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
+取消
+</a>
+</div><nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul><li>
+<a class=menu-item href=/posts/ title>Posts</a>
+</li><li>
+<a class=menu-item href=/tags/ title>Tags</a>
+</li><li>
+<a class=menu-item href=/categories/ title>Categories</a>
+</li><li>
+<a class=menu-item href=/about/ title>About</a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i></a>
+</li></ul>
+</nav>
+<a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a></div>
+</div>
+</div><div class="search-dropdown desktop">
+<div id=search-dropdown-desktop></div>
+</div>
+<div class="search-dropdown mobile">
+<div id=search-dropdown-mobile></div>
+</div></header><main class=main>
+<div class="container content-article page-toc theme-classic"><div class=toc id=toc-auto>
+<div class=toc-title>目录</div>
+<div class=toc-content id=toc-content-auto></div>
+</div>
+<article>
+<header class=header-post>
+<div class=post-title>
+<div class=post-all-meta>
+<nav class=breadcrumbs>
+<ol>
+<li><a href=/>主页 </a></li><li><a href=/categories/optimize/>Optimize </a></li><li>发生在用户点击 icon 之后</li>
+</ol>
+</nav>
+<h1 class="single-title flipInX">发生在用户点击 icon 之后</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+<a href=/categories/optimize/><span class="svg-icon icon-folder"></span>Optimize</a>
+</span><span class="post-meta-date meta-item">
+<span class="svg-icon icon-clock"></span><time class=timeago datetime=2021-12-28>2021-12-28</time>
+</span><span class="post-meta-words meta-item">
+<span class="svg-icon icon-pencil"></span>约 186 字
+</span>
+<span class="post-meta-reading meta-item">
+<span class="svg-icon icon-stopwatch"></span>预计阅读 1 分钟
+</span>
+</div>
+</div>
+</div>
+</header>
+<div class="article-post toc-start">
+<div class="content-block content-block-first content-block-position">
+<div class="post single"><div class=image-theme-classic>
+<img src=https://ryderfang.com/app-launch-process/featured-image.jpg style=width:100%>
+</div><div class="details toc" id=toc-static data-kept>
+<div class="details-summary toc-title">
+<span>目录</span>
+</div>
+<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents>
+<ul>
+<li><a href=#系统层>系统层</a></li>
+<li><a href=#pre-main-阶段>pre-main 阶段</a></li>
+<li><a href=#main-方法>main 方法</a></li>
+<li><a href=#首屏渲染后>首屏渲染后</a></li>
+</ul>
+</nav></div>
+</div><p>本文讨论一下 iOS 的 App 从用户点击图标开始到 App 完全可用的过程。苹果开发者文档有这样一篇文章：</p>
+<p><a href="https://developer.apple.com/documentation/uikit/app_and_environment/responding_to_the_launch_of_your_app?language=objc" target=_blank rel="noopener noreffer">Responding to the Launch of Your App</a></p>
+<p>有个主要的流程图：</p>
+<p>
+<img loading=lazy decoding=async class=render-image src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-28-GZXEUO.jpg alt=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-28-GZXEUO.jpg title=2021-12-28-GZXEUO.jpg></p>
+<p>另外，还有一篇介绍如何优化启动速度的文章，毕竟只有准确了解了启动中做了哪些事，才能更针对地进行优化。</p>
+<p><a href=https://developer.apple.com/documentation/xcode/reducing-your-app-s-launch-time target=_blank rel="noopener noreffer">Reducing Your App’s Launch Time</a></p>
+<p>这里还参考了以下几篇文章：</p>
+<p>[1]: <a href=https://www.jianshu.com/p/024b3d847fe0 target=_blank rel="noopener noreffer">iOS App 启动优化</a></p>
+<p>[2]: <a href=https://www.jianshu.com/p/231b1cebf477 target=_blank rel="noopener noreffer">iOS App 从点击到启动</a></p>
+<p>[3]: <a href=https://www.jianshu.com/p/e7a9e14205ac target=_blank rel="noopener noreffer">深入了解 App 启动过程</a></p>
+<p>总结一下：</p>
+<h2 id=系统层 class=headerLink><a href=#%e7%b3%bb%e7%bb%9f%e5%b1%82 class=header-mark></a>系统层</h2><h2 id=pre-main-阶段 class=headerLink><a href=#pre-main-%e9%98%b6%e6%ae%b5 class=header-mark></a>pre-main 阶段</h2><h2 id=main-方法 class=headerLink><a href=#main-%e6%96%b9%e6%b3%95 class=header-mark></a>main 方法</h2><h2 id=首屏渲染后 class=headerLink><a href=#%e9%a6%96%e5%b1%8f%e6%b8%b2%e6%9f%93%e5%90%8e class=header-mark></a>首屏渲染后</h2></div><footer>
+<div class=post>
+<div class=post-share><div class=share-link>
+<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://ryderfang.com/app-launch-process/ data-title="发生在用户点击 icon 之后" data-via=ryderfang data-hashtags=Launch,App><span class="svg-social-icon icon-twitter"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://ryderfang.com/app-launch-process/ data-hashtag=Launch><span class="svg-social-icon icon-facebook"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://ryderfang.com/app-launch-process/ data-title="发生在用户点击 icon 之后"><span class="svg-social-icon icon-weibo"></span></a>
+</div></div>
+<div class=block-author>
+<div class=author-avatar><a href=https://github.com/ryderfang/ target=_blank><img alt=人生如逆旅，我亦是行人 src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-05-avatar2.jpg></a></div>
+<div class=author-info>
+<div class=name><a href=https://github.com/ryderfang/ target=_blank></a></div>
+<div class=number-posts>人生如逆旅，我亦是行人</span></div>
+</div>
+</div>
+<div class=post-tags><a href=/tags/launch/ class=tag>Launch</a><a href=/tags/app/ class=tag>App</a></div></div>
+</footer></div>
+<div id=toc-final></div>
+</div>
+</article>
+<section class="page single comments content-block-position">
+<h1 class=display-hidden>Комментарии</h1><div id=comments><div id=utterances></div><noscript>
+Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.
+</noscript></div></section></div>
+</main><footer class=footer>
+<div class=footer-container><div class=footer-line>© 2021 Ryder Fang · &lt;/> Powered by <a href=https://gohugo.io/ target=_blank><strong>Hugo</strong></a> and <a href=https://github.com/uPagge/uBlogger target=_blank><strong>uBlogger</strong></a></div><div class=footer-line><span class=license><a href=https://opensource.org/licenses/MIT/ target=_blank>MIT</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br>
+<span class=icp><a href=https://beian.miit.gov.cn/ target=_blank rel=noopener><u>沪ICP备2021031507号-1</u></a></span></div>
+</div>
+</footer></div>
+<aside id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
+<i class="svg-icon icon-arrow-up"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论>
+<i class="svg-icon icon-comments-fixed"></i>
+</a>
+</aside><script src=/lib/smooth-scroll/smooth-scroll.min.js></script><script src=/lib/autocomplete/autocomplete.min.js></script><script src=/lib/algoliasearch/algoliasearch-lite.umd.min.js></script><script src=/lib/clipboard/clipboard.min.js></script><script src=/lib/sharer/sharer.min.js></script><script src=/lib/prismjs/prism.js></script><script>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"Utterances",lightTheme:"github-light",repo:"ryderfang/ryderfang.github.io"}},search:{algoliaAppID:"KNWHHR2LLW",algoliaIndex:"ryder_blog",algoliaSearchKey:"99980e3c2014fb8c463a83c546a3f4a6",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:30,type:"algolia"}}</script><script src=/js/theme.min.js></script></body>
+</html>
