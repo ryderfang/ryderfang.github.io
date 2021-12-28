@@ -36,7 +36,7 @@ https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?p
 - GOOGLE_DEFAULT_CLIENT_ID
 - GOOGLE_DEFAULT_CLIENT_SECRET
 
-### 解决
+## 解决
 
 官方的解决方法是：
 
