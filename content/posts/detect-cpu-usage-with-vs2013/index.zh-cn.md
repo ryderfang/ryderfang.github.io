@@ -3,6 +3,8 @@ title: "VS2013 检测 CPU 占用率"
 date: 2016-08-08T19:59:09+08:00
 categories: [Windows]
 tags: [CPU]
+toc:
+  enable: false
 resources:
 - name: "featured-image"
   src: "featured-image.jpg"

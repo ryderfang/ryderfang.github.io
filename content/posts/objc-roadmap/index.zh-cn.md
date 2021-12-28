@@ -1,5 +1,5 @@
 ---
-title: "Objc 路线图"
+title: "ObjC 之 技术路线图"
 date: 2021-12-23T17:32:58+08:00
 categories: [ObjC]
 tags: [Roadmap, ObjC]
@@ -120,6 +120,8 @@ iOS 的体系结构如下图：
 一图胜千言，引用 Runtime 工程师 [Greg Parker](http://www.sealiesoftware.com/blog/archive/2009/04/14/objc_explain_Classes_and_metaclasses.html) 在其博客中给出的经典图
 
 ![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-23-class-diagram.png)
+
+系列文章：[Runtime 是个啥？](https://ryderfang.com/what-is-runtime/)
 ## UIKit
 
 ### UIView 与 CALayer
