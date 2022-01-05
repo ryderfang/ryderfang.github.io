@@ -15,21 +15,21 @@ Now I'm living with my wife and little son in Shanghai, China.
 
 ## 经历
 
-🐧 腾讯上海
+🐧 腾讯科技（上海）有限公司
 <img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-qq.jpg' width='64px'>
 
 * 客户端开发
-* 2020.11.22 - INF
+* 2019.11 - INF
 * 手 Q 开发
   * 相机渲染，道具特效等
   * 图片、视频编辑
   * AI 端智能
 
-🚼 阿里巴巴 | 口碑
+🚼 口碑（上海）信息技术有限公司 | 阿里巴巴
 <img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-merchant-logo.png' width='64px'>
 
 * 高级无线开发工程师
-* 2017.10.16 - 2020.11.20
+* 2017.10 - 2019.11
 * 口碑掌柜
   * 业务开发、投放体系建设
   * Lottie 接入
@@ -38,7 +38,7 @@ Now I'm living with my wife and little son in Shanghai, China.
   * 端 AI 智能算法
   * H5 容器相关
 
-🏝 哔哩哔哩 | 幻电信息科技
+🏝 上海哔哩哔哩科技有限公司 | 幻电信息科技
 <img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-bilibili-logo.png' width='64px'>
 
 * iOS 开发工程师
@@ -52,7 +52,7 @@ Now I'm living with my wife and little son in Shanghai, China.
   * 多线程视频文件上传
   * 稿件管理功能等
 
-📟 二三四五网络科技
+📟 上海二三四五网络科技有限公司
 <img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-2345.jpg' width='64px'>
 
 * 2013.12 - 2016.04
