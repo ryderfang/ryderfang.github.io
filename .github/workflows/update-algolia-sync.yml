@@ -1,4 +1,4 @@
-name: Update Search
+name: Update & Sync
 
 on:
   workflow_dispatch: # run the action manually
@@ -25,3 +25,15 @@ jobs:
           ALGOLIA_INDEX_NAME: ryder_blog
           ALGOLIA_INDEX_FILE: index.json
         run: npm install atomic-algolia && npm run algolia
+
+      - name: remote ssh command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.TENCENT_CLOUD_HOST }}
+          username: ubuntu
+          key: ${{ secrets.TENCENT_CLOUD_KEY }}
+          port: 22
+          script: |
+            whoami
+            cd blog && git pull
+            echo 'Done!'
