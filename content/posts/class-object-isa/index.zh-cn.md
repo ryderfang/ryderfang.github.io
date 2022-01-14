@@ -5,7 +5,7 @@ categories: []
 tags: []
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "featured-image.jpg"
 ---
 
 作为 Runtime 系列的第一篇博文（也是 2022 年第一篇），先从最基础的对象、类开始学习。
