@@ -2,12 +2,12 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>Class, Object 与 isa | 热爱可抵岁月漫长</title><meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://ryderfang.com/class-object-isa/featured-image.png">
+<meta name=twitter:image content="https://ryderfang.com/class-object-isa/featured-image.jpg">
 <meta name=twitter:title content="Class, Object 与 isa">
 <meta name=twitter:description content><meta name=twitter:creator content="@ryderfang"><meta name=Description content="About uBlogger Theme"><meta property="og:title" content="Class, Object 与 isa">
 <meta property="og:description" content="作为 Runtime 系列的第一篇博文（也是 2022 年第一篇），先从最基础的对象、类开始学习。 参考 OC 编译过程 我们可以借助 clang 工具将 OC 源码预处理成 CPP 来窥探 OC 的内部实现">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://ryderfang.com/class-object-isa/"><meta property="og:image" content="https://ryderfang.com/class-object-isa/featured-image.png"><meta property="article:section" content="posts">
+<meta property="og:url" content="https://ryderfang.com/class-object-isa/"><meta property="og:image" content="https://ryderfang.com/class-object-isa/featured-image.jpg"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2022-01-04T20:19:38+08:00">
 <meta property="article:modified_time" content="2022-01-04T20:19:38+08:00"><meta property="og:site_name" content="热爱可抵岁月漫长">
 <meta name=application-name content="uBlogger">
@@ -15,7 +15,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/class-object-isa/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Class, Object 与 isa","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/class-object-isa\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/class-object-isa\/featured-image.png","width":1506,"height":782}],"genre":"posts","wordCount":1072,"url":"https:\/\/ryderfang.com\/class-object-isa\/","datePublished":"2022-01-04T20:19:38+08:00","dateModified":"2022-01-04T20:19:38+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/class-object-isa/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Class, Object 与 isa","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/class-object-isa\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/class-object-isa\/featured-image.jpg","width":1600,"height":900}],"genre":"posts","wordCount":1072,"url":"https:\/\/ryderfang.com\/class-object-isa\/","datePublished":"2022-01-04T20:19:38+08:00","dateModified":"2022-01-04T20:19:38+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -131,7 +131,7 @@
 <div class="article-post toc-start">
 <div class="content-block content-block-first content-block-position">
 <div class="post single"><div class=image-theme-classic>
-<img src=https://ryderfang.com/class-object-isa/featured-image.png style=width:100%>
+<img src=https://ryderfang.com/class-object-isa/featured-image.jpg style=width:100%>
 </div><div class="details toc" id=toc-static data-kept>
 <div class="details-summary toc-title">
 <span>目录</span>

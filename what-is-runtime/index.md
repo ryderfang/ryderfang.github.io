@@ -37,7 +37,7 @@ Runtime 是一个动态库 (/usr/lib/libobjc.A.dylib)，用于实现 OC 语言�
 
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtVersionsPlatforms.html#//apple_ref/doc/uid/TP40008048-CH106-SW1
 
-按照官方的说明，iPhone 和 10.5 版本之后的 64 位程序都使用的 OC 2.0。
+按照官方的说明，所有 iPhone 和 10.5 版本之后的 Mac OSX 64 位程序都使用的 OC 2.0。
 
 Runtime 源码: [https://opensource.apple.com/source/objc4/](https://opensource.apple.com/source/objc4/)
 
