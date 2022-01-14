@@ -15,7 +15,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/what-is-runtime/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"ObjC 之 Runtime 是个啥","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/what-is-runtime\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/what-is-runtime\/featured-image.jpg","width":1280,"height":853}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":428,"url":"https:\/\/ryderfang.com\/what-is-runtime\/","datePublished":"2021-12-28T14:51:24+08:00","dateModified":"2021-12-28T14:51:24+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"ObjC 之 Runtime 是个啥"}]}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/what-is-runtime/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"ObjC 之 Runtime 是个啥","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/what-is-runtime\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/what-is-runtime\/featured-image.jpg","width":1280,"height":853}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":583,"url":"https:\/\/ryderfang.com\/what-is-runtime\/","datePublished":"2021-12-28T14:51:24+08:00","dateModified":"2021-12-28T14:51:24+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"ObjC 之 Runtime 是个啥"}]}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -121,10 +121,10 @@
 </span><span class="post-meta-date meta-item">
 <span class="svg-icon icon-clock"></span><time class=timeago datetime=2021-12-28>2021-12-28</time>
 </span><span class="post-meta-words meta-item">
-<span class="svg-icon icon-pencil"></span>约 428 字
+<span class="svg-icon icon-pencil"></span>约 583 字
 </span>
 <span class="post-meta-reading meta-item">
-<span class="svg-icon icon-stopwatch"></span>预计阅读 1 分钟
+<span class="svg-icon icon-stopwatch"></span>预计阅读 2 分钟
 </span>
 </div>
 </div>
@@ -142,6 +142,7 @@
 <ul>
 <li><a href=#概述>概述</a></li>
 <li><a href=#起源>起源</a></li>
+<li><a href=#runtime-version>Runtime Version</a></li>
 <li><a href=#runtime-里有什么>Runtime 里有什么</a>
 <ul>
 <li><a href=#classobject-与-isa>Class/Object 与 isa</a></li>
@@ -173,9 +174,23 @@
 <p>Objective-C = C + Preprocessor + Runtime</p>
 </blockquote>
 <p><a href=https://blog.youxu.info/2010/02/28/why-mac-os-x-for-programmers/ target=_blank rel="noopener noreffer">SmallTalk 领先了时代 20 年</a>，至今 OC 仍然没有实现它的全部特性。</p>
+<h2 id=runtime-version class=headerLink><a href=#runtime-version class=header-mark></a>Runtime Version</h2><p>存在两个版本的 Runtime，<code>modern</code> 和 <code>legacy</code>：</p>
+<p><a href=https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtVersionsPlatforms.html#//apple_ref/doc/uid/TP40008048-CH106-SW1 target=_blank rel="noopener noreffer">https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtVersionsPlatforms.html#//apple_ref/doc/uid/TP40008048-CH106-SW1</a></p>
+<p>按照官方的说明，iPhone 和 10.5 版本之后的 64 位程序都使用的 OC 2.0。</p>
+<p>Runtime 源码: <a href=https://opensource.apple.com/source/objc4/ target=_blank rel="noopener noreffer">https://opensource.apple.com/source/objc4/</a></p>
+<p>下载 tarballs: <a href=https://opensource.apple.com/tarballs/objc4/ target=_blank rel="noopener noreffer">https://opensource.apple.com/tarballs/objc4/</a></p>
+<p>可调试项目: <a href=https://github.com/RetVal/objc-runtime target=_blank rel="noopener noreffer">https://github.com/RetVal/objc-runtime</a></p>
 <h2 id=runtime-里有什么 class=headerLink><a href=#runtime-%e9%87%8c%e6%9c%89%e4%bb%80%e4%b9%88 class=header-mark></a>Runtime 里有什么</h2><p>Runtime 的源码可以在 <a href=https://github.com/RetVal/objc-runtime target=_blank rel="noopener noreffer">RetVal/objc-runtime</a> 这里找到，甚至可以 Debug。</p>
 <p>主要包含如下几个方面，后续会逐个总结。</p>
-<h3 id=classobject-与-isa class=headerLink><a href=#classobject-%e4%b8%8e-isa class=header-mark></a>Class/Object 与 isa</h3><h3 id=metaclass class=headerLink><a href=#metaclass class=header-mark></a>MetaClass</h3><p>经典图再次镇楼：</p>
+<h3 id=classobject-与-isa class=headerLink><a href=#classobject-%e4%b8%8e-isa class=header-mark></a>Class/Object 与 isa</h3><p>参考：<a href=../class-object-isa/ rel>Class Object 与 isa</a></p>
+<h3 id=metaclass class=headerLink><a href=#metaclass class=header-mark></a>MetaClass</h3><blockquote>
+<ol>
+<li>元类指向链: 实例 -> 类 -> 元类 -> 根元类 -> 根元类 (isa 指向自己)</li>
+<li>类的继承链: 子类 -> 父类 -> NSObject</li>
+<li>元类的继承链: 子类元类 -> 父类元类 -> 根元类 -> NSObject -> nil</li>
+</ol>
+</blockquote>
+<p>经典图再次镇楼：</p>
 <p>
 <img loading=lazy decoding=async class=render-image src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-23-class-diagram.png alt=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-23-class-diagram.png title=2021-12-23-class-diagram.png></p>
 <h3 id=methodimpsel class=headerLink><a href=#methodimpsel class=header-mark></a>Method/IMP/SEL</h3><h3 id=category class=headerLink><a href=#category class=header-mark></a>Category</h3><h3 id=messaging class=headerLink><a href=#messaging class=header-mark></a>Messaging</h3><h3 id=swizzling class=headerLink><a href=#swizzling class=header-mark></a>Swizzling</h3><h3 id=其它常用方法 class=headerLink><a href=#%e5%85%b6%e5%ae%83%e5%b8%b8%e7%94%a8%e6%96%b9%e6%b3%95 class=header-mark></a>其它常用方法</h3><p>++++++</p>
