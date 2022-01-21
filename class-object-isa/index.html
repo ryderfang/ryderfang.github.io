@@ -15,7 +15,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/class-object-isa/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Class, Object 与 isa","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/class-object-isa\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/class-object-isa\/featured-image.jpg","width":1600,"height":900}],"genre":"posts","wordCount":1072,"url":"https:\/\/ryderfang.com\/class-object-isa\/","datePublished":"2022-01-04T20:19:38+08:00","dateModified":"2022-01-04T20:19:38+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/class-object-isa/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Class, Object 与 isa","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/class-object-isa\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/class-object-isa\/featured-image.jpg","width":1600,"height":900}],"genre":"posts","wordCount":1465,"url":"https:\/\/ryderfang.com\/class-object-isa\/","datePublished":"2022-01-04T20:19:38+08:00","dateModified":"2022-01-04T20:19:38+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -119,7 +119,7 @@
 <h1 class="single-title flipInX">Class, Object 与 isa</h1><div class="post-meta summary-post-meta"><span class="post-meta-date meta-item">
 <span class="svg-icon icon-clock"></span><time class=timeago datetime=2022-01-04>2022-01-04</time>
 </span><span class="post-meta-words meta-item">
-<span class="svg-icon icon-pencil"></span>约 1072 字
+<span class="svg-icon icon-pencil"></span>约 1465 字
 </span>
 <span class="post-meta-reading meta-item">
 <span class="svg-icon icon-stopwatch"></span>预计阅读 3 分钟
@@ -329,11 +329,23 @@ public:
     // ISA() assumes this is NOT a tagged pointer object
     Class ISA();
 
+    // initIsa() should be used to init the isa of new objects only.
+    // If this object already has an isa, use changeIsa() for correctness.
+    // initInstanceIsa(): objects with no custom RR/AWZ
+    // initClassIsa(): class objects
+    // initProtocolIsa(): protocol objects
+    // initIsa(): other objects
+    void initIsa(Class cls /*nonpointer=false*/);
+    void initClassIsa(Class cls /*nonpointer=maybe*/);
+    void initProtocolIsa(Class cls /*nonpointer=maybe*/);
+    void initInstanceIsa(Class cls, bool hasCxxDtor);
+
     // 省略大量方法
+
 private:
     void initIsa(Class newCls, bool nonpointer, bool hasCxxDtor);
 
-    // 省略大量方法
+    // 省略大量方法`
 };
 
 </code></pre></div><p>可以看出来不管 OC 1.0 还是 2.0,</p>
@@ -342,20 +354,82 @@ private:
 </blockquote>
 <h2 id=isa-又是什么 class=headerLink><a href=#isa-%e5%8f%88%e6%98%af%e4%bb%80%e4%b9%88 class=header-mark></a>isa 又是什么</h2><p>在 1.0 版本中 isa 就是一个 Class 对象，也就是一个指向 <code>objc_class</code> 的指针，而在 2.0 时，isa 是一个叫 <code>isa_t</code> 的结构体变量。</p>
 <p>那么 <code>isa_t</code> 是什么呢？</p>
-<p>同样在 <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-private.h.auto.html target=_blank rel="noopener noreffer">objc-private.h</a> 中有定义：</p>
+<p>同样在 <a href=https://opensource.apple.com/source/objc4/objc4-818.2/runtime/objc-private.h.auto.html target=_blank rel="noopener noreffer">objc-private.h</a> 中有定义：</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>union isa_t {
     isa_t() { }
     isa_t(uintptr_t value) : bits(value) { }
 
-    Class cls;
     uintptr_t bits;
+
+private:
+    // Accessing the class requires custom ptrauth operations, so
+    // force clients to go through setClass/getClass by making this
+    // private.
+    Class cls;
+
+public:
 #if defined(ISA_BITFIELD)
     struct {
         ISA_BITFIELD;  // defined in isa.h
     };
+
+    bool isDeallocating() {
+        return extra_rc == 0 &amp;&amp; has_sidetable_rc == 0;
+    }
+    void setDeallocating() {
+        extra_rc = 0;
+        has_sidetable_rc = 0;
+    }
 #endif
+
+    void setClass(Class cls, objc_object *obj);
+    Class getClass(bool authenticated);
+    Class getDecodedClass(bool authenticated);
 };
-</code></pre></div><p>// TODO</p>
+</code></pre></div><p>参考 <sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> 的图：</p>
+<p>
+<img loading=lazy decoding=async class=render-image src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-01-21-lhezaA.jpg alt=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-01-21-lhezaA.jpg title=2022-01-21-lhezaA.jpg></p>
+<p>作为一个 union 结构，与 struct 区别在于，成员之间会互相覆盖，union 的总内存占用等于最大的成员占用的内存大小，而 struct 大小至少是成员内存占用之和，如果需要字节对齐则会更大。</p>
+<p>所以采用 union 结构可以节省内存。</p>
+<p>在 <a href rel>objc-object.h</a> 中，有 <code>objc_object::initIsa()</code> 的实现：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>inline void 
+objc_object::initIsa(Class cls, bool nonpointer, bool hasCxxDtor) 
+{ 
+    ASSERT(!isTaggedPointer()); 
+    
+    if (!nonpointer) {
+        isa = isa_t((uintptr_t)cls);
+    } else {
+        ASSERT(!DisableNonpointerIsa);
+        ASSERT(!cls-&gt;instancesRequireRawIsa());
+
+        isa_t newisa(0);
+
+#if SUPPORT_INDEXED_ISA
+        ASSERT(cls-&gt;classArrayIndex() &gt; 0);
+        newisa.bits = ISA_INDEX_MAGIC_VALUE;
+        // isa.magic is part of ISA_MAGIC_VALUE
+        // isa.nonpointer is part of ISA_MAGIC_VALUE
+        newisa.has_cxx_dtor = hasCxxDtor;
+        newisa.indexcls = (uintptr_t)cls-&gt;classArrayIndex();
+#else
+        newisa.bits = ISA_MAGIC_VALUE;
+        // isa.magic is part of ISA_MAGIC_VALUE
+        // isa.nonpointer is part of ISA_MAGIC_VALUE
+        newisa.has_cxx_dtor = hasCxxDtor;
+        newisa.shiftcls = (uintptr_t)cls &gt;&gt; 3;
+#endif
+
+        // This write must be performed in a single store in some cases
+        // (for example when realizing a class because other threads
+        // may simultaneously try to use the class).
+        // fixme use atomics here to guarantee single-store and to
+        // guarantee memory order w.r.t. the class index table
+        // ...but not too atomic because we don&#39;t want to hurt instantiation
+        isa = newisa;
+    }
+}
+</code></pre></div><p>可以看出 isa_t 中的 Class 与 bits 是互斥的，避免了互相覆盖的问题。</p>
 <section class=footnotes role=doc-endnotes>
 <hr>
 <ol>

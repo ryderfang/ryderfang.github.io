@@ -208,11 +208,23 @@ public:
     // ISA() assumes this is NOT a tagged pointer object
     Class ISA();
 
+    // initIsa() should be used to init the isa of new objects only.
+    // If this object already has an isa, use changeIsa() for correctness.
+    // initInstanceIsa(): objects with no custom RR/AWZ
+    // initClassIsa(): class objects
+    // initProtocolIsa(): protocol objects
+    // initIsa(): other objects
+    void initIsa(Class cls /*nonpointer=false*/);
+    void initClassIsa(Class cls /*nonpointer=maybe*/);
+    void initProtocolIsa(Class cls /*nonpointer=maybe*/);
+    void initInstanceIsa(Class cls, bool hasCxxDtor);
+
     // 省略大量方法
+
 private:
     void initIsa(Class newCls, bool nonpointer, bool hasCxxDtor);
 
-    // 省略大量方法
+    // 省略大量方法`
 };
 
 ```
@@ -227,25 +239,93 @@ private:
 
 那么 `isa_t` 是什么呢？
 
-同样在 [objc-private.h](https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-private.h.auto.html) 中有定义：
+同样在 [objc-private.h](https://opensource.apple.com/source/objc4/objc4-818.2/runtime/objc-private.h.auto.html) 中有定义：
 
 ```
 union isa_t {
     isa_t() { }
     isa_t(uintptr_t value) : bits(value) { }
 
-    Class cls;
     uintptr_t bits;
+
+private:
+    // Accessing the class requires custom ptrauth operations, so
+    // force clients to go through setClass/getClass by making this
+    // private.
+    Class cls;
+
+public:
 #if defined(ISA_BITFIELD)
     struct {
         ISA_BITFIELD;  // defined in isa.h
     };
+
+    bool isDeallocating() {
+        return extra_rc == 0 && has_sidetable_rc == 0;
+    }
+    void setDeallocating() {
+        extra_rc = 0;
+        has_sidetable_rc = 0;
+    }
 #endif
+
+    void setClass(Class cls, objc_object *obj);
+    Class getClass(bool authenticated);
+    Class getDecodedClass(bool authenticated);
 };
 ```
 
-// TODO
+参考 [^1] 的图：
 
+![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-01-21-lhezaA.jpg)
+
+作为一个 union 结构，与 struct 区别在于，成员之间会互相覆盖，union 的总内存占用等于最大的成员占用的内存大小，而 struct 大小至少是成员内存占用之和，如果需要字节对齐则会更大。
+
+所以采用 union 结构可以节省内存。
+
+在 [objc-object.h]() 中，有 `objc_object::initIsa()` 的实现：
+
+```
+inline void 
+objc_object::initIsa(Class cls, bool nonpointer, bool hasCxxDtor) 
+{ 
+    ASSERT(!isTaggedPointer()); 
+    
+    if (!nonpointer) {
+        isa = isa_t((uintptr_t)cls);
+    } else {
+        ASSERT(!DisableNonpointerIsa);
+        ASSERT(!cls->instancesRequireRawIsa());
+
+        isa_t newisa(0);
+
+#if SUPPORT_INDEXED_ISA
+        ASSERT(cls->classArrayIndex() > 0);
+        newisa.bits = ISA_INDEX_MAGIC_VALUE;
+        // isa.magic is part of ISA_MAGIC_VALUE
+        // isa.nonpointer is part of ISA_MAGIC_VALUE
+        newisa.has_cxx_dtor = hasCxxDtor;
+        newisa.indexcls = (uintptr_t)cls->classArrayIndex();
+#else
+        newisa.bits = ISA_MAGIC_VALUE;
+        // isa.magic is part of ISA_MAGIC_VALUE
+        // isa.nonpointer is part of ISA_MAGIC_VALUE
+        newisa.has_cxx_dtor = hasCxxDtor;
+        newisa.shiftcls = (uintptr_t)cls >> 3;
+#endif
+
+        // This write must be performed in a single store in some cases
+        // (for example when realizing a class because other threads
+        // may simultaneously try to use the class).
+        // fixme use atomics here to guarantee single-store and to
+        // guarantee memory order w.r.t. the class index table
+        // ...but not too atomic because we don't want to hurt instantiation
+        isa = newisa;
+    }
+}
+```
+
+可以看出 isa_t 中的 Class 与 bits 是互斥的，避免了互相覆盖的问题。
 
 [^1]: https://halfrost.com/objc_runtime_isa_class/
 [^2]: https://kangzubin.com/objc1.0-class-object/

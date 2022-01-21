@@ -15,7 +15,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/what-is-runtime/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"ObjC 之 Runtime 是个啥","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/what-is-runtime\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/what-is-runtime\/featured-image.jpg","width":1280,"height":720}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":582,"url":"https:\/\/ryderfang.com\/what-is-runtime\/","datePublished":"2021-12-28T14:51:24+08:00","dateModified":"2021-12-28T14:51:24+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"ObjC 之 Runtime 是个啥"}]}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/what-is-runtime/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"ObjC 之 Runtime 是个啥","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/what-is-runtime\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/what-is-runtime\/featured-image.jpg","width":1280,"height":720}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":583,"url":"https:\/\/ryderfang.com\/what-is-runtime\/","datePublished":"2021-12-28T14:51:24+08:00","dateModified":"2021-12-28T14:51:24+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"ObjC 之 Runtime 是个啥"}]}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -121,7 +121,7 @@
 </span><span class="post-meta-date meta-item">
 <span class="svg-icon icon-clock"></span><time class=timeago datetime=2021-12-28>2021-12-28</time>
 </span><span class="post-meta-words meta-item">
-<span class="svg-icon icon-pencil"></span>约 582 字
+<span class="svg-icon icon-pencil"></span>约 583 字
 </span>
 <span class="post-meta-reading meta-item">
 <span class="svg-icon icon-stopwatch"></span>预计阅读 2 分钟
@@ -162,13 +162,13 @@
 <p><a href="https://developer.apple.com/documentation/objectivec/objective-c_runtime?language=objc" target=_blank rel="noopener noreffer">Objective-C Runtime</a></p>
 <p><a href=https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008048-CH1-SW1 target=_blank rel="noopener noreffer">Objective-C Runtime Programming Guide</a></p>
 <p>Runtime 是一个动态库 (/usr/lib/libobjc.A.dylib)，用于实现 OC 语言的动态性。</p>
-<p>这个动态性主要体现在三个方面：</p>
+<p>这个动态性主要体现在三个方面 <sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>:</p>
 <ul>
 <li>Dynamic Typing 运行时才能决定对象的类型，也就是说编译器不检查类型合法性</li>
 <li>Dynamic Binding 运行时才能知道方法被如何执行，也就是消息机制 (messaging)</li>
 <li>Dynamic Loading 允许动态添加类、方法等</li>
 </ul>
-<h2 id=起源 class=headerLink><a href=#%e8%b5%b7%e6%ba%90 class=header-mark></a>起源</h2><p>孙源大佬在 <a href=http://blog.sunnyxx.com/2016/08/13/reunderstanding-runtime-0/ target=_blank rel="noopener noreffer">博客</a> 中说过，OC<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> 其实是 C 语言与 SmallTalk<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup> 思想结合的产物。</p>
+<h2 id=起源 class=headerLink><a href=#%e8%b5%b7%e6%ba%90 class=header-mark></a>起源</h2><p>孙源大佬在 <a href=http://blog.sunnyxx.com/2016/08/13/reunderstanding-runtime-0/ target=_blank rel="noopener noreffer">博客</a> 中说过，OC<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup> 其实是 C 语言与 SmallTalk<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup> 思想结合的产物。</p>
 <p>与同属 SmallTalk 学派的语言 Java, Python 和 Ruby 一样，OC 具有面向对象、动态类型和反射式等特点。</p>
 <blockquote>
 <p>Objective-C = C + Preprocessor + Runtime</p>
@@ -198,10 +198,13 @@
 <hr>
 <ol>
 <li id=fn:1 role=doc-endnote>
-<p><a href=https://zh.wikipedia.org/wiki/Objective-C target=_blank rel="noopener noreffer">https://zh.wikipedia.org/wiki/Objective-C</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+<p><a href=https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaObjects/CocoaObjects.html target=_blank rel="noopener noreffer">https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaObjects/CocoaObjects.html</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
 <li id=fn:2 role=doc-endnote>
-<p><a href=https://zh.wikipedia.org/zh-hans/Smalltalk target=_blank rel="noopener noreffer">https://zh.wikipedia.org/zh-hans/Smalltalk</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+<p><a href=https://zh.wikipedia.org/wiki/Objective-C target=_blank rel="noopener noreffer">https://zh.wikipedia.org/wiki/Objective-C</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:3 role=doc-endnote>
+<p><a href=https://zh.wikipedia.org/zh-hans/Smalltalk target=_blank rel="noopener noreffer">https://zh.wikipedia.org/zh-hans/Smalltalk</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>

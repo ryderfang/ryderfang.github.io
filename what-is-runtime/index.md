@@ -15,7 +15,7 @@ Runtime 是 OC 这个语言的核心，也是为什么 OC 被称为动态语言�
 
 Runtime 是一个动态库 (/usr/lib/libobjc.A.dylib)，用于实现 OC 语言的动态性。
 
-这个动态性主要体现在三个方面：
+这个动态性主要体现在三个方面 [^1]:
 
 - Dynamic Typing  运行时才能决定对象的类型，也就是说编译器不检查类型合法性
 - Dynamic Binding 运行时才能知道方法被如何执行，也就是消息机制 (messaging)
@@ -23,7 +23,7 @@ Runtime 是一个动态库 (/usr/lib/libobjc.A.dylib)，用于实现 OC 语言�
 
 ## 起源
 
-孙源大佬在 [博客](http://blog.sunnyxx.com/2016/08/13/reunderstanding-runtime-0/) 中说过，OC[^1] 其实是 C 语言与 SmallTalk[^2] 思想结合的产物。
+孙源大佬在 [博客](http://blog.sunnyxx.com/2016/08/13/reunderstanding-runtime-0/) 中说过，OC[^2] 其实是 C 语言与 SmallTalk[^3] 思想结合的产物。
 
 与同属 SmallTalk 学派的语言 Java, Python 和 Ruby 一样，OC 具有面向对象、动态类型和反射式等特点。
 
@@ -77,7 +77,8 @@ Runtime 的源码可以在 [RetVal/objc-runtime](https://github.com/RetVal/objc-
 
 ++++++
 
-[^1]: https://zh.wikipedia.org/wiki/Objective-C
-[^2]: https://zh.wikipedia.org/zh-hans/Smalltalk
+[^1]: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaObjects/CocoaObjects.html
+[^2]: https://zh.wikipedia.org/wiki/Objective-C
+[^3]: https://zh.wikipedia.org/zh-hans/Smalltalk
 
 
