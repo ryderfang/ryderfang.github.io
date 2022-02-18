@@ -330,3 +330,4 @@ objc_object::initIsa(Class cls, bool nonpointer, bool hasCxxDtor)
 [^1]: https://halfrost.com/objc_runtime_isa_class/
 [^2]: https://kangzubin.com/objc1.0-class-object/
 [^3]: https://kangzubin.com/objc2.0-class-object/
+[^4]: https://www.laoqingcai.com/ios-legacy-runtime/
