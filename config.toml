@@ -73,7 +73,7 @@ enableEmoji = true
     [languages.zh-cn.params]
       title = "热爱可抵岁月漫长"
       # site description
-      description = "About uBlogger Theme"
+      description = "而不是给文明以岁月"
       # site keywords
       keywords = ["Theme", "Hugo"]
       # App icon config
@@ -123,7 +123,7 @@ enableEmoji = true
           # URL of avatar shown in home page
           avatarURL = "/avatar.png"
           # title shown in home page (HTML format is supported)
-          title = "<u>Ryder's Humble Room</u>"
+          title = "Ryder's Humble Home 🏡"
           # subtitle shown in home page (HTML format is supported)
           subtitle = "公元 2276 年 (威慑纪元 61 年)，三体文明统治地球。人类流亡澳大利亚..."
           # whether to show social links
@@ -175,7 +175,7 @@ enableEmoji = true
     [params.footer]
         enable = true
         # 自定义内容 (支持 HTML 格式)
-        custom = '© 2021 Ryder Fang · &lt;/&gt; Powered by <a href="https://gohugo.io/" target="_blank"><strong>Hugo</strong></a> and <a href="https://github.com/uPagge/uBlogger" target="_blank"><strong>uBlogger</strong></a>'
+        custom = '© 2016 - 2022 Ryder Fang · &lt;/&gt; Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> and <a href="https://github.com/uPagge/uBlogger" target="_blank">uBlogger</a>'
         # 是否显示 Hugo 和主题信息
         hugo = false
         # 是否显示版权信息
