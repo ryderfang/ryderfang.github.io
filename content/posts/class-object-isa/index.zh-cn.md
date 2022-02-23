@@ -1,8 +1,8 @@
 ---
 title: "Class, Object 与 isa"
 date: 2022-01-04T20:19:38+08:00
-categories: []
-tags: []
+categories: [ObjC]
+tags: [ObjC, Runtime]
 resources:
 - name: "featured-image"
   src: "featured-image.jpg"
