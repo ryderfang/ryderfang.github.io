@@ -1,0 +1,332 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>获取 OC Class 对象 | 热爱可抵岁月漫长</title><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://ryderfang.com/get-class/featured-image.jpg">
+<meta name=twitter:title content="获取 OC Class 对象">
+<meta name=twitter:description content><meta name=twitter:creator content="@ryderfang"><meta name=Description content="而不是给文明以岁月"><meta property="og:title" content="获取 OC Class 对象">
+<meta property="og:description" content="获取 Class 对象的方法有很多，本文主要是收集整理它们的区别以及探究具体的实现。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ryderfang.com/get-class/"><meta property="og:image" content="https://ryderfang.com/get-class/featured-image.jpg"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-02-23T17:49:11+08:00">
+<meta property="article:modified_time" content="2022-02-23T17:49:11+08:00"><meta property="og:site_name" content="热爱可抵岁月漫长">
+<meta name=application-name content="uBlogger">
+<meta name=apple-mobile-web-app-title content="uBlogger"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/get-class/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"获取 OC Class 对象","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/get-class\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/get-class\/featured-image.jpg","width":1200,"height":554}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":779,"url":"https:\/\/ryderfang.com\/get-class\/","datePublished":"2022-02-23T17:49:11+08:00","dateModified":"2022-02-23T17:49:11+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"获取 OC Class 对象"}]}</script></head>
+<body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
+<div id=mask></div><div class=wrapper><header>
+<div class="desktop header" id=header-desktop>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title=给岁月以文明 class="header-logo logo-svg"><img loading=lazy decoding=async class=logo src=/geoclerk.png alt=/geoclerk.png title=/geoclerk.png><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内，皆是命运 💫</a>
+</div>
+<div class=menu>
+<nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul class=menu-inner><li>
+<a class=menu-item href=/posts/> Posts </a>
+</li><li>
+<a class=menu-item href=/tags/> Tags </a>
+</li><li>
+<a class=menu-item href=/categories/> Categories </a>
+</li><li>
+<a class=menu-item href=/about/> About </a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i> </a>
+</li></ul>
+</nav><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-desktop>
+<span class="svg-icon icon-loading"></span>
+</span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a>
+</div>
+</div>
+</div><div class="mobile header" id=header-mobile>
+<div class=header-container>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title=给岁月以文明 class=header-logo><img loading=lazy decoding=async class=logo src=/geoclerk.png alt=/geoclerk.png title=/geoclerk.png><span class=header-title-pre><i class="fas fa-pencil-alt fa-fw"></i></span>光锥之内，皆是命运 💫</a>
+</div>
+<div class=menu-toggle id=menu-toggle-mobile>
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class=menu id=menu-mobile><div class=search-wrapper>
+<div class="search mobile" id=search-mobile>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索>
+<span class="svg-icon icon-search"></span>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空>
+<span class="svg-icon icon-cancel"></span>
+</a>
+<span class="search-button search-loading" id=search-loading-mobile>
+<span class="svg-icon icon-loading"></span>
+</span>
+</div>
+<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
+取消
+</a>
+</div><nav>
+<h2 class=display-hidden>Основная навигация</h2>
+<ul><li>
+<a class=menu-item href=/posts/ title>Posts</a>
+</li><li>
+<a class=menu-item href=/tags/ title>Tags</a>
+</li><li>
+<a class=menu-item href=/categories/ title>Categories</a>
+</li><li>
+<a class=menu-item href=/about/ title>About</a>
+</li><li>
+<a class=menu-item href=https://github.com/upagge/ublogger title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i></a>
+</li></ul>
+</nav>
+<a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<span class="svg-icon icon-moon"></span>
+</a></div>
+</div>
+</div><div class="search-dropdown desktop">
+<div id=search-dropdown-desktop></div>
+</div>
+<div class="search-dropdown mobile">
+<div id=search-dropdown-mobile></div>
+</div></header><main class=main>
+<div class="container content-article page-toc theme-classic"><div class=toc id=toc-auto>
+<div class=toc-title>目录</div>
+<div class=toc-content id=toc-content-auto></div>
+</div>
+<article>
+<header class=header-post>
+<div class=post-title>
+<div class=post-all-meta>
+<nav class=breadcrumbs>
+<ol>
+<li><a href=/>主页 </a></li><li><a href=/categories/objc/>ObjC </a></li><li>获取 OC Class 对象</li>
+</ol>
+</nav>
+<h1 class="single-title flipInX">获取 OC Class 对象</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+<a href=/categories/objc/><span class="svg-icon icon-folder"></span>ObjC</a>
+</span><span class="post-meta-date meta-item">
+<span class="svg-icon icon-clock"></span><time class=timeago datetime=2022-02-23>2022-02-23</time>
+</span><span class="post-meta-words meta-item">
+<span class="svg-icon icon-pencil"></span>约 779 字
+</span>
+<span class="post-meta-reading meta-item">
+<span class="svg-icon icon-stopwatch"></span>预计阅读 2 分钟
+</span>
+</div>
+</div>
+</div>
+</header>
+<div class="article-post toc-start">
+<div class="content-block content-block-first content-block-position">
+<div class="post single"><div class=image-theme-classic>
+<img src=https://ryderfang.com/get-class/featured-image.jpg style=width:100%>
+</div><div class="details toc" id=toc-static data-kept>
+<div class="details-summary toc-title">
+<span>目录</span>
+</div>
+<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents>
+<ul>
+<li><a href=#class-方法>class 方法</a></li>
+<li><a href=#object_getclass>object_getClass</a></li>
+<li><a href=#objc_getclass>objc_getClass</a></li>
+<li><a href=#nsclassfromstring>NSClassFromString</a></li>
+</ul>
+</nav></div>
+</div><p>获取 <code>Class</code> 对象的方法有很多，本文主要是收集整理它们的区别以及探究具体的实现。</p>
+<h2 id=class-方法 class=headerLink><a href=#class-%e6%96%b9%e6%b3%95 class=header-mark></a>class 方法</h2><p>有两种 class 方法，一个是实例方法，一个是类方法：</p>
+<p>@interface NSObject <nsobject></p>
+<p><code>- (Class)class OBJC_SWIFT_UNAVAILABLE("use 'type(of: anObject)' instead");</code></p>
+<p><code>+ (Class)class OBJC_SWIFT_UNAVAILABLE("use 'aClass.self' instead");</code></p>
+<p>@end</p>
+<p>查看 runtime 的源码：<a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/NSObject.mm.auto.html target=_blank rel="noopener noreffer">NSObject.mm</a></p>
+<p>可以看到它们的实现：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>+ (id)self {
+    return (id)self;
+}
+
+- (id)self {
+    return self;
+}
+
++ (Class)class {
+    return self;
+}
+
+- (Class)class {
+    return object_getClass(self);
+}
+</code></pre></div><p>所以，说给类对象发 <code>class</code> 消息，得到的是类本身 <code>self</code>，也就是</p>
+<blockquote>
+<p>[NSObject class] == [NSObject self]</p>
+</blockquote>
+<p>给实例对象发 <code>class</code> 消息，相当于调用了 <code>object_getClass</code></p>
+<h2 id=object_getclass class=headerLink><a href=#object_getclass class=header-mark></a>object_getClass</h2><p>那么这个方法的实现是怎么样的呢？</p>
+<p>同样查看 runtime 源码：<a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-class.mm.auto.html target=_blank rel="noopener noreffer">objc-class.mm</a></p>
+<p><code>Class _Nullable object_getClass(id _Nullable obj)</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Class object_getClass(id obj)
+{
+    if (obj) return obj-&gt;getIsa();
+    else return Nil;
+}
+</code></pre></div><p>调用了 类的 <code>getIsa()</code> 方法</p>
+<p>// <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-object.h.auto.html target=_blank rel="noopener noreffer">objc-object.h</a></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>inline Class 
+objc_object::getIsa() 
+{
+    if (!isTaggedPointer()) return ISA();
+
+    uintptr_t ptr = (uintptr_t)this;
+    if (isExtTaggedPointer()) {
+        uintptr_t slot = 
+            (ptr &gt;&gt; _OBJC_TAG_EXT_SLOT_SHIFT) &amp; _OBJC_TAG_EXT_SLOT_MASK;
+        return objc_tag_ext_classes[slot];
+    } else {
+        uintptr_t slot = 
+            (ptr &gt;&gt; _OBJC_TAG_SLOT_SHIFT) &amp; _OBJC_TAG_SLOT_MASK;
+        return objc_tag_classes[slot];
+    }
+}
+</code></pre></div><h2 id=objc_getclass class=headerLink><a href=#objc_getclass class=header-mark></a>objc_getClass</h2><p>这个方法和上面的 <code>object_getClass</code> 长得很像，但还是有一些区别：</p>
+<ul>
+<li>
+<p>参数不一样，一个是 <code>id</code>，一个是 <code>const char *</code>，也就是一个传入是个类对象，一个是类名</p>
+</li>
+<li>
+<p>实现不一样，一个调用的是 <code>obj->getIsa()</code>，一个调用的是 <code>loop_up_class()</code></p>
+</li>
+</ul>
+<p>// <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-runtime.mm.auto.html target=_blank rel="noopener noreffer">objc-runtime.mm</a></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Class objc_getClass(const char *aClassName)
+{
+    if (!aClassName) return Nil;
+
+    // NO unconnected, YES class handler
+    return look_up_class(aClassName, NO, YES);
+}
+</code></pre></div><p>调用了 <code>look_up_class</code>:</p>
+<p>// <a href=https://opensource.apple.com/source/objc4/objc4-787.1/runtime/objc-runtime-new.mm.auto.html target=_blank rel="noopener noreffer">objc-runtime-new.mm</a></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Class 
+look_up_class(const char *name, 
+              bool includeUnconnected __attribute__((unused)), 
+              bool includeClassHandler __attribute__((unused)))
+{
+    if (!name) return nil;
+
+    Class result;
+    bool unrealized;
+    {
+        runtimeLock.lock();
+        result = getClassExceptSomeSwift(name);
+        unrealized = result  &amp;&amp;  !result-&gt;isRealized();
+        if (unrealized) {
+            result = realizeClassMaybeSwiftAndUnlock(result, runtimeLock);
+            // runtimeLock is now unlocked
+        } else {
+            runtimeLock.unlock();
+        }
+    }
+
+    if (!result) {
+        // Ask Swift about its un-instantiated classes.
+
+        // We use thread-local storage to prevent infinite recursion
+        // if the hook function provokes another lookup of the same name
+        // (for example, if the hook calls objc_allocateClassPair)
+
+        auto *tls = _objc_fetch_pthread_data(true);
+
+        // Stop if this thread is already looking up this name.
+        for (unsigned i = 0; i &lt; tls-&gt;classNameLookupsUsed; i++) {
+            if (0 == strcmp(name, tls-&gt;classNameLookups[i])) {
+                return nil;
+            }
+        }
+
+        // Save this lookup in tls.
+        if (tls-&gt;classNameLookupsUsed == tls-&gt;classNameLookupsAllocated) {
+            tls-&gt;classNameLookupsAllocated =
+                (tls-&gt;classNameLookupsAllocated * 2 ?: 1);
+            size_t size = tls-&gt;classNameLookupsAllocated *
+                sizeof(tls-&gt;classNameLookups[0]);
+            tls-&gt;classNameLookups = (const char **)
+                realloc(tls-&gt;classNameLookups, size);
+        }
+        tls-&gt;classNameLookups[tls-&gt;classNameLookupsUsed++] = name;
+
+        // Call the hook.
+        Class swiftcls = nil;
+        if (GetClassHook.get()(name, &amp;swiftcls)) {
+            ASSERT(swiftcls-&gt;isRealized());
+            result = swiftcls;
+        }
+
+        // Erase the name from tls.
+        unsigned slot = --tls-&gt;classNameLookupsUsed;
+        ASSERT(slot &gt;= 0  &amp;&amp;  slot &lt; tls-&gt;classNameLookupsAllocated);
+        ASSERT(name == tls-&gt;classNameLookups[slot]);
+        tls-&gt;classNameLookups[slot] = nil;
+    }
+
+    return result;
+}
+</code></pre></div><h2 id=nsclassfromstring class=headerLink><a href=#nsclassfromstring class=header-mark></a>NSClassFromString</h2><p>这个在 <code>Foundation.framework</code> 中的实现，并没有开源，</p>
+<p>函数原型是</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>FOUNDATION_EXPORT Class _Nullable NSClassFromString(NSString *aClassName);
+</code></pre></div><p>与 <code>objc_getClass</code> 参数一样，传入 Class 的名字，返回 Class 地址。</p>
+<p>有大佬通过研究汇编分析出它的具体实现：<a href=https://xiaozhuanlan.com/topic/5781026934 target=_blank rel="noopener noreffer">从汇编代码探究 NSClassFromString 实现</a></p>
+<p>最后，做个试验：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Student *stu = [Student new];
+Class cls = [stu class];
+NSLog(@&#34;%p %p %p %p %p&#34;, cls, [Student class], objc_getClass(&#34;Student&#34;), object_getClass(stu), NSClassFromString(@&#34;Student&#34;));
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>0x10000e7b8 0x10000e7b8 0x10000e7b8 0x10000e7b8 0x10000e7b8
+</code></pre></div><p>可以看出来，这四种方法拿到的结果是一样的。</p></div><footer>
+<div class=post>
+<div class=post-share><div class=share-link>
+<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://ryderfang.com/get-class/ data-title="获取 OC Class 对象" data-via=ryderfang data-hashtags=ObjC,Runtime><span class="svg-social-icon icon-twitter"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://ryderfang.com/get-class/ data-hashtag=ObjC><span class="svg-social-icon icon-facebook"></span></a>
+</div><div class=share-link>
+<a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://ryderfang.com/get-class/ data-title="获取 OC Class 对象"><span class="svg-social-icon icon-weibo"></span></a>
+</div></div>
+<div class=block-author>
+<div class=author-avatar><a href=https://github.com/ryderfang/ target=_blank><img alt=人生如逆旅，我亦是行人 src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-05-avatar2.jpg></a></div>
+<div class=author-info>
+<div class=name><a href=https://github.com/ryderfang/ target=_blank></a></div>
+<div class=number-posts>人生如逆旅，我亦是行人</span></div>
+</div>
+</div>
+<div class=post-tags><a href=/tags/objc/ class=tag>ObjC</a><a href=/tags/runtime/ class=tag>Runtime</a></div></div>
+</footer></div>
+<div id=toc-final></div>
+</div>
+</article>
+<section class="page single comments content-block-position">
+<h1 class=display-hidden>Комментарии</h1><div id=comments><div id=utterances></div><noscript>
+Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.
+</noscript></div></section></div>
+</main><footer class=footer>
+<div class=footer-container><div class=footer-line>© 2016 - 2022 Ryder Fang · &lt;/> Powered by <a href=https://gohugo.io/ target=_blank>Hugo</a> and <a href=https://github.com/uPagge/uBlogger target=_blank>uBlogger</a></div><div class=footer-line><span class=license><a href=https://opensource.org/licenses/MIT/ target=_blank>MIT</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br>
+<span class=icp><a href=https://beian.miit.gov.cn/ target=_blank rel=noopener><u>沪ICP备2021031507号-1</u></a></span></div>
+</div>
+</footer></div>
+<aside id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
+<i class="svg-icon icon-arrow-up"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论>
+<i class="svg-icon icon-comments-fixed"></i>
+</a>
+</aside><script src=/lib/smooth-scroll/smooth-scroll.min.js></script><script src=/lib/autocomplete/autocomplete.min.js></script><script src=/lib/algoliasearch/algoliasearch-lite.umd.min.js></script><script src=/lib/clipboard/clipboard.min.js></script><script src=/lib/sharer/sharer.min.js></script><script src=/lib/prismjs/prism.js></script><script>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"Utterances",lightTheme:"github-light",repo:"ryderfang/ryderfang.github.io"}},search:{algoliaAppID:"KNWHHR2LLW",algoliaIndex:"ryder_blog",algoliaSearchKey:"99980e3c2014fb8c463a83c546a3f4a6",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:30,type:"algolia"}}</script><script src=/js/theme.min.js></script></body>
+</html>

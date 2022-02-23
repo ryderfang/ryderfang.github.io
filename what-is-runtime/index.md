@@ -58,12 +58,10 @@ Runtime 的源码可以在 [RetVal/objc-runtime](https://github.com/RetVal/objc-
 ### MetaClass
 
 > 1. 元类指向链: 实例 -> 类 -> 元类 -> 根元类 -> 根元类 (isa 指向自己)
-> 2. 类的继承链: 子类 -> 父类 -> NSObject
+> 2. 类的继承链: 子类 -> 父类 -> NSObject -> nil
 > 3. 元类的继承链: 子类元类 -> 父类元类 -> 根元类 -> NSObject -> nil
 
-经典图再次镇楼：
-
-![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-23-class-diagram.png)
+参考：[Meta Class](../meta-class/)
 
 ### Method/IMP/SEL
 

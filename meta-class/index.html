@@ -15,7 +15,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/meta-class/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Meta Class","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/meta-class\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/meta-class\/featured-image.jpg","width":800,"height":525}],"genre":"posts","wordCount":1680,"url":"https:\/\/ryderfang.com\/meta-class\/","datePublished":"2022-02-14T19:45:15+08:00","dateModified":"2022-02-14T19:45:15+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/meta-class/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Meta Class","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/meta-class\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/meta-class\/featured-image.jpg","width":800,"height":525}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":983,"url":"https:\/\/ryderfang.com\/meta-class\/","datePublished":"2022-02-14T19:45:15+08:00","dateModified":"2022-02-14T19:45:15+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"Meta Class"}]}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -113,16 +113,18 @@
 <div class=post-all-meta>
 <nav class=breadcrumbs>
 <ol>
-<li><a href=/>主页 </a></li><li>Meta Class</li>
+<li><a href=/>主页 </a></li><li><a href=/categories/objc/>ObjC </a></li><li>Meta Class</li>
 </ol>
 </nav>
-<h1 class="single-title flipInX">Meta Class</h1><div class="post-meta summary-post-meta"><span class="post-meta-date meta-item">
+<h1 class="single-title flipInX">Meta Class</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+<a href=/categories/objc/><span class="svg-icon icon-folder"></span>ObjC</a>
+</span><span class="post-meta-date meta-item">
 <span class="svg-icon icon-clock"></span><time class=timeago datetime=2022-02-14>2022-02-14</time>
 </span><span class="post-meta-words meta-item">
-<span class="svg-icon icon-pencil"></span>约 1680 字
+<span class="svg-icon icon-pencil"></span>约 983 字
 </span>
 <span class="post-meta-reading meta-item">
-<span class="svg-icon icon-stopwatch"></span>预计阅读 4 分钟
+<span class="svg-icon icon-stopwatch"></span>预计阅读 2 分钟
 </span>
 </div>
 </div>
@@ -144,17 +146,6 @@
 <ul>
 <li><a href=#isa-链>isa 链</a></li>
 <li><a href=#继承链>继承链</a></li>
-</ul>
-</li>
-<li><a href=#题外话>题外话</a>
-<ul>
-<li><a href=#获取类对象>获取类对象</a>
-<ul>
-<li><a href=#class-方法>class 方法</a></li>
-<li><a href=#object_getclass>object_getClass</a></li>
-<li><a href=#objc_getclass>objc_getClass</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -239,7 +230,7 @@ class: NSObject addr: 0x7fff806e7088
 rootClass: 0x7fff806e7088
 </code></pre></div><p>继承链比较简单：</p>
 <blockquote>
-<p>子类 -> 父类 -> 根类 -> 空</p>
+<p>子类 -> 父类 -> 根类 -> nil</p>
 </blockquote>
 <p>
 <img loading=lazy decoding=async class=render-image src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-02-18-3DVEXQ.png alt=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-02-18-3DVEXQ.png title=2022-02-18-3DVEXQ.png></p>
@@ -248,150 +239,6 @@ rootClass: 0x7fff806e7088
 
 // rootClass&#39;isa: 0x7fff806e7060
 </code></pre></div><p>地址 <code>0x7fff806e7060</code> 与前面根元类 <code>rootMetaClass</code> 一样，这也证实了 <code>根类 --> 根元类</code>。</p>
-<h2 id=题外话 class=headerLink><a href=#%e9%a2%98%e5%a4%96%e8%af%9d class=header-mark></a>题外话</h2><p>在研究这个图的过程中，有一些容易混淆的点，这里记录一下</p>
-<h3 id=获取类对象 class=headerLink><a href=#%e8%8e%b7%e5%8f%96%e7%b1%bb%e5%af%b9%e8%b1%a1 class=header-mark></a>获取类对象</h3><p>有好几种获取类对象的方法：</p>
-<h4 id=class-方法 class=headerLink><a href=#class-%e6%96%b9%e6%b3%95 class=header-mark></a>class 方法</h4><p>有两种 class 方法，一个是实例方法，一个是类方法：</p>
-<p>@interface NSObject <nsobject></p>
-<p><code>- (Class)class OBJC_SWIFT_UNAVAILABLE("use 'type(of: anObject)' instead");</code></p>
-<p><code>+ (Class)class OBJC_SWIFT_UNAVAILABLE("use 'aClass.self' instead");</code></p>
-<p>@end</p>
-<p>查看 runtime 的源码：<a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/NSObject.mm.auto.html target=_blank rel="noopener noreffer">NSObject.mm</a></p>
-<p>可以看到它们的实现：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>+ (id)self {
-    return (id)self;
-}
-
-- (id)self {
-    return self;
-}
-
-+ (Class)class {
-    return self;
-}
-
-- (Class)class {
-    return object_getClass(self);
-}
-</code></pre></div><p>所以，说给类对象发 <code>class</code> 消息，得到的是类本身 <code>self</code>，也就是</p>
-<blockquote>
-<p>[NSObject class] == [NSObject self]</p>
-</blockquote>
-<p>给实例对象发 <code>class</code> 消息，相当于调用了 <code>object_getClass</code></p>
-<h4 id=object_getclass class=headerLink><a href=#object_getclass class=header-mark></a>object_getClass</h4><p>那么这个方法的实现是怎么样的呢？</p>
-<p>同样查看 runtime 源码：<a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-class.mm.auto.html target=_blank rel="noopener noreffer">objc-class.mm</a></p>
-<p><code>Class _Nullable object_getClass(id _Nullable obj)</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Class object_getClass(id obj)
-{
-    if (obj) return obj-&gt;getIsa();
-    else return Nil;
-}
-</code></pre></div><p>调用了 类的 <code>getIsa()</code> 方法</p>
-<p>// <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-object.h.auto.html target=_blank rel="noopener noreffer">objc-object.h</a></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>inline Class 
-objc_object::getIsa() 
-{
-    if (!isTaggedPointer()) return ISA();
-
-    uintptr_t ptr = (uintptr_t)this;
-    if (isExtTaggedPointer()) {
-        uintptr_t slot = 
-            (ptr &gt;&gt; _OBJC_TAG_EXT_SLOT_SHIFT) &amp; _OBJC_TAG_EXT_SLOT_MASK;
-        return objc_tag_ext_classes[slot];
-    } else {
-        uintptr_t slot = 
-            (ptr &gt;&gt; _OBJC_TAG_SLOT_SHIFT) &amp; _OBJC_TAG_SLOT_MASK;
-        return objc_tag_classes[slot];
-    }
-}
-</code></pre></div><h4 id=objc_getclass class=headerLink><a href=#objc_getclass class=header-mark></a>objc_getClass</h4><p>这个方法和上面的 <code>object_getClass</code> 长得很像，但还是有一些区别：</p>
-<ul>
-<li>
-<p>参数不一样，一个是 <code>id</code>，一个是 <code>const char *</code>，也就是一个传入是个类对象，一个是类名</p>
-</li>
-<li>
-<p>实现不一样，一个调用的是 <code>obj->getIsa()</code>，一个调用的是 <code>loop_up_class()</code></p>
-</li>
-</ul>
-<p>// <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-runtime.mm.auto.html target=_blank rel="noopener noreffer">objc-runtime.mm</a></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Class objc_getClass(const char *aClassName)
-{
-    if (!aClassName) return Nil;
-
-    // NO unconnected, YES class handler
-    return look_up_class(aClassName, NO, YES);
-}
-</code></pre></div><p>调用了 <code>look_up_class</code>:</p>
-<p>// <a href=https://opensource.apple.com/source/objc4/objc4-787.1/runtime/objc-runtime-new.mm.auto.html target=_blank rel="noopener noreffer">objc-runtime-new.mm</a></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Class 
-look_up_class(const char *name, 
-              bool includeUnconnected __attribute__((unused)), 
-              bool includeClassHandler __attribute__((unused)))
-{
-    if (!name) return nil;
-
-    Class result;
-    bool unrealized;
-    {
-        runtimeLock.lock();
-        result = getClassExceptSomeSwift(name);
-        unrealized = result  &amp;&amp;  !result-&gt;isRealized();
-        if (unrealized) {
-            result = realizeClassMaybeSwiftAndUnlock(result, runtimeLock);
-            // runtimeLock is now unlocked
-        } else {
-            runtimeLock.unlock();
-        }
-    }
-
-    if (!result) {
-        // Ask Swift about its un-instantiated classes.
-
-        // We use thread-local storage to prevent infinite recursion
-        // if the hook function provokes another lookup of the same name
-        // (for example, if the hook calls objc_allocateClassPair)
-
-        auto *tls = _objc_fetch_pthread_data(true);
-
-        // Stop if this thread is already looking up this name.
-        for (unsigned i = 0; i &lt; tls-&gt;classNameLookupsUsed; i++) {
-            if (0 == strcmp(name, tls-&gt;classNameLookups[i])) {
-                return nil;
-            }
-        }
-
-        // Save this lookup in tls.
-        if (tls-&gt;classNameLookupsUsed == tls-&gt;classNameLookupsAllocated) {
-            tls-&gt;classNameLookupsAllocated =
-                (tls-&gt;classNameLookupsAllocated * 2 ?: 1);
-            size_t size = tls-&gt;classNameLookupsAllocated *
-                sizeof(tls-&gt;classNameLookups[0]);
-            tls-&gt;classNameLookups = (const char **)
-                realloc(tls-&gt;classNameLookups, size);
-        }
-        tls-&gt;classNameLookups[tls-&gt;classNameLookupsUsed++] = name;
-
-        // Call the hook.
-        Class swiftcls = nil;
-        if (GetClassHook.get()(name, &amp;swiftcls)) {
-            ASSERT(swiftcls-&gt;isRealized());
-            result = swiftcls;
-        }
-
-        // Erase the name from tls.
-        unsigned slot = --tls-&gt;classNameLookupsUsed;
-        ASSERT(slot &gt;= 0  &amp;&amp;  slot &lt; tls-&gt;classNameLookupsAllocated);
-        ASSERT(name == tls-&gt;classNameLookups[slot]);
-        tls-&gt;classNameLookups[slot] = nil;
-    }
-
-    return result;
-}
-</code></pre></div><p>最后，做个试验：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Student *stu = [Student new];
-Class cls = [stu class];
-NSLog(@&#34;%p %p %p %p&#34;, cls, [Student class], objc_getClass(&#34;Student&#34;), object_getClass(stu));
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>0x10000e7b8 0x10000e7b8 0x10000e7b8 0x10000e7b8
-</code></pre></div><p>可以看出来，这四种方法拿到的结果是一样的。</p>
 <section class=footnotes role=doc-endnotes>
 <hr>
 <ol>
@@ -402,9 +249,9 @@ NSLog(@&#34;%p %p %p %p&#34;, cls, [Student class], objc_getClass(&#34;Student&#
 </section></div><footer>
 <div class=post>
 <div class=post-share><div class=share-link>
-<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://ryderfang.com/meta-class/ data-title="Meta Class" data-via=ryderfang><span class="svg-social-icon icon-twitter"></span></a>
+<a class="share-icon share-twitter" href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://ryderfang.com/meta-class/ data-title="Meta Class" data-via=ryderfang data-hashtags=ObjC,Runtime><span class="svg-social-icon icon-twitter"></span></a>
 </div><div class=share-link>
-<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://ryderfang.com/meta-class/><span class="svg-social-icon icon-facebook"></span></a>
+<a class="share-icon share-facebook" href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://ryderfang.com/meta-class/ data-hashtag=ObjC><span class="svg-social-icon icon-facebook"></span></a>
 </div><div class=share-link>
 <a class="share-icon share-weibo" href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://ryderfang.com/meta-class/ data-title="Meta Class"><span class="svg-social-icon icon-weibo"></span></a>
 </div></div>
@@ -415,7 +262,7 @@ NSLog(@&#34;%p %p %p %p&#34;, cls, [Student class], objc_getClass(&#34;Student&#
 <div class=number-posts>人生如逆旅，我亦是行人</span></div>
 </div>
 </div>
-</div>
+<div class=post-tags><a href=/tags/objc/ class=tag>ObjC</a><a href=/tags/runtime/ class=tag>Runtime</a></div></div>
 </footer></div>
 <div id=toc-final></div>
 </div>
