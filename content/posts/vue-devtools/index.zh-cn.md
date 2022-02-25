@@ -18,7 +18,7 @@ resources:
 
 html 内容是这样的:
 
-``` html
+```html
 <html>
 
 <head>

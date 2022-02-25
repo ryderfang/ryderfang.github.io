@@ -16,19 +16,21 @@ resources:
 
 有两种 class 方法，一个是实例方法，一个是类方法：
 
+```objc
 @interface NSObject <NSObject>
 
-`- (Class)class OBJC_SWIFT_UNAVAILABLE("use 'type(of: anObject)' instead");`
+- (Class)class OBJC_SWIFT_UNAVAILABLE("use 'type(of: anObject)' instead");
 
-`+ (Class)class OBJC_SWIFT_UNAVAILABLE("use 'aClass.self' instead");`
++ (Class)class OBJC_SWIFT_UNAVAILABLE("use 'aClass.self' instead");
 
 @end
+```
 
 查看 runtime 的源码：[NSObject.mm](https://opensource.apple.com/source/objc4/objc4-750/runtime/NSObject.mm.auto.html)
 
 可以看到它们的实现：
 
-```
+```objc
 + (id)self {
     return (id)self;
 }
@@ -60,7 +62,7 @@ resources:
 
 `Class _Nullable object_getClass(id _Nullable obj)`
 
-```
+```objc
 Class object_getClass(id obj)
 {
     if (obj) return obj->getIsa();
@@ -71,7 +73,8 @@ Class object_getClass(id obj)
 调用了 类的 `getIsa()` 方法
 
 // [objc-object.h](https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-object.h.auto.html)
-```
+
+```objc
 inline Class 
 objc_object::getIsa() 
 {
@@ -99,7 +102,8 @@ objc_object::getIsa()
 * 实现不一样，一个调用的是 `obj->getIsa()`，一个调用的是 `loop_up_class()`
 
 // [objc-runtime.mm](https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-runtime.mm.auto.html)
-```
+
+```objc
 Class objc_getClass(const char *aClassName)
 {
     if (!aClassName) return Nil;
@@ -112,7 +116,8 @@ Class objc_getClass(const char *aClassName)
 调用了 `look_up_class`:
 
 // [objc-runtime-new.mm](https://opensource.apple.com/source/objc4/objc4-787.1/runtime/objc-runtime-new.mm.auto.html)
-```
+
+```objc
 Class 
 look_up_class(const char *name, 
               bool includeUnconnected __attribute__((unused)), 
@@ -185,7 +190,7 @@ look_up_class(const char *name,
 
 函数原型是
 
-```
+```objc
 FOUNDATION_EXPORT Class _Nullable NSClassFromString(NSString *aClassName);
 ```
 
@@ -196,13 +201,13 @@ FOUNDATION_EXPORT Class _Nullable NSClassFromString(NSString *aClassName);
 
 最后，做个试验：
 
-```
+```objc
 Student *stu = [Student new];
 Class cls = [stu class];
 NSLog(@"%p %p %p %p %p", cls, [Student class], objc_getClass("Student"), object_getClass(stu), NSClassFromString(@"Student"));
 ```
 
-```
+```r
 0x10000e7b8 0x10000e7b8 0x10000e7b8 0x10000e7b8 0x10000e7b8
 ```
 

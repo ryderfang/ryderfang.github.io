@@ -14,7 +14,7 @@ resources:
 
 定义一个简单的类：
 
-```
+```objc
 @interface Foo : NSObject
 
 @property (nonatomic, assign) BOOL ppty1;
@@ -60,7 +60,7 @@ https://gist.github.com/ryderfang/75a852f1ae0961aeea97127f7d9ca6c5
 
 https://opensource.apple.com/source/objc4/objc4-750/runtime/runtime.h.auto.html
 
-```
+```objc
 /* Types */
 
 #if !OBJC_TYPES_DEFINED
@@ -100,7 +100,7 @@ struct objc_class {
 
 在 [objc-runtime-new.h](https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-runtime-new.h.auto.html) 中定义了 objc_class 的 2.0 版本：
 
-```
+```objc
 struct objc_class : objc_object {
     // Class ISA;
     Class superclass;
@@ -122,7 +122,7 @@ struct objc_class : objc_object {
 
 从 [objc4-750](https://opensource.apple.com/source/objc4/objc4-750/runtime/) 这个版本开始，在 [objc-config.h](https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-config.h.auto.html) 中开始有了 `__OBJC2__` 的定义！
 
-```
+```objc
 // Define __OBJC2__ for the benefit of our asm files.
 #ifndef __OBJC2__
 #   if TARGET_OS_OSX  &&  !TARGET_OS_IOSMAC  &&  __i386__
@@ -141,7 +141,7 @@ https://github.com/apple-oss-distributions/objc4/commit/26c7408b94ead1f04a0b5976
 
 在 [objc-api.h](https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-api.h.auto.html) 中定义了 `OBJC_ISA_AVAILABILITY`:
 
-```
+```objc
 /* OBJC_ISA_AVAILABILITY: `isa` will be deprecated or unavailable 
  * in the future */
 #if !defined(OBJC_ISA_AVAILABILITY)
@@ -155,7 +155,7 @@ https://github.com/apple-oss-distributions/objc4/commit/26c7408b94ead1f04a0b5976
 
 在 [objc-private.h](https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-private.h.auto.html) 中同时定义了 `OBJC_TYPES_DEFINED`:
 
-```
+```objc
 /* Isolate ourselves from the definitions of id and Class in the compiler 
  * and public headers.
  */
@@ -169,7 +169,7 @@ https://github.com/apple-oss-distributions/objc4/commit/26c7408b94ead1f04a0b5976
 
 同时也定义了 Class 和 id
 
-```
+```objc
 typedef struct objc_class *Class;
 typedef struct objc_object *id;
 ```
@@ -185,7 +185,7 @@ typedef struct objc_object *id;
 https://opensource.apple.com/source/objc4/objc4-750/runtime/objc.h.auto.html
 
 ### Object 1.0
-```
+```objc
 #if !OBJC_TYPES_DEFINED
 /// An opaque type that represents an Objective-C class.
 typedef struct objc_class *Class;
@@ -205,7 +205,7 @@ typedef struct objc_object *id;
 那么，OC 2.0 的 `objc_object` 是什么样的呢，在 [objc-private.h](https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-private.h.auto.html) 中定义了：
 
 ### Object 2.0
-```
+```objc
 struct objc_object {
 private:
     isa_t isa;
@@ -248,7 +248,7 @@ private:
 
 同样在 [objc-private.h](https://opensource.apple.com/source/objc4/objc4-818.2/runtime/objc-private.h.auto.html) 中有定义：
 
-```
+```objc
 union isa_t {
     isa_t() { }
     isa_t(uintptr_t value) : bits(value) { }
@@ -292,7 +292,7 @@ public:
 
 在 [objc-object.h]() 中，有 `objc_object::initIsa()` 的实现：
 
-```
+```objc
 inline void 
 objc_object::initIsa(Class cls, bool nonpointer, bool hasCxxDtor) 
 { 

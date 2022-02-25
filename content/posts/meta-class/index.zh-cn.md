@@ -1,5 +1,5 @@
 ---
-title: "Meta Class"
+title: "从 Meta 说起"
 date: 2022-02-14T19:45:15+08:00
 categories: [ObjC]
 tags: [ObjC, Runtime]
@@ -42,12 +42,22 @@ Greg Parker 经典图
 
 定义一对父类与子类：
 
-```
+```objc
 @interface Person : NSObject
 @end
 
 @interface Student : Person
 @end
+```
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+}
 ```
 
 ### isa 链
@@ -62,7 +72,7 @@ Greg Parker 经典图
 
 那么元类的 isa 又指向谁呢，图中显示的是 **根元类**，通过代码来获取一下这条链：
 
-```
+```objc
 Student *stu = [Student new];
 NSLog(@"Student instance addr: %p", stu);
 Class cls = [stu class];
@@ -82,7 +92,7 @@ NSLog(@"root MetaClass: %p", rootMetaClass);
 
 -->
 
-```
+```r
 Student instance addr: 0x100668810
 Student class addr: 0x10000e7b8
 isa: Student addr: 0x10000e7b8
@@ -101,7 +111,7 @@ root MetaClass: 0x7fff806e7060
 
 再来看一下继承关系，
 
-```
+```objc
 Class cls = [stu class];
 id rootClass = nil;
     while (cls) {
@@ -116,7 +126,7 @@ id rootClass = nil;
 
 -->
 
-```
+```r
 class: Student addr: 0x10000e7b8
 class: Person addr: 0x10000e768
 class: NSObject addr: 0x7fff806e7088
@@ -131,7 +141,7 @@ rootClass: 0x7fff806e7088
 
 可以看出来根类没有父类，顺便我们看一下根类的 isa 指向哪里？
 
-```
+```objc
 NSLog(@"rootClass'isa: %p", object_getClass(rootClass));
 
 // rootClass'isa: 0x7fff806e7060
