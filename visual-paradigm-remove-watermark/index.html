@@ -205,18 +205,18 @@
 $ brew install libtiff libjpeg webp little-cms2
 $ pip3 install Pillow
 </code></pre></div><p>安装 <code>cairosvg</code> 成功后，使用 Python3 <code>import cairosvg</code> 发现还是报错:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>&gt;&gt;&gt; import cairosvg
-Traceback (most recent call last):
-  File &#34;&lt;stdin&gt;&#34;, line 1, in &lt;module&gt;
-  File &#34;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/__init__.py&#34;, line 29, in &lt;module&gt;
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>&gt;&gt;&gt; import cairosvg
+Traceback <span class=o>(</span>most recent call last<span class=o>)</span>:
+  File <span class=s2>&#34;&lt;stdin&gt;&#34;</span>, line 1, in &lt;module&gt;
+  File <span class=s2>&#34;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/__init__.py&#34;</span>, line 29, in &lt;module&gt;
     from . import surface
-  File &#34;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/surface.py&#34;, line 24, in &lt;module&gt;
+  File <span class=s2>&#34;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairosvg/surface.py&#34;</span>, line 24, in &lt;module&gt;
     import cairocffi as cairo
-  File &#34;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py&#34;, line 41, in &lt;module&gt;
-    cairo = dlopen(ffi, &#39;cairo&#39;, &#39;cairo-2&#39;)
-  File &#34;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py&#34;, line 38, in dlopen
-    raise OSError(&#34;dlopen() failed to load a library: %s&#34; % &#39; / &#39;.join(names))
-OSError: dlopen() failed to load a library: cairo / cairo-2
+  File <span class=s2>&#34;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py&#34;</span>, line 41, in &lt;module&gt;
+    <span class=nv>cairo</span> <span class=o>=</span> dlopen<span class=o>(</span>ffi, <span class=s1>&#39;cairo&#39;</span>, <span class=s1>&#39;cairo-2&#39;</span><span class=o>)</span>
+  File <span class=s2>&#34;/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/cairocffi/__init__.py&#34;</span>, line 38, in dlopen
+    raise OSError<span class=o>(</span><span class=s2>&#34;dlopen() failed to load a library: %s&#34;</span> % <span class=s1>&#39; / &#39;</span>.join<span class=o>(</span>names<span class=o>))</span>
+OSError: dlopen<span class=o>()</span> failed to load a library: cairo / cairo-2
 </code></pre></div><p>经过搜索，发现还需要安装 <code>cairo</code> 和 <code>libffi</code>：</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ brew install cairo pango gdk-pixbuf libffi
 </code></pre></div><ul>

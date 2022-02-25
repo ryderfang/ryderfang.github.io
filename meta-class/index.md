@@ -1,4 +1,4 @@
-# Meta Class
+# 从 Meta 说起
 
 
 Meta 这个词在 2021 年下半年开始火爆，而后 Facebook 改名 Meta 引发各大科技公司跟风押注。似乎全球资本都在追逐“元宇宙”的概念，但什么是“元宇宙”，各家有各家的说法，没有一个统一的标准。
@@ -35,12 +35,22 @@ Greg Parker 经典图
 
 定义一对父类与子类：
 
-```
+```objc
 @interface Person : NSObject
 @end
 
 @interface Student : Person
 @end
+```
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+}
 ```
 
 ### isa 链
@@ -55,7 +65,7 @@ Greg Parker 经典图
 
 那么元类的 isa 又指向谁呢，图中显示的是 **根元类**，通过代码来获取一下这条链：
 
-```
+```objc
 Student *stu = [Student new];
 NSLog(@"Student instance addr: %p", stu);
 Class cls = [stu class];
@@ -75,7 +85,7 @@ NSLog(@"root MetaClass: %p", rootMetaClass);
 
 -->
 
-```
+```r
 Student instance addr: 0x100668810
 Student class addr: 0x10000e7b8
 isa: Student addr: 0x10000e7b8
@@ -94,7 +104,7 @@ root MetaClass: 0x7fff806e7060
 
 再来看一下继承关系，
 
-```
+```objc
 Class cls = [stu class];
 id rootClass = nil;
     while (cls) {
@@ -109,7 +119,7 @@ id rootClass = nil;
 
 -->
 
-```
+```r
 class: Student addr: 0x10000e7b8
 class: Person addr: 0x10000e768
 class: NSObject addr: 0x7fff806e7088
@@ -124,7 +134,7 @@ rootClass: 0x7fff806e7088
 
 可以看出来根类没有父类，顺便我们看一下根类的 isa 指向哪里？
 
-```
+```objc
 NSLog(@"rootClass'isa: %p", object_getClass(rootClass));
 
 // rootClass'isa: 0x7fff806e7060

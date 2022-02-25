@@ -11,31 +11,31 @@
 
 ### local variable
 
-``` objectivec
+```objc
 returnType (^blockName)(parameterTypes) = ^returnType(parameters) {...};
 ```
 
 ### property
 
-``` objectivec
+```objc
 @property (nonatomic, copy, nullability) returnType (^blockName)(parameterTypes);
 ```
 
 ### method parameter
 
-``` objectivec
+```objc
 - (void)someMethodThatTakesABlock:(returnType (^nullability)(parameterTypes))blockName;
 ```
 
 ### argument to a method call
 
-``` objectivec
+```objc
 [someObject someMethodThatTakesABlock:^returnType (parameters) {...}];
 ```
 
 ### typedef
 
-``` objectivec
+```objc
 typedef returnType (^TypeName)(parameterTypes);
 TypeName blockName = ^returnType(parameters) {...};
 ```

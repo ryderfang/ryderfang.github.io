@@ -15,7 +15,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/class-object-isa/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Class, Object 与 isa","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/class-object-isa\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/class-object-isa\/featured-image.jpg","width":1600,"height":900}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":1465,"url":"https:\/\/ryderfang.com\/class-object-isa\/","datePublished":"2022-01-04T20:19:38+08:00","dateModified":"2022-01-04T20:19:38+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"Class, Object 与 isa"}]}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/class-object-isa/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Class, Object 与 isa","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/class-object-isa\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/class-object-isa\/featured-image.jpg","width":1600,"height":900}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":1521,"url":"https:\/\/ryderfang.com\/class-object-isa\/","datePublished":"2022-01-04T20:19:38+08:00","dateModified":"2022-01-04T20:19:38+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"Class, Object 与 isa"}]}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -121,10 +121,10 @@
 </span><span class="post-meta-date meta-item">
 <span class="svg-icon icon-clock"></span><time class=timeago datetime=2022-01-04>2022-01-04</time>
 </span><span class="post-meta-words meta-item">
-<span class="svg-icon icon-pencil"></span>约 1465 字
+<span class="svg-icon icon-pencil"></span>约 1521 字
 </span>
 <span class="post-meta-reading meta-item">
-<span class="svg-icon icon-stopwatch"></span>预计阅读 3 分钟
+<span class="svg-icon icon-stopwatch"></span>预计阅读 4 分钟
 </span>
 </div>
 </div>
@@ -159,18 +159,18 @@
 </div><p>作为 Runtime 系列的第一篇博文（也是 2022 年第一篇），先从最基础的对象、类开始学习。</p>
 <p>参考 <a href=https://cloud.tencent.com/developer/article/1520878 target=_blank rel="noopener noreffer">OC 编译过程</a> 我们可以借助 <code>clang</code> 工具将 OC 源码预处理成 CPP 来窥探 OC 的内部实现。</p>
 <p>定义一个简单的类：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>@interface Foo : NSObject
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=k>@interface</span> <span class=nc>Foo</span> : <span class=nc>NSObject</span>
 
-@property (nonatomic, assign) BOOL ppty1;
-@property (nonatomic, copy) NSString *ppty2;
+<span class=k>@property</span> <span class=p>(</span><span class=k>nonatomic</span><span class=p>,</span> <span class=k>assign</span><span class=p>)</span> <span class=kt>BOOL</span> <span class=n>ppty1</span><span class=p>;</span>
+<span class=k>@property</span> <span class=p>(</span><span class=k>nonatomic</span><span class=p>,</span> <span class=k>copy</span><span class=p>)</span> <span class=n>NSString</span> <span class=o>*</span><span class=n>ppty2</span><span class=p>;</span>
 
-- (BOOL)iMethod1;
+<span class=p>-</span> <span class=p>(</span><span class=kt>BOOL</span><span class=p>)</span><span class=nf>iMethod1</span><span class=p>;</span>
 
-- (void)iMethod2:(NSString *)p1;
+<span class=p>-</span> <span class=p>(</span><span class=kt>void</span><span class=p>)</span><span class=nf>iMethod2:</span><span class=p>(</span><span class=n>NSString</span> <span class=o>*</span><span class=p>)</span><span class=nv>p1</span><span class=p>;</span>
 
-+ (void)cMethod1;
+<span class=p>+</span> <span class=p>(</span><span class=kt>void</span><span class=p>)</span><span class=nf>cMethod1</span><span class=p>;</span>
 
-@end
+<span class=k>@end</span>
 </code></pre></div><p>通过命令 <code>clang -rewrite-objc xx.m</code> 得到一个 9 万多行的 cpp 文件 😱</p>
 <p><a href=https://gist.github.com/ryderfang/75a852f1ae0961aeea97127f7d9ca6c5 target=_blank rel="noopener noreffer">https://gist.github.com/ryderfang/75a852f1ae0961aeea97127f7d9ca6c5</a></p>
 <h2 id=tldr class=headerLink><a href=#tldr class=header-mark></a>TL;DR</h2><p>太长不看版：</p>
@@ -215,29 +215,29 @@
 <p><code>typedef struct objc_class *Class;</code></p>
 <p>在 iOS 15 之前 <u>&lt;objc/runtime.h></u> 中曾经有 <code>objc_class</code> 的定义：</p>
 <p><a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/runtime.h.auto.html target=_blank rel="noopener noreffer">https://opensource.apple.com/source/objc4/objc4-750/runtime/runtime.h.auto.html</a></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-mysql data-lang=mysql><span class=cm>/* Types */</span><span class=w>
-</span><span class=w>
-</span><span class=w></span><span class=c1>#if !OBJC_TYPES_DEFINED
-</span><span class=c1></span><span class=w>
-</span><span class=w></span><span class=n>struct</span><span class=w> </span><span class=n>objc_class</span><span class=w> </span><span class=err>{</span><span class=w>
-</span><span class=w>    </span><span class=n>Class</span><span class=w> </span><span class=n>_Nonnull</span><span class=w> </span><span class=n>isa</span><span class=w>  </span><span class=n>OBJC_ISA_AVAILABILITY</span><span class=p>;</span><span class=w>
-</span><span class=w>
-</span><span class=w></span><span class=c1>#if !__OBJC2__
-</span><span class=c1></span><span class=w>    </span><span class=n>Class</span><span class=w> </span><span class=n>_Nullable</span><span class=w> </span><span class=n>super_class</span><span class=w>                              </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w>    </span><span class=n>const</span><span class=w> </span><span class=kt>char</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=n>_Nonnull</span><span class=w> </span><span class=n>name</span><span class=w>                               </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w>    </span><span class=k>long</span><span class=w> </span><span class=n>version</span><span class=w>                                             </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w>    </span><span class=k>long</span><span class=w> </span><span class=n>info</span><span class=w>                                                </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w>    </span><span class=k>long</span><span class=w> </span><span class=n>instance_size</span><span class=w>                                       </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w>    </span><span class=n>struct</span><span class=w> </span><span class=n>objc_ivar_list</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=n>_Nullable</span><span class=w> </span><span class=n>ivars</span><span class=w>                  </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w>    </span><span class=n>struct</span><span class=w> </span><span class=n>objc_method_list</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=n>_Nullable</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=n>_Nullable</span><span class=w> </span><span class=n>methodLists</span><span class=w>                    </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w>    </span><span class=n>struct</span><span class=w> </span><span class=n>objc_cache</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=n>_Nonnull</span><span class=w> </span><span class=n>cache</span><span class=w>                       </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w>    </span><span class=n>struct</span><span class=w> </span><span class=n>objc_protocol_list</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=n>_Nullable</span><span class=w> </span><span class=n>protocols</span><span class=w>          </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w></span><span class=c1>#endif
-</span><span class=c1></span><span class=w>
-</span><span class=w></span><span class=err>}</span><span class=w> </span><span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span><span class=w>
-</span><span class=w></span><span class=cm>/* Use `Class` instead of `struct objc_class *` */</span><span class=w>
-</span><span class=w>
-</span><span class=w></span><span class=c1>#endif
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=cm>/* Types */</span>
+
+<span class=cp>#if !OBJC_TYPES_DEFINED
+</span><span class=cp></span>
+<span class=k>struct</span> <span class=n>objc_class</span> <span class=p>{</span>
+    <span class=kt>Class</span> <span class=n>_Nonnull</span> <span class=n>isa</span>  <span class=n>OBJC_ISA_AVAILABILITY</span><span class=p>;</span>
+
+<span class=cp>#if !__OBJC2__
+</span><span class=cp></span>    <span class=kt>Class</span> <span class=n>_Nullable</span> <span class=n>super_class</span>                              <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+    <span class=k>const</span> <span class=kt>char</span> <span class=o>*</span> <span class=n>_Nonnull</span> <span class=n>name</span>                               <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+    <span class=kt>long</span> <span class=n>version</span>                                             <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+    <span class=kt>long</span> <span class=n>info</span>                                                <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+    <span class=kt>long</span> <span class=n>instance_size</span>                                       <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+    <span class=k>struct</span> <span class=n>objc_ivar_list</span> <span class=o>*</span> <span class=n>_Nullable</span> <span class=n>ivars</span>                  <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+    <span class=k>struct</span> <span class=n>objc_method_list</span> <span class=o>*</span> <span class=n>_Nullable</span> <span class=o>*</span> <span class=n>_Nullable</span> <span class=n>methodLists</span>                    <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+    <span class=k>struct</span> <span class=n>objc_cache</span> <span class=o>*</span> <span class=n>_Nonnull</span> <span class=n>cache</span>                       <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+    <span class=k>struct</span> <span class=n>objc_protocol_list</span> <span class=o>*</span> <span class=n>_Nullable</span> <span class=n>protocols</span>          <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+<span class=cp>#endif
+</span><span class=cp></span>
+<span class=p>}</span> <span class=n>OBJC2_UNAVAILABLE</span><span class=p>;</span>
+<span class=cm>/* Use `Class` instead of `struct objc_class *` */</span>
+
+<span class=cp>#endif
 </span></code></pre></div><p>目前我使用的 Xcode 13.2.1 中已经找不到这个定义，<del>也就是说在 macOS 12.1 / iOS 15.2 中，OBJC1 已经被完全废弃。</del></p>
 <blockquote>
 <p>Hint: 按照官方文档 <a href=https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtVersionsPlatforms.html#//apple_ref/doc/uid/TP40008048-CH106-SW1 target=_blank rel="noopener noreffer">Runtime Version</a> 的解释, legacy 版本 (OC 1.0) 在 2007 年就完全废弃了，所有 iPhone 和 OSX 10.5 以后的 Mac 上使用的都是 modern 版本 (OC 2.0)!</p>
@@ -252,103 +252,103 @@
 </div>
 <p>从这个宏 <code>OBJC2_UNAVAILABLE</code> 可以看出来 OBJC2 这种定义会失效。那么 OBJC2 是什么？</p>
 <h3 id=class-20 class=headerLink><a href=#class-20 class=header-mark></a>Class 2.0</h3><p>在 <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-runtime-new.h.auto.html target=_blank rel="noopener noreffer">objc-runtime-new.h</a> 中定义了 objc_class 的 2.0 版本：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>struct objc_class : objc_object {
-    // Class ISA;
-    Class superclass;
-    cache_t cache;             // formerly cache pointer and vtable
-    class_data_bits_t bits;    // class_rw_t * plus custom rr/alloc flags
-
-    class_rw_t *data() { 
-        return bits.data();
-    }
-    ...
-}
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=k>struct</span> <span class=nl>objc_class</span> <span class=p>:</span> <span class=n>objc_object</span> <span class=p>{</span>
+    <span class=c1>// Class ISA;
+</span><span class=c1></span>    <span class=kt>Class</span> <span class=n>superclass</span><span class=p>;</span>
+    <span class=n>cache_t</span> <span class=n>cache</span><span class=p>;</span>             <span class=c1>// formerly cache pointer and vtable
+</span><span class=c1></span>    <span class=n>class_data_bits_t</span> <span class=n>bits</span><span class=p>;</span>    <span class=c1>// class_rw_t * plus custom rr/alloc flags
+</span><span class=c1></span>
+    <span class=n>class_rw_t</span> <span class=o>*</span><span class=nf>data</span><span class=p>()</span> <span class=p>{</span> 
+        <span class=k>return</span> <span class=n>bits</span><span class=p>.</span><span class=n>data</span><span class=p>();</span>
+    <span class=p>}</span>
+    <span class=p>...</span>
+<span class=p>}</span>
 </code></pre></div><p>参考 <sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> 和 <sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup></p>
 <p>了解到，苹果在 2006 年重写了 runtime，发布了新的 Runtime 2.0，那么 <code>__OBJC2__</code> 这个宏是什么时候生效的呢？</p>
 <p>通过查找苹果公开的 runtime 源码：https://opensource.apple.com/source/objc4/ 发现：</p>
 <p>从 <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/ target=_blank rel="noopener noreffer">objc4-750</a> 这个版本开始，在 <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-config.h.auto.html target=_blank rel="noopener noreffer">objc-config.h</a> 中开始有了 <code>__OBJC2__</code> 的定义！</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>// Define __OBJC2__ for the benefit of our asm files.
-#ifndef __OBJC2__
-#   if TARGET_OS_OSX  &amp;&amp;  !TARGET_OS_IOSMAC  &amp;&amp;  __i386__
-        // old ABI
-#   else
-#       define __OBJC2__ 1
-#   endif
-#endif
-</code></pre></div><p>来自 apple 的 commit：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=c1>// Define __OBJC2__ for the benefit of our asm files.
+</span><span class=c1></span><span class=cp>#ifndef __OBJC2__
+</span><span class=cp>#   if TARGET_OS_OSX  &amp;&amp;  !TARGET_OS_IOSMAC  &amp;&amp;  __i386__
+</span><span class=cp></span>        <span class=c1>// old ABI
+</span><span class=c1></span><span class=cp>#   else
+</span><span class=cp>#       define __OBJC2__ 1
+</span><span class=cp>#   endif
+</span><span class=cp>#endif
+</span></code></pre></div><p>来自 apple 的 commit：</p>
 <p>
 <img loading=lazy decoding=async class=render-image src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-01-13-WGJpaA.png alt=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-01-13-WGJpaA.png title=2022-01-13-WGJpaA.png></p>
 <p><a href=https://github.com/apple-oss-distributions/objc4/commit/26c7408b94ead1f04a0b5976e354a03966ce61ea target=_blank rel="noopener noreffer">https://github.com/apple-oss-distributions/objc4/commit/26c7408b94ead1f04a0b5976e354a03966ce61ea</a></p>
 <p>在 <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-api.h.auto.html target=_blank rel="noopener noreffer">objc-api.h</a> 中定义了 <code>OBJC_ISA_AVAILABILITY</code>:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-mysql data-lang=mysql><span class=cm>/* OBJC_ISA_AVAILABILITY: `isa` will be deprecated or unavailable 
-</span><span class=cm> * in the future */</span><span class=w>
-</span><span class=w></span><span class=c1>#if !defined(OBJC_ISA_AVAILABILITY)
-</span><span class=c1>#   if __OBJC2__
-</span><span class=c1>#       define OBJC_ISA_AVAILABILITY  __attribute__((deprecated))
-</span><span class=c1>#   else
-</span><span class=c1>#       define OBJC_ISA_AVAILABILITY  /* still available */
-</span><span class=c1>#   endif
-</span><span class=c1>#endif
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=cm>/* OBJC_ISA_AVAILABILITY: `isa` will be deprecated or unavailable 
+</span><span class=cm> * in the future */</span>
+<span class=cp>#if !defined(OBJC_ISA_AVAILABILITY)
+</span><span class=cp>#   if __OBJC2__
+</span><span class=cp>#       define OBJC_ISA_AVAILABILITY  __attribute__((deprecated))
+</span><span class=cp>#   else
+</span><span class=cp>#       define OBJC_ISA_AVAILABILITY  </span><span class=cm>/* still available */</span><span class=cp>
+</span><span class=cp>#   endif
+</span><span class=cp>#endif
 </span></code></pre></div><p>在 <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-private.h.auto.html target=_blank rel="noopener noreffer">objc-private.h</a> 中同时定义了 <code>OBJC_TYPES_DEFINED</code>:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>/* Isolate ourselves from the definitions of id and Class in the compiler 
- * and public headers.
- */
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=cm>/* Isolate ourselves from the definitions of id and Class in the compiler 
+</span><span class=cm> * and public headers.
+</span><span class=cm> */</span>
 
-#ifdef _OBJC_OBJC_H_
-#error include objc-private.h before other headers
-#endif
-
-#define OBJC_TYPES_DEFINED 1
-</code></pre></div><p>同时也定义了 Class 和 id</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>typedef struct objc_class *Class;
-typedef struct objc_object *id;
+<span class=cp>#ifdef _OBJC_OBJC_H_
+</span><span class=cp>#error include objc-private.h before other headers
+</span><span class=cp>#endif
+</span><span class=cp></span>
+<span class=cp>#define OBJC_TYPES_DEFINED 1
+</span></code></pre></div><p>同时也定义了 Class 和 id</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=k>typedef</span> <span class=k>struct</span> <span class=n>objc_class</span> <span class=o>*</span><span class=kt>Class</span><span class=p>;</span>
+<span class=k>typedef</span> <span class=k>struct</span> <span class=n>objc_object</span> <span class=o>*</span><span class=kt>id</span><span class=p>;</span>
 </code></pre></div><p>所以，不管 OC 1.0 还是 2.0，</p>
 <blockquote>
 <p>Class 都是一个叫 <code>objc_class</code> 的结构体指针。</p>
 </blockquote>
 <h2 id=object-与-id class=headerLink><a href=#object-%e4%b8%8e-id class=header-mark></a>Object 与 id</h2><p>在 <u>&lt;objc/objc.h></u> 中，定义</p>
 <p><a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc.h.auto.html target=_blank rel="noopener noreffer">https://opensource.apple.com/source/objc4/objc4-750/runtime/objc.h.auto.html</a></p>
-<h3 id=object-10 class=headerLink><a href=#object-10 class=header-mark></a>Object 1.0</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>#if !OBJC_TYPES_DEFINED
-/// An opaque type that represents an Objective-C class.
-typedef struct objc_class *Class;
+<h3 id=object-10 class=headerLink><a href=#object-10 class=header-mark></a>Object 1.0</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=cp>#if !OBJC_TYPES_DEFINED
+</span><span class=cp></span><span class=c1>/// An opaque type that represents an Objective-C class.
+</span><span class=c1></span><span class=k>typedef</span> <span class=k>struct</span> <span class=n>objc_class</span> <span class=o>*</span><span class=kt>Class</span><span class=p>;</span>
 
-/// Represents an instance of a class.
-struct objc_object {
-    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;
-};
+<span class=c1>/// Represents an instance of a class.
+</span><span class=c1></span><span class=k>struct</span> <span class=n>objc_object</span> <span class=p>{</span>
+    <span class=kt>Class</span> <span class=n>_Nonnull</span> <span class=n>isa</span>  <span class=n>OBJC_ISA_AVAILABILITY</span><span class=p>;</span>
+<span class=p>};</span>
 
-/// A pointer to an instance of a class.
-typedef struct objc_object *id;
-#endif
-</code></pre></div><p>同样被包在 <code>OBJC_TYPES_DEFINED</code> 宏中，也就是 OC 2.0 并不生效。</p>
+<span class=c1>/// A pointer to an instance of a class.
+</span><span class=c1></span><span class=k>typedef</span> <span class=k>struct</span> <span class=n>objc_object</span> <span class=o>*</span><span class=kt>id</span><span class=p>;</span>
+<span class=cp>#endif
+</span></code></pre></div><p>同样被包在 <code>OBJC_TYPES_DEFINED</code> 宏中，也就是 OC 2.0 并不生效。</p>
 <p>那么，OC 2.0 的 <code>objc_object</code> 是什么样的呢，在 <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-private.h.auto.html target=_blank rel="noopener noreffer">objc-private.h</a> 中定义了：</p>
-<h3 id=object-20 class=headerLink><a href=#object-20 class=header-mark></a>Object 2.0</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>struct objc_object {
-private:
-    isa_t isa;
+<h3 id=object-20 class=headerLink><a href=#object-20 class=header-mark></a>Object 2.0</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=k>struct</span> <span class=n>objc_object</span> <span class=p>{</span>
+<span class=nl>private</span><span class=p>:</span>
+    <span class=n>isa_t</span> <span class=n>isa</span><span class=p>;</span>
 
-public:
+<span class=nl>public</span><span class=p>:</span>
 
-    // ISA() assumes this is NOT a tagged pointer object
-    Class ISA();
+    <span class=c1>// ISA() assumes this is NOT a tagged pointer object
+</span><span class=c1></span>    <span class=kt>Class</span> <span class=n>ISA</span><span class=p>();</span>
 
-    // initIsa() should be used to init the isa of new objects only.
-    // If this object already has an isa, use changeIsa() for correctness.
-    // initInstanceIsa(): objects with no custom RR/AWZ
-    // initClassIsa(): class objects
-    // initProtocolIsa(): protocol objects
-    // initIsa(): other objects
-    void initIsa(Class cls /*nonpointer=false*/);
-    void initClassIsa(Class cls /*nonpointer=maybe*/);
-    void initProtocolIsa(Class cls /*nonpointer=maybe*/);
-    void initInstanceIsa(Class cls, bool hasCxxDtor);
+    <span class=c1>// initIsa() should be used to init the isa of new objects only.
+</span><span class=c1></span>    <span class=c1>// If this object already has an isa, use changeIsa() for correctness.
+</span><span class=c1></span>    <span class=c1>// initInstanceIsa(): objects with no custom RR/AWZ
+</span><span class=c1></span>    <span class=c1>// initClassIsa(): class objects
+</span><span class=c1></span>    <span class=c1>// initProtocolIsa(): protocol objects
+</span><span class=c1></span>    <span class=c1>// initIsa(): other objects
+</span><span class=c1></span>    <span class=kt>void</span> <span class=nf>initIsa</span><span class=p>(</span><span class=kt>Class</span> <span class=n>cls</span> <span class=cm>/*nonpointer=false*/</span><span class=p>);</span>
+    <span class=kt>void</span> <span class=nf>initClassIsa</span><span class=p>(</span><span class=kt>Class</span> <span class=n>cls</span> <span class=cm>/*nonpointer=maybe*/</span><span class=p>);</span>
+    <span class=kt>void</span> <span class=nf>initProtocolIsa</span><span class=p>(</span><span class=kt>Class</span> <span class=n>cls</span> <span class=cm>/*nonpointer=maybe*/</span><span class=p>);</span>
+    <span class=kt>void</span> <span class=nf>initInstanceIsa</span><span class=p>(</span><span class=kt>Class</span> <span class=n>cls</span><span class=p>,</span> <span class=kt>bool</span> <span class=n>hasCxxDtor</span><span class=p>);</span>
 
-    // 省略大量方法
+    <span class=c1>// 省略大量方法
+</span><span class=c1></span>
+<span class=nl>private</span><span class=p>:</span>
+    <span class=kt>void</span> <span class=n>initIsa</span><span class=p>(</span><span class=kt>Class</span> <span class=n>newCls</span><span class=p>,</span> <span class=kt>bool</span> <span class=n>nonpointer</span><span class=p>,</span> <span class=kt>bool</span> <span class=n>hasCxxDtor</span><span class=p>);</span>
 
-private:
-    void initIsa(Class newCls, bool nonpointer, bool hasCxxDtor);
-
-    // 省略大量方法`
-};
+    <span class=c1>// 省略大量方法`
+</span><span class=c1></span><span class=p>};</span>
 
 </code></pre></div><p>可以看出来不管 OC 1.0 还是 2.0,</p>
 <blockquote>
@@ -357,80 +357,80 @@ private:
 <h2 id=isa-又是什么 class=headerLink><a href=#isa-%e5%8f%88%e6%98%af%e4%bb%80%e4%b9%88 class=header-mark></a>isa 又是什么</h2><p>在 1.0 版本中 isa 就是一个 Class 对象，也就是一个指向 <code>objc_class</code> 的指针，而在 2.0 时，isa 是一个叫 <code>isa_t</code> 的结构体变量。</p>
 <p>那么 <code>isa_t</code> 是什么呢？</p>
 <p>同样在 <a href=https://opensource.apple.com/source/objc4/objc4-818.2/runtime/objc-private.h.auto.html target=_blank rel="noopener noreffer">objc-private.h</a> 中有定义：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>union isa_t {
-    isa_t() { }
-    isa_t(uintptr_t value) : bits(value) { }
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=k>union</span> <span class=n>isa_t</span> <span class=p>{</span>
+    <span class=n>isa_t</span><span class=p>()</span> <span class=p>{</span> <span class=p>}</span>
+    <span class=n>isa_t</span><span class=p>(</span><span class=n>uintptr_t</span> <span class=n>value</span><span class=p>)</span> <span class=o>:</span> <span class=n>bits</span><span class=p>(</span><span class=n>value</span><span class=p>)</span> <span class=p>{</span> <span class=p>}</span>
 
-    uintptr_t bits;
+    <span class=n>uintptr_t</span> <span class=n>bits</span><span class=p>;</span>
 
-private:
-    // Accessing the class requires custom ptrauth operations, so
-    // force clients to go through setClass/getClass by making this
-    // private.
-    Class cls;
+<span class=nl>private</span><span class=p>:</span>
+    <span class=c1>// Accessing the class requires custom ptrauth operations, so
+</span><span class=c1></span>    <span class=c1>// force clients to go through setClass/getClass by making this
+</span><span class=c1></span>    <span class=c1>// private.
+</span><span class=c1></span>    <span class=kt>Class</span> <span class=n>cls</span><span class=p>;</span>
 
-public:
-#if defined(ISA_BITFIELD)
-    struct {
-        ISA_BITFIELD;  // defined in isa.h
-    };
+<span class=nl>public</span><span class=p>:</span>
+<span class=cp>#if defined(ISA_BITFIELD)
+</span><span class=cp></span>    <span class=k>struct</span> <span class=p>{</span>
+        <span class=n>ISA_BITFIELD</span><span class=p>;</span>  <span class=c1>// defined in isa.h
+</span><span class=c1></span>    <span class=p>};</span>
 
-    bool isDeallocating() {
-        return extra_rc == 0 &amp;&amp; has_sidetable_rc == 0;
-    }
-    void setDeallocating() {
-        extra_rc = 0;
-        has_sidetable_rc = 0;
-    }
-#endif
-
-    void setClass(Class cls, objc_object *obj);
-    Class getClass(bool authenticated);
-    Class getDecodedClass(bool authenticated);
-};
+    <span class=kt>bool</span> <span class=nf>isDeallocating</span><span class=p>()</span> <span class=p>{</span>
+        <span class=k>return</span> <span class=n>extra_rc</span> <span class=o>==</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=n>has_sidetable_rc</span> <span class=o>==</span> <span class=mi>0</span><span class=p>;</span>
+    <span class=p>}</span>
+    <span class=kt>void</span> <span class=nf>setDeallocating</span><span class=p>()</span> <span class=p>{</span>
+        <span class=n>extra_rc</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+        <span class=n>has_sidetable_rc</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=cp>#endif
+</span><span class=cp></span>
+    <span class=kt>void</span> <span class=nf>setClass</span><span class=p>(</span><span class=kt>Class</span> <span class=n>cls</span><span class=p>,</span> <span class=n>objc_object</span> <span class=o>*</span><span class=n>obj</span><span class=p>);</span>
+    <span class=kt>Class</span> <span class=nf>getClass</span><span class=p>(</span><span class=kt>bool</span> <span class=n>authenticated</span><span class=p>);</span>
+    <span class=kt>Class</span> <span class=nf>getDecodedClass</span><span class=p>(</span><span class=kt>bool</span> <span class=n>authenticated</span><span class=p>);</span>
+<span class=p>};</span>
 </code></pre></div><p>参考 <sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> 的图：</p>
 <p>
 <img loading=lazy decoding=async class=render-image src=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-01-21-lhezaA.jpg alt=https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-01-21-lhezaA.jpg title=2022-01-21-lhezaA.jpg></p>
 <p>作为一个 union 结构，与 struct 区别在于，成员之间会互相覆盖，union 的总内存占用等于最大的成员占用的内存大小，而 struct 大小至少是成员内存占用之和，如果需要字节对齐则会更大。</p>
 <p>所以采用 union 结构可以节省内存。</p>
 <p>在 <a href rel>objc-object.h</a> 中，有 <code>objc_object::initIsa()</code> 的实现：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>inline void 
-objc_object::initIsa(Class cls, bool nonpointer, bool hasCxxDtor) 
-{ 
-    ASSERT(!isTaggedPointer()); 
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=kr>inline</span> <span class=kt>void</span> 
+<span class=n>objc_object</span><span class=o>::</span><span class=n>initIsa</span><span class=p>(</span><span class=kt>Class</span> <span class=n>cls</span><span class=p>,</span> <span class=kt>bool</span> <span class=n>nonpointer</span><span class=p>,</span> <span class=kt>bool</span> <span class=n>hasCxxDtor</span><span class=p>)</span> 
+<span class=p>{</span> 
+    <span class=n>ASSERT</span><span class=p>(</span><span class=o>!</span><span class=n>isTaggedPointer</span><span class=p>());</span> 
     
-    if (!nonpointer) {
-        isa = isa_t((uintptr_t)cls);
-    } else {
-        ASSERT(!DisableNonpointerIsa);
-        ASSERT(!cls-&gt;instancesRequireRawIsa());
+    <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=n>nonpointer</span><span class=p>)</span> <span class=p>{</span>
+        <span class=n>isa</span> <span class=o>=</span> <span class=n>isa_t</span><span class=p>((</span><span class=n>uintptr_t</span><span class=p>)</span><span class=n>cls</span><span class=p>);</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+        <span class=n>ASSERT</span><span class=p>(</span><span class=o>!</span><span class=n>DisableNonpointerIsa</span><span class=p>);</span>
+        <span class=n>ASSERT</span><span class=p>(</span><span class=o>!</span><span class=n>cls</span><span class=o>-&gt;</span><span class=n>instancesRequireRawIsa</span><span class=p>());</span>
 
-        isa_t newisa(0);
+        <span class=n>isa_t</span> <span class=nf>newisa</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
 
-#if SUPPORT_INDEXED_ISA
-        ASSERT(cls-&gt;classArrayIndex() &gt; 0);
-        newisa.bits = ISA_INDEX_MAGIC_VALUE;
-        // isa.magic is part of ISA_MAGIC_VALUE
-        // isa.nonpointer is part of ISA_MAGIC_VALUE
-        newisa.has_cxx_dtor = hasCxxDtor;
-        newisa.indexcls = (uintptr_t)cls-&gt;classArrayIndex();
-#else
-        newisa.bits = ISA_MAGIC_VALUE;
-        // isa.magic is part of ISA_MAGIC_VALUE
-        // isa.nonpointer is part of ISA_MAGIC_VALUE
-        newisa.has_cxx_dtor = hasCxxDtor;
-        newisa.shiftcls = (uintptr_t)cls &gt;&gt; 3;
-#endif
-
-        // This write must be performed in a single store in some cases
-        // (for example when realizing a class because other threads
-        // may simultaneously try to use the class).
-        // fixme use atomics here to guarantee single-store and to
-        // guarantee memory order w.r.t. the class index table
-        // ...but not too atomic because we don&#39;t want to hurt instantiation
-        isa = newisa;
-    }
-}
+<span class=cp>#if SUPPORT_INDEXED_ISA
+</span><span class=cp></span>        <span class=n>ASSERT</span><span class=p>(</span><span class=n>cls</span><span class=o>-&gt;</span><span class=n>classArrayIndex</span><span class=p>()</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>);</span>
+        <span class=n>newisa</span><span class=p>.</span><span class=n>bits</span> <span class=o>=</span> <span class=n>ISA_INDEX_MAGIC_VALUE</span><span class=p>;</span>
+        <span class=c1>// isa.magic is part of ISA_MAGIC_VALUE
+</span><span class=c1></span>        <span class=c1>// isa.nonpointer is part of ISA_MAGIC_VALUE
+</span><span class=c1></span>        <span class=n>newisa</span><span class=p>.</span><span class=n>has_cxx_dtor</span> <span class=o>=</span> <span class=n>hasCxxDtor</span><span class=p>;</span>
+        <span class=n>newisa</span><span class=p>.</span><span class=n>indexcls</span> <span class=o>=</span> <span class=p>(</span><span class=n>uintptr_t</span><span class=p>)</span><span class=n>cls</span><span class=o>-&gt;</span><span class=n>classArrayIndex</span><span class=p>();</span>
+<span class=cp>#else
+</span><span class=cp></span>        <span class=n>newisa</span><span class=p>.</span><span class=n>bits</span> <span class=o>=</span> <span class=n>ISA_MAGIC_VALUE</span><span class=p>;</span>
+        <span class=c1>// isa.magic is part of ISA_MAGIC_VALUE
+</span><span class=c1></span>        <span class=c1>// isa.nonpointer is part of ISA_MAGIC_VALUE
+</span><span class=c1></span>        <span class=n>newisa</span><span class=p>.</span><span class=n>has_cxx_dtor</span> <span class=o>=</span> <span class=n>hasCxxDtor</span><span class=p>;</span>
+        <span class=n>newisa</span><span class=p>.</span><span class=n>shiftcls</span> <span class=o>=</span> <span class=p>(</span><span class=n>uintptr_t</span><span class=p>)</span><span class=n>cls</span> <span class=o>&gt;&gt;</span> <span class=mi>3</span><span class=p>;</span>
+<span class=cp>#endif
+</span><span class=cp></span>
+        <span class=c1>// This write must be performed in a single store in some cases
+</span><span class=c1></span>        <span class=c1>// (for example when realizing a class because other threads
+</span><span class=c1></span>        <span class=c1>// may simultaneously try to use the class).
+</span><span class=c1></span>        <span class=c1>// fixme use atomics here to guarantee single-store and to
+</span><span class=c1></span>        <span class=c1>// guarantee memory order w.r.t. the class index table
+</span><span class=c1></span>        <span class=c1>// ...but not too atomic because we don&#39;t want to hurt instantiation
+</span><span class=c1></span>        <span class=n>isa</span> <span class=o>=</span> <span class=n>newisa</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>}</span>
 </code></pre></div><p>可以看出 isa_t 中的 Class 与 bits 是互斥的，避免了互相覆盖的问题。</p>
 <section class=footnotes role=doc-endnotes>
 <hr>

@@ -67,7 +67,7 @@ WdwvFl2vGaThOSEAAAAASUVORK5CYII=" height="16" stroke="white" preserveAspectRatio
 
 * 需要先安装 `cairosvg`:
 
-``` bash
+```bash
 $ pip3 install cairosvg
 ```
 
@@ -75,14 +75,14 @@ $ pip3 install cairosvg
 `The headers or library files could not be found for zlib.`
 
 可以尝试一下:
-``` bash
+```bash
 $ xcode-select —-install
 $ brew install libtiff libjpeg webp little-cms2
 $ pip3 install Pillow
 ```
 
 安装 `cairosvg` 成功后，使用 Python3 `import cairosvg` 发现还是报错:
-```
+```bash
 >>> import cairosvg
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -98,7 +98,7 @@ OSError: dlopen() failed to load a library: cairo / cairo-2
 ```
 
 经过搜索，发现还需要安装 `cairo` 和 `libffi`：
-``` bash
+```bash
 $ brew install cairo pango gdk-pixbuf libffi
 ```
 
@@ -110,7 +110,7 @@ $ brew install cairo pango gdk-pixbuf libffi
 [vp_remove_watermark.py](https://github.com/ryderfang/PyTools/blob/master/vp_remove_watermark.py)
 
 * 核心代码如下：
-``` python
+```python
 import cairosvg
 
 svg_content = ''

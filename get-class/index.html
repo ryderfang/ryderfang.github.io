@@ -15,7 +15,7 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=icon type=image/png sizes=192x192 href=/android-chrome-192x192.png>
-<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/get-class/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"获取 OC Class 对象","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/get-class\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/get-class\/featured-image.jpg","width":1200,"height":554}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":779,"url":"https:\/\/ryderfang.com\/get-class\/","datePublished":"2022-02-23T17:49:11+08:00","dateModified":"2022-02-23T17:49:11+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"获取 OC Class 对象"}]}</script></head>
+<link rel=icon type=image/png sizes=512x512 href=/android-chrome-512x512.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ryderfang.com/get-class/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/lib/prismjs/prism.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"获取 OC Class 对象","inLanguage":"zh-cn","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ryderfang.com\/get-class\/"},"image":[{"@type":"ImageObject","url":"https:\/\/ryderfang.com\/get-class\/featured-image.jpg","width":1200,"height":554}],"genre":"posts","keywords":"ObjC, Runtime","wordCount":780,"url":"https:\/\/ryderfang.com\/get-class\/","datePublished":"2022-02-23T17:49:11+08:00","dateModified":"2022-02-23T17:49:11+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Person","name":"","image":[{"@type":"ImageObject","url":"https:\/\/ryder-1252249141.cos.ap-shanghai.myqcloud.com\/uPic\/2021-11-05-avatar2.jpg"}]},"author":{"@type":"Person","name":""},"description":""}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"主页","item":"https:\/\/ryderfang.com\/"},{"@type":"ListItem","position":2,"name":"ObjC","item":"https://ryderfang.com/categories/objc/"},{"@type":"ListItem","position":3,"name":"获取 OC Class 对象"}]}</script></head>
 <body data-header-desktop=fixed data-header-mobile=auto><script>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
 <div id=mask></div><div class=wrapper><header>
 <div class="desktop header" id=header-desktop>
@@ -121,7 +121,7 @@
 </span><span class="post-meta-date meta-item">
 <span class="svg-icon icon-clock"></span><time class=timeago datetime=2022-02-23>2022-02-23</time>
 </span><span class="post-meta-words meta-item">
-<span class="svg-icon icon-pencil"></span>约 779 字
+<span class="svg-icon icon-pencil"></span>约 780 字
 </span>
 <span class="post-meta-reading meta-item">
 <span class="svg-icon icon-stopwatch"></span>预计阅读 2 分钟
@@ -148,27 +148,30 @@
 </nav></div>
 </div><p>获取 <code>Class</code> 对象的方法有很多，本文主要是收集整理它们的区别以及探究具体的实现。</p>
 <h2 id=class-方法 class=headerLink><a href=#class-%e6%96%b9%e6%b3%95 class=header-mark></a>class 方法</h2><p>有两种 class 方法，一个是实例方法，一个是类方法：</p>
-<p>@interface NSObject <nsobject></p>
-<p><code>- (Class)class OBJC_SWIFT_UNAVAILABLE("use 'type(of: anObject)' instead");</code></p>
-<p><code>+ (Class)class OBJC_SWIFT_UNAVAILABLE("use 'aClass.self' instead");</code></p>
-<p>@end</p>
-<p>查看 runtime 的源码：<a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/NSObject.mm.auto.html target=_blank rel="noopener noreffer">NSObject.mm</a></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=k>@interface</span> <span class=nc>NSObject</span> <span class=o>&lt;</span><span class=n>NSObject</span><span class=o>&gt;</span>
+
+<span class=o>-</span> <span class=p>(</span><span class=kt>Class</span><span class=p>)</span><span class=k>class</span> <span class=n>OBJC_SWIFT_UNAVAILABLE</span><span class=p>(</span><span class=s>&#34;use &#39;type(of: anObject)&#39; instead&#34;</span><span class=p>);</span>
+
+<span class=p>+</span> <span class=p>(</span><span class=kt>Class</span><span class=p>)</span><span class=nf>class</span> <span class=n>OBJC_SWIFT_UNAVAILABLE</span><span class=p>(</span><span class=s>&#34;use &#39;aClass.self&#39; instead&#34;</span><span class=p>);</span>
+
+<span class=k>@end</span>
+</code></pre></div><p>查看 runtime 的源码：<a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/NSObject.mm.auto.html target=_blank rel="noopener noreffer">NSObject.mm</a></p>
 <p>可以看到它们的实现：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>+ (id)self {
-    return (id)self;
-}
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=p>+</span> <span class=p>(</span><span class=kt>id</span><span class=p>)</span><span class=nf>self</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=p>(</span><span class=kt>id</span><span class=p>)</span><span class=nb>self</span><span class=p>;</span>
+<span class=p>}</span>
 
-- (id)self {
-    return self;
-}
+<span class=p>-</span> <span class=p>(</span><span class=kt>id</span><span class=p>)</span><span class=nf>self</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nb>self</span><span class=p>;</span>
+<span class=p>}</span>
 
-+ (Class)class {
-    return self;
-}
+<span class=p>+</span> <span class=p>(</span><span class=kt>Class</span><span class=p>)</span><span class=nf>class</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nb>self</span><span class=p>;</span>
+<span class=p>}</span>
 
-- (Class)class {
-    return object_getClass(self);
-}
+<span class=p>-</span> <span class=p>(</span><span class=kt>Class</span><span class=p>)</span><span class=nf>class</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=n>object_getClass</span><span class=p>(</span><span class=nb>self</span><span class=p>);</span>
+<span class=p>}</span>
 </code></pre></div><p>所以，说给类对象发 <code>class</code> 消息，得到的是类本身 <code>self</code>，也就是</p>
 <blockquote>
 <p>[NSObject class] == [NSObject self]</p>
@@ -177,29 +180,29 @@
 <h2 id=object_getclass class=headerLink><a href=#object_getclass class=header-mark></a>object_getClass</h2><p>那么这个方法的实现是怎么样的呢？</p>
 <p>同样查看 runtime 源码：<a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-class.mm.auto.html target=_blank rel="noopener noreffer">objc-class.mm</a></p>
 <p><code>Class _Nullable object_getClass(id _Nullable obj)</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Class object_getClass(id obj)
-{
-    if (obj) return obj-&gt;getIsa();
-    else return Nil;
-}
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=kt>Class</span> <span class=nf>object_getClass</span><span class=p>(</span><span class=kt>id</span> <span class=n>obj</span><span class=p>)</span>
+<span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=n>obj</span><span class=p>)</span> <span class=k>return</span> <span class=n>obj</span><span class=o>-&gt;</span><span class=n>getIsa</span><span class=p>();</span>
+    <span class=k>else</span> <span class=k>return</span> <span class=n>Nil</span><span class=p>;</span>
+<span class=p>}</span>
 </code></pre></div><p>调用了 类的 <code>getIsa()</code> 方法</p>
 <p>// <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-object.h.auto.html target=_blank rel="noopener noreffer">objc-object.h</a></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>inline Class 
-objc_object::getIsa() 
-{
-    if (!isTaggedPointer()) return ISA();
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=kr>inline</span> <span class=kt>Class</span> 
+<span class=n>objc_object</span><span class=o>::</span><span class=n>getIsa</span><span class=p>()</span> 
+<span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=n>isTaggedPointer</span><span class=p>())</span> <span class=k>return</span> <span class=n>ISA</span><span class=p>();</span>
 
-    uintptr_t ptr = (uintptr_t)this;
-    if (isExtTaggedPointer()) {
-        uintptr_t slot = 
-            (ptr &gt;&gt; _OBJC_TAG_EXT_SLOT_SHIFT) &amp; _OBJC_TAG_EXT_SLOT_MASK;
-        return objc_tag_ext_classes[slot];
-    } else {
-        uintptr_t slot = 
-            (ptr &gt;&gt; _OBJC_TAG_SLOT_SHIFT) &amp; _OBJC_TAG_SLOT_MASK;
-        return objc_tag_classes[slot];
-    }
-}
+    <span class=n>uintptr_t</span> <span class=n>ptr</span> <span class=o>=</span> <span class=p>(</span><span class=n>uintptr_t</span><span class=p>)</span><span class=n>this</span><span class=p>;</span>
+    <span class=k>if</span> <span class=p>(</span><span class=n>isExtTaggedPointer</span><span class=p>())</span> <span class=p>{</span>
+        <span class=n>uintptr_t</span> <span class=n>slot</span> <span class=o>=</span> 
+            <span class=p>(</span><span class=n>ptr</span> <span class=o>&gt;&gt;</span> <span class=n>_OBJC_TAG_EXT_SLOT_SHIFT</span><span class=p>)</span> <span class=o>&amp;</span> <span class=n>_OBJC_TAG_EXT_SLOT_MASK</span><span class=p>;</span>
+        <span class=k>return</span> <span class=n>objc_tag_ext_classes</span><span class=p>[</span><span class=n>slot</span><span class=p>];</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+        <span class=n>uintptr_t</span> <span class=n>slot</span> <span class=o>=</span> 
+            <span class=p>(</span><span class=n>ptr</span> <span class=o>&gt;&gt;</span> <span class=n>_OBJC_TAG_SLOT_SHIFT</span><span class=p>)</span> <span class=o>&amp;</span> <span class=n>_OBJC_TAG_SLOT_MASK</span><span class=p>;</span>
+        <span class=k>return</span> <span class=n>objc_tag_classes</span><span class=p>[</span><span class=n>slot</span><span class=p>];</span>
+    <span class=p>}</span>
+<span class=p>}</span>
 </code></pre></div><h2 id=objc_getclass class=headerLink><a href=#objc_getclass class=header-mark></a>objc_getClass</h2><p>这个方法和上面的 <code>object_getClass</code> 长得很像，但还是有一些区别：</p>
 <ul>
 <li>
@@ -210,89 +213,89 @@ objc_object::getIsa()
 </li>
 </ul>
 <p>// <a href=https://opensource.apple.com/source/objc4/objc4-750/runtime/objc-runtime.mm.auto.html target=_blank rel="noopener noreffer">objc-runtime.mm</a></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Class objc_getClass(const char *aClassName)
-{
-    if (!aClassName) return Nil;
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=kt>Class</span> <span class=nf>objc_getClass</span><span class=p>(</span><span class=k>const</span> <span class=kt>char</span> <span class=o>*</span><span class=n>aClassName</span><span class=p>)</span>
+<span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=n>aClassName</span><span class=p>)</span> <span class=k>return</span> <span class=n>Nil</span><span class=p>;</span>
 
-    // NO unconnected, YES class handler
-    return look_up_class(aClassName, NO, YES);
-}
+    <span class=c1>// NO unconnected, YES class handler
+</span><span class=c1></span>    <span class=k>return</span> <span class=n>look_up_class</span><span class=p>(</span><span class=n>aClassName</span><span class=p>,</span> <span class=nb>NO</span><span class=p>,</span> <span class=nb>YES</span><span class=p>);</span>
+<span class=p>}</span>
 </code></pre></div><p>调用了 <code>look_up_class</code>:</p>
 <p>// <a href=https://opensource.apple.com/source/objc4/objc4-787.1/runtime/objc-runtime-new.mm.auto.html target=_blank rel="noopener noreffer">objc-runtime-new.mm</a></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Class 
-look_up_class(const char *name, 
-              bool includeUnconnected __attribute__((unused)), 
-              bool includeClassHandler __attribute__((unused)))
-{
-    if (!name) return nil;
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=kt>Class</span> 
+<span class=nf>look_up_class</span><span class=p>(</span><span class=k>const</span> <span class=kt>char</span> <span class=o>*</span><span class=n>name</span><span class=p>,</span> 
+              <span class=kt>bool</span> <span class=n>includeUnconnected</span> <span class=n>__attribute__</span><span class=p>((</span><span class=n>unused</span><span class=p>)),</span> 
+              <span class=kt>bool</span> <span class=n>includeClassHandler</span> <span class=n>__attribute__</span><span class=p>((</span><span class=n>unused</span><span class=p>)))</span>
+<span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=n>name</span><span class=p>)</span> <span class=k>return</span> <span class=nb>nil</span><span class=p>;</span>
 
-    Class result;
-    bool unrealized;
-    {
-        runtimeLock.lock();
-        result = getClassExceptSomeSwift(name);
-        unrealized = result  &amp;&amp;  !result-&gt;isRealized();
-        if (unrealized) {
-            result = realizeClassMaybeSwiftAndUnlock(result, runtimeLock);
-            // runtimeLock is now unlocked
-        } else {
-            runtimeLock.unlock();
-        }
-    }
+    <span class=kt>Class</span> <span class=n>result</span><span class=p>;</span>
+    <span class=kt>bool</span> <span class=n>unrealized</span><span class=p>;</span>
+    <span class=p>{</span>
+        <span class=n>runtimeLock</span><span class=p>.</span><span class=n>lock</span><span class=p>();</span>
+        <span class=n>result</span> <span class=o>=</span> <span class=n>getClassExceptSomeSwift</span><span class=p>(</span><span class=n>name</span><span class=p>);</span>
+        <span class=n>unrealized</span> <span class=o>=</span> <span class=n>result</span>  <span class=o>&amp;&amp;</span>  <span class=o>!</span><span class=n>result</span><span class=o>-&gt;</span><span class=n>isRealized</span><span class=p>();</span>
+        <span class=k>if</span> <span class=p>(</span><span class=n>unrealized</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>result</span> <span class=o>=</span> <span class=n>realizeClassMaybeSwiftAndUnlock</span><span class=p>(</span><span class=n>result</span><span class=p>,</span> <span class=n>runtimeLock</span><span class=p>);</span>
+            <span class=c1>// runtimeLock is now unlocked
+</span><span class=c1></span>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+            <span class=n>runtimeLock</span><span class=p>.</span><span class=n>unlock</span><span class=p>();</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
 
-    if (!result) {
-        // Ask Swift about its un-instantiated classes.
+    <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=n>result</span><span class=p>)</span> <span class=p>{</span>
+        <span class=c1>// Ask Swift about its un-instantiated classes.
+</span><span class=c1></span>
+        <span class=c1>// We use thread-local storage to prevent infinite recursion
+</span><span class=c1></span>        <span class=c1>// if the hook function provokes another lookup of the same name
+</span><span class=c1></span>        <span class=c1>// (for example, if the hook calls objc_allocateClassPair)
+</span><span class=c1></span>
+        <span class=k>auto</span> <span class=o>*</span><span class=n>tls</span> <span class=o>=</span> <span class=n>_objc_fetch_pthread_data</span><span class=p>(</span><span class=nb>true</span><span class=p>);</span>
 
-        // We use thread-local storage to prevent infinite recursion
-        // if the hook function provokes another lookup of the same name
-        // (for example, if the hook calls objc_allocateClassPair)
+        <span class=c1>// Stop if this thread is already looking up this name.
+</span><span class=c1></span>        <span class=k>for</span> <span class=p>(</span><span class=kt>unsigned</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookupsUsed</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+            <span class=k>if</span> <span class=p>(</span><span class=mi>0</span> <span class=o>==</span> <span class=n>strcmp</span><span class=p>(</span><span class=n>name</span><span class=p>,</span> <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookups</span><span class=p>[</span><span class=n>i</span><span class=p>]))</span> <span class=p>{</span>
+                <span class=k>return</span> <span class=nb>nil</span><span class=p>;</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
 
-        auto *tls = _objc_fetch_pthread_data(true);
+        <span class=c1>// Save this lookup in tls.
+</span><span class=c1></span>        <span class=k>if</span> <span class=p>(</span><span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookupsUsed</span> <span class=o>==</span> <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookupsAllocated</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookupsAllocated</span> <span class=o>=</span>
+                <span class=p>(</span><span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookupsAllocated</span> <span class=o>*</span> <span class=mi>2</span> <span class=o>?:</span> <span class=mi>1</span><span class=p>);</span>
+            <span class=n>size_t</span> <span class=n>size</span> <span class=o>=</span> <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookupsAllocated</span> <span class=o>*</span>
+                <span class=k>sizeof</span><span class=p>(</span><span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookups</span><span class=p>[</span><span class=mi>0</span><span class=p>]);</span>
+            <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookups</span> <span class=o>=</span> <span class=p>(</span><span class=k>const</span> <span class=kt>char</span> <span class=o>**</span><span class=p>)</span>
+                <span class=n>realloc</span><span class=p>(</span><span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookups</span><span class=p>,</span> <span class=n>size</span><span class=p>);</span>
+        <span class=p>}</span>
+        <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookups</span><span class=p>[</span><span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookupsUsed</span><span class=o>++</span><span class=p>]</span> <span class=o>=</span> <span class=n>name</span><span class=p>;</span>
 
-        // Stop if this thread is already looking up this name.
-        for (unsigned i = 0; i &lt; tls-&gt;classNameLookupsUsed; i++) {
-            if (0 == strcmp(name, tls-&gt;classNameLookups[i])) {
-                return nil;
-            }
-        }
+        <span class=c1>// Call the hook.
+</span><span class=c1></span>        <span class=kt>Class</span> <span class=n>swiftcls</span> <span class=o>=</span> <span class=nb>nil</span><span class=p>;</span>
+        <span class=k>if</span> <span class=p>(</span><span class=n>GetClassHook</span><span class=p>.</span><span class=n>get</span><span class=p>()(</span><span class=n>name</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>swiftcls</span><span class=p>))</span> <span class=p>{</span>
+            <span class=n>ASSERT</span><span class=p>(</span><span class=n>swiftcls</span><span class=o>-&gt;</span><span class=n>isRealized</span><span class=p>());</span>
+            <span class=n>result</span> <span class=o>=</span> <span class=n>swiftcls</span><span class=p>;</span>
+        <span class=p>}</span>
 
-        // Save this lookup in tls.
-        if (tls-&gt;classNameLookupsUsed == tls-&gt;classNameLookupsAllocated) {
-            tls-&gt;classNameLookupsAllocated =
-                (tls-&gt;classNameLookupsAllocated * 2 ?: 1);
-            size_t size = tls-&gt;classNameLookupsAllocated *
-                sizeof(tls-&gt;classNameLookups[0]);
-            tls-&gt;classNameLookups = (const char **)
-                realloc(tls-&gt;classNameLookups, size);
-        }
-        tls-&gt;classNameLookups[tls-&gt;classNameLookupsUsed++] = name;
+        <span class=c1>// Erase the name from tls.
+</span><span class=c1></span>        <span class=kt>unsigned</span> <span class=n>slot</span> <span class=o>=</span> <span class=o>--</span><span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookupsUsed</span><span class=p>;</span>
+        <span class=n>ASSERT</span><span class=p>(</span><span class=n>slot</span> <span class=o>&gt;=</span> <span class=mi>0</span>  <span class=o>&amp;&amp;</span>  <span class=n>slot</span> <span class=o>&lt;</span> <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookupsAllocated</span><span class=p>);</span>
+        <span class=n>ASSERT</span><span class=p>(</span><span class=n>name</span> <span class=o>==</span> <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookups</span><span class=p>[</span><span class=n>slot</span><span class=p>]);</span>
+        <span class=n>tls</span><span class=o>-&gt;</span><span class=n>classNameLookups</span><span class=p>[</span><span class=n>slot</span><span class=p>]</span> <span class=o>=</span> <span class=nb>nil</span><span class=p>;</span>
+    <span class=p>}</span>
 
-        // Call the hook.
-        Class swiftcls = nil;
-        if (GetClassHook.get()(name, &amp;swiftcls)) {
-            ASSERT(swiftcls-&gt;isRealized());
-            result = swiftcls;
-        }
-
-        // Erase the name from tls.
-        unsigned slot = --tls-&gt;classNameLookupsUsed;
-        ASSERT(slot &gt;= 0  &amp;&amp;  slot &lt; tls-&gt;classNameLookupsAllocated);
-        ASSERT(name == tls-&gt;classNameLookups[slot]);
-        tls-&gt;classNameLookups[slot] = nil;
-    }
-
-    return result;
-}
+    <span class=k>return</span> <span class=n>result</span><span class=p>;</span>
+<span class=p>}</span>
 </code></pre></div><h2 id=nsclassfromstring class=headerLink><a href=#nsclassfromstring class=header-mark></a>NSClassFromString</h2><p>这个在 <code>Foundation.framework</code> 中的实现，并没有开源，</p>
 <p>函数原型是</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>FOUNDATION_EXPORT Class _Nullable NSClassFromString(NSString *aClassName);
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=n>FOUNDATION_EXPORT</span> <span class=kt>Class</span> <span class=n>_Nullable</span> <span class=nf>NSClassFromString</span><span class=p>(</span><span class=n>NSString</span> <span class=o>*</span><span class=n>aClassName</span><span class=p>);</span>
 </code></pre></div><p>与 <code>objc_getClass</code> 参数一样，传入 Class 的名字，返回 Class 地址。</p>
 <p>有大佬通过研究汇编分析出它的具体实现：<a href=https://xiaozhuanlan.com/topic/5781026934 target=_blank rel="noopener noreffer">从汇编代码探究 NSClassFromString 实现</a></p>
 <p>最后，做个试验：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Student *stu = [Student new];
-Class cls = [stu class];
-NSLog(@&#34;%p %p %p %p %p&#34;, cls, [Student class], objc_getClass(&#34;Student&#34;), object_getClass(stu), NSClassFromString(@&#34;Student&#34;));
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>0x10000e7b8 0x10000e7b8 0x10000e7b8 0x10000e7b8 0x10000e7b8
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-objc data-lang=objc><span class=n>Student</span> <span class=o>*</span><span class=n>stu</span> <span class=o>=</span> <span class=p>[</span><span class=n>Student</span> <span class=n>new</span><span class=p>];</span>
+<span class=kt>Class</span> <span class=n>cls</span> <span class=o>=</span> <span class=p>[</span><span class=n>stu</span> <span class=k>class</span><span class=p>];</span>
+<span class=n>NSLog</span><span class=p>(</span><span class=s>@&#34;%p %p %p %p %p&#34;</span><span class=p>,</span> <span class=n>cls</span><span class=p>,</span> <span class=p>[</span><span class=n>Student</span> <span class=k>class</span><span class=p>],</span> <span class=n>objc_getClass</span><span class=p>(</span><span class=s>&#34;Student&#34;</span><span class=p>),</span> <span class=n>object_getClass</span><span class=p>(</span><span class=n>stu</span><span class=p>),</span> <span class=n>NSClassFromString</span><span class=p>(</span><span class=s>@&#34;Student&#34;</span><span class=p>));</span>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=mh>0x10000e7b8</span> <span class=mh>0x10000e7b8</span> <span class=mh>0x10000e7b8</span> <span class=mh>0x10000e7b8</span> <span class=mh>0x10000e7b8</span>
 </code></pre></div><p>可以看出来，这四种方法拿到的结果是一样的。</p></div><footer>
 <div class=post>
 <div class=post-share><div class=share-link>
