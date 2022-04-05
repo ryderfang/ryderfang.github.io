@@ -1,13 +1,13 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog - 标签 - 给岁月以文明</title><link>https://ryderfang.com/tags/blog/</link><description>Blog - 标签 - 给岁月以文明</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 Sep 2017 20:04:57 +0800</lastBuildDate><atom:link href="https://ryderfang.com/tags/blog/" rel="self" type="application/rss+xml"/><item><title>使用 Hexo 遇到的一些问题</title><link>https://ryderfang.com/hexo-workflow/</link><pubDate>Wed, 27 Sep 2017 20:04:57 +0800</pubDate><author>ryderfang</author><guid>https://ryderfang.com/hexo-workflow/</guid><description><![CDATA[<p>关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm install -g hexo
-</span></span><span class="line"><span class="cl">$ hexo init
-</span></span><span class="line"><span class="cl">$ hexo generate <span class="o">(</span>hexo g<span class="o">)</span>
-</span></span><span class="line"><span class="cl">$ hexo server <span class="o">(</span>hexo s<span class="o">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">$ hexo new <span class="o">[</span>name<span class="o">]</span> - 新建文章
-</span></span><span class="line"><span class="cl">$ hexo new page <span class="o">[</span>name<span class="o">]</span> - 新建页面
-</span></span></code></pre></div>]]></description></item><item><title>Jekyll 本地安装</title><link>https://ryderfang.com/install-jekyll-locally/</link><pubDate>Sun, 05 Jun 2016 19:34:55 +0800</pubDate><author>ryderfang</author><guid>https://ryderfang.com/install-jekyll-locally/</guid><description><![CDATA[<p>安装 Ruby 和 Ruby DevKit</p>
-<ul>
-<li><a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe" target="_blank" rel="noopener noreffer">Ruby 2.2.4</a></li>
-<li><a href="http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe" target="_blank" rel="noopener noreffer">Ruby DevKit</a></li>
-</ul>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Ryder Fang</title><link>https://ryderfang.com/tags/blog/</link><description>Recent content in Blog on Ryder Fang</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright/><lastBuildDate>Wed, 27 Sep 2017 20:04:57 +0800</lastBuildDate><atom:link href="https://ryderfang.com/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Hexo 遇到的一些问题</title><link>https://ryderfang.com/posts/hexo-workflow/</link><pubDate>Wed, 27 Sep 2017 20:04:57 +0800</pubDate><guid>https://ryderfang.com/posts/hexo-workflow/</guid><description>&lt;p>关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ npm install -g hexo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo generate &lt;span class="o">(&lt;/span>hexo g&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo server &lt;span class="o">(&lt;/span>hexo s&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo new &lt;span class="o">[&lt;/span>name&lt;span class="o">]&lt;/span> - 新建文章
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo new page &lt;span class="o">[&lt;/span>name&lt;span class="o">]&lt;/span> - 新建页面
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Jekyll 本地安装</title><link>https://ryderfang.com/posts/install-jekyll-locally/</link><pubDate>Sun, 05 Jun 2016 19:34:55 +0800</pubDate><guid>https://ryderfang.com/posts/install-jekyll-locally/</guid><description>&lt;p>安装 Ruby 和 Ruby DevKit&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe">Ruby 2.2.4&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe">Ruby DevKit&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
