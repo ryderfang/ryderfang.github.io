@@ -1,3 +1,4 @@
-[submodule "themes/uBlogger"]
-	path = themes/uBlogger
-	url = https://github.com/ryderfang/uBlogger.git
+[submodule "themes/congo"]
+	path = themes/congo
+	url = https://github.com/ryderfang/congo.git
+	branch = stable

@@ -2,10 +2,7 @@
 title: "ObjC 之 Runtime 是个啥"
 date: 2021-12-28T14:51:24+08:00
 categories: [ObjC]
-tags: [ObjC, Runtime]
-resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
+tags: [objc, runtime]
 ---
 
 ## 概述
@@ -22,7 +19,7 @@ Runtime 是 OC 这个语言的核心，也是为什么 OC 被称为动态语言�
 
 Runtime 是一个动态库 (/usr/lib/libobjc.A.dylib)，用于实现 OC 语言的动态性。
 
-这个动态性主要体现在三个方面 [^1]:
+这个动态性主要体现在三个方面 [ref](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaObjects/CocoaObjects.html):
 
 - Dynamic Typing  运行时才能决定对象的类型，也就是说编译器不检查类型合法性
 - Dynamic Binding 运行时才能知道方法被如何执行，也就是消息机制 (messaging)
@@ -42,7 +39,7 @@ Runtime 是一个动态库 (/usr/lib/libobjc.A.dylib)，用于实现 OC 语言�
 
 存在两个版本的 Runtime，`modern` 和 `legacy`：
 
-https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtVersionsPlatforms.html#//apple_ref/doc/uid/TP40008048-CH106-SW1
+[developer.apple.com/ObjCRuntimeGuide/ocrtVersionsPlatforms](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtVersionsPlatforms.html#//apple_ref/doc/uid/TP40008048-CH106-SW1)
 
 按照官方的说明，所有 iPhone 和 10.5 版本之后的 Mac OSX 64 位程序都使用的 OC 2.0。
 
@@ -82,7 +79,6 @@ Runtime 的源码可以在 [RetVal/objc-runtime](https://github.com/RetVal/objc-
 
 ++++++
 
-[^1]: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaObjects/CocoaObjects.html
 [^2]: https://zh.wikipedia.org/wiki/Objective-C
 [^3]: https://zh.wikipedia.org/zh-hans/Smalltalk
 

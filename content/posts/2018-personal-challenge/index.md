@@ -11,11 +11,9 @@ categories: [Challenge]
 tags: [Flag]
 ---
 
-{{< admonition info >}}
 Mark Zuckerberg 每年都会发布自己的年度挑战 [Personal Challenge](https://www.facebook.com/zuck/posts/10104380170714571)
 
 So，我也要给自己立一些 Flag...
-{{< /admonition >}}
 
 <!--more-->
 
@@ -70,6 +68,4 @@ console.log('达到中初级前端工程师水平')
 
 在一起快一年了，喜欢她的性格，也觉得该修成正果，安定下来了。
 
-{{< admonition success>}}
-UPDATE: 2018.12.01 相识 **520** 天，我们结婚啦！👫 💕💕
-{{< /admonition >}}
+> UPDATE: 2018.12.01 相识 **520** 天，我们结婚啦！👫 💕💕

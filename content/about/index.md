@@ -1,19 +1,21 @@
 ---
-title: "$whoami"
+title: "About"
 date: 2021-11-11T19:22:00+08:00
 draft: false
-
-math:
-  enable: true
+showTableOfContents: false
+showDate: false
+showAuthor: false
+showReadingTime: false
+showEdit: false
 ---
 
-## 我是谁
+## G’day, I’m Ryder! 👋
 
 <img align='right' src='/sword.png' width='64px'>
 
 互联网游荡者，历经 'BAT' 三家公司，现任鹅厂废柴搬砖工。
 
-I worked from B (Bilibili) A (Alibaba) T (Tencent), still too <u>vegetable</u> as a primary coder.
+I worked at <u>B</u>ilibili, <u>A</u>libaba and now <u>T</u>encent, still too `vegetable` to be a senior coder.
 
 Now I'm living with my wife and little son in Shanghai, China.
 
@@ -25,7 +27,7 @@ Now I'm living with my wife and little son in Shanghai, China.
 <img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-qq.jpg' width='64px'>
 
 * 客户端开发
-* 2019.11 - INF
+* 2019.11 - Now
 * 手 Q 开发
   * 相机渲染，道具特效等
   * 图片、视频编辑

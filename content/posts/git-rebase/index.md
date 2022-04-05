@@ -29,11 +29,7 @@ $ git merge
 
 在说 rebase 前，先重点强调一下 **黄金法则**：
 
-{{< admonition danger >}}
-
-!!! 永远不要在公共分支上使用 rebase !!!
-
-{{</admonition>}}
+> !!! 永远不要在公共分支上使用 rebase !!!
 
 rebase 作为一个进阶命令，常常与 merge 放在一起比较。
 
@@ -132,11 +128,7 @@ git config --global --edit
 
 再次复习一下 **黄金法则**：
 
-{{< admonition danger >}}
-
-!!! 永远不要在公共分支上使用 rebase !!!
-
-{{</admonition>}}
+> !!! 永远不要在公共分支上使用 rebase !!!
 
 如果你和同事公用了一个 feature 分支，而你使用 rebase 同步主干。很有可能弄丢同事的代码！
 
@@ -206,11 +198,7 @@ git config --global --edit
 
 所以，总得来说，还是**黄金法则**：
 
-{{< admonition danger >}}
-
-!!! 永远不要在公共分支上使用 rebase !!!
-
-{{</admonition>}}
+> !!! 永远不要在公共分支上使用 rebase !!!
 
 > 多人协作分支，同步主干，请使用 merge !!
 

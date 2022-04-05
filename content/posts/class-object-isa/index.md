@@ -2,10 +2,8 @@
 title: "Class, Object 与 isa"
 date: 2022-01-04T20:19:38+08:00
 categories: [ObjC]
-tags: [ObjC, Runtime]
-resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
+tags: [runtime]
+featured_image: featured-image.jpg
 ---
 
 作为 Runtime 系列的第一篇博文（也是 2022 年第一篇），先从最基础的对象、类开始学习。
@@ -42,10 +40,10 @@ https://gist.github.com/ryderfang/75a852f1ae0961aeea97127f7d9ca6c5
 > 🎁 objc_class 是所有类/元类对象的底层结构，它也有一个 isa 指针，指向自己的元类
 
 | | OC 1.0 | OC 2.0 |
-| :-: | :-: | :-: |
-| id<br /> 实例 | `typedef struct objc_object *id;` | `typedef struct objc_object *id;` |
+| :- | :- | :- |
+| id 实例 | typedef struct objc_object *id; | typedef struct objc_object *id; |
 | objc_object | [struct objc_object {}](#object-10) | [struct objc_object {}](#object-20) |
-| Class<br /> 类 | `typedef struct objc_class *Class;` | `typedef struct objc_class *Class;` |
+| Class 类 | typedef struct objc_class *Class; | typedef struct objc_class *Class; |
 | objc_class | [struct objc_class {}](#class-10) | [struct objc_class : objc_object {} ](#class-20) |
 
 ## Class 是什么
@@ -90,9 +88,7 @@ struct objc_class {
 
 > Hint: 按照官方文档 [Runtime Version](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtVersionsPlatforms.html#//apple_ref/doc/uid/TP40008048-CH106-SW1) 的解释, legacy 版本 (OC 1.0) 在 2007 年就完全废弃了，所有 iPhone 和 OSX 10.5 以后的 Mac 上使用的都是 modern 版本 (OC 2.0)!
 
-{{< admonition tip >}}
-根据 wiki 的说明，[OC 2.0](https://zh.wikipedia.org/wiki/Objective-C#Objective-C_2.0) 于 2006 年发布，而 [iPhone 第一代](https://zh.wikipedia.org/wiki/IPhone) 是在 2007 年发布的，[Mac OS X 10.5 Leopard](https://zh.wikipedia.org/wiki/MacOS#Mac_OS_X_10.5_Leopard) 也是在 2007 年上市。
-{{< /admonition >}}
+> 根据 wiki 的说明，[OC 2.0](https://zh.wikipedia.org/wiki/Objective-C#Objective-C_2.0) 于 2006 年发布，而 [iPhone 第一代](https://zh.wikipedia.org/wiki/IPhone) 是在 2007 年发布的，[Mac OS X 10.5 Leopard](https://zh.wikipedia.org/wiki/MacOS#Mac_OS_X_10.5_Leopard) 也是在 2007 年上市。
 
 从这个宏 `OBJC2_UNAVAILABLE` 可以看出来 OBJC2 这种定义会失效。那么 OBJC2 是什么？
 
