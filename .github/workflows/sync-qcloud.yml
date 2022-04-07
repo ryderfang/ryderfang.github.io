@@ -1,4 +1,4 @@
-name: Sync To TCloud
+name: Sync To Cloud
 
 on:
   workflow_dispatch: # run the action manually
