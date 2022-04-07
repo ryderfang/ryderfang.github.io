@@ -1,5 +1,5 @@
 ---
-title: '碎語閑言'
+title: '碎语闲言'
 ---
 {{< lead >}}
 > 这世道的无常，注定敢爱的人一生伤。
@@ -7,3 +7,5 @@ title: '碎語閑言'
 {{< /lead >}}
 
 ![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-04-05-bram-naus-n8Qb1ZAkK88-unsplash.jpg "Photo by [Bram Naus](https://unsplash.com/@bramnaus) on [Unsplash](https://unsplash.com/)")
+
+## Posts
