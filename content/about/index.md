@@ -1,7 +1,6 @@
 ---
 title: "About"
 date: 2021-11-11T19:22:00+08:00
-draft: false
 showTableOfContents: false
 showDate: false
 showAuthor: false
