@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hexo on Ryder Fang</title><link>https://ryderfang.com/tags/hexo/</link><description>Recent content in Hexo on Ryder Fang</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright/><lastBuildDate>Wed, 27 Sep 2017 20:04:57 +0800</lastBuildDate><atom:link href="https://ryderfang.com/tags/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Hexo 遇到的一些问题</title><link>https://ryderfang.com/posts/hexo-workflow/</link><pubDate>Wed, 27 Sep 2017 20:04:57 +0800</pubDate><guid>https://ryderfang.com/posts/hexo-workflow/</guid><description>&lt;p>关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ npm install -g hexo
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo init
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo generate &lt;span class="o">(&lt;/span>hexo g&lt;span class="o">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo server &lt;span class="o">(&lt;/span>hexo s&lt;span class="o">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo new &lt;span class="o">[&lt;/span>name&lt;span class="o">]&lt;/span> - 新建文章
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo new page &lt;span class="o">[&lt;/span>name&lt;span class="o">]&lt;/span> - 新建页面
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
