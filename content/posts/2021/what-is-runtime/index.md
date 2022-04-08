@@ -57,7 +57,7 @@ Runtime 的源码可以在 [RetVal/objc-runtime](https://github.com/RetVal/objc-
 
 ### Class/Object 与 isa
 
-参考：[Class Object 与 isa](../class-object-isa/)
+参考：[Class Object 与 isa](../../2022/class-object-isa/)
 
 ### MetaClass
 
@@ -65,7 +65,7 @@ Runtime 的源码可以在 [RetVal/objc-runtime](https://github.com/RetVal/objc-
 > 2. 类的继承链: 子类 -> 父类 -> NSObject -> nil
 > 3. 元类的继承链: 子类元类 -> 父类元类 -> 根元类 -> NSObject -> nil
 
-参考：[从 Meta 说起](../meta-class/)
+参考：[从 Meta 说起](../../2022/meta-class/)
 
 ### Method/IMP/SEL
 
