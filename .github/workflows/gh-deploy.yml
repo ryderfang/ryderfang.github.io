@@ -37,7 +37,7 @@ jobs:
           keep_files: false
           commit_message: ${{ github.event.head_commit.message }}
       
-       - name: Sync To Cloud
+      - name: Sync To Cloud
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.TENCENT_CLOUD_HOST }}
@@ -48,5 +48,3 @@ jobs:
             whoami
             cd blog && git pull
             echo 'Done!'
-
-
