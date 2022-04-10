@@ -21,9 +21,9 @@ Runtime 是一个动态库 (/usr/lib/libobjc.A.dylib)，用于实现 OC 语言�
 
 这个动态性主要体现在三个方面 [ref](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaObjects/CocoaObjects.html):
 
-- Dynamic Typing  运行时才能决定对象的类型，也就是说编译器不检查类型合法性
-- Dynamic Binding 运行时才能知道方法被如何执行，也就是消息机制 (messaging)
-- Dynamic Loading 允许动态添加类、方法等
+- 动态类型 (Dynamic Typing): 运行时才能决定对象的类型，也就是说编译器不检查类型合法性
+- 动态绑定 (Dynamic Binding): 运行时才能知道方法被如何执行，也就是消息机制 (messaging)
+- 动态加载 (Dynamic Loading): 允许动态添加类、方法等
 
 ## 起源
 

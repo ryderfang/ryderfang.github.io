@@ -21,7 +21,7 @@ Meta 这个词在 2021 年下半年开始火爆，而后 Facebook 改名 Meta �
 
 本文继续讨论 Runtime，聚焦 OC 中的 MetaClass。
 
-Greg Parker 经典图
+一图胜千言，引用 Runtime 工程师 [Greg Parker](http://www.sealiesoftware.com/blog/archive/2009/04/14/objc_explain_Classes_and_metaclasses.html) 在其博客中给出的经典图
 
 ![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-23-class-diagram.png)
 

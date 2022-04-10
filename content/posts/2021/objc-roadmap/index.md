@@ -1,9 +1,13 @@
 ---
 title: "ObjC 之 技术路线图"
 date: 2021-12-23T17:32:58+08:00
-categories: [ObjC]
+categories: [ObjC, Interview]
 tags: [objc]
 ---
+
+{{< lead >}}
+> 本文可以作为面试八股的准备指南
+{{< /lead >}}
 
 很早之前看过一个 [前端 Roadmap](https://github.com/kamranahmedse/developer-roadmap)，图做的非常漂亮。最近发现有人做了类似的 [移动端 Roadmap](https://github.com/godrm/mobile-developer-roadmap)，
 
@@ -35,7 +39,7 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 
 ## Foundation
 
-### I. ARC/MRC 3️⃣
+### ARC/MRC 与 内存管理
 
 `ARC is supported in Xcode 4.2 for OS X v10.6 and v10.7 (64-bit applications) and for iOS 4 and iOS 5.`
 
@@ -46,13 +50,20 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 
 2. 在 ARC 的工程中使用 MRC，需要在工程中设置源文件的编译选项 `-fno-objc-arc`
 
-### II. AutoReleasePool 4️⃣
+* Tagged Pointer
+
+* OC 对象与 CF 对象转换
+
+  - `__bridge`, `__bridge_retained`, `__bridge_transfer`
+### AutoReleasePool
 
 * AutoReleasePool 的数据结构
 
 * AutoReleasePool 与 @autoreleasepool
 
-### III. Block 5️⃣
+### Block 🔥
+
+* __weak 与 __block
 
 * block 的结构体类型
 
@@ -60,47 +71,74 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 
 * 循环引用 与 [Weak-Strong Dance](Foundation/Notes/weak-strong-dance.md)
 
-### IV. Category 5️⃣
+### Category 🔥
 
 * load 加载时机
 
 * load 与 initialze
 
+* 方法加载时机
+
+* 如何添加属性 - 关联对象
+
+* category 与 class-extension
+
 * category 覆盖原类方法的原理
 
 * category 同名方法调用顺序
 
-### V. HotPatch 1️⃣
+### HotPatch
 
 * JSPatch 的原理
 
-### VI. KVC 2️⃣
+### KVC 与 KVO 
 
 * KVC 是如何实现的
 
-### VII. KVO 4️⃣
-
 * KVO 的原理
 
-### VIII. MultiThread 4️⃣
+* KVC 与 KVO 有什么联系与区别
+
+### MultiThread 多线程 🔥
 
 * 哪些多线程方法
 
+* GCD 与 NSThread, NSOperationQueue
+
 * 互斥锁与自旋锁
-### IX. Network 3️⃣
+### Network 🔥
 
 * NSURLSession 与 NSURLConnection
-### X. NSTimer 5️⃣
+
+* 常用网络库
+
+  - [AFNetworking](https://github.com/AFNetworking/AFNetworking) (ObjC)
+
+  - [Alamofire](https://github.com/Alamofire/Alamofire) (Swift)
+### NSTimer 🔥
 
 * timer 与 Runloop
 
 * timer 导致循环引用的产生与解决
 
-### XI. Property 5️⃣
+### Property 🔥
+
+* 不指定任何关键字时，默认的类型：
+
+  - OC 对象：`atomic, readwrite, strong`
+  - 数值对象：`atomic, readwrite, assign`
 
 * 不同属性的区别
 
+> 1. atomic/nonatomic
+> 2. readonly/readwrite
+> 3. (retain, MRC)/assign/weak/strong/unsafe_unretained/copy
+
+* copy 与 assign
+
 * weak 与 copy
+
+* weak 与 __unsafe_unretained
 
 * atomic 并不是线程安全的
 
@@ -110,19 +148,39 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
    - \+ [NSHashTable weakObjectsHashTable] 弱引用 hash 表
    - \+ [NSValue valueWithNonretainedObject:] 弱引用对象
 
-### XII. Runloop 4️⃣
+### Runloop 🔥
 
 * Runloop 与线程的关系
 
+* mode
+
+* source0 & source1
+
 * 如何实现一个常驻线程
 
-### XIII. Runtime 5️⃣
+### Runtime 🔥
 
-一图胜千言，引用 Runtime 工程师 [Greg Parker](http://www.sealiesoftware.com/blog/archive/2009/04/14/objc_explain_Classes_and_metaclasses.html) 在其博客中给出的经典图
+系列文章：[Runtime 是个啥？](/categories/runtime/)
 
-![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-12-23-class-diagram.png)
+* Method Swizzling
 
-系列文章：[Runtime 是个啥？](/categories/Runtime/)
+* [从 Meta 说起](/posts/2022/meta-class/)
+
+* [Class, Object 与 isa](/posts/2022/class-object-isa/)
+
+* 消息转发
+
+* `NSObject` 与 `<NSObject>`
+
+### 其他知识
+
+* NSNotification 原理
+
+* id 与 `instancetype`
+
+* nil, Nil, NULL, NSNull
+
+* NSPredicate 谓词
 
 ## UIKit
 
@@ -132,12 +190,13 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 
 * setNeedsDisplay 与 layoutIfNeeded
 
-
 ### 常用 UI 组件
 
 * UIScrollView
 
 * UITableView
+
+   - cell 复用原理
 
 * UICollectionView
 
@@ -145,15 +204,27 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 
 * Masonary 原理
 
+* VFL 语法
+
+* 约束 Constraints
+
 ### UIResponder
 
 * touch events
 
-* hitTest
+* hitTest / pointsInside
+
+* 事件传递与响应链
 
 ### 离屏渲染
 
 * layoutSubview 与 drawRect
+
+### 性能优化
+
+* 图片渲染过程
+
+* 卡顿优化
 
 ## Core 系列
 
@@ -165,3 +236,31 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 
 ### AVFoundation
 
+
+## 架构能力
+
+### 设计模式
+
+### 架构模式
+
+* MVC
+
+* MVP
+
+* MVVM
+
+### 响应式编程
+
+### 重构与解耦
+
+### 组件化
+
+---
+
+更多面试题：
+
+1. https://github.com/LGBamboo/iOS-Advanced
+2. https://www.jianshu.com/p/e709fde38de3
+3. https://www.jianshu.com/p/d9a39ab1d526
+
+![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-04-10-KJGbb4.jpg)
