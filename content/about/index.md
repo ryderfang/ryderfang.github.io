@@ -8,9 +8,9 @@ showReadingTime: false
 showEdit: false
 ---
 
-## G’day, I’m Ryder! 👋
+<img align='right' src='/avatar2.jpg' width='128px'>
 
-<img align='right' src='/sword.png' width='64px'>
+## G’day, I’m Ryder! 👋
 
 互联网游荡者，历经 'BAT' 三家公司，现任鹅厂废柴搬砖工。
 

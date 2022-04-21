@@ -97,6 +97,10 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 
 * KVO 的原理
 
+* 如何对 NSMutableArray 进行 KVO
+
+  - `mutableArrayValueForKey`
+
 * KVC 与 KVO 有什么联系与区别
 
 ### MultiThread 多线程 🔥
@@ -158,6 +162,8 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 
 * 如何实现一个常驻线程
 
+* 用 runloop 监听主线程卡顿
+
 ### Runtime 🔥
 
 系列文章：[Runtime 是个啥？](/categories/runtime/)
@@ -167,6 +173,8 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 * [从 Meta 说起](/posts/2022/meta-class/)
 
 * [Class, Object 与 isa](/posts/2022/class-object-isa/)
+
+* 运行时，动态添加一个类
 
 * 消息转发
 
@@ -181,6 +189,9 @@ demo 工程：[https://github.com/ryderfang/iosBagu](https://github.com/ryderfan
 * nil, Nil, NULL, NSNull
 
 * NSPredicate 谓词
+
+* APNS (Apple Push Notification Service) 原理
+
 
 ## UIKit
 
