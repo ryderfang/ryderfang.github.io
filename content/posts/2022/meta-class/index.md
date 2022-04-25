@@ -51,16 +51,6 @@ Meta 这个词在 2021 年下半年开始火爆，而后 Facebook 改名 Meta �
 @end
 ```
 
-```go
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("Hello, World!")
-}
-```
-
 ### isa 链
 
 定义一个子类的实例 `Student *stu`，根据之前的文章 [class-object-isa](./class-object-isa/)，实例本质上是一个 `objc_object` 结构体，内部存在一个 isa 指针，指向的是 `Student` 这个类对象。
