@@ -146,6 +146,15 @@ a == nil ? a! : b
 
 * struct 在 OC 中并不是一等公民，但在 Swift 中，是与 class 同等地位的对象封装。
 
+* Swift 中的 struct 与 class 比较：
+
+  - struct 是值类型，而 class 是引用类型 (值类型存储变量本身，引用类型存储内存地址)
+  - struct 不支持继承，而 class 可以
+  - struct 会给成员变量默认值，而 class 必须自行初始化
+  - struct 不需要引用计数，所以没有 deinit 方法
+  - 使用 `let`声明的实例，class 可以修改它的属性，而 struct 不行 (需要借助 mutating 方法)
+  - struct 不支持类型转换 (typecasting)
+
 ref: [Choosing Between Structures and Classes](https://developer.apple.com/documentation/swift/choosing_between_structures_and_classes)
 
 ### 值类型与引用类型
@@ -153,7 +162,9 @@ ref: [Choosing Between Structures and Classes](https://developer.apple.com/docum
 `值类型` 被赋值给另一个变量时，会进行 copy 操作，以确保新变量的修改不会影响原来的变量值。
 而 `引用类型` 的赋值是一次指针赋值，新旧变量指向同一块内存。
 
-* Swift 中 String, enum, struct 是值类型，class 是引用类型。
+> String, Array, Dictionary 都是 struct
+
+* Swift 中 enum, struct 是值类型，class 是引用类型。
 
 * OC 中仅有基本数据类型、基础 struct 是值类型。
 
