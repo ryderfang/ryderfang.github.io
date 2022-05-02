@@ -17,10 +17,33 @@ tags: [block]
 returnType (^blockName)(parameterTypes) = ^returnType(parameters) {...};
 ```
 
+例如：
+```objc
+double (^multiply)(double, double) = ^double(double a, double b) {
+    return a * b;
+};
+
+// 其中返回值可以省略
+double (^multiply)(double, double) = ^(double a, double b) {
+    return a * b;
+};
+
+// 如果参数为空，可以继续省略
+void (^voidBlock)(void) = ^{
+    
+};
+```
+
 ### 属性 property
 
 ```objc
 @property (nonatomic, copy, nullability) returnType (^blockName)(parameterTypes);
+```
+
+例如：
+```objc
+@property (nonatomic, copy) double (^multiply)(double, double);
+@property (nonatomic, copy) void (^voidBlock)(void);
 ```
 
 ### 方法参数
@@ -29,17 +52,44 @@ returnType (^blockName)(parameterTypes) = ^returnType(parameters) {...};
 - (void)someMethodThatTakesABlock:(returnType (^nullability)(parameterTypes))blockName;
 ```
 
+例如：
+```objc
+- (void)someMethodCallBlock:(double (^_Nonnull)(double, double))multiply {
+    
+}
+```
+
+这里 `_Nonnull` 修饰的是 block 本身，也就是传一个 nil 的 block，会有 warning
+
+> Null passed to a callee that requires a non-null argument
+
 ### 参数调用
 
 ```objc
 [someObject someMethodThatTakesABlock:^returnType (parameters) {...}];
 ```
 
+例如：
+```objc
+[self someMethodCallBlock:^(double a, double b) {
+    return a * b;
+}];
+```
+
+这里的返回值也可以忽略。
+
 ### typedef 定义
 
 ```objc
 typedef returnType (^TypeName)(parameterTypes);
 TypeName blockName = ^returnType(parameters) {...};
+```
+
+例如：
+```objc
+typedef double (^Multiplier)(double, double);
+
+@property (nonatomic, copy) Multiplier multiply;
 ```
 
 ## Hint
