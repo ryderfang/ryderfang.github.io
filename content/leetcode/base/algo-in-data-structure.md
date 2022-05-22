@@ -1,7 +1,7 @@
 ---
 title: "重拾数据结构中的算法"
 date: 2022-04-22T16:48:09+08:00
-categories: [Data Structure, Algorithm]
+categories: [Data Structure]
 tags: [algo]
 ---
 

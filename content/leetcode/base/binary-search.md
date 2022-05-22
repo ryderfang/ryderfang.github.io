@@ -1,7 +1,7 @@
 ---
 title: "很难写⌜正确⌟的二分查找"
 date: 2022-03-08T17:52:24+08:00
-categories: [Algorithm]
+categories: [Binary-Search]
 tags: [search]
 ---
 
