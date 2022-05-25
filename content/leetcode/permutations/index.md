@@ -272,7 +272,7 @@ public func TOCK(function: String = #function) {
 
 如果直接遍历，效率不高。使用中介数可以直接得到结果。
 
-BTW, 找了好久，发现这个概念的英文叫 [Lehmer Code](https://en.wikipedia.org/wiki/Lehmer_code) - 莱默编码
+BTW, 找了好久，发现这个概念的英文叫 [Lehmer Code](https://en.wikipedia.org/wiki/Lehmer_code) - 莱默编码[^7]
 
 ## 关于去重
 
