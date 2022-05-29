@@ -575,40 +575,37 @@ func permuteUnique(_ nums: [Int]) -> [[Int]] {
 ```swift
 func permuteUnique2(_ nums: [Int]) -> [[Int]] {
     guard !nums.isEmpty else { return [] }
-
-    let n = nums.count
+    
     var ans = [[Int]]()
-    var used = [Bool](repeating: false, count: n)
-    let a = nums.sorted()
-    func _backTracking(locatedAt index: Int, with result: inout [Int]) -> Void {
-        guard index < n else {
-            ans.append(result)
+    var a = nums
+    let n = nums.count
+    func _p(_ index: Int) {
+        if index == n {
+            ans.append(a)
             return
         }
-        for i in 0..<n {
-            if used[i] {
-                continue
-            } else if (i > 0 && a[i] == a[i-1] && !used[i-1]) {
-                // 这里是唯一的区别
+        
+        var used = Set<Int>()
+        for i in index..<n {
+            if used.contains(a[i]) {
                 continue
             }
-            result.append(a[i])
-            used[i] = true
-            _backTracking(locatedAt: index + 1, with: &result)
-            used[i] = false
-            result.removeLast()
+            used.insert(a[i])
+            a.swapAt(index, i)
+            _p(index + 1)
+            a.swapAt(index, i)
         }
     }
-    
-    var tmp = [Int]()
-    _backTracking(locatedAt: 0, with: &tmp)
+    _p(0)
     return ans
 }
 ```
 
-如果没有这句 `if (i > 0 && a[i] == a[i-1] && !used[i-1])` 判断，就是无重复元素的全排列回溯算法。
+对于重复的元素只选择一次！
 
-这句的逻辑是，在所有相同的未选择元素中，选择一个序号最小的。
+![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-05-29-DMckyL.png)
+
+> Cheers! 🎉
 
 [^1]: https://en.wikipedia.org/wiki/Permutation#Algorithms_to_generate_permutations
 [^2]: https://www.baeldung.com/cs/array-generate-all-permutations
