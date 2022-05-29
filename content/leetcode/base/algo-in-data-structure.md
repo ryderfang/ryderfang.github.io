@@ -18,7 +18,14 @@ tags: [algo]
 
 https://cloud.tsinghua.edu.cn/d/76cbab99574046698804/files/?p=%2Fdsacpp-3rd-edn.pdf
 
-> 虽然有电子版，等疫情结束还是会买本实体书支持下老师。
+虽然有电子版，等疫情结束还是会买本实体书支持下老师。
+
+> `2022/05/27` 买到了！JD 下单后 4 天收到，说明上海的疫情快结束了。加油吧！
+
+{{< alert info >}}
+
+![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-05-27-data-structure.jpg)
+{{< /alert >}}
 
 这本书有自己的官网：[https://dsa.cs.tsinghua.edu.cn/~deng/ds/dsacpp/index.htm](https://dsa.cs.tsinghua.edu.cn/~deng/ds/dsacpp/index.htm)
 

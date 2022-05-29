@@ -23,12 +23,14 @@ $$
 
 哈哈，跑偏了，这篇不是要演示 [KaTex 的用法](https://katex.org/docs/supported.html) （虽然确实挺有意思的 😹）
 
-## 排列算法
+## 应用
 
 * [46. Permutations](https://leetcode.com/problems/permutations/)
 * [31. Next Permutation](https://leetcode.com/problems/next-permutation/)
 * [47. Permutations II](https://leetcode.com/problems/permutations-ii/)
 * [60. Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)
+
+## 排列算法
 
 我们知道排列数是阶乘级增长，10个数的排列就达到了 \\(10! = 3628800\\)，百万级的规模。
 
@@ -182,7 +184,7 @@ func permute3(_ nums: [Int]) -> [[Int]] {
 }
 ```
 
-### 递归法
+### 递归法 ✨
 
 主要思路是，枚举原数组所有位置，将位置上的数移到结果数组中，直到原数组清空。
 
@@ -211,35 +213,291 @@ func permute4(_ nums: [Int]) -> [[Int]] {
 
 也就是 `Steinhaus–Johnson–Trotter` 算法。
 
-// TODO：待补充
+首先，定义升序是正方向，而对于 \\(a[i] > a[j], i < j\\)，就是一个逆序对。
 
+* 初始化一个方向数组，默认全 0，表示向左交换，如果变成 1，就是向右交换
+* 确认一个元素是否能交换（活动状态）：在它的方向上，它的邻位比自己小。
+
+算法步骤就是：
+
+1. 初始化方向数组，全部向左交换
+2. 找到所有处于活动状态元素中最大的一个
+3. 将它与邻位交换
+4. 将所有大于上面这个元素（非活动状态）的其他元素方向反转
+5. 跳转 2，直至找不到这样的元素
+
+```swift
+func permute5(_ nums: [Int]) -> [[Int]] {
+    TICK()
+    var a = nums
+    let sz = a.count
+    var ans = [[Int]]()
+    // -1 means left, 1 means right
+    var directions = [Int](repeating: -1, count: sz)
+    func _movable() -> Int? {
+        var max = 1
+        var pos = -1
+        for i in 0..<sz {
+            if a[i] < max {
+                continue
+            }
+            if (directions[i] > 0 && i < sz - 1 && a[i] > a[i+1]) ||
+                (directions[i] < 0 && i > 0 && a[i] > a[i-1]) {
+                max = a[i]
+                pos = i
+            }
+        }
+        if (pos >= 0) {
+            return pos
+        }
+        return nil
+    }
+    ans.append(a)
+    while let max_i = _movable() {
+        let max_v = a[max_i]
+        a.swapAt(max_i, max_i + directions[max_i])
+        // 注意：方向也要跟着交换
+        directions.swapAt(max_i, max_i + directions[max_i])
+        ans.append(a)
+        for i in 0..<sz {
+            if (a[i] > max_v) {
+                directions[i] = -directions[i]
+            }
+        }
+    }
+    TOCK()
+    return ans
+}
+```
+
+> 相比字典序来说，邻位交换在交换这一步更快，但是查找最大可移动元素和修改方向时，需要遍历。整体来说，时间差不多。
 
 ### Heap 算法[^4]
 
-
+```swift
+func _permute6(_ nums: [Int]) -> [[Int]] {
+    TICK()
+    var ans = [[Int]]()
+    func _heap(k: Int, a: inout [Int]) {
+        if k == 1 {
+            ans.append(a)
+            return
+        }
+        // Generate permutations with k-th unaltered
+        // Initially k = length(A)
+        _heap(k: k-1, a: &a)
+        // Generate permutations for k-th swapped with each k-1 initial
+        for i in 0..<k-1 {
+            // Swap choice dependent on parity of k (even or odd)
+            if k % 2 == 0 {
+                a.swapAt(i, k-1)
+            } else {
+                a.swapAt(0, k-1)
+            }
+            _heap(k: k-1, a: &a)
+        }
+    }
+    var a = nums
+    _heap(k: a.count, a: &a)
+    TOCK()
+    return ans
+}
+```
 
 ### 递增进位法
 
-
+```swift
+func permute7(_ nums: [Int]) -> [[Int]] {
+    TICK()
+    var ans = [[Int]]()
+    let sz = nums.count
+    var inc = [Int](repeating: 0, count: sz)
+    // inc[i] 表示 (i+1) 右边比它的小的数的个数，是 (i+1) 进制数
+    // inc[0] 总是 0
+    func _outInc() -> String {
+        let rev : [String] = inc[1...].reversed().map({ String($0) })
+        return rev.joined()
+    }
+    
+    // 最低位是 2 进制，递增时进位多
+    func _increace() -> Bool {
+        var i = 1
+        var carry = 1
+        while i < sz {
+            if carry == 0 {
+                break
+            }
+            let sum = inc[i] + carry
+            inc[i] = sum % (i + 1)
+            carry = sum / (i + 1)
+            i += 1
+        }
+        // 如果还有进位，说明已经到了最大的排列
+        return (carry == 0)
+    }
+    
+    func _next() -> Bool {
+        // 根据当前中介数求排列
+        var p = [Int](repeating: 0, count: sz)
+        for i in (0..<sz).reversed() {
+            var count = 0
+            var j = sz - 1
+            // inc[i] + 1 的空位，放 sz - i
+            while j >= 0 {
+                if p[j] == 0 {
+                    count += 1
+                }
+                if (count > inc[i]) {
+                    break
+                }
+                j -= 1
+            }
+            // p[j] = i + 1
+            p[j] = nums[i]
+        }
+        ans.append(p)
+        
+        //print(_outInc())
+        // 中介数 + 1
+        return _increace()
+    }
+    
+    while _next() {
+        
+    }
+    TOCK()
+    return ans
+}
+```
 
 ### 递减进位法
 
+```swift
+func permute8(_ nums: [Int]) -> [[Int]] {
+    TICK()
+    var ans = [[Int]]()
+    let sz = nums.count
+    var inc = [Int](repeating: 0, count: sz)
+    // inc[i] 表示 (n-i) 右边比它的小的数的个数，是 (n-i) 进制数
+    // inc[sz-1] 总是 0
+    func _outInc() -> String {
+        let rev : [String] = inc[0..<sz-1].reversed().map({ String($0) })
+        return rev.joined()
+    }
+    
+    // 最低位是 n 进制，递增时进位少
+    func _increace() -> Bool {
+        var i = 0
+        var carry = 1
+        while i < sz - 1 {
+            if carry == 0 {
+                break
+            }
+            let sum = inc[i] + carry
+            inc[i] = sum % (sz - i)
+            carry = sum / (sz - i)
+            i += 1
+        }
+        // 如果还有进位，说明已经到了最大的排列
+        return (carry == 0)
+    }
+    
+    func _next() -> Bool {
+        // 根据当前中介数求排列
+        var p = [Int](repeating: 0, count: sz)
+        for i in 0..<sz {
+            var count = 0
+            var j = sz - 1
+            // inc[i] + 1 的空位，放 sz - i
+            while j >= 0 {
+                if p[j] == 0 {
+                    count += 1
+                }
+                if (count > inc[i]) {
+                    break
+                }
+                j -= 1
+            }
+            // p[j] = sz - i
+            p[j] = nums[sz - i - 1]
+        }
+        ans.append(p)
+        
+        //print(_outInc())
+        // 中介数 + 1
+        return _increace()
+    }
+    
+    while _next() {
+        
+    }
+    TOCK()
+    return ans
+}
+```
+
+可以看出来，递减进位制和递增进位制法非常类似。区别仅在于：
+
+* 中介数的最低位，递减法是 \\(n\\) 进制数，而递增法是 \\(2\\) 进制，这样在迭代时，递增法需要进位的次数更多。
 
 ### 快速排列
 
 `QuickPerm` 算法[^5]。
 
+```swift
+func permute9(_ nums: [Int]) -> [[Int]] {
+    TICK()
+    var ans = [[Int]]()
+    var a = nums
+    // init: [0,0,0...0]
+    var p = [Int](repeating: 0, count: a.count)
+    ans.append(a)
+    var i = 1
+    var j : Int
+    while i < a.count {
+        if (p[i] < i) {
+            // if i is odd, j = p[i]; else 0
+            j = i % 2 * p[i]
+            // swap(a[i], a[j])
+            (a[i], a[j]) = (a[j], a[i])
+            ans.append(a)
+            p[i] += 1
+            i = 1
+        } else {
+            p[i] = 0
+            i += 1
+        }
+    }
+    TOCK()
+    return ans
+}
+```
+
+开始我没太理解这个算法的逻辑，后来看到了 `Heap` 算法的 [非递归实现](https://en.wikipedia.org/wiki/Heap%27s_algorithm#Details_of_the_algorithm)。
+
+不能说比较相似吧，只能说一模一样。唯一的区别是这个算法改进了起始点从 `i = 0` 变成了 `i = 1`，因为 `i = 0` 进入循环后什么也没有变化就进入了 `i = 1` 的状态。但是这一点优化，在数据量巨大的情况下，是质的提升！
+
+另外，在它的官网上，这一实现被称为 `Counting`，还有另一种实现叫 [`Countdown`](https://www.quickperm.org/01example.php)，区别就在于 \\(P[]\\) 数组的初始化和修改方式，一个递增、一个递减。
+
+## 耗时统计 ⌛
 
 以下是通过 `TICK/TOCK` 宏生成的各个算法的执行时间 （以 10 个数排列为例）
 
 | 算法 | 时间 |
 | -- | -- |
-| 回溯法 | 4.01 s |
-| 插入法 | 4.39 s |
-| 字典序 | 8.02 s |
-| 递归法 | 11.13 s |
+| 回溯法 | 4.97 s |
+| 插入法 | 4.58 s |
+| 字典序 | 8.24 s |
+| 递归法 | 11.49 s |
+| 邻位对换法 | 28.37 s |
+| Heap 算法 | **2.57 s** |
+| 递增进位法 | 16.70 s |
+| 递减对换法 | 19.67 s |
+| 快速排列算法 | **0.78 s** |
 
-> 耗时统计
+不愧是 `快速排列` 算法！
+
+* 统计宏
 ```swift
 var g_start_time = NSDate()
 public func TICK() {
@@ -250,39 +508,111 @@ public func TOCK(function: String = #function) {
 }
 ```
 
-## 关于中介数[^6]
+## 最佳实践 🚀
 
-中介数是为了快速推导某个排列的中间数。以字典序为例，我们本来可以使用序号 \\(0,1,2..n!\\) 来表示各个排列。
+上面讲了非常多的算法，但是有些难以理解，我觉得对于同类算法，只需记住最容易理解的逻辑即可。
 
-但从这个序号推导出具体的排列，不是很容易。所以我们引入了中介数的概念。
-
-假设排列 \\(\sigma = (\sigma_1,\sigma_2,\sigma_3,...)\\)，定义中介数为 \\(L(\sigma) = (L_{n-1}L_{n-2}..L_1)\\)
-
-* \\(L_{n-i}\\) 表示 \\(\sigma_i\\) 右边比它的小的数的个数
-* 中介数是特殊进制设计，最低位是 2 进制，次低位是 3 进制，依次类推，它的十进制结果就是字典序的序号
-* 中介数的计算：\\(L(\sigma) = L_{n-1}(n-1)! + L_{n-2}(n-2)! + ... + L_1 * 1!\\)
-* 一个 \\(n-1\\) 位的中介数，可以表示 \\(n!\\) 个数字，正好与排列数对应
-* 一个中介数对应一个特定的排列，同样根据一个排列也能求出其中介数
-
-中介数的应用举例：
-
-> 求排列 83674521 之前第 2015 个排列。
-
-另外，在前面提到的 [60. Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)
-
-如果直接遍历，效率不高。使用中介数可以直接得到结果。
-
-BTW, 找了好久，发现这个概念的英文叫 [Lehmer Code](https://en.wikipedia.org/wiki/Lehmer_code) - 莱默编码[^7]
+```swift
+func permute(_ nums: [Int]) -> [[Int]] {
+    guard !nums.isEmpty else { return [] }
+    
+    var ans = [[Int]]()
+    var a = nums
+    let n = nums.count
+    func _p(_ index: Int) {
+        if index == n {
+            ans.append(a)
+            return
+        }
+        for i in index..<n {
+            a.swapAt(index, i)
+            _p(index + 1)
+            a.swapAt(i, index)
+        }
+    }
+    _p(0)
+    return ans
+}
+```
 
 ## 关于去重
 
+对于有重复元素的排列[^6]：
 
+* [47. Permutations II](https://leetcode.com/problems/permutations-ii/)
+
+最容易想到的是，不管重复元素，先求出所有排列。然后再去重。
+
+我们在上面的最佳实践上稍加改动：
+
+```swift
+func permuteUnique(_ nums: [Int]) -> [[Int]] {
+    guard !nums.isEmpty else { return [] }
+    
+    var ans = Set<[Int]>()
+    var a = nums
+    let n = nums.count
+    func _p(_ index: Int) {
+        if index == n {
+            ans.insert(a)
+            return
+        }
+        for i in index..<n {
+            a.swapAt(index, i)
+            _p(index + 1)
+            a.swapAt(i, index)
+        }
+    }
+    _p(0)
+    return Array(ans)
+}
+```
+
+![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-05-29-eTF3Mg.png)
+
+也还行，就是依赖 `Set` 的性质，有点耗时。那么怎么在求排列过程中直接忽略重复项呢？
+
+```swift
+func permuteUnique2(_ nums: [Int]) -> [[Int]] {
+    guard !nums.isEmpty else { return [] }
+
+    let n = nums.count
+    var ans = [[Int]]()
+    var used = [Bool](repeating: false, count: n)
+    let a = nums.sorted()
+    func _backTracking(locatedAt index: Int, with result: inout [Int]) -> Void {
+        guard index < n else {
+            ans.append(result)
+            return
+        }
+        for i in 0..<n {
+            if used[i] {
+                continue
+            } else if (i > 0 && a[i] == a[i-1] && !used[i-1]) {
+                // 这里是唯一的区别
+                continue
+            }
+            result.append(a[i])
+            used[i] = true
+            _backTracking(locatedAt: index + 1, with: &result)
+            used[i] = false
+            result.removeLast()
+        }
+    }
+    
+    var tmp = [Int]()
+    _backTracking(locatedAt: 0, with: &tmp)
+    return ans
+}
+```
+
+如果没有这句 `if (i > 0 && a[i] == a[i-1] && !used[i-1])` 判断，就是无重复元素的全排列回溯算法。
+
+这句的逻辑是，在所有相同的未选择元素中，选择一个序号最小的。
 
 [^1]: https://en.wikipedia.org/wiki/Permutation#Algorithms_to_generate_permutations
 [^2]: https://www.baeldung.com/cs/array-generate-all-permutations
 [^3]: [Steinhaus–Johnson–Trotter algorithm](https://en.wikipedia.org/wiki/Steinhaus%E2%80%93Johnson%E2%80%93Trotter_algorithm)
 [^4]: https://en.wikipedia.org/wiki/Heap%27s_algorithm
-[^5]: https://www.quickperm.org/01example.php
-[^6]: [全排列生成算法](https://zh.m.wikipedia.org/zh-cn/%E5%85%A8%E6%8E%92%E5%88%97%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95)
-[^7]: https://en.wikipedia.org/wiki/Permutation#Numbering_permutations
-
+[^5]: https://www.quickperm.org/quickperm.php
+[^6]: https://segmentfault.com/a/1190000040142137

@@ -1,6 +1,6 @@
 ---
 title: "组合算法"
-date: 2022-05-22T00:26:54+08:00
+date: 2022-05-25T19:26:54+08:00
 categories: [Combinations]
 tags: []
 ---
@@ -30,4 +30,4 @@ $$
 ## 例题
 
 * [77. Combinations](https://leetcode.com/problems/combinations/)
-
+* [78. Subsets](https://leetcode.com/problems/subsets/)
