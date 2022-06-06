@@ -8,13 +8,13 @@ showReadingTime: false
 showEdit: false
 ---
 
-<img align='right' src='/avatar2.jpg' width='128px'>
+<img align='right' src='/Eren-Jeager.jpg' width='91.66px'>
 
-## G’day, I’m Ryder! 👋
+## `Hello, World!` 👋
 
-互联网游荡者，历经 'BAT' 三家公司，现任鹅厂废柴搬砖工。
+历经 `BAT` 三家公司，摸鱼达人，废柴码农。人生苦短、及时行乐。
 
-I worked at <u>B</u>ilibili, <u>A</u>libaba and now <u>T</u>encent, still too `vegetable` to be a senior coder.
+I worked at <u>B</u>ilibili, <u>A</u>libaba and now <u>T</u>encent, still too `vegetable` to be a senior engineer. Lacking of patience and persistence.
 
 Now I'm living with my wife and little son in Shanghai, China.
 
