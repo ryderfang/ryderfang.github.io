@@ -128,7 +128,7 @@ Runtime 的初始化，ObjC 类的注册，selector 唯一性检查，Category �
 
 参考下一篇：
 
-[还能更快吗之启动优化](/categories/pkgsize)
+[还能更快吗之启动优化](/categories/PkgSize)
 
 [^1]: https://github.com/aidansteele/osx-abi-macho-file-format-reference
 [^2]: https://juejin.cn/post/6844903511612899336
