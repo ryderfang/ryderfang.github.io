@@ -12,20 +12,24 @@
 
 > 给岁月以文明，而不是给文明以岁月 —— 《三体Ⅱ ∙ 黑暗森林》
 
-* 基于 [Hugo](https://gohugo.io/) 和 [uBlogger](https://github.com/uPagge/uBlogger) 主题
+## Manual 📜
+* 基于 [Hugo](https://gohugo.io/) 和 [Congo](https://github.com/jpanther/congo) 主题
 * 使用 [Github Actions](https://github.com/ryderfang/ryderfang.github.io/blob/main/.github/workflows/gh-deploy.yml) 自动构建并发布到 `gh-pages` 分支
   - 根目录下 `.nojekyll` 文件很重要 - [Without Jekyll](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/)
-  - 注意 github actions 默认的构建分支是 `main` 而不是 `master`
-  - 文件名 `posts/xx/index.en.md` 需要根据当前语言修改，如中文 `index.zh-cn.md`
-### Contents 🚀
+  - 注意 **Github Actions** 默认的构建分支是 `main` 而不是 `master`
+  - 只支持中文
+  - ~~文件名 `posts/xx/index.en.md` 需要根据当前语言修改，如中文 `index.zh-cn.md`~~
+  - 可以使用根目录下的脚本 `new_post.sh` 快捷创建文章
+  - 可以使用 `run.sh` 启动本地 server (http://localhost:2233/)，用于快速预览调试
+## Contents 🚀
 
 * 💻 技术总结
 
 * 📜 专业分享
 
-* 📝 少量感悟
+* 📝 少量生活
 
-### License 📕
+## License 📕
 
 [Unlicense](https://en.wikipedia.org/wiki/Unlicense) - You can do whatever you what.
 
