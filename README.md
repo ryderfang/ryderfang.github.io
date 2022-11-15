@@ -19,8 +19,8 @@
   - 注意 **Github Actions** 默认的构建分支是 `main` 而不是 `master`
   - 只支持中文
   - ~~文件名 `posts/xx/index.en.md` 需要根据当前语言修改，如中文 `index.zh-cn.md`~~
-  - 可以使用根目录下的脚本 `new_post.sh` 快捷创建文章
-  - 可以使用 `run.sh` 启动本地 server (http://localhost:2233/)，用于快速预览调试
+  - 使用根目录下的脚本 `new_post.sh` 快捷创建文章
+  - 使用 `run.sh`，启动本地 server - [http://localhost:2233](http://localhost:2233)，快速预览
 ## Contents 🚀
 
 * 💻 技术总结
