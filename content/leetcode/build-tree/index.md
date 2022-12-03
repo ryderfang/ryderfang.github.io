@@ -71,6 +71,23 @@ public extension TreeNode {
 
 这个构造过程过于朴素，需要后续优化下 🥸
 
+### Update
+
+一种更 `Swifter` 的写法
+
+```swift
+func array() -> [Int?] {
+    var result = [Int?]()
+    var tree: [TreeNode?] = [self]
+    while !tree.isEmpty {
+        guard tree.compactMap({ $0 }).count > 0 else { break }
+        result.append(contentsOf: tree.map { $0?.val })
+        tree = tree.compactMap { $0 }.flatMap { [$0?.left, $0?.right] }
+    }
+    return result
+}
+```
+
 ## 前序与中序构造
 
 [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
