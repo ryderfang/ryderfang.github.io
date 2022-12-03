@@ -1,5 +1,5 @@
 ---
-title: "树的结构与算法系列 一"
+title: "树的结构与算法之一：遍历"
 date: 2022-06-03T14:57:43+08:00
 categories: [Tree, Data Structure]
 tags: []
@@ -28,62 +28,6 @@ draft: false
 
 ![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-10-19-carbon.png)
 
-## 构造
-
-一般测试数据的输入是数组，我们需要将数组转换成树结构。同时，为了便于输出验证，也需要将树再转回数组。
-其实就是层次遍历及其逆向构造树的过程。
-
-```swift
-public extension TreeNode {
-    func array() -> [Int?] {
-        var ans: [Int?] = []
-        var queue: [TreeNode?] = [self]
-        while !queue.isEmpty {
-            if let node = queue.removeFirst() {
-                ans.append(node.val)
-                queue.append(node.left)
-                queue.append(node.right)
-            } else {
-                ans.append(nil)
-            }
-        }
-        // remove nils at last
-        while ans.last == nil {
-            ans.removeLast()
-        }
-        return ans
-    }
-
-    // level traversal
-    static func arrayToTree(_ nums: [Int?]) -> TreeNode? {
-        guard nums.count > 0 else { return nil }
-        guard let rootVal = nums[0] else { return nil }
-        let root = TreeNode(rootVal)
-        var queue: [TreeNode?] = [root]
-        var i = 1
-        let sz = nums.count
-        while !queue.isEmpty && i < sz {
-            let node = queue.removeFirst()
-            if let val = nums[i] {
-                let left = TreeNode(val)
-                node?.left = left
-                queue.append(left)
-            }
-            i += 1
-            if i >= sz {
-                break
-            }
-            if let val = nums[i] {
-                let right = TreeNode(val)
-                node?.right = right
-                queue.append(right)
-            }
-            i += 1
-        }
-        return root
-    }
-}
-```
 
 ## 遍历
 
@@ -98,7 +42,7 @@ public extension TreeNode {
 ```swift
 // MARK: - Recursive Traversal
 public extension TreeNode {
-    func inorderTraversal(_ root: TreeNode?) -> [Int] {
+    static func inOrder(_ root: TreeNode?) -> [Int] {
         var ans = [Int]()
         func _inorder(_ node: TreeNode?, _ res: inout [Int]) {
             guard let node = node else { return }
@@ -110,7 +54,7 @@ public extension TreeNode {
         return ans
     }
 
-    func preorderTraversal(_ root: TreeNode?) -> [Int] {
+    static func preOrder(_ root: TreeNode?) -> [Int] {
         var ans = [Int]()
         func _preorder(_ node: TreeNode?, _ res: inout [Int]) {
             guard let node = node else { return }
@@ -122,7 +66,7 @@ public extension TreeNode {
         return ans
     }
 
-    func postorderTraversal(_ root: TreeNode?) -> [Int] {
+    static func postOrder(_ root: TreeNode?) -> [Int] {
         var ans = [Int]()
         func _postorder(_ node: TreeNode?, _ res: inout [Int]) {
             guard let node = node else { return }
@@ -148,39 +92,44 @@ public extension TreeNode {
 ```swift
 // MARK: - Iteratively Traversal
 public extension TreeNode {
-    func inorderTraversal_i(_ root: TreeNode?) -> [Int] {
+    // 左根右
+    static func inOrderIterative(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
         var ans = [Int]()
         var stack = [TreeNode]()
-        var node = root
+        var node: TreeNode? = root
         while !stack.isEmpty || node != nil {
-            while node != nil {
-                stack.append(node!)
-                node = node?.left
+            while let tmp = node {
+                stack.append(tmp)
+                node = tmp.left
             }
-            let top = stack.popLast()
-            // 区别
-            ans.append(top!.val)
-            node = top!.right
+            let top = stack.removeLast()
+            // !!
+            ans.append(top.val)
+            node = top.right
         }
         return ans
     }
 
-    func preorderTraversal_i(_ root: TreeNode?) -> [Int] {
+    // 根左右
+    static func preOrderIterative(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
         var ans = [Int]()
         var stack = [TreeNode]()
-        var node = root
+        var node: TreeNode? = root
         while !stack.isEmpty || node != nil {
-            while node != nil {
-                stack.append(node!)
-                // 区别
-                ans.append(node!.val)
-                node = node!.left
+            while let tmp = node {
+                stack.append(tmp)
+                // !!
+                ans.append(tmp.val)
+                node = tmp.left
             }
-            let top = stack.popLast()
-            node = top!.right
+            let top = stack.removeLast()
+            node = top.right
         }
         return ans
     }
+}
 ```
 
 * 后序遍历会相对麻烦一点，但也和上面的写法尽量类似：
@@ -189,20 +138,21 @@ public extension TreeNode {
 
 ```swift
 public extension TreeNode {
-    func postorderTraversal_i(_ root: TreeNode?) -> [Int] {
+    static func postOrderIterative(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
         var ans = [Int]()
         var stack = [TreeNode]()
-        var node = root
+        var node: TreeNode? = root
         while !stack.isEmpty || node != nil {
-            while node != nil {
-                stack.append(node!)
+            while let tmp = node {
+                stack.append(tmp)
                 // 这里每次插入开头
-                ans.insert(node!.val, at: 0)
+                ans.insert(tmp.val, at: 0)
                 // 先右后左
-                node = node?.right
+                node = tmp.right
             }
-            let top = stack.popLast()
-            node = top!.left
+            let top = stack.removeLast()
+            node = top.left
         }
         return ans
     }
