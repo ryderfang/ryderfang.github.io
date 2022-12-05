@@ -135,9 +135,27 @@ class Solution {
 
 https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups/
 
+题意是：
+
+> 给定一个无向图，将图中所有顶点按照两条规则分组，求最大的分组数。
+  1. 一个顶点只在一个分组中
+  2. 有边相连的两个点，必须在想邻的分组里
+
+注意到：
+
+* 输入的图不一定连通。
+* 对于非连通的图，只需要分别求每个连通区域的分组数，然后相加即可。
+* 每个连通区域的分组数，可能通过枚举各个顶点，通过 BFS 得到，分组数就是 BFS 的深度。
+
+关键点：
+
+* 在 BFS 过程中，每一层的节点不能相连 （也就是二分图 `bipartite graph`）
+* 同一个连通图内的点，可能使用并查集判断或者 DFS 获取
+
 ```swift
 class Solution {
     func magnificentSets(_ n: Int, _ edges: [[Int]]) -> Int {
+        // Union Find
         var uf = [Int](repeating: -1, count: n + 1)
         for i in 0...n {
             uf[i] = i
@@ -150,7 +168,6 @@ class Solution {
                 return uf[x]
             }
         }
-
         func _merge(_ i: Int, _ j: Int) {
             let x = min(i, j)
             let y = max(i, j)
@@ -167,10 +184,14 @@ class Solution {
             _merge(edge[0], edge[1])
         }
 
-        var v = [Int](repeating: 0, count: n + 1)
-        v[0] = 1
-        func _bfs(_ v: [Int], _ queue: [Int], _ depth: Int, _ count: Int) -> Int {
-            var v = v
+        // Find Components
+        var components = [Int: [Int]]()
+        for i in 1...n {
+            components[_find(i), default: []].append(i)
+        }
+
+        func _bfs(_ visited: [Int], _ queue: [Int], _ depth: Int) -> Int {
+            var v = visited
             for x in queue {
                 v[x] = 1
             }
@@ -190,29 +211,111 @@ class Solution {
                 }
             }
 
-            return _bfs(v, queue, depth + 1, count + queue.count)
+            return _bfs(v, queue, depth + 1)
         }
 
-        var dp = [Int](repeating: 0, count: n + 1)
-        for i in 1...n {
-            let tmp = _bfs(v, [i], 1, 1)
-            if tmp > 0 {
-                dp[_find(i)] = max(dp[_find(i)], tmp)
-            }
-        }
-        var components = Set<Int>()
-        for i in 1...n {
-            components.insert(_find(i))
-        }
         var ans = 0
-        for x in components {
-            guard dp[x] > 0 else {
-                return -1
+        for comp in components.values {
+            var maxLevel = -1
+            for v in comp {
+                let tmp = _bfs([Int](repeating: 0, count: n + 1), [v], 1)
+                if tmp == -1 {
+                    continue
+                }
+                maxLevel = max(maxLevel, tmp)
             }
-            ans += dp[x]
+            guard maxLevel > 0 else { return -1 }
+            ans += maxLevel
         }
         return ans
     }
+}
+```
+
+整体框架就是这样，有几处细节可以优化一下。
+
+
+
+### 优化1
+
+* 判断当前层是否有连通的线段，可以通过比较当前层（本身就是上一层的 neighbor 的子集）的 neighbor 和上一层的 neighbor 来判断。如果它们有重合，那么说明当前层内有连通。
+
+* 如果有连通，则整个图不是二分图，无法找到满足条件的分组，直接返回 -1。
+
+```swift
+func _bfs(_ visited: [Int], _ queue: [Int], _ lastLevel: Set<Int>, _ depth: Int) -> Int {
+    var v = visited
+    for x in queue {
+        v[x] = 1
+    }
+    var queue = queue.flatMap { path[$0, default: []] }
+    var nextLevel = Set(queue)
+    if nextLevel.intersection(lastLevel).count > 0 {
+        return -1
+    }
+    queue = Array(nextLevel).filter { v[$0] == 0 }
+    guard queue.count > 0 else { return depth }
+    return _bfs(v, queue, nextLevel, depth + 1)
+}
+```
+
+### 优化2
+
+不使用并查集，使用 DFS 来生成 `components`。
+
+```swift
+func magnificentSets(_ n: Int, _ edges: [[Int]]) -> Int {
+    var path = [Int: [Int]]()
+    for edge in edges {
+        path[edge[0], default: []].append(edge[1])
+        path[edge[1], default: []].append(edge[0])
+    }
+
+    // Find Components
+    var components = [Int: [Int]]()
+    var visit = [Int](repeating: 0, count: n + 1)
+    var groupId = 0
+    for i in 1...n {
+        guard visit[i] == 0 else { continue }
+        _dfs(i, &visit, groupId)
+        groupId += 1
+    }
+
+    // DFS
+    func _dfs(_ v: Int, _ visit: inout [Int], _ groupId: Int) {
+        visit[v] = 1
+        components[groupId, default: []].append(v)
+        for x in path[v, default: []] {
+            _dfs(x, &visit, groupId)
+        }
+    }
+
+    func _bfs(_ visited: [Int], _ queue: [Int], _ lastLevel: Set<Int>, _ depth: Int) -> Int {
+        var v = visited
+        for x in queue {
+            v[x] = 1
+        }
+        var queue = queue.flatMap { path[$0, default: []] }
+        var nextLevel = Set(queue)
+        if nextLevel.intersection(lastLevel).count > 0 {
+            return -1
+        }
+        queue = Array(nextLevel).filter { v[$0] == 0 }
+        guard queue.count > 0 else { return depth }
+        return _bfs(v, queue, nextLevel, depth + 1)
+    }
+
+    var ans = 0
+    for comp in components.values {
+        var maxLevel = -1
+        for v in comp {
+            let tmp = _bfs([Int](repeating: 0, count: n + 1), [v], [], 1)
+            guard tmp > 0 else { return -1 }
+            maxLevel = max(maxLevel, tmp)
+        }
+        ans += maxLevel
+    }
+    return ans
 }
 ```
 
