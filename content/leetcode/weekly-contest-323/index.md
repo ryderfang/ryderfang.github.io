@@ -142,12 +142,12 @@ https://leetcode.com/problems/maximum-number-of-points-from-grid-queries/
 
 ### 思路一
 
-如果是拿到 query 再去搜索会超时，所以可以提前得到每个格式能被访问到的最小 query 值。
+如果是拿到 `query` 再去搜索会超时，所以可以提前得到每个位置能被访问到的最小 `query` 值。
 
 显然 `(0, 0)` 这个点至少是 `grid[0][0] + 1` 才能被访问。更广泛的，对于节点 `(i, j)`，
 
 * 首先要严格大于 `grid[i][j]`
-* 其次要大于等于周围四个方向中最小的一个 query 值
+* 其次要大于等于周围四个方向中最小的一个 `query` 值
 
 $$
 \begin{align}
