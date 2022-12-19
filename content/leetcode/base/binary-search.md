@@ -212,6 +212,8 @@ func FirstGreaterOrEqual(array []int, target int) int {
 
 ## 总之，记模板
 
+[704. Binary Search](https://leetcode.com/problems/binary-search/description/)
+
 可见，想写对二分不容易，那么我们只记一种正确的写法，归纳成模板即可
 
 ```python
@@ -227,6 +229,28 @@ def _bsearch(a: List[int], x: int, l: int = 0, r: int = None) -> int:
     return l
 ```
 
+```swift
+#if !LC_SOLUTION_EXT
+class Solution {}
+#endif
+extension Solution {
+    func search(_ nums: [Int], _ target: Int) -> Int {
+        var l = 0, r = nums.count - 1
+        while l <= r {
+            let mid = l + (r - l) / 2
+            if nums[mid] == target {
+                return mid
+            }
+            if nums[mid] < target {
+                l = mid + 1
+            } else {
+                r = mid - 1
+            }
+        }
+        return -1
+    }
+}
+```
 
 [^1]: [Wikipedia](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E5%B0%8B%E6%BC%94%E7%AE%97%E6%B3%95#%E5%AE%9E%E7%8E%B0%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98)
 [^2]: https://en.wikipedia.org/wiki/Binary_search_algorithm
