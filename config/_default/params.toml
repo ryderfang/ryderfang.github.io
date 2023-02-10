@@ -8,18 +8,27 @@
 colorScheme = "congo"
 defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = true
-showAppearanceSwitcher = true
 
 enableSearch = true
 enableCodeCopy = true
 
-mainSections = ["posts", "leetcode"]
 # robots = ""
-showScrollToTop = true
+
+[header]
+  layout = "basic" # valid options: basic, hamburger, hybrid, custom
+  logo = "img/logo.png"
+  showTitle = true
+
+[footer]
+  showCopyright = false
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
 
 [homepage]
   layout = "page" # valid options: page, profile, custom
   showRecent = true
+  recentLimit = 6
 
 [article]
   showDate = true

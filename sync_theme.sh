@@ -2,7 +2,8 @@
 
 cd themes/congo
 
-git remote add upstream git@github.com:jpanther/congo.git
+#git remote add origin git@github.com:ryderfang/congo.git
+#git remote add upstream git@github.com:jpanther/congo.git
 
 git fetch upstream
 
