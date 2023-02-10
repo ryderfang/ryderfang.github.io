@@ -1,7 +1,7 @@
 ---
 title: "题解 Weekly Contest 321"
 date: 2022-11-27T15:21:40+08:00
-categories: [LeetCode, Contest]
+categories: [Contest]
 tags: []
 ---
 

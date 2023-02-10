@@ -1,7 +1,7 @@
 ---
 title: "题解 Weekly Contest 323"
 date: 2022-12-11T15:03:19+08:00
-categories: [LeetCode, Contest]
+categories: [Contest]
 tags: []
 ---
 
