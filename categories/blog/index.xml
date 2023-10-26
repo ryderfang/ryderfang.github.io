@@ -8,17 +8,18 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo new page &lt;span class="o">[&lt;/span>name&lt;span class="o">]&lt;/span> - 新建页面
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Jekyll 本地安装</title><link>https://ryderfang.com/posts/2016/install-jekyll-locally/</link><pubDate>Sun, 05 Jun 2016 19:34:55 +0800</pubDate><guid>https://ryderfang.com/posts/2016/install-jekyll-locally/</guid><description>&lt;p>
 &lt;figure>
-&lt;img class="mx-auto my-0 rounded-md" src="https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-04-07-jekyll.jpg" alt="" />
+&lt;img
+class="mx-auto my-0 rounded-md"
+src="https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-04-07-jekyll.jpg"
+alt=""
+loading="lazy"
+/>
 &lt;/figure>
 &lt;/p>
 &lt;p>安装 Ruby 和 Ruby DevKit&lt;/p>
 &lt;ul>
-&lt;li>&lt;a
-href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe"
-target="_blank" rel="noreferrer noopener"
->Ruby 2.2.4&lt;/a>&lt;/li>
-&lt;li>&lt;a
-href="http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe"
-target="_blank" rel="noreferrer noopener"
->Ruby DevKit&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe" target="_blank" rel="noreferrer">Ruby 2.2.4&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe" target="_blank" rel="noreferrer">Ruby DevKit&lt;/a>&lt;/li>
 &lt;/ul></description></item></channel></rss>
