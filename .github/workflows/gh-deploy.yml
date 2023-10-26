@@ -32,7 +32,7 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
-          cname: fangr.cc
+          cname: ryderfang.com
           allow_empty_commit: true
           keep_files: false
           commit_message: ${{ github.event.head_commit.message }}

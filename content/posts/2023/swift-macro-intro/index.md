@@ -17,12 +17,12 @@ WWDC2023[^1] 发布 Swift 5.9，引入了 “宏” 的新特性[^2]。
 
 Swift 宏与语法树深度结合，已经是一种自定义编译过程的方式。
 
-![]()
+![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2023-10-26-Er8qZG.png)
 
 另外，要创建宏，必须使用 Swift Package，在 File -> New -> Package -> Swift Macro 创建，
 并依赖 `swift-syntax 590.0.1`
 
-![]()
+![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2023-10-26-r2rFp2.png)
 
 有两类宏：
 

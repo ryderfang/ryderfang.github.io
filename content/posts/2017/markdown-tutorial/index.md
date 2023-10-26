@@ -20,15 +20,15 @@ tags: [markdown]
 
 `###### 六级标题`
 
-`[超链接](http://fangr.cc/)` ~> [超链接](http://fangr.cc/)
+`[超链接](http://ryderfang.com/)` ~> [超链接](http://ryderfang.com/)
 
-`[超链接][1] [1]:http://fangr.cc` ~>
+`[超链接][1] [1]:http://ryderfang.com` ~>
 
 [超链接][1]
 
-[1]: http://fangr.cc
+[1]: http://ryderfang.com
 
-`<http://fangr.cc/>` ~> <http://fangr.cc/>
+`<http://ryderfang.com/>` ~> <http://ryderfang.com/>
 
 `*/+/- 无序列表` ~>
 - 无序列表

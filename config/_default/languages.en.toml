@@ -1,18 +1,14 @@
 languageCode = "en"
 languageName = "English"
-displayName = "EN"
-isoCode = "en"
 weight = 1
-rtl = false
 
 title = "一个技术宅的碎碎念"
 # description = "My awesome website"
 # copyright = "Copy, _right?_ :thinking_face:"
 
-dateFormat = "January 2 2006"
-
 [params]
   mainSections = ["posts", "leetcode"]
+  dateFormat = "January 2 2006"
 
 [author]
   name = "Ryder Fang"
