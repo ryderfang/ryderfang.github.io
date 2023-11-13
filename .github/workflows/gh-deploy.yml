@@ -36,15 +36,3 @@ jobs:
           allow_empty_commit: true
           keep_files: false
           commit_message: ${{ github.event.head_commit.message }}
-      
-      - name: Sync To Cloud
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.TENCENT_CLOUD_HOST }}
-          username: ubuntu
-          key: ${{ secrets.TENCENT_CLOUD_KEY }}
-          port: 22
-          script: |
-            whoami
-            cd blog && git pull
-            echo 'Done!'
