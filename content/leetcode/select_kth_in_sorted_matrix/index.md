@@ -5,7 +5,9 @@ categories: []
 tags: []
 ---
 
-Leetcode 经典题：https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
+Leetcode 经典题：
+
+https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix
 
 > 这个问题题意很简单，在一个行和列都是非递减排序的矩阵中，求第 k 小的数。
 

@@ -12,21 +12,30 @@ showEdit: false
 
 ## `Hello, World!` 👋
 
-历经 `BAT` 三家公司，摸鱼达人，废柴码农。人生苦短、及时行乐。
+历经 `BAT` 三家公司，摸鱼达人，废柴码农。~~人生苦短、及时行乐。~~
 
 I worked at <u>B</u>ilibili, <u>A</u>libaba and now <u>T</u>encent, still too `vegetable` to be a senior engineer. Lacking of patience and persistence.
 
 Now I'm living with my wife and little son in Shanghai, China.
 
+如今在外企苟全一隅，上有老下有小，中年危机，压力山大！
+
 > Life is too short, Just enjoy it.
 
 ## 经历
+
+🖖 酷澎网络科技（上海）有限公司
+<img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2024-12-03-ZJjwWH.png' width='64px'>
+
+* Senior iOS Developer
+* 2022.07 - ~
+* EE - TW Product Engineering
 
 🐧 腾讯科技（上海）有限公司
 <img align='right' src='https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2021-11-15-qq.jpg' width='64px'>
 
 * 客户端开发
-* 2019.11 - Now
+* 2019.11 - 2022.07
 * 手 Q 开发
   * 相机渲染，道具特效等
   * 图片、视频编辑
