@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on 一个技术宅的碎碎念</title><link>https://ryderfang.com/categories/blog/</link><description>Recent content in Blog on 一个技术宅的碎碎念</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 27 Sep 2017 20:04:57 +0800</lastBuildDate><atom:link href="https://ryderfang.com/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Hexo 遇到的一些问题</title><link>https://ryderfang.com/posts/2017/hexo-workflow/</link><pubDate>Wed, 27 Sep 2017 20:04:57 +0800</pubDate><guid>https://ryderfang.com/posts/2017/hexo-workflow/</guid><description>&lt;p>关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on 一个技术宅的碎碎念</title><link>https://ryderfang.com/categories/blog/</link><description>Recent content in Blog on 一个技术宅的碎碎念</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 12 Nov 2021 11:26:13 +0800</lastBuildDate><atom:link href="https://ryderfang.com/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Hexo 遇到的一些问题</title><link>https://ryderfang.com/posts/2017/hexo-workflow/</link><pubDate>Wed, 27 Sep 2017 20:04:57 +0800</pubDate><guid>https://ryderfang.com/posts/2017/hexo-workflow/</guid><description>&lt;p>关于 Hexo 如何使用，网上已经有很多教程了，不再赘述。涉及的几个相关命令也就是:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ npm install -g hexo
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo init
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ hexo generate &lt;span class="o">(&lt;/span>hexo g&lt;span class="o">)&lt;/span>
@@ -11,22 +11,15 @@
 
 
 
- &lt;figure>
- &lt;img
- class="mx-auto my-0 rounded-md"
- src="https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-04-07-jekyll.jpg"
- alt="" 
+
+
  
- loading="lazy"
  
- />
- 
- &lt;/figure>
+&lt;figure>&lt;img src="https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-04-07-jekyll.jpg" alt="" class="mx-auto my-0 rounded-md" />
+&lt;/figure>
 &lt;/p>
 &lt;p>安装 Ruby 和 Ruby DevKit&lt;/p>
 &lt;ul>
-&lt;li>
-&lt;a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe" target="_blank" rel="noreferrer">Ruby 2.2.4&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe" target="_blank" rel="noreferrer">Ruby DevKit&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe" target="_blank" rel="noreferrer">Ruby 2.2.4&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe" target="_blank" rel="noreferrer">Ruby DevKit&lt;/a>&lt;/li>
 &lt;/ul></description></item></channel></rss>

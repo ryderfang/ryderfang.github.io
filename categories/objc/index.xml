@@ -1,27 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ObjC on 一个技术宅的碎碎念</title><link>https://ryderfang.com/categories/objc/</link><description>Recent content in ObjC on 一个技术宅的碎碎念</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 10 Apr 2022 15:15:57 +0800</lastBuildDate><atom:link href="https://ryderfang.com/categories/objc/index.xml" rel="self" type="application/rss+xml"/><item><title>Swift 与 OC 有哪些不同</title><link>https://ryderfang.com/posts/2022/swift-vs-oc/</link><pubDate>Sun, 10 Apr 2022 15:15:57 +0800</pubDate><guid>https://ryderfang.com/posts/2022/swift-vs-oc/</guid><description>参考：swift.</description></item><item><title>[Runtime] 获取 OC Class 对象</title><link>https://ryderfang.com/posts/2022/get-class/</link><pubDate>Wed, 23 Feb 2022 17:49:11 +0800</pubDate><guid>https://ryderfang.com/posts/2022/get-class/</guid><description>&lt;p>获取 &lt;code>Class&lt;/code> 对象的方法有很多，本文主要是收集整理它们的区别以及探究具体的实现。&lt;/p></description></item><item><title>[Runtime] 从 Meta 说起</title><link>https://ryderfang.com/posts/2022/meta-class/</link><pubDate>Mon, 14 Feb 2022 19:45:15 +0800</pubDate><guid>https://ryderfang.com/posts/2022/meta-class/</guid><description>&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ObjC on 一个技术宅的碎碎念</title><link>https://ryderfang.com/categories/objc/</link><description>Recent content in ObjC on 一个技术宅的碎碎念</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 10 Apr 2022 15:15:57 +0800</lastBuildDate><atom:link href="https://ryderfang.com/categories/objc/index.xml" rel="self" type="application/rss+xml"/><item><title>Swift 与 OC 有哪些不同</title><link>https://ryderfang.com/posts/2022/swift-vs-oc/</link><pubDate>Sun, 10 Apr 2022 15:15:57 +0800</pubDate><guid>https://ryderfang.com/posts/2022/swift-vs-oc/</guid><description/></item><item><title>[Runtime] 获取 OC Class 对象</title><link>https://ryderfang.com/posts/2022/get-class/</link><pubDate>Wed, 23 Feb 2022 17:49:11 +0800</pubDate><guid>https://ryderfang.com/posts/2022/get-class/</guid><description>&lt;p>获取 &lt;code>Class&lt;/code> 对象的方法有很多，本文主要是收集整理它们的区别以及探究具体的实现。&lt;/p></description></item><item><title>[Runtime] 从 Meta 说起</title><link>https://ryderfang.com/posts/2022/meta-class/</link><pubDate>Mon, 14 Feb 2022 19:45:15 +0800</pubDate><guid>https://ryderfang.com/posts/2022/meta-class/</guid><description>&lt;p>
 
 
 
 
- &lt;figure>
- &lt;img
- class="mx-auto my-0 rounded-md"
- src="https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-04-07-meta.jpg"
- alt="" 
+
+
  
- loading="lazy"
  
- />
- 
- &lt;/figure>
+&lt;figure>&lt;img src="https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-04-07-meta.jpg" alt="" class="mx-auto my-0 rounded-md" />
+&lt;/figure>
 &lt;/p>
-&lt;p>Meta 这个词在 2021 年下半年开始火爆，而后 Facebook 改名 Meta 引发各大科技公司跟风押注。似乎全球资本都在追逐“元宇宙”的概念，但什么是“元宇宙”，各家有各家的说法，没有一个统一的标准。&lt;/p></description></item><item><title>[Runtime] Class, Object 与 isa</title><link>https://ryderfang.com/posts/2022/class-object-isa/</link><pubDate>Tue, 04 Jan 2022 20:19:38 +0800</pubDate><guid>https://ryderfang.com/posts/2022/class-object-isa/</guid><description>作为 Runtime 系列的第一篇博文（也是 2022 年第一篇），先从最基础的对象、类开始学习。</description></item><item><title>ObjC 之 Runtime 是个啥</title><link>https://ryderfang.com/posts/2021/what-is-runtime/</link><pubDate>Tue, 28 Dec 2021 14:51:24 +0800</pubDate><guid>https://ryderfang.com/posts/2021/what-is-runtime/</guid><description>概述 #Runtime 是 OC 这个语言的核心，也是为什么 OC 被称为动态语言的原因。</description></item><item><title>ObjC 之 技术路线图</title><link>https://ryderfang.com/posts/2021/objc-roadmap/</link><pubDate>Thu, 23 Dec 2021 17:32:58 +0800</pubDate><guid>https://ryderfang.com/posts/2021/objc-roadmap/</guid><description>&lt;div class="lead !mb-9 text-xl">
+&lt;p>Meta 这个词在 2021 年下半年开始火爆，而后 Facebook 改名 Meta 引发各大科技公司跟风押注。似乎全球资本都在追逐“元宇宙”的概念，但什么是“元宇宙”，各家有各家的说法，没有一个统一的标准。&lt;/p></description></item><item><title>[Runtime] Class, Object 与 isa</title><link>https://ryderfang.com/posts/2022/class-object-isa/</link><pubDate>Tue, 04 Jan 2022 20:19:38 +0800</pubDate><guid>https://ryderfang.com/posts/2022/class-object-isa/</guid><description/></item><item><title>ObjC 之 Runtime 是个啥</title><link>https://ryderfang.com/posts/2021/what-is-runtime/</link><pubDate>Tue, 28 Dec 2021 14:51:24 +0800</pubDate><guid>https://ryderfang.com/posts/2021/what-is-runtime/</guid><description/></item><item><title>ObjC 之 技术路线图</title><link>https://ryderfang.com/posts/2021/objc-roadmap/</link><pubDate>Thu, 23 Dec 2021 17:32:58 +0800</pubDate><guid>https://ryderfang.com/posts/2021/objc-roadmap/</guid><description>&lt;div class="lead !mb-9 text-xl">
  &lt;blockquote>
 &lt;p>本文可以作为面试八股的准备指南&lt;/p>
 &lt;/blockquote>
 &lt;/div>
 
-&lt;p>很早之前看过一个 
-&lt;a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noreferrer">前端 Roadmap&lt;/a>，图做的非常漂亮。最近发现有人做了类似的 
-&lt;a href="https://github.com/godrm/mobile-developer-roadmap" target="_blank" rel="noreferrer">移动端 Roadmap&lt;/a>，&lt;/p>
-&lt;p>其中 iOS 是这样的：&lt;/p></description></item><item><title>在 ObjC 中如何定义 Block</title><link>https://ryderfang.com/posts/2017/how-to-declare-block-in-oc/</link><pubDate>Wed, 31 May 2017 19:34:55 +0800</pubDate><guid>https://ryderfang.com/posts/2017/how-to-declare-block-in-oc/</guid><description>来自一个神奇的域名: http://fuckingblocksyntax.</description></item></channel></rss>
+&lt;p>很早之前看过一个 &lt;a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noreferrer">前端 Roadmap&lt;/a>，图做的非常漂亮。最近发现有人做了类似的 &lt;a href="https://github.com/godrm/mobile-developer-roadmap" target="_blank" rel="noreferrer">移动端 Roadmap&lt;/a>，&lt;/p>
+&lt;p>其中 iOS 是这样的：&lt;/p></description></item><item><title>在 ObjC 中如何定义 Block</title><link>https://ryderfang.com/posts/2017/how-to-declare-block-in-oc/</link><pubDate>Wed, 31 May 2017 19:34:55 +0800</pubDate><guid>https://ryderfang.com/posts/2017/how-to-declare-block-in-oc/</guid><description/></item></channel></rss>
