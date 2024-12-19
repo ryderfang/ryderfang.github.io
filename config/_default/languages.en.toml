@@ -10,7 +10,7 @@ title = "一个技术宅的碎碎念"
   mainSections = ["posts", "leetcode"]
   dateFormat = "January 2 2006"
 
-[author]
+[params.author]
   name = "Ryder Fang"
   image = "img/avatar.png"
   headline = ""
