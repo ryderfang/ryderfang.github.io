@@ -4,7 +4,9 @@ title: ''
 
 <center>
 
-![](groot.jpg "Photo by [Praveen Thirumurugan](https://unsplash.com/@praveentcom) on [Unsplash](https://unsplash.com/)")
+| <center><img src="groot.jpg" alt="drawing" width="888"/></center> |
+| :---: |
+| *Photo by [Praveen Thirumurugan](https://unsplash.com/@praveentcom) on [Unsplash](https://unsplash.com/)* |
 
 </center>
 
