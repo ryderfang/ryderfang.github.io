@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interview on 一个技术宅的碎碎念</title><link>https://ryderfang.com/categories/interview/</link><description>Recent content in Interview on 一个技术宅的碎碎念</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 23 Dec 2021 17:32:58 +0800</lastBuildDate><atom:link href="https://ryderfang.com/categories/interview/index.xml" rel="self" type="application/rss+xml"/><item><title>ObjC 之 技术路线图</title><link>https://ryderfang.com/posts/2021/objc-roadmap/</link><pubDate>Thu, 23 Dec 2021 17:32:58 +0800</pubDate><guid>https://ryderfang.com/posts/2021/objc-roadmap/</guid><description>&lt;div class="lead !mb-9 text-xl">
  &lt;blockquote>
-&lt;p>本文可以作为面试八股的准备指南&lt;/p>
-&lt;/blockquote>
+&lt;p>本文可以作为面试八股的准备指南&lt;/p>&lt;/blockquote>
 &lt;/div>
 
 &lt;p>很早之前看过一个 &lt;a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noreferrer">前端 Roadmap&lt;/a>，图做的非常漂亮。最近发现有人做了类似的 &lt;a href="https://github.com/godrm/mobile-developer-roadmap" target="_blank" rel="noreferrer">移动端 Roadmap&lt;/a>，&lt;/p>
